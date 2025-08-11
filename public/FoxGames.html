@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fox Games</title>
+  <style>
+    body { margin: 0; background-color: #000; color: #fff; font-family: Arial, sans-serif; }
+    header { text-align: center; padding: 2rem 1rem 1rem; }
+    header img.logo { width: 200px; display: block; margin: 0 auto 1rem; }
+    header img.title { max-width: 60%; height: auto; display: block; margin: auto; }
+    nav { display: flex; justify-content: center; gap: 2rem; background: #111; padding: 1rem 0; }
+    nav a { background: linear-gradient(135deg, #ff0000, #ff6600); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; font-weight: bold; cursor: pointer; transition: all 0.3s ease; padding: 0.3rem 0.6rem; border-radius: 5px; position: relative; }
+    nav a::after { content: ''; position: absolute; inset: 0; border-radius: 5px; background: linear-gradient(135deg, #ff0000, #ff6600); opacity: 0; transition: opacity 0.3s ease; z-index: -1; }
+    nav a:hover { -webkit-text-fill-color: #fff; }
+    nav a:hover::after { opacity: 1; filter: blur(4px); }
+    .welcome-container { background: linear-gradient(145deg, #111, #1a1a1a); border-radius: 15px; padding: 2rem; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); text-align: center; max-width: 800px; margin: auto; }
+    .welcome-container h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #ff6600; text-shadow: 0 0 10px #000; }
+    .welcome-container .highlight { background: linear-gradient(45deg, #ff0000, #ff6600); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .welcome-container p { font-size: 1.2rem; color: #ccc; line-height: 1.6; margin: 1rem 0; }
+    section { display: none; padding: 2rem; max-width: 1000px; margin: auto; }
+    section.active { display: block; }
+    .game { margin-bottom: 2rem; }
+    .game-feature { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; background: linear-gradient(135deg, #230041, #30114e); padding: 2rem; border-radius: 20px; box-shadow: 0 0 20px rgba(255, 0, 255, 0.2); margin: auto; max-width: 1000px; color: #fff; }
+    .game-info { flex: 1 1 50%; min-width: 300px; }
+    .game-info h2 { font-size: 2.5rem; margin: 1rem 0; }
+    .badge { display: inline-block; background: linear-gradient(to right, #9a4dff, #4da6ff); color: white; padding: 0.3rem 1rem; border-radius: 999px; font-size: 0.9rem; font-weight: bold; }
+    .badge-icon { margin-right: 0.5rem; }
+    .tags { margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag { background: #4b0082; padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 0.8rem; color: #fff; }
+    .tag.blue { background: #2061e3; }
+    .tag.green { background: #1fbfa3; }
+    .tag.orange { background: #c94b25; }
+    .tag.electricviolet { background: #5b00fb; }
+    .description { font-size: 1.1rem; margin-bottom: 1.5rem; color: #ddd; }
+    .features { list-style: none; padding: 0; margin: 0; }
+    .features li { display: flex; align-items: center; margin: 0.5rem 0; font-size: 1rem; }
+    .icon { font-size: 1.2rem; margin-right: 0.6rem; }
+    .game-preview { flex: 1 1 35%; min-width: 250px; position: relative; display: flex; justify-content: center; align-items: center; }
+    .game-info {position: relative;}
+    .preview-box { background: linear-gradient(135deg, #4f0ac8, #7f4cdb); padding: 2rem; border-radius: 20px; text-align: center; box-shadow: inset 0 0 30px rgba(255,255,255,0.05); }
+    .preview-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .preview-title { font-size: 1.2rem; font-weight: bold; }
+    .preview-sub { font-size: 0.9rem; color: #ccc; }
+    .corner-icon { position: absolute; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px); border-radius: 50%; width: 40px; height: 40px; font-size: 1.5rem; display: flex; justify-content: center; align-items: center; }
+    .top-right { top: -10px; right: -10px; }
+    .bottom-left { bottom: -10px; left: -10px; }
+    .game-feature + .game-feature { margin-top: 3rem; }
+    .project-lead {position: absolute;bottom: -20px;left: 0px;color: #666;font-size: 12px;font-weight: normal;}
+    .job-listing { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding-top: 2rem; }
+    .job-card { background: #111; padding: 1.5rem; border-radius: 12px; width: 250px; text-align: center; box-shadow: 0 0 15px rgba(255, 255, 255, 0.05); transition: transform 0.3s, box-shadow 0.3s; }
+    .job-card:hover { transform: translateY(-5px); box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+    .job-card h3 { margin-bottom: 1rem; font-size: 1.5rem; }
+    .job-card p { color: #ccc; font-size: 1rem; line-height: 1.4; }
+    .job-card.programmer h3 { color: #00ffff; text-shadow: 0 0 5px #00ffff; }
+    .job-card.voiceactor h3 { color: #b84dff; text-shadow: 0 0 5px #b84dff; }
+    .job-card.sounddesigner h3 { color: #ffa500; text-shadow: 0 0 5px #ffa500; }
+    .job-card.composer h3 { color: #ff69b4; text-shadow: 0 0 5px #ff69b4; }
+    .staff-section { text-align: center; }
+    .staff-entry { display: inline-block; padding: 1rem; margin: 1rem; border-radius: 10px; text-align: center; background-color: #000000; border: 2px solid #000000; box-shadow: 0 0 8px #ffffff; }
+    .staff-entry img { width: 200px; height: 200px; object-fit: cover; border-radius: 10px; display: block; margin: 0 auto 1rem; }
+    .staff-name { font-size: 1.2rem; font-weight: bold; color: #800080; text-shadow: 0 0 5px #000; }
+    .staff-description { color: #bbbbbb; text-shadow: 0 0 3px #000; }
+    .kontakt-container { background: linear-gradient(135deg, #1a001f, #2b003b); padding: 2rem; border-radius: 20px; max-width: 800px; margin: auto; box-shadow: 0 0 20px rgba(255, 0, 128, 0.2); text-align: center; color: #fff; }
+    .kontakt-container h2 { font-size: 2.2rem; color: #ff66cc; text-shadow: 0 0 10px #000; margin-bottom: 1rem; }
+    .kontakt-text { color: #ccc; margin-bottom: 2rem; font-size: 1.1rem; }
+    .kontakt-methoden { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+    .kontakt-item { background: #130017; border: 2px solid #3a003f; border-radius: 15px; padding: 1.5rem; width: 250px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 0 10px rgba(255, 0, 128, 0.1); }
+    .kontakt-item:hover { transform: translateY(-5px); box-shadow: 0 0 20px rgba(255, 0, 128, 0.3); }
+    .kontakt-item .icon { font-size: 2rem; margin-bottom: 1rem; }
+    .kontakt-item h3 { margin-bottom: 0.5rem; font-size: 1.3rem; color: #ff99cc; }
+    .kontakt-item a { color: #ff66cc; font-weight: bold; text-decoration: none; }
+    .kontakt-item a:hover { text-decoration: underline; }
+    .report-container {background: linear-gradient(135deg, #1a001f, #2b003b);padding: 2.5rem 3rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 128, 0.4);text-align: center;color: #fff;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.1rem;line-height: 1.5;border: 2px solid #ff0080;transition: box-shadow 0.3s ease;}
+    .report-container:hover {box-shadow: 0 0 40px rgba(255, 0, 128, 0.7);}
+    .report-container strong {color: #ff66cc;font-weight: 600;}
+    .report-container a {color: #ff66cc;text-decoration: underline;}
+    .report-container a:hover {color: #ff00aa;text-decoration: none;}
+    footer { background: #111; text-align: center; padding: 1rem; font-size: 0.9rem; color: #888; margin-top: 3rem; }
+    hr { border: 1px solid #f00; margin: 2rem 0; }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.onload = () => showSection('willkommen');
+
+  function confirmServerReport(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    const servername = form.servername.value;
+    const ip = form.ip.value;
+    const reason = form.reason.value;
+    const description = form.description.value;
+    const contact = form.contact.value;
+
+    const summary = `Sind alle Daten korrekt?\n\n` +
+      `Servername: ${servername}\n` +
+      `IP-Adresse: ${ip}\n` +
+      `Grund: ${reason}\n` +
+      `Beschreibung: ${description || "-"}` + `\n` +
+      `Kontakt: ${contact}` +
+      `\n\nWenn dieser Server tatsächlich gegen unsere TOS verstößt, wird er in weniger als 48 Stunden offline sein.` +
+      `\n\nDas ungerechte Melden von Servern kann zu Einschränkungen deines Accounts führen.`;
+
+    if (confirm(summary)) {
+      form.submit();
+    }
+    return false;
+  }
+
+  </script>
+</head>
+<body>
+  <header>
+    <img src="Fox Games Logo.png" class="logo" style="width: 250px;">
+    <img src="Fox Games Title.png" class="title" style="max-width: 20%;">
+  </header>
+
+  <nav>
+    <a onclick="showSection('willkommen')">Willkommen</a>
+    <a onclick="showSection('spiele')">Spiele</a>
+    <a onclick="showSection('arbeit')">Arbeit</a>
+    <a onclick="showSection('staff')">Staff</a>
+    <a onclick="showSection('kontakt')">Kontakt</a>
+    <a onclick="showSection('partnerschaft')">Partnerschaft</a>
+    <a onclick="showSection('serverreport')">Server melden</a>
+    <a onclick="showSection('administrativeost')">Administrative OST</a>
+    <a href="pass.html">FoxNet Login</a>
+  </nav>
+
+  <section id="willkommen">
+    <div class="welcome-container">
+      <h2>Willkommen bei <span class="highlight">Fox Games</span></h2>
+      <p>Wir sind ein leidenschaftliches Indie-Entwicklerstudio, das sich darauf spezialisiert hat, einzigartige Spiele mit Herz und Seele zu schaffen. Unser kleines, aber engagiertes Team arbeitet ständig daran, kreative Ideen zum Leben zu erwecken – für dich und unsere Community.</p>
+      <p>Egal ob du Spieler:in, Entwickler:in oder einfach nur neugierig bist – schön, dass du hier bist!</p>
+    </div>
+  </section>
+
+  <section id="spiele">
+    <div class="game-feature">
+      <div class="game-info">
+        <div class="badge"><span class="badge-icon">🎮</span> FEATURED GAME</div>
+        <h2>Administrative</h2>
+        <div class="tags">
+          <span class="tag">MMORPG</span>
+          <span class="tag blue">Gott-Simulator</span>
+          <span class="tag orange">Voice Chat</span>
+          <span class="tag electricviolet">Einzelspieler</span>
+          <span class="tag electricviolet">Online-PvP</span>
+          <span class="tag electricviolet">LAN-PvP</span>
+          <span class="tag electricviolet">Online-Koop</span>
+          <span class="tag electricviolet">LAN-Koop</span>
+        </div>
+        <p class="description">Ein MMORPG/Gott-Simulator. Multiplayer mit Voicechat und starkem Community-Fokus. Schwierig am Anfang, aber man wächst mit jeder Erfahrung.</p>
+        <ul class="features">
+          <li><span class="icon">🌍</span> Riesige, persistente Welten</li>
+          <li><span class="icon">🧠</span> Integrierter Voice Chat</li>
+          <li><span class="icon">🕹️</span> Community-getriebenes Gameplay</li>
+          <li><span class="icon">📈</span> Progressives Lernsystem</li>
+          <div class="project-lead">Leitung: VECTORY</div>
+        </ul>
+      </div>
+      <div class="game-preview">
+        <div class="preview-box">
+          <div class="preview-icon">⚡</div>
+          <div class="preview-text">
+            <div class="preview-title">Coming Soon</div>
+            <div class="preview-sub">Screenshots & Gameplay</div>
+          </div>
+        </div>
+        <div class="corner-icon top-right">🎯</div>
+        <div class="corner-icon bottom-left">✈️</div>
+      </div>
+    </div>
+
+    <div class="game-feature">
+      <div class="game-info">
+        <div class="badge"><span class="badge-icon">🧩</span> Öffentliches Repo</div>
+        <h2>Dreadout</h2>
+        <div class="tags">
+          <span class="tag electricviolet">Einzelspieler</span>
+          <span class="tag electricviolet">Online-PvP</span>
+          <span class="tag electricviolet">LAN-PvP</span>
+          <span class="tag electricviolet">Online-Koop</span>
+          <span class="tag electricviolet">LAN-Koop</span>
+        </div>
+        <p class="description">Arkanoid/Breakout Klon, die alte art von spiel, aber mit einem neuen schliff.</p>
+        <ul class="features">
+          <li><span class="icon">🌍</span> 100+ Level</li>
+          <li><span class="icon">🕹️</span> Community-getriebener Workshop</li>
+          <li><span class="icon">📈</span> Dauerhafte Updates</li>
+          <div class="project-lead">Leitung: VECTORY</div>
+        </ul>
+      </div>
+      <div class="game-preview">
+        <div class="preview-box">
+          <div class="preview-icon">🌀</div>
+          <div class="preview-text">
+            <div class="preview-title">In arbeit</div>
+            <div class="preview-sub">Irgendwann</div>
+          </div>
+        </div>
+        <div class="corner-icon top-right">🧠</div>
+        <div class="corner-icon bottom-left">🚀</div>
+      </div>
+    </div>
+
+    <div class="game-feature">
+      <div class="game-info">
+        <div class="badge"><span class="badge-icon">🧩</span> Spielstatus</div>
+        <h2>Name</h2>
+        <div class="tags">
+          <span class="tag blue">Blau</span>
+          <span class="tag green">Grün</span>
+          <span class="tag">Lila</span>
+        </div>
+        <p class="description">Beschreibung</p>
+        <ul class="features">
+          <li><span class="icon">🧠</span> Tags</li>
+          <div class="project-lead">Leitung: Leitung</div>
+        </ul>
+      </div>
+      <div class="game-preview">
+        <div class="preview-box">
+          <div class="preview-icon">🌀</div>
+          <div class="preview-text">
+            <div class="preview-title">Status</div>
+            <div class="preview-sub">Status</div>
+          </div>
+        </div>
+        <div class="corner-icon top-right">🧠</div>
+        <div class="corner-icon bottom-left">🚀</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="arbeit">
+    <h2 style="text-align:center;">Wir suchen dich!</h2>
+    <div class="job-listing">
+      <div class="job-card programmer">
+        <h3>Programmierer</h3>
+        <p>Du liebst Code? Entwickle mit uns innovative Spiele – von Gameplay-Mechaniken bis zum Netzwerkcode.</p>
+      </div>
+      <div class="job-card voiceactor">
+        <h3>Voice Actor</h3>
+        <p>Verleihe unseren Charakteren Leben durch deine Stimme. Wir suchen markante, emotionale Sprecher:innen.</p>
+      </div>
+      <div class="job-card sounddesigner">
+        <h3>Sound Designer</h3>
+        <p>Erschaffe Klangwelten! Vom UI-Sound bis zu epischen Explosionen – deine Kreativität zählt.</p>
+      </div>
+      <div class="job-card composer">
+        <h3>Composer</h3>
+        <p>Schreibe atmosphärische Musik, die Emotionen weckt – sei es episch, düster oder verträumt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="staff" class="staff-section">
+    <h2 style="color:#000000; text-shadow:0 0 5px #800080;">CEO</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#800080; box-shadow:0 0 8px #800080;">
+      <img src="VECTORY.gif">
+      <div class="staff-name" style="color:#000; text-shadow:0 0 5px #800080;">VECTORY</div>
+      <div class="staff-description" style="color:#000000; text-shadow:0 0 3px #800080;">CEO und Gründer von Fox Games</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#000000; text-shadow:0 0 5px #ffffff;">Owner</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#800080; box-shadow:0 0 8px #800080;">
+      <img src="VECTORY.png">
+      <div class="staff-name" style="color:#000; text-shadow:0 0 5px #800080;">VECTORY</div>
+      <div class="staff-description" style="color:#000000; text-shadow:0 0 3px #800080;">VECTORY Owner</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#8b0000; box-shadow:0 0 8px #8b0000;">
+      <img src="Killer.jpeg">
+      <div class="staff-name" style="color:#000; text-shadow:0 0 5px #8b0000;">Killer</div>
+      <div class="staff-description" style="color:#000000; text-shadow:0 0 3px #8b0000;">Scott Owner</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#ee82ee; box-shadow:0 0 8px #ee82ee;">
+      <img src="none.png">
+      <div class="staff-name" style="color:#000; text-shadow:0 0 5px #ee82ee;">???</div>
+      <div class="staff-description" style="color:#000000; text-shadow:0 0 3px #ee82ee;">Roxy Owner</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#000000; text-shadow:0 0 5px #850303;">Creative Director</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#850303; box-shadow:0 0 8px #850303;">
+      <img src="Foodhater.gif">
+      <div class="staff-name" style="color:#850303; text-shadow:0 0 5px #000000;">Foodhater</div>
+      <div class="staff-description" style="color:#850303; text-shadow:0 0 3px #850303;">Creative Director von Fox Games</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#000000; text-shadow:0 0 5px #c0eb34;">Cryptid Co-Director</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#c0eb34; box-shadow:0 0 8px #c0eb34;">
+      <img src="Earthevocator.png">
+      <div class="staff-name" style="color:#c0eb34; text-shadow:0 0 5px #000000;">Eathevocator</div>
+      <div class="staff-description" style="color:#c0eb34; text-shadow:0 0 3px #c0eb34;">Cryptid Co-Director</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#000000; text-shadow:0 0 5px #9400d3;">Co-Owner</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#9400d3; box-shadow:0 0 8px #9400d3;">
+      <img src="FoxBot.png">
+      <div class="staff-name" style="color:#000000; text-shadow:0 0 5px #9400d3;">FoxBot Co-Owner</div>
+      <div class="staff-description" style="color:#000000; text-shadow:0 0 3px #9400d3;">Hauseigener Bot</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#000000; text-shadow:0 0 5px #00ffff;">Programmer</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#a8160c; box-shadow:0 0 8px #a8160c;">
+      <img src="Schwertsascha.png">
+      <div class="staff-name" style="color:#000000; text-shadow:0 0 5px #a8160c;">Schwertsascha</div>
+      <div class="staff-description" style="color:#a8160c; text-shadow:0 0 3px #a8160c;">Programmierer von Fox Games</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#ffff00; text-shadow:0 0 5px #000000;">Designer</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#260e47; box-shadow:0 0 8px #260e47;">
+      <img src="Felix.png">
+      <div class="staff-name" style="color:#260e47; text-shadow:0 0 5px #000000;">Felix</div>
+      <div class="staff-description" style="color:#260e47; text-shadow:0 0 3px #000000;">Designer von Fox Games</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#a30808; box-shadow:0 0 8px #a30808;">
+      <img src="Molumbi.png">
+      <div class="staff-name" style="color:#a30808; text-shadow:0 0 5px #000000;">Molumbi</div>
+      <div class="staff-description" style="color:#a30808; text-shadow:0 0 3px #000000;">Designer von Fox Games</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#ff4fd8; text-shadow:0 0 5px #000000;">Composer</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#0029f7; box-shadow:0 0 8px #0029f7;">
+      <img src="Lukas.png">
+      <div class="staff-name" style="color:#0029f7; text-shadow:0 0 5px #000000;">Lukas</div>
+      <div class="staff-description" style="color:#0029f7; text-shadow:0 0 3px #000000;">Composer von Fox Games</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#ff4fd8; box-shadow:0 0 8px #ff4fd8;">
+      <img src="XMAN.png">
+      <div class="staff-name" style="color:#ff4fd8; text-shadow:0 0 5px #000000;">XMAN</div>
+      <div class="staff-description" style="color:#ff4fd8; text-shadow:0 0 3px #000000;">Composer von Fox Games</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#8b0000; text-shadow:0 0 5px #000000;">FoxBot Developer</h2>
+    <div class="staff-entry" style="background-image: url('DomiBackground.gif');background-size: cover;background-position: center;border-color:#1A3AC4;box-shadow: 0 0 8px #1A3AC4;">
+      <img src="Domi.gif">
+      <div class="staff-name" style="color:#1A3AC4; text-shadow:0 0 5px #000000;">Domi</div>
+      <div class="staff-description" style="color:#1A3AC4; text-shadow:0 0 3px #1A3AC4;">FoxBot Developer von Fox Games</div>
+    </div>
+
+    <hr>
+    <h2 style="color:#9b30ff; text-shadow:0 0 5px #000000;">Voice Actor</h2>
+    <div class="staff-entry" style="background-color:#000000; border-color:#800080; box-shadow:0 0 8px #800080;">
+      <img src="VECTORY.png">
+      <div class="staff-name" style="color:#000000; text-shadow:0 0 5px #800080;">VECTORY</div>
+      <div class="staff-description" style="color:#800080; text-shadow:0 0 3px #000000;">Stimme von VECTORY Owner und Dread</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#8b0000; box-shadow:0 0 8px #8b0000;">
+      <img src="Killer.jpeg">
+      <div class="staff-name" style="color:#000; text-shadow:0 0 5px #8b0000;">Killer</div>
+      <div class="staff-description" style="color:#000000; text-shadow:0 0 3px #8b0000;">Stimme von Scott Owner</div>
+    </div>
+
+    <div class="staff-entry" style="background-image: url('FuchsieBackground.gif');background-size: cover;background-position: center;border-color:#9b30ff;box-shadow: 0 0 8px #9b30ff;">
+      <img src="Fuchsie.gif">
+      <div class="staff-name" style="color:#9b30ff; text-shadow:0 0 5px #000000;">Fuchsie</div>
+      <div class="staff-description" style="color:#9b30ff; text-shadow:0 0 3px #9b30ff;">Stimme von Zeiles Morgana Vilgore und Frax Reich</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#260e47; box-shadow:0 0 8px #260e47;">
+      <img src="Felix.png">
+      <div class="staff-name" style="color:#260e47; text-shadow:0 0 5px #000000;">Felix</div>
+      <div class="staff-description" style="color:#260e47; text-shadow:0 0 3px #000000;">Stimme von Erkan Imkal</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#83ccca; box-shadow:0 0 8px #83ccca;">
+      <img src="Queen Bee.png">
+      <div class="staff-name" style="color:#83ccca; text-shadow:0 0 5px #000000;">Queen Bee</div>
+      <div class="staff-description" style="color:#83ccca; text-shadow:0 0 3px #83ccca;">Stimme von Jamie Fleck und Jill Leif</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#d45c00; box-shadow:0 0 8px #d45c00;">
+      <img src="Rée.jpg">
+      <div class="staff-name" style="color:#d45c00; text-shadow:0 0 5px #000000;">Rée</div>
+      <div class="staff-description" style="color:#d45c00; text-shadow:0 0 3px #d45c00;">Stimme von Mila Fenris und Monroe Valise</div>
+    </div>
+
+    <div class="staff-entry" style="background-image: url('DinonudelBackground.gif');background-size: cover;background-position: center;border-color:#9b30ff;box-shadow: 0 0 8px #a327e6;">
+      <img src="Dinonudel.gif">
+      <div class="staff-name" style="color:#a327e6; text-shadow:0 0 5px #000000;">Dinonudel</div>
+      <div class="staff-description" style="color:#a327e6; text-shadow:0 0 3px #a327e6;">Stimme von Mint Rech</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#9b30ff; box-shadow:0 0 8px #9b30ff;">
+      <img src="Mugen.jpeg">
+      <div class="staff-name" style="color:#9b30ff; text-shadow:0 0 5px #000000;">Mugen</div>
+      <div class="staff-description" style="color:#9b30ff; text-shadow:0 0 3px #9b30ff;">Stimme von Foxim Reich und Knolli Wile</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#c0eb34; box-shadow:0 0 8px #c0eb34;">
+      <img src="Earthevocator.png">
+      <div class="staff-name" style="color:#c0eb34; text-shadow:0 0 5px #000000;">Eathevocator</div>
+      <div class="staff-description" style="color:#c0eb34; text-shadow:0 0 3px #c0eb34;">Stimme von ???</div>
+    </div>
+
+    <div class="staff-entry" style="background-color:#000000; border-color:#9b30ff; box-shadow:0 0 8px #9b30ff;">
+      <img src="IK.png">
+      <div class="staff-name" style="color:#9b30ff; text-shadow:0 0 5px #000000;">IK</div>
+      <div class="staff-description" style="color:#9b30ff; text-shadow:0 0 3px #9b30ff;">Stimme von ???</div>
+    </div>
+
+  </section>
+
+  <section id="kontakt">
+    <div class="kontakt-container">
+      <h2>Kontaktiere uns</h2>
+      <p class="kontakt-text">Hast du Fragen, Ideen oder willst du mitarbeiten? Wir freuen uns über jede Nachricht!</p>
+      <div class="kontakt-methoden">
+        <div class="kontakt-item discord">
+          <div class="icon">💬</div>
+          <div class="details">
+            <h3>Discord</h3>
+            <a href="https://discord.gg/hewy2By47T" target="_blank">Beitreten</a>
+          </div>
+        </div>
+        <div class="kontakt-item email">
+          <div class="icon">📧</div>
+          <div class="details">
+            <h3>E-Mail</h3>
+            <a href="mailto:foxgames@web.de">foxgames@web.de</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="partnerschaft">
+  <div style="background: linear-gradient(135deg, #002f2f, #004d4d); box-shadow: 0 0 20px rgba(0, 255, 200, 0.2); padding: 2rem; border-radius: 20px; max-width: 800px; margin: 2rem auto; color: #ffffff; font-family: Arial, sans-serif;">
+    <h2 style="color: #00ffee; text-shadow: 0 0 10px #000; text-align: center; margin-bottom: 1rem;">Partnerschaftsanfrage</h2>
+    <p style="color: #cccccc; font-size: 1.1rem; text-align: center; margin-bottom: 2rem;">Du möchtest mit uns zusammenarbeiten? Fülle einfach das folgende Formular aus und wir melden uns bei dir!</p>
+
+    <form action="/partnership" method="POST" style="max-width: 600px; margin: auto; text-align: left;">
+      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Dein Name:</label>
+      <input type="text" name="name" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">E-Mail:</label>
+      <input type="email" name="email" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Discord-Server (Name oder Invite):</label>
+      <input type="text" name="discord" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Wieviele Abos/Follower?</label>
+      <input type="text" name="abos" placeholder="z. B. YouTube 2.000, Twitch 500, Discord 800" style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Twitch/YouTube-Link(s):</label>
+      <input type="text" name="links" placeholder="z. B. twitch.tv/deinname, youtube.com/@deinchannel" style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Warum möchtest du Partner werden?</label>
+      <textarea name="message" rows="4" placeholder="Kurze Motivation..." style="width:100%; padding:0.5rem; margin-bottom:1.5rem; border-radius:5px; border:none;"></textarea>
+
+      <button type="submit" style="padding:0.7rem 1.5rem; font-weight:bold; background:#00ffee; color:#000; border:none; border-radius:6px; cursor:pointer; width:100%;">ABSENDEN</button>
+    </form>
+  </div>
+</section>
+
+<section id="serverreport">
+  <div class="report-container">
+    <h2>Server melden</h2>
+    <p class="report-text">Hier kannst du Server melden, die gegen unsere Richtlinien verstoßen. Bitte sei ehrlich – Missbrauch kann zu Einschränkungen führen.</p>
+
+<form action="/report" method="POST" onsubmit="return confirmServerReport(event)" style="text-align:left; max-width:600px; margin:auto;">
+  <label for="servername">Servername:</label>
+  <input type="text" name="servername" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+  <label for="ip">IP-Adresse:</label>
+  <input type="text" name="ip" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+  <label for="reason">Grund der Meldung:</label>
+  <input type="text" name="reason" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+  <label for="description">Beschreibung (optional):</label>
+  <textarea name="description" rows="4" style="width:100%; padding:0.5rem; border-radius:5px; border:none;"></textarea>
+
+  <label for="contact">Dein Name: (Discord oder E-Mail)</label>
+  <input type="text" name="contact" required placeholder="z. B. Max / Max#1234 / max@email.de" style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+
+  <button type="submit" style="margin-top:1rem; padding:0.7rem 1.5rem; font-weight:bold; background:#e63946; color:#fff; border:none; border-radius:6px; cursor:pointer;">SERVER MELDEN</button>
+</form>
+  </div>
+</section>
+
+<section id="administrativeost" style="padding:4rem 2rem; max-width:1200px; margin:auto; color:#fff; font-family:Arial, sans-serif;">
+  <h2 style="border-radius: 40px;display: flex;justify-content: center;text-align:center; font-size:3rem; margin-bottom:3rem;color: #000000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #ff0000, 0 0 25px #000000 inset;">Administrative</h2>
+
+  <div style="display:flex; flex-direction:column; gap:2rem;">
+
+  <div class="audioplayer" style="--visualizer-color: #8b0000" data-index="0">
+    <div class="track-number" style="color: #000000; text-shadow: 0 0 5px #8b0000;">01</div>
+    <div class="track-title" style="color: #000000; text-shadow: 0 0 5px #8b0000;">Fox Games Intro</div>
+    <div class="controls">
+      <button onclick="prevTrack()">⏮️</button>
+      <button class="play-btn" onclick="togglePlay(this)">▶️</button>
+      <button onclick="nextTrack()">⏭️</button>
+      <canvas class="visualizer" width="300" height="60"></canvas>
+      <div class="progress">
+        <input type="range" value="0" step="0.1" onchange="seek(this)">
+      </div>
+      <div class="time">0:00 / 0:00</div>
+      <div class="volume">
+        <input type="range" min="0" max="1" step="0.01" value="1" oninput="setVolume(this)">
+      </div>
+    </div>
+    <a href="administrativeost/0Fox Games Intro.mp3" download class="download-btn">
+      <img src="assets/download.png" alt="Download Button">
+    </a>
+    <audio src="administrativeost/01 Fox Games Intro.mp3"></audio>
+  </div>
+
+  <div class="audioplayer" style="--visualizer-color: #ffffff" data-index="0">
+    <div class="track-number" style="color: #ffffff;">02</div>
+    <div class="track-title" style="color: #ffffff;">Menu</div>
+    <div class="controls">
+      <button onclick="prevTrack()">⏮️</button>
+      <button class="play-btn" onclick="togglePlay(this)">▶️</button>
+      <button onclick="nextTrack()">⏭️</button>
+      <canvas class="visualizer" width="300" height="60"></canvas>
+      <div class="progress">
+        <input type="range" value="0" step="0.1" onchange="seek(this)">
+      </div>
+      <div class="time">0:00 / 0:00</div>
+      <div class="volume">
+        <input type="range" min="0" max="1" step="0.01" value="1" oninput="setVolume(this)">
+      </div>
+    </div>
+    <a href="administrativeost/02 Menu.mp3" download class="download-btn">
+      <img src="assets/download.png" alt="Download Button">
+    </a>
+    <audio src="administrativeost/02 Menu.mp3"></audio>
+  </div>
+
+  <div class="audioplayer" style="--visualizer-color: #ff0000" data-index="0">
+    <div class="track-number" style="color: #000000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #ff0000, 0 0 25px #000000 inset;">03</div>
+    <div class="track-title" style="color: #000000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #ff0000, 0 0 25px #000000 inset;">Dread Main Theme</div>
+    <div class="controls">
+      <button onclick="prevTrack()">⏮️</button>
+      <button class="play-btn" onclick="togglePlay(this)">▶️</button>
+      <button onclick="nextTrack()">⏭️</button>
+      <canvas class="visualizer" style="color:#ff0000" width="300" height="60"></canvas>
+      <div class="progress">
+        <input type="range" value="0" step="0.1" onchange="seek(this)">
+      </div>
+      <div class="time">0:00 / 0:00</div>
+      <div class="volume">
+        <input type="range" min="0" max="1" step="0.01" value="1" oninput="setVolume(this)">
+      </div>
+    </div>
+    <a href="administrativeost/03 Dread Main Theme.mp3" download class="download-btn">
+      <img src="assets/download.png" alt="Download Button">
+    </a>
+    <audio src="administrativeost/03 Dread Main Theme.mp3"></audio>
+  </div>
+
+<div class="audioplayer unknown" data-index="0">
+    <div class="track-number" style="color: #000000; text-shadow: 0 0 5px #ffffff; background-color: #000000; border: 1px solid #ffffff;box-shadow: 0 2px 12px #000000, 0 0 25px #000000 inset;">04</div>
+    <div class="track-title" style="color: #000000; text-shadow: 0 0 5px #ffffff; background-color: #000000; border: 1px solid #ffffff;box-shadow: 0 2px 12px #000000, 0 0 25px #000000 inset;">???</div>
+  <audio src=""></audio>
+
+</div>
+
+  </div>
+
+  <style>
+    .btn img {
+      width: 30px;
+      height: auto;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .audioplayer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 10px;
+      color: white;
+    }
+    .visualizer {
+      flex: 1;
+      height: 60px;
+      background: black;
+      border-radius: 5px;
+      display: block;
+    }
+    .track-number {
+      border-radius: 4px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    .track-title {
+      border-radius: 4px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 4px;
+      flex: 1;
+      min-width: 150px;
+      margin-left: 10px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      flex: 2;
+      gap: 0.5rem;
+      min-width: 250px;
+      margin: 0 1rem;
+      flex-wrap: wrap;
+    }
+
+    .controls button {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: lime;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+    }
+
+    .progress {
+      flex: 1;
+    }
+
+    .progress input[type="range"],
+    .volume input[type="range"] {
+      width: 100%;
+    }
+
+    .time {
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+
+    .volume {
+      width: 80px;
+    }
+
+    .download-btn img {
+      width: 30px;
+      height: auto;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .download-btn:hover img {
+      filter: drop-shadow(0 0 6px lime);
+      transform: scale(1.1);
+    }
+
+    .download-btn:active img {
+      transform: scale(0.95);
+      filter: drop-shadow(0 0 3px lime);
+    }
+  </style>
+<script>
+  const players = Array.from(document.querySelectorAll('.audioplayer'))
+    .filter(player => player.querySelector('audio') && player.querySelector('audio').src);
+  let currentPlayerIndex = 0;
+
+  function pauseAll() {
+    players.forEach(player => {
+      const audio = player.querySelector('audio');
+      const btn = player.querySelector('.play-btn');
+      if (!audio || !btn) return;
+      audio.pause();
+      btn.textContent = '▶️';
+    });
+  }
+
+  function togglePlay(btn) {
+    const player = btn.closest('.audioplayer');
+    const audio = player.querySelector('audio');
+
+    if (audio.paused) {
+      pauseAll();
+      audio.play();
+      btn.textContent = '⏸️';
+    } else {
+      audio.pause();
+      btn.textContent = '▶️';
+    }
+  }
+
+  function seek(input) {
+    const player = input.closest('.audioplayer');
+    const audio = player.querySelector('audio');
+    audio.currentTime = input.value;
+  }
+
+  function setVolume(input) {
+    const player = input.closest('.audioplayer');
+    const audio = player.querySelector('audio');
+    audio.volume = input.value;
+  }
+
+  function formatTime(seconds) {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec.toString().padStart(2, '0')}`;
+  }
+
+  function updateTime(player) {
+    const audio = player.querySelector('audio');
+    const progress = player.querySelector('input[type="range"]');
+    const timeDisplay = player.querySelector('.time');
+
+    if (!audio || !progress || !timeDisplay) return;
+
+    progress.max = audio.duration || 0;
+    progress.value = audio.currentTime;
+    timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+  }
+
+  players.forEach((player, index) => {
+    const audio = player.querySelector('audio');
+
+    audio.addEventListener('timeupdate', () => updateTime(player));
+    audio.addEventListener('ended', () => {
+      const playBtn = player.querySelector('.play-btn');
+      if (playBtn) playBtn.textContent = '▶️';
+      const range = player.querySelector('input[type="range"]');
+      if (range) range.value = 0;
+    });
+  });
+
+  function nextTrack() {
+    if (currentPlayerIndex < players.length - 1) {
+      const current = players[currentPlayerIndex];
+      const next = players[++currentPlayerIndex];
+      current.querySelector('audio').pause();
+      current.querySelector('.play-btn').textContent = '▶️';
+      next.querySelector('audio').play();
+      next.querySelector('.play-btn').textContent = '⏸️';
+    }
+  }
+
+  function prevTrack() {
+    if (currentPlayerIndex > 0) {
+      const current = players[currentPlayerIndex];
+      const prev = players[--currentPlayerIndex];
+      current.querySelector('audio').pause();
+      current.querySelector('.play-btn').textContent = '▶️';
+      prev.querySelector('audio').play();
+      prev.querySelector('.play-btn').textContent = '⏸️';
+    }
+  }
+
+  // Visualizer
+  players.forEach((player) => {
+    const audio = player.querySelector('audio');
+    const canvas = player.querySelector('.visualizer');
+    if (!audio || !canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioCtx.createAnalyser();
+    const source = audioCtx.createMediaElementSource(audio);
+
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+    analyser.fftSize = 256;
+
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function draw() {
+      requestAnimationFrame(draw);
+      analyser.getByteFrequencyData(dataArray);
+
+      const width = canvas.clientWidth;
+      const height = canvas.height;
+      canvas.width = width;
+
+      const style = getComputedStyle(player);
+      const baseColor = style.getPropertyValue('--visualizer-color').trim() || '#00ff00';
+
+      ctx.clearRect(0, 0, width, height);
+
+      const barWidth = (width / bufferLength) * 2.5;
+      let x = 0;
+
+      for (let i = 0; i < bufferLength; i++) {
+        const barHeight = dataArray[i] / 2;
+        ctx.fillStyle = applyAlphaToColor(baseColor, 0.5 + barHeight / 255 / 2);
+        ctx.fillRect(x, height - barHeight, barWidth, barHeight);
+        x += barWidth + 1;
+      }
+    }
+
+    audio.addEventListener('play', () => {
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      draw();
+    });
+  });
+
+  function applyAlphaToColor(hex, alpha) {
+    let r, g, b;
+    if (hex.length === 7) {
+      r = parseInt(hex.slice(1, 3), 16);
+      g = parseInt(hex.slice(3, 5), 16);
+      b = parseInt(hex.slice(5, 7), 16);
+    } else if (hex.length === 4) {
+      r = parseInt(hex[1] + hex[1], 16);
+      g = parseInt(hex[2] + hex[2], 16);
+      b = parseInt(hex[3] + hex[3], 16);
+    } else {
+      r = 0; g = 255; b = 0;
+    }
+    return `rgba(${r},${g},${b},${alpha.toFixed(2)})`;
+  }
+</script>
+</section>
+
+  <section id="impressum">
+    <div class="legal-container">
+      <h2>Impressum</h2>
+      <p><strong>Fox Games</strong><br>VECTORY<br>Straße 1<br>30556 Fox<br>Deutschland</p>
+      <p>E-Mail: kontakt@foxgames.de<br>Telefon: ///</p>
+      <p>Verantwortlich gemäß § 5 TMG: VECTORY</p>
+    </div>
+  </section>
+
+  <section id="datenschutz">
+    <div class="legal-container">
+      <h2>Datenschutzerklärung</h2>
+      <p>Wir nehmen den Schutz deiner persönlichen Daten sehr ernst. Personenbezogene Daten werden auf dieser Webseite nur im notwendigen Umfang erhoben. In keinem Fall werden die Daten verkauft oder aus anderen Gründen an Dritte weitergegeben.</p>
+      <p>Beim Besuch unserer Website können durch unseren Hostinganbieter automatisch Daten wie IP-Adresse, Browsertyp, Betriebssystem etc. gespeichert werden. Diese Daten dienen ausschließlich der technischen Absicherung und statistischen Auswertung.</p>
+      <p>Du hast jederzeit das Recht auf Auskunft über die von dir gespeicherten Daten sowie das Recht auf Berichtigung oder Löschung dieser Daten.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 Fox Games | <a href="#" onclick="showSection('impressum')">Impressum</a> | <a href="#" onclick="showSection('datenschutz')">Datenschutz</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
