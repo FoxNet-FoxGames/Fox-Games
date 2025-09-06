@@ -10,21 +10,26 @@
     header { text-align: center; padding: 2rem 1rem 1rem; }
     header img.logo { width: 200px; display: block; margin: 0 auto 1rem; }
     header img.title { max-width: 60%; height: auto; display: block; margin: auto; }
+
     nav { display: flex; justify-content: center; gap: 2rem; background: #111; padding: 1rem 0; }
     nav a { background: linear-gradient(135deg, #ff0000, #ff6600); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; font-weight: bold; cursor: pointer; transition: all 0.3s ease; padding: 0.3rem 0.6rem; border-radius: 5px; position: relative; }
     nav a::after { content: ''; position: absolute; inset: 0; border-radius: 5px; background: linear-gradient(135deg, #ff0000, #ff6600); opacity: 0; transition: opacity 0.3s ease; z-index: -1; }
     nav a:hover { -webkit-text-fill-color: #fff; }
     nav a:hover::after { opacity: 1; filter: blur(4px); }
+
     .welcome-container { background: linear-gradient(145deg, #111, #1a1a1a); border-radius: 15px; padding: 2rem; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); text-align: center; max-width: 800px; margin: auto; }
     .welcome-container h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #ff6600; text-shadow: 0 0 10px #000; }
     .welcome-container .highlight { background: linear-gradient(45deg, #ff0000, #ff6600); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .welcome-container p { font-size: 1.2rem; color: #ccc; line-height: 1.6; margin: 1rem 0; }
+
     section { display: none; padding: 2rem; max-width: 1000px; margin: auto; }
     section.active { display: block; }
+
     .game { margin-bottom: 2rem; }
-    .game-feature { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; background: linear-gradient(135deg, #230041, #30114e); padding: 2rem; border-radius: 20px; box-shadow: 0 0 20px rgba(255, 0, 255, 0.2); margin: auto; max-width: 1000px; color: #fff; }
+    .game-feature { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; padding: 2rem; border-radius: 20px; margin: auto; max-width: 1000px; }
     .game-info { flex: 1 1 50%; min-width: 300px; }
     .game-info h2 { font-size: 2.5rem; margin: 1rem 0; }
+
     .badge { display: inline-block; background: linear-gradient(to right, #9a4dff, #4da6ff); color: white; padding: 0.3rem 1rem; border-radius: 999px; font-size: 0.9rem; font-weight: bold; }
     .badge-icon { margin-right: 0.5rem; }
     .tags { margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -44,6 +49,7 @@
     .bottom-left { bottom: -10px; left: -10px; }
     .game-feature + .game-feature { margin-top: 3rem; }
     .project-lead {position: absolute;bottom: -20px;left: 0px;color: #666;font-size: 12px;font-weight: normal;}
+
     .job-listing { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding-top: 2rem; }
     .job-card { background: #111; padding: 1.5rem; border-radius: 12px; width: 250px; text-align: center; box-shadow: 0 0 15px rgba(255, 255, 255, 0.05); transition: transform 0.3s, box-shadow 0.3s; }
     .job-card:hover { transform: translateY(-5px); box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
@@ -53,11 +59,13 @@
     .job-card.voiceactor h3 { color: #b84dff; text-shadow: 0 0 5px #b84dff; }
     .job-card.sounddesigner h3 { color: #ffa500; text-shadow: 0 0 5px #ffa500; }
     .job-card.composer h3 { color: #ff69b4; text-shadow: 0 0 5px #ff69b4; }
+
     .staff-section { text-align: center; }
     .staff-entry { display: inline-block; padding: 1rem; margin: 1rem; border-radius: 10px; text-align: center; background-color: #000000; border: 2px solid #000000; box-shadow: 0 0 8px #ffffff; }
     .staff-entry img { width: 200px; height: 200px; object-fit: cover; border-radius: 10px; display: block; margin: 0 auto 1rem; }
     .staff-name { font-size: 1.2rem; font-weight: bold; color: #800080; text-shadow: 0 0 5px #000; }
     .staff-description { color: #bbbbbb; text-shadow: 0 0 3px #000; }
+
     .kontakt-container { background: linear-gradient(135deg, #1a001f, #2b003b); padding: 2rem; border-radius: 20px; max-width: 800px; margin: auto; box-shadow: 0 0 20px rgba(255, 0, 128, 0.2); text-align: center; color: #fff; }
     .kontakt-container h2 { font-size: 2.2rem; color: #ff66cc; text-shadow: 0 0 10px #000; margin-bottom: 1rem; }
     .kontakt-text { color: #ccc; margin-bottom: 2rem; font-size: 1.1rem; }
@@ -68,6 +76,7 @@
     .kontakt-item h3 { margin-bottom: 0.5rem; font-size: 1.3rem; color: #ff99cc; }
     .kontakt-item a { color: #ff66cc; font-weight: bold; text-decoration: none; }
     .kontakt-item a:hover { text-decoration: underline; }
+
     .report-container {background: linear-gradient(135deg, #1a001f, #2b003b);padding: 2.5rem 3rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 128, 0.4);text-align: center;color: #fff;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.1rem;line-height: 1.5;border: 2px solid #ff0080;transition: box-shadow 0.3s ease;}
     .report-container:hover {box-shadow: 0 0 40px rgba(255, 0, 128, 0.7);}
     .report-container strong {color: #ff66cc;font-weight: 600;}
@@ -112,9 +121,11 @@
 </head>
 <body>
   <header>
+    <a onclick="showSection('willkommen')" style="cursor: pointer;">
     <img src="Fox Games Logo.png" class="logo" style="width: 250px;">
     <img src="Fox Games Title.png" class="title" style="max-width: 20%;">
-  </header>
+  </a>
+</header>
 
   <nav>
     <a onclick="showSection('willkommen')">Willkommen</a>
@@ -124,54 +135,73 @@
     <a onclick="showSection('kontakt')">Kontakt</a>
     <a onclick="showSection('partnerschaft')">Partnerschaft</a>
     <a onclick="showSection('serverreport')">Server melden</a>
-    <a onclick="showSection('administrativeost')">Administrative OST</a>
     <a href="pass.html">FoxNet Login</a>
   </nav>
 
   <section id="willkommen">
     <div class="welcome-container">
       <h2>Willkommen bei <span class="highlight">Fox Games</span></h2>
-      <p>Wir sind ein leidenschaftliches Indie-Entwicklerstudio, das sich darauf spezialisiert hat, einzigartige Spiele mit Herz und Seele zu schaffen. Unser kleines, aber engagiertes Team arbeitet ständig daran, kreative Ideen zum Leben zu erwecken – für dich und unsere Community.</p>
-      <p>Egal ob du Spieler:in, Entwickler:in oder einfach nur neugierig bist – schön, dass du hier bist!</p>
+      <p>Bei uns gibt es keine Angestellten – nur Familie. Wir sind ein kleines, leidenschaftliches Indie-Animationsstudio, das mit Herz und Seele einzigartige Serien und Filme erschafft. Alles, was wir tun, entsteht aus Freude, Neugier und Kreativität – für dich und unsere wachsende Community. Ob du zuschaust, mitgestaltest oder einfach nur neugierig bist.</p>
+      <p>wir freuen uns riesig, dass du hier bist Willkommen bei <span class="highlight">Fox Games</span></h2></p>
     </div>
   </section>
 
   <section id="spiele">
-    <div class="game-feature">
-      <div class="game-info">
-        <div class="badge"><span class="badge-icon">🎮</span> FEATURED GAME</div>
-        <h2>Administrative</h2>
-        <div class="tags">
-          <div class="tag" style="color: #5b00fb; text-shadow: 0 0 5px #5b00fb; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">MMORPG</div>
-          <div class="tag" style="color: #5b00fb; text-shadow: 0 0 5px #5b00fb; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">Gott-Simulator</div>
-          <div class="tag" style="color: #5b00fb; text-shadow: 0 0 5px #5b00fb; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">Voice Chat</div>
-          <div class="tag" style="color: #5b00fb; text-shadow: 0 0 5px #5b00fb; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">Achievements</div>
-          <div class="tag" style="color: #5b00fb; text-shadow: 0 0 5px #5b00fb; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">Online-PvP</div>
-          <div class="tag" style="color: #5b00fb; text-shadow: 0 0 5px #5b00fb; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">LAN-PvP</div>
-          <div class="tag" style="color: #5b00fb; text-shadow: 0 0 5px #5b00fb; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">Online-Koop</div>
-          <div class="tag" style="color: #5b00fb; text-shadow: 0 0 5px #5b00fb; background-color: #000000; border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">LAN-Koop</div>
-        </div>
-        <p class="description">Ein MMORPG/Gott-Simulator. Multiplayer mit Voicechat und starkem Community-Fokus. Schwierig am Anfang, aber man wächst mit jeder Erfahrung.</p>
-        <ul class="features">
-          <li><span class="icon">🌍</span> Riesige, persistente Welten</li>
-          <li><span class="icon">🧠</span> Integrierter Voice Chat</li>
-          <li><span class="icon">🕹️</span> Community-getriebenes Gameplay</li>
-          <li><span class="icon">📈</span> Progressives Lernsystem</li>
-          <div class="project-lead">Leitung: VECTORY</div>
-        </ul>
-      </div>
-      <div class="game-preview">
-        <div class="preview-box">
-          <div class="preview-icon">⚡</div>
-          <div class="preview-text">
-            <div class="preview-title">Coming Soon</div>
-            <div class="preview-sub">Screenshots & Gameplay</div>
-          </div>
-        </div>
-        <div class="corner-icon top-right">🎯</div>
-        <div class="corner-icon bottom-left">✈️</div>
+<div class="game-feature" 
+     style="background:#000; color:#ff0000; border:2px solid #ff0000; box-shadow:0 0 20px #ff0000;">
+  
+  <div class="game-info">
+    <div class="badge" style="color: #ff0000; text-shadow: 0 0 5px #ff0000;"> 
+      <span class="badge-icon">🎮</span> FEATURED GAME
+    </div>
+    <h2 style="color: #000000; text-shadow: 0 0 5px #ff0000;">Administrative</h2>
+    
+    <div class="tags">
+      <div class="tag" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #ff0000; box-shadow: 0 2px 12px #000000;">MMORPG</div>
+      <div class="tag" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #ff0000; box-shadow: 0 2px 12px #000000;">Gott-Simulator</div>
+      <div class="tag" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #ff0000; box-shadow: 0 2px 12px #000000;">Voice Chat</div>
+      <div class="tag" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #ff0000; box-shadow: 0 2px 12px #000000;">Achievements</div>
+      <div class="tag" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #ff0000; box-shadow: 0 2px 12px #000000;">Online-PvP</div>
+      <div class="tag" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #ff0000; box-shadow: 0 2px 12px #000000;">LAN-PvP</div>
+      <div class="tag" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #ff0000; box-shadow: 0 2px 12px #000000;">Online-Koop</div>
+      <div class="tag" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #ff0000; box-shadow: 0 2px 12px #000000;">LAN-Koop</div>
+    </div>
+    
+    <p class="description" style="color: #ffffff;">Ein MMORPG/Gott-Simulator. Multiplayer mit Voicechat und starkem Community-Fokus. Schwierig am Anfang, aber man wächst mit jeder Erfahrung.</p>
+    
+    <ul class="features" style="color: #ffffff;">
+      <li><span class="icon">🌍</span> Riesige, persistente Welten</li>
+      <li><span class="icon">🧠</span> Integrierter Voice Chat</li>
+      <li><span class="icon">🕹️</span> Community-getriebenes Gameplay</li>
+      <li><span class="icon">📈</span> Progressives Lernsystem</li>
+      <div class="project-lead">Leitung: VECTORY</div>
+    </ul>
+  </div>
+  
+  <div class="game-preview" style="margin-top: 15px;">
+    <div class="preview-box" 
+         style="border: 2px solid #000000; background-color: #111; padding: 10px; border-radius: 10px; text-align: center;">
+      
+      <!-- YouTube Video -->
+      <iframe width="300" height="170" src="https://www.youtube.com/embed/nhylYD8xvF4" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+
+      <div class="preview-text" style="color: #ffffff;">
+        <div class="preview-title">Coming Soon</div>
+        <div class="preview-sub">Screenshots & Gameplay</div>
+        <button onclick="nextScreenshot()" style="background: #000; color: #ff00ff; border: 1px solid #ff0000; padding: 5px 10px;">➡️</button>
       </div>
     </div>
+    
+    <div class="corner-icon top-right" style="color:#ff0000;">🎯</div>
+    
+    <div class="corner-icon bottom-left">
+      <button onclick="showSection('administrativeost')" style="background: #000; color: #ff0000; border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
+    </div>
+  </div>
+</div>
 
     <div class="game-feature">
       <div class="game-info">
@@ -428,7 +458,7 @@
     <div class="staff-entry" style="background-image: url('MargaretheBackground.gif');background-size: cover;background-position: center;border-color:#5e0e11;box-shadow: 0 0 8px #5e0e11;">
       <img src="Margarethe.jpg">
       <div class="staff-name" style="color:#5e0e11; text-shadow:0 0 5px #000000;">Margarethe</div>
-      <div class="staff-description" style="color:#5e0e11; text-shadow:0 0 3px #5e0e11;">Stimme von ???</div>
+      <div class="staff-description" style="color:#5e0e11; text-shadow:0 0 3px #5e0e11;">Stimme von Elize Hanko</div>
     </div>
 
     <div class="staff-entry" style="background-image: url('EarthevocatorBackground.gif');background-size: cover;background-position: center;border-color:#c0eb34;box-shadow: 0 0 8px #c0eb34;">
