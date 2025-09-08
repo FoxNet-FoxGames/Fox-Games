@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jamie Fleck</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent1:#ff8800; /* default Lieblingsfarbe */
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:18px;
+      --maxw:980px;
+    }
+    *{box-sizing:border-box}
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(110,231,183,0.06), transparent),
+              linear-gradient(180deg, #071025 0%, #071422 100%),
+              var(--bg);
+  color: #e6eef8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 48px 20px;
+  display: flex;
+  justify-content: center;   /* horizontal mittig */
+}
+
+.wrap {
+  max-width: var(--maxw);
+  width: 100%;
+}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+      border-radius:var(--radius);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 360px 1fr;
+      gap:0;
+      backdrop-filter: blur(8px) saturate(120%);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    /* Left column */
+    .left{
+      padding:28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      align-items:center;
+      justify-content:flex-start;
+    }
+
+.portrait {
+  max-width: 220px;   /* oder eine andere Wunschbreite */
+  border-radius: 16px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  box-shadow: 0 12px 30px rgba(3,8,20,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.portrait img {
+  display: block;
+  width: 100%;   /* skaliert die Breite, Höhe passt sich automatisch an */
+  height: auto;  /* sorgt dafür, dass die Proportionen bleiben */
+  object-fit: contain; /* optional, kann auch raus */
+}
+
+    .name{
+      font-size:24px;font-weight:800;letter-spacing:0.2px;margin-top:6px;text-align:center;
+    }
+    .subtitle{font-size:13px;color:var(--muted);text-align:center}
+
+    .favColor{
+      display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:12px;background:var(--glass-2);
+      width:100%;justify-content:center;border:1px solid rgba(255,255,255,0.015);
+    }
+    .swatch{width:36px;height:36px;border-radius:8px;border:1px solid rgba(0,0,0,0.25)}
+    .meta-list{width:100%;display:flex;flex-direction:column;gap:10px}
+
+    .meta{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);}
+    .meta .k{color:var(--muted);font-size:13px}
+    .meta .v{font-weight:600}
+
+    /* Right column */
+    .right{padding:28px 32px;display:flex;flex-direction:column;gap:18px}
+    .section{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .section h3{margin:0;font-size:16px;font-weight:700}
+    .section p{margin:8px 0 0;color:var(--muted);line-height:1.45}
+
+    .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .info-item{padding:12px;background:var(--glass);border-radius:10px}
+    .info-item .label{font-size:12px;color:var(--muted)}
+    .info-item .value{font-weight:700;margin-top:6px}
+
+    .family{display:flex;gap:12px;flex-wrap:wrap}
+    .family .member{flex:0 0 48%;padding:10px;border-radius:10px;background:var(--glass-2)}
+    .family .member .role{font-size:12px;color:var(--muted)}
+    .family .member .who{font-weight:700;margin-top:6px}
+
+.zitate {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+.quote-box {
+  background-color: #000000;
+  border-left: 5px solid #fabd44;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 8px;
+}
+.quote-box strong {
+  font-size: 1.1em;
+  display: block;
+}
+
+    .history{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .history h3{margin:0;font-size:16px;font-weight:700}
+    .history p{margin:8px 0 0;color:var(--muted);line-height:1.45}
+
+    .footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    /* small screens */
+    @media (max-width:900px){
+      .card{grid-template-columns:1fr;}
+      .left{flex-direction:row;gap:16px;padding:18px}
+      .portrait{width:120px;height:120px}
+    }
+
+    /* utility - editable hints */
+    .hint{font-size:12px;color:var(--muted);}
+
+    /* CSS variable editing area (hidden by default, useful to change favourite color quickly) */
+    .editor{display:flex;gap:8px;align-items:center}
+    .editor input[type="color"]{width:44px;height:34px;border-radius:8px;border:0;padding:0;background:none}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Charakter Steckbrief">
+
+      <aside class="left">
+        <div class="portrait" title="Jamie Fleck (15)">
+          <img src="JamieFleck.png"/>
+        </div>
+
+        <div style="text-align:center">
+            <div class="name"><div class="who"><a href="JamieFleck.html" style="color: #000000; text-shadow: 0 0 5px #ff0000;text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#fabd44'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #ff0000';">Jamie Fleck</a></div></div>
+          <div class="subtitle"></div>
+        </div>
+
+        <div class="meta-list">
+            <div class="meta"><div class="k">Synchronsprecher</div><div class="who"><a href="QueenBee.html" style="color: #83ccca; text-shadow: 0 0 5px #83ccca; text-decoration: none;">Queen Bee</a></div></div>
+        </div>
+
+        <div class="favColor">
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px">
+            <div class="hint">Lieblingsfarbe</div>
+            <div style="font-weight:700">Orange</div>
+          </div>
+          <div class="swatch" style="background:var(--accent1)"></div>
+        </div>
+
+        <div class="meta-list">
+          <div class="meta"><div class="k">Geschlecht</div><div class="v">Weiblich</div></div>
+          <div class="meta"><div class="k">Geburtsort</div><div class="v"><a href="C.A.T.Einrichtung.html" style="color: #00ffff; text-shadow: 0 0 5px #0000; text-decoration: none; transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#000000'; this.style.textShadow='0 0 5px #00ffff';"onmouseout="this.style.color='#00ffff'; this.style.textShadow='0 0 5px #000000';">C.A.T. Einrichtung</a>&nbsp;(<a href="Tvera.html" style="color: #00ffff; text-shadow: 0 0 5px #000000; text-decoration: none; transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#000000'; this.style.textShadow='0 0 5px #00ffff';"onmouseout="this.style.color='#00ffff'; this.style.textShadow='0 0 5px #000000';">T´vera</a>)</div></div>
+          <div class="meta"><div class="k">Geburtsdimension</div><div class="v">Catificate</div></div>
+          <div class="meta"><div class="k">Spezies</div><div class="v">Katze (Feline)</div></div>
+          <div class="meta"><div class="k">Beruf / Rolle</div><div class="v"><a href="Admin.html" style="color: #ff0000; text-shadow: 0 0 5px #ff0000; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#000000'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#ff0000'; this.style.textShadow='0 0 5px #ff0000';">Admin</a>&nbsp;/ <span style="color:#800080; text-shadow: 0 0 5px #800080;">Dimensionsreisende</span></div></div>
+
+        </div>
+
+      </aside>
+
+      <main class="right">
+        <section class="section">
+          <h3>Kurzprofil</h3>
+          <p>
+            Jamie Fleck ist ein ruhiges, sensibles, neugieriges Kätzchen, die zwischen Dimensionen reist.
+          </p>
+        </section>
+
+        <section class="section">
+          <h3>Wesentliche Daten</h3>
+          <div class="info-grid" style="margin-top:12px">
+
+            <div class="info-item"><div class="label">Geburtsdatum</div><div class="value">24. Oktober 2021</a></div></div>
+            <div class="info-item"><div class="label">Todesdatum</div><div class="value">///</div></div>
+            <div class="info-item"><div class="label">Größe</div><div class="value">1,47M</div></div>
+            <div class="info-item"><div class="label">Augenfarbe</div><div class="value">Bernstein-Braun</div></div>
+          </div></section>
+
+        <section class="section">
+          <h3>Familie</h3>
+          <div class="family" style="margin-top:12px">
+            <div class="member"><div class="role">Mutter (Leiblich)</div><div class="who"><a href="MashraFleck.html" style="color: #ffcc55; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#000000'; this.style.textShadow='0 0 5px #ffcc55';"onmouseout="this.style.color='#ffcc55'; this.style.textShadow='none';">Mashra Fleck</a></div></div>
+            <div class="member"><div class="role">Vater (Leiblich)</div><div class="who"><a href="FellyFleck.html" style="color: #f28c28; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#000000'; this.style.textShadow='0 0 5px #f28c28';"onmouseout="this.style.color='#f28c28'; this.style.textShadow='none';">Felly Fleck</a></div></div>
+            <div class="member"><div class="role">Mutter (gewählt)</div><div class="who"><a href="RoxyOwner.html" style="color: #000000; text-shadow: 0 0 5px #ee82ee; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#ee82ee'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #ee82ee';">Roxy Owner</a></div></div>
+            <div class="member"><div class="role">Vater (gewählt)</div><div class="who"><a href="Dread.html" style="color: #000000; text-shadow: 0 0 5px #ff0000; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#ff0000'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #ff0000';">Dread</a></div></div>
+            <div class="member"><div class="role">Schwester (gewählt)</div><div class="who"><a href="Viviol.html" style="color: #ee82ee; text-shadow: 0 0 5px #ee82ee; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#000000'; this.style.textShadow='0 0 5px #ee82ee';"onmouseout="this.style.color='#ee82ee'; this.style.textShadow='0 0 5px #ee82ee';">Viviol</a></div></div>
+            <div class="member"><div class="role">Mentor</div><div class="who"><a href="Dread.html" style="color: #000000; text-shadow: 0 0 5px #ff0000; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#ff0000'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #ff0000';">Dread</a></div></div>
+            <div class="member"><div class="role">Entjungferung x1</div><div class="who"><a href="Viviol.html" style="color: #ee82ee; text-shadow: 0 0 5px #ee82ee; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#000000'; this.style.textShadow='0 0 5px #ee82ee';"onmouseout="this.style.color='#ee82ee'; this.style.textShadow='0 0 5px #ee82ee';">Viviol</a></div></div>
+            <div class="member"><div class="role">Entjungferung x2</div><div class="who"><a href="NickoTeros.html" style="color: #ffffff; text-decoration: none;transition: color 0.5s, text-shadow 0.5s;"onmouseover="this.style.color='#000000'; this.style.textShadow='0 0 5px #ffffff';"onmouseout="this.style.color='#ffffff'; this.style.textShadow='none';">Nicko Teros</a></div></div>
+          </div>
+        </section>
+
+<section class="zitate">
+  <h3>Zitate</h3>
+
+  <div class="quote-box">
+    <strong>Ich bin leicht zu verletzen, aber schwer zu brechen.</strong>
+  </div>
+
+  <div class="quote-box">
+Auf zu neuen abenteuern und grenzlosen Erfahrungen!
+  </div>
+
+</section>
+
+        <section class="section">
+          <h3>Biographie & Besonderheiten</h3>
+          <p>
+            Wuchs in der C.A.T.-Einrichtung auf, floh von dort, traf Dread, baute zu ihm eine Bindung auf und reist nun durch Dimensionen.
+          </p>
+        <strong>Besonderheiten:</strong> Hat genau die gleichen Kräfte wie Dread, da er ihr es anvertraut hat.
+      </p>
+    </section>
+
+        <div class="footer">
+        </div>
+    </div>
+  </div>
+</body>
+</html>
