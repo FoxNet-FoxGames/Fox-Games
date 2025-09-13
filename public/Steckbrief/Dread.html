@@ -4,12 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dread</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent1:#000000;--glass: rgba(255,255,255,0.04);--glass-2: rgba(255,255,255,0.02);--radius:18px;--maxw: 1400px}*{box-sizing:border-box}html, body {margin: 0;padding: 0;min-height: 100%;}
-
-body{
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background: radial-gradient(1200px 600px at 10% 10%, rgba(110,231,183,0.06), transparent),linear-gradient(180deg, #071025 0%, #071422 100%),var(--bg);color: #e6eef8;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 48px 20px;display: flex;justify-content: center;}
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background: radial-gradient(1200px 600px at 10% 10%, rgba(110,231,183,0.06), transparent),linear-gradient(180deg, #071025 0%, #071422 100%),var(--bg);color: #e6eef8;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 48px 20px;display: flex;justify-content: center;}
     .wrap {max-width: var(--maxw);width: 100%;}
     .card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015)); border-radius:var(--radius); box-shadow: 0 10px 30px rgba(2,6,23,0.7), inset 0 1px 0 rgba(255,255,255,0.02); overflow:hidden; display:grid; grid-template-columns: 2fr 3fr 2fr; width: 100%; margin: 0 auto; gap: 20px;position: relative;}
     .left{padding:28px;background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:flex-start;}
@@ -43,11 +40,9 @@ body{
     .wisdom {background-color: black;box-shadow: 0 0 8px purple;text-shadow: 0 0 4px purple;}
     .charisma {background-color: black;box-shadow: 0 0 8px hotpink;text-shadow: 0 0 4px hotpink;}
     .trustworthiness {background-color: black;box-shadow: 0 0 8px seagreen;text-shadow: 0 0 4px seagreen;}
-    .fear { background-color: black; box-shadow: 0 0 8px darkred; text-shadow: 0 0 4px darkred; }
     .attractiveness { background-color: black; box-shadow: 0 0 8px pink; text-shadow: 0 0 4px pink; }
     .sexyness { background-color: black; box-shadow: 0 0 8px crimson; text-shadow: 0 0 4px crimson; }
     .sexuality { background-color: black; box-shadow: 0 0 8px crimson; text-shadow: 0 0 4px pink; }
-    .loyalty { background-color: black; box-shadow: 0 0 8px teal; text-shadow: 0 0 4px teal; }
 
     .family{display:flex;gap:12px;flex-wrap:wrap}
     .family .member{flex:0 0 48%;padding:10px;border-radius:10px;background:var(--glass-2)}
@@ -56,146 +51,25 @@ body{
     .zitate {max-width: 600px;margin: 0 auto;font-family: sans-serif;}
     .quote-box {background-color: #000000;border-left: 5px solid #ff0000;padding: 1em;margin: 1em 0;border-radius: 8px;}
     .quote-box strong {font-size: 1.1em;display: block;}
-
-
-
-
-
-
-.bottom {
-  grid-column: 1 / -1;      /* volle Breite der Card */
-  margin-top: 20px;         /* Abstand zu den Spalten oben */
-  display: flex;
-  flex-direction: column;   /* Boxen übereinander */
-  align-items: center;      /* mittig in der Card */
-  gap: 16px;                /* Abstand zwischen Theme und History */
-  padding: 0 16px;          /* Abstand zum Rand der Card */
-}
-
-.theme-section, .history-section {
-  width: 100%;              /* volle Breite der Card minus padding */
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.02);
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-  padding: 16px 24px;
-}
-
-.theme-section h3 {
-  margin: 0 0 8px 0;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.theme-section ul {
-  margin: 0;
-  padding-left: 16px;
-  color: var(--muted);
-}
-
-.theme-section li {
-  margin-bottom: 4px;
-  list-style-type: disc;
-}
-
-.audio-section {
-  width: 100%;
-  margin-top: 16px;
-  padding: 16px 24px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.02);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.audio-section h3 {
-  margin: 0 0 8px 0;
-  font-size: 16px;
-  font-weight: 700;
-  color: #e6eef8;
-}
-
-.audio-player {
-  width: 100%;
-  max-width: 1500px;
-  color: #e6eef8;
-  border-radius: 120px;
-}
-
-.audio-player::-webkit-media-controls-panel {
-  background-color: #ff0000;
-  border-radius: 12px;
-}
-.audio-player::-webkit-media-controls-play-button,
-.audio-player::-webkit-media-controls-volume-slider {
-  filter: invert(1);
-}
-
-.history-section h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.history-section p {
-  margin: 12px 0 0;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-.history-section {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.history-section .event {
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.03));
-  border-left: 4px solid #ff0000;
-  padding: 14px 18px;
-  border-radius: 10px;
-}
-
-.history-section .event-date {
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 4px;
-}
-
-.history-section .event-title {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.history-section .event-desc {
-  font-size: 14px;
-  margin-bottom: 6px;
-  color: #e6eef8;
-}
-
-.history-section .event-result {
-  font-size: 13px;
-  color: #94a3b8;
-  font-style: italic;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .bottom {grid-column: 1 / -1;margin-top: 20px;display: flex;flex-direction: column;align-items: center;gap: 16px;padding: 0 16px;}
+    .theme-section, .history-section {width: 100%;border-radius: 12px;border: 1px solid rgba(255,255,255,0.02);background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding: 16px 24px;}
+    .theme-section h3 {margin: 0 0 8px 0;font-size: 16px;font-weight: 700;}
+    .theme-section ul {margin: 0;padding-left: 16px;color: var(--muted);}
+    .theme-section li {margin-bottom: 4px;list-style-type: disc;}
+    .audio-section {width: 100%;margin-top: 16px;padding: 16px 24px;background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius: 12px;border: 1px solid rgba(255,255,255,0.02);display: flex;flex-direction: column;align-items: center;gap: 12px;}
+    .audio-section h3 {margin: 0 0 8px 0;font-size: 16px;font-weight: 700;color: #e6eef8;}
+    .audio-player {width: 100%;max-width: 1500px;color: #e6eef8;border-radius: 120px;}
+    .audio-player::-webkit-media-controls-panel {background-color: #ff0000;border-radius: 12px;}
+    .audio-player::-webkit-media-controls-play-button,
+    .audio-player::-webkit-media-controls-volume-slider {filter: invert(1);}
+    .history-section h3 {margin: 0;font-size: 18px;font-weight: 700;}
+    .history-section p {margin: 12px 0 0;color: var(--muted);line-height: 1.55;}
+    .history-section {padding: 20px;display: flex;flex-direction: column;gap: 16px;}
+    .history-section .event {background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.03));border-left: 4px solid #ff0000;padding: 14px 18px;border-radius: 10px;}
+    .history-section .event-date {font-size: 12px;color: var(--muted);margin-bottom: 4px;}
+    .history-section .event-title {font-size: 16px;font-weight: 700;margin-bottom: 6px;}
+    .history-section .event-desc {font-size: 14px;margin-bottom: 6px;color: #e6eef8;}
+    .history-section .event-result {font-size: 13px;color: #94a3b8;font-style: italic;}
     .footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
     @media (max-width:900px){
     .card{grid-template-columns:1fr;}
@@ -245,7 +119,7 @@ body{
         <section class="section">
           <h3>Kurzprofil</h3>
           <p>
-            ???
+            Schattenkreatur, Formwandler, multidimensionaler Jäger, Vielseitig, Hartnäckig, Lieb aber streng, wiedersprüchlich, Individuell
           </p>
         </section>
 
@@ -271,11 +145,10 @@ body{
           </div></section>
 
         <section class="section">
-          <h3>Biographie & Besonderheiten</h3>
+          <h3>Biographie</h3>
           <p>
-            ???
+            Dread ist eine Schattenkreatur, deren Existenz zwischen Licht und Dunkelheit pendelt. Als Formwandler kann er seine Gestalt nach Belieben verändern, sei es als Tier, Mensch oder monströse Erscheinung. Seine Fähigkeit, zwischen Dimensionen zu springen, macht ihn zu einem multidimensionalen Jäger, der gleichzeitig Beschützer, Strafender und Beobachter ist. Er ist vielseitig, anpassungsfähig an jede Umgebung und Situation, und hartnäckig in seinen Zielen, der selten von seinem Weg abweichend. Trotz seiner tödlichen Fähigkeiten zeigt er auch eine liebevolle, aber strenge Seite, besonders gegenüber denen, die er trainiert oder beschützt. Dread ist widersprüchlich: brutal und fürsorglich, gefährlich und loyal, mysteriös und nachvollziehbar zugleich. Er agiert individuell, nach eigenen Regeln und Moralvorstellungen, ohne sich von äußeren Konventionen einschränken zu lassen.
           </p>
-        <strong>Besonderheiten:</strong> Steht in der Hirarchie genau unter Roxy.
       </p></section></aside>
 
 <aside class="right">
@@ -290,10 +163,8 @@ body{
         <div class="stat-box intelligence">Intelligenz: 100</div>
         <div class="stat-box wisdom">Weisheit: 100</div>
         <div class="stat-box charisma">Charisma: 100</div>
-        <div class="stat-box fear">Angst: 100</div>
         <div class="stat-box sexyness">Sexyness: 100</div>
         <div class="stat-box sexuality">Sexualität: 100</div>
-        <div class="stat-box loyalty">Loyalität: 100</div>
       </div>
     </div>
   </section>
@@ -429,5 +300,4 @@ body{
   </div>
 </section>
 </main>
-
-        <div class="footer"></div></div></div></body></html>
+<div class="footer"></div></div></div></body></html>
