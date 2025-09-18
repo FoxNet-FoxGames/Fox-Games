@@ -41,8 +41,6 @@
     .charisma {background-color: black;box-shadow: 0 0 8px hotpink;text-shadow: 0 0 4px hotpink;}
     .trustworthiness {background-color: black;box-shadow: 0 0 8px seagreen;text-shadow: 0 0 4px seagreen;}
     .attractiveness { background-color: black; box-shadow: 0 0 8px pink; text-shadow: 0 0 4px pink; }
-    .sexyness { background-color: black; box-shadow: 0 0 8px crimson; text-shadow: 0 0 4px crimson; }
-    .sexuality { background-color: black; box-shadow: 0 0 8px crimson; text-shadow: 0 0 4px pink; }
 
     .family{display:flex;gap:12px;flex-wrap:wrap}
     .family .member{flex:0 0 48%;padding:10px;border-radius:10px;background:var(--glass-2)}
@@ -58,10 +56,8 @@
     .theme-section li {margin-bottom: 4px;list-style-type: disc;}
     .audio-section {width: 100%;margin-top: 16px;padding: 16px 24px;background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius: 12px;border: 1px solid rgba(255,255,255,0.02);display: flex;flex-direction: column;align-items: center;gap: 12px;}
     .audio-section h3 {margin: 0 0 8px 0;font-size: 16px;font-weight: 700;color: #e6eef8;}
-    .audio-player {width: 100%;max-width: 1500px;color: #e6eef8;border-radius: 120px;}
-    .audio-player::-webkit-media-controls-panel {background-color: #ff0000;border-radius: 12px;}
-    .audio-player::-webkit-media-controls-play-button,
-    .audio-player::-webkit-media-controls-volume-slider {filter: invert(1);}
+    .audio-player::-webkit-media-controls-panel {background-color: #8b0000;}
+    .audio-player::-webkit-media-controls-play-button {background-color: #ff0000;border-radius: 50%;filter: invert(0);}
     .history-section h3 {margin: 0;font-size: 18px;font-weight: 700;}
     .history-section p {margin: 12px 0 0;color: var(--muted);line-height: 1.55;}
     .history-section {padding: 20px;display: flex;flex-direction: column;gap: 16px;}
@@ -158,13 +154,11 @@
       <div class="rank">Rang: 4</div>
       <div class="stats-container">
         <div class="stat-box strength">Stärke: 100</div>
-        <div class="stat-box dexterity">Geschicklichkeit: 100</div>
-        <div class="stat-box constitution">Konstitution: 100</div>
-        <div class="stat-box intelligence">Intelligenz: 100</div>
-        <div class="stat-box wisdom">Weisheit: 100</div>
-        <div class="stat-box charisma">Charisma: 100</div>
-        <div class="stat-box sexyness">Sexyness: 100</div>
-        <div class="stat-box sexuality">Sexualität: 100</div>
+        <div class="stat-box dexterity">Geschicklichkeit: 98</div>
+        <div class="stat-box constitution">Konstitution: 96</div>
+        <div class="stat-box intelligence">Intelligenz: 80</div>
+        <div class="stat-box wisdom">Weisheit: 90</div>
+        <div class="stat-box charisma">Charisma: 85</div>
       </div>
     </div>
   </section>
@@ -181,21 +175,44 @@
 </aside>
 
 <main class="bottom">
-  <div class="audio-section">
-    <div class="track-title">Dread</div>
-    <audio controls class="audio-player">
-      <source src="Dread.mp3" type="audio/mpeg">
-      Dein Browser unterstützt kein Audio-Element.
-  </div>
 
-  <div class="audio-section">
-    <div class="track-title">Broken Dread</div>
-    <audio controls class="audio-player">
-      <source src="BrokenDread.mp3" type="audio/mpeg">
-      Dein Browser unterstützt kein Audio-Element.
-  </div>
+  <div class="audio-section" 
+       style="background:linear-gradient(180deg,#3e0000,#140000);border:1px solid #ff1a1a;border-radius:12px;padding:16px 24px;">
+    <div class="track-title" style="color:#000000;text-shadow: 0 0 10px #ff0000;font-weight:bold;font-size:18px;">Dread</div>
+    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
+      <source src="Dread.mp3" type="audio/mpeg"></audio></div>
 
-</section>
+  <div class="audio-section" 
+       style="background:linear-gradient(180deg,#140000,#120014);border:1px solid #8b0000;border-radius:12px;padding:16px 24px;">
+    <div class="track-title" style="color:#000000;text-shadow: 0 0 10px #ff0000;font-weight:bold;font-size:18px;">VS Dread</div>
+    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
+      <source src="VSDread.mp3" type="audio/mpeg"></audio></div>
+
+  <div class="audio-section" 
+       style="background:linear-gradient(180deg,#120014,#2e003e);border:1px solid #6a00ff;border-radius:12px;padding:16px 24px;">
+    <div class="track-title" style="color:#ffffff;text-shadow: 0 0 10px #ff0000;font-weight:bold;font-size:18px;">Broken Dread</div>
+    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
+      <source src="BrokenDread.mp3" type="audio/mpeg"></audio></div>
+
+  <div class="audio-section" 
+       style="background:linear-gradient(180deg,#ff0000,#fabd44);border:1px solid #ffffff;border-radius:12px;padding:16px 24px;">
+    <div class="track-title" style="color:#fabd44;text-shadow: 0 0 10px #ff0000;font-weight:bold;font-size:18px;">Dread und Jamie</div>
+    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
+      <source src="DreadundJamie.mp3" type="audio/mpeg"></audio></div>
+
+  <div class="audio-section" 
+       style="background:linear-gradient(180deg,#fabd44,#ff0000);border:1px solid #ffffff;border-radius:12px;padding:16px 24px;">
+    <div class="track-title" style="color:#ff0000;text-shadow: 0 0 10px #fabd44;font-weight:bold;font-size:18px;">Jamie und Dread</div>
+    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
+      <source src="JamieundDread.mp3" type="audio/mpeg"></audio></div>
+
+  <div class="audio-section" 
+       style="background:linear-gradient(180deg,#000000,#ffffff);border:1px solid #ffffff;border-radius:12px;padding:16px 24px;">
+    <div class="track-title" style="color:#ffffff;text-shadow: 0 0 10px #ffffff;font-weight:bold;font-size:18px;">Dread (Old) (Unused)</div>
+    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
+      <source src="Dread(Old).mp3" type="audio/mpeg"></audio></div>
+
+</main>
 
 <section class="history-section">
 
@@ -266,10 +283,10 @@
     <div class="event-date">Staffel 1</div>
     <div class="event-title">Kurzes Auftreten</div>
     <div class="event-desc">
-      Dread hilft Jamie, als sie in Schwierigkeiten gerät. Sein Eingreifen ist kurz, aber entscheidend.
+      Dread hilft Jamie, als sie ihm nach hilfe fragt. Dannach geht er wieder.
     </div>
     <div class="event-result">
-      Dreads Einfluss wird etabliert, seine Präsenz ist mächtig, auch wenn sie kurz ist.
+      Dreads hat aus einem Contained Black Hole, ein Instable Black Hole gemacht.
     </div>
   </div>
 </section>
