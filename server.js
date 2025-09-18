@@ -1,65 +1,67 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const session = require('express-session');
 const app = express();
 
 const PORT = 3000;
 const HOST = '192.168.178.107';
 
-const correctPassword = "fox";
-const verifiedIPs = new Set();
-
-// Middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Hilfsfunktion zur IP-Erkennung
-function clientIp(req) {
-  let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress;
-  if (ip.startsWith('::ffff:')) ip = ip.replace('::ffff:', '');
-  return ip;
+// === Config laden ===
+const configPath = path.join(__dirname, 'config.json');
+let users = [];
+if (fs.existsSync(configPath)) {
+  try {
+    const raw = fs.readFileSync(configPath, 'utf8');
+    users = JSON.parse(raw).users || [];
+    console.log(`[CONFIG] ${users.length} Benutzer geladen.`);
+  } catch (err) {
+    console.error('[CONFIG] Fehler beim Laden von config.json:', err);
+  }
+} else {
+  console.warn('[CONFIG] Keine config.json gefunden!');
 }
 
-// Route für Startseite
+// === Middleware ===
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: 'replace_this_with_a_strong_secret_locally',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 1000 * 60 * 60 } // 1 Stunde
+}));
+
+// === Login-Seite ===
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'FoxGames.html'));
 });
 
-// Route für /partnership ohne .html
+// Partnership-Seite
 app.get('/partnership', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'partnership.html'));
 });
 
-// Passwortüberprüfung und IP-Verifizierung
+// === Login prüfen ===
 app.post('/verify-password', (req, res) => {
-  const { password } = req.body;
-  const ip = clientIp(req);
+  const { username, password } = req.body;
 
-  console.log(`[LOGIN] Passwort empfangen von IP: ${ip}`);
+  const user = users.find(u => u.username === username && u.password === password);
 
-  if (password === correctPassword) {
-    verifiedIPs.add(ip);
-    console.log(`[ZUGELASSEN] Zugriff für IP: ${ip}`);
-    res.redirect('/foxnet.html');
+  if (user) {
+    req.session.authenticated = true;
+    req.session.username = username;
+    console.log(`[ZUGELASSEN] '${username}' eingeloggt`);
+    return res.redirect('/foxnet.html');
   } else {
-    console.log(`[ABGELEHNT] Falsches Passwort von IP: ${ip}`);
-    res.status(401).send("Falsches Passwort.");
+    console.log(`[ABGELEHNT] '${username}', Passwort='${password}'`);
+    return res.sendStatus(401);
   }
 });
 
-// Zugriffsschutz für foxnet.html
-app.get('/foxnet.html', (req, res) => {
-  const ip = clientIp(req);
-  console.log(`[ZUGRIFF] foxnet.html von ${ip} | Verifiziert: ${verifiedIPs.has(ip)}`);
-
-  if (verifiedIPs.has(ip)) {
-    res.sendFile(path.join(__dirname, 'public', 'foxnet.html'));
-  } else {
-    res.status(403).send("Zugriff verweigert. Deine IP ist nicht verifiziert.");
-  }
-});
-
-// POST-Route für Servermeldungen
+// === Reports ===
 app.post('/report', (req, res) => {
   const { servername, ip, reason, description, contact } = req.body;
 
@@ -85,7 +87,7 @@ Kontakt: ${contact}
   res.sendFile(path.join(__dirname, 'public', 'confirmation.html'));
 });
 
-// Server starten
+// === Server starten ===
 app.listen(PORT, HOST, () => {
   console.log(`FoxGames Webserver läuft auf http://${HOST}:${PORT}`);
 });
