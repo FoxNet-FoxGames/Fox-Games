@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Steckbriefe</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1, h2 {
+      color: #ff0000;
+      text-shadow: 0 0 5px #000;
+      margin-top: 40px;
+    }
+
+    .character-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .name {
+      border-radius: 8px;
+      padding: 10px 14px;
+      min-width: 120px;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .name:hover {
+      transform: translateY(-5px);
+    }
+
+    .who a {
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Steckbriefe</h1>
+
+  <!-- Kategorien -->
+  <h2>Alle</h2>
+  <div id="list-all" class="character-list"></div>
+
+  <h2>Serie 1</h2>
+  <div id="list-series1" class="character-list"></div>
+
+  <h2>Serie 2</h2>
+  <div id="list-series2" class="character-list"></div>
+
+  <!-- Original-Charaktere -->
+  <div id="characters" style="display:none;">
+
+    <div class="name"
+         data-sort="all series1"
+         data-text-color="#000000"
+         data-text-shadow="#ff0000"
+         data-text-border="#ff0000"
+         data-box-bg="rgba(255,0,0,0.1)"
+         data-box-shadow="#ff0000"
+         data-box-border="#ff0000">
+      <div class="who"><a href="Dread.html">Dread</a></div>
+    </div>
+
+    <div class="name"
+         data-sort="all series1"
+         data-text-color="#ffffff"
+         data-text-shadow="#00ffff"
+         data-text-border="#00ffff"
+         data-box-bg="rgba(0,255,255,0.1)"
+         data-box-shadow="#00ffff"
+         data-box-border="#00ffff">
+      <div class="who"><a href="Shadow.html">Shadow</a></div>
+    </div>
+
+    <div class="name"
+         data-sort="all series2"
+         data-text-color="#ffff00"
+         data-text-shadow="#ff00ff"
+         data-text-border="#ff00ff"
+         data-box-bg="rgba(255,255,0,0.1)"
+         data-box-shadow="#ff00ff"
+         data-box-border="#ff00ff">
+      <div class="who"><a href="Luna.html">Luna</a></div>
+    </div>
+
+  </div>
+
+  <script>
+    // Charaktere einfügen & stylen
+    const characters = document.querySelectorAll("#characters .name");
+
+    characters.forEach(char => {
+      const categories = char.dataset.sort.split(" ");
+      categories.forEach(cat => {
+        const target = document.querySelector(`#list-${cat}`);
+        if (target) {
+          const clone = char.cloneNode(true);
+
+          // Farben auslesen
+          const textColor = char.dataset.textColor || "#fff";
+          const textShadow = char.dataset.textShadow || "transparent";
+          const textBorder = char.dataset.textBorder || "transparent";
+          const boxBg = char.dataset.boxBg || "transparent";
+          const boxShadow = char.dataset.boxShadow || "transparent";
+          const boxBorder = char.dataset.boxBorder || "transparent";
+
+          // Text-Styles
+          const link = clone.querySelector("a");
+          link.style.color = textColor;
+          link.style.textShadow = `0 0 5px ${textShadow}`;
+          link.style.border = `1px solid ${textBorder}`;
+
+          target.appendChild(clone);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

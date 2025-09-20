@@ -49,9 +49,10 @@
     .preview-icon { font-size: 3rem; margin-bottom: 1rem; }
     .preview-title { font-size: 1.2rem; font-weight: bold; }
     .preview-sub { font-size: 0.9rem; color: #ccc; }
-    .corner-icon { position: absolute; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px); border-radius: 50%; width: 40px; height: 40px; font-size: 1.5rem; display: flex; justify-content: center; align-items: center; }
-    .top-right { top: -10px; right: -10px; }
-    .bottom-left { bottom: -10px; left: -10px; }
+
+    .corner-icon {position: absolute;display: flex;justify-content: center;align-items: center;}
+    .bottom-left {bottom: -10px;left: -10px;background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(5px);border-radius: 50%;width: 40px;height: 40px;font-size: 1.5rem;}
+    .top-right {top: -10px;right: -10px;background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(5px);border-radius: 8px;width: 80px;height: 30px;font-size: 0.8rem;white-space: nowrap;border: 1px solid #ff0000;color: #ff0000;}
     .game-feature + .game-feature { margin-top: 3rem; }
     .project-lead {position: absolute;bottom: -20px;left: 0px;color: #666;font-size: 12px;font-weight: normal;}
 
@@ -192,8 +193,8 @@
         <button onclick="nextScreenshot()" style="background: #000; color: #ff00ff; border: 1px solid #ff0000; padding: 5px 10px;">➡️</button>
       </div>
     </div>
-    <div class="corner-icon top-right" style="color:#ff0000;">🎯</div>
-    <div class="corner-icon bottom-left">
+      <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="text-decoration:none;">Steckbrief</a>
+      <div class="corner-icon bottom-left">
       <button onclick="showSection('administrativeost')" style="background: #000; color: #ff0000; border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
     </div>
   </div>
@@ -226,8 +227,9 @@
             <div class="preview-sub">Irgendwann</div>
           </div>
         </div>
-        <div class="corner-icon top-right">🧠</div>
-        <div class="corner-icon bottom-left">🚀</div>
+      <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="text-decoration:none;">Steckbrief</a>
+      <div class="corner-icon bottom-left">
+      <button onclick="showSection('dreadoutost')" style="background: #000; color: #ff0000; border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
       </div>
     </div>
   </section>
@@ -264,8 +266,8 @@
         <button onclick="nextScreenshot()" style="background: #000; color: #ff00ff; border: 1px solid #ff0000; padding: 5px 10px;">➡️</button>
       </div>
     </div>
-    <div class="corner-icon top-right" style="color:#ff0000;">🎯</div>
-    <div class="corner-icon bottom-left">
+      <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="text-decoration:none;">Steckbrief</a>
+      <div class="corner-icon bottom-left">
       <button onclick="showSection('dreadost')" style="background: #000; color: #ff0000; border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
     </div>
   </div>
@@ -301,8 +303,8 @@
         <button onclick="nextScreenshot()" style="background: #000; color: #ff00ff; border: 1px solid #ff0000; padding: 5px 10px;">➡️</button>
       </div>
     </div>
-    <div class="corner-icon top-right" style="color:#880055;">🎯</div>
-    <div class="corner-icon bottom-left">
+      <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="text-decoration:none;">Steckbrief</a>
+      <div class="corner-icon bottom-left">
       <button onclick="showSection('cryptidost')" style="background: #000; color: #ff0000; border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
     </div>
   </div>
@@ -505,7 +507,7 @@
       <div class="staff-description" style="color:#1d1919; text-shadow:0 0 3px #000000;">Stimme von Erkan Imkal</div>
     </div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#83ccca; box-shadow:0 0 8px #83ccca;">
+    <div class="staff-entry" style="background-image: url('Queen Bee Background.gif');background-size: cover;background-position: center;border-color:#83ccca;box-shadow: 0 0 8px #83ccca;">
       <img src="Queen Bee.png">
       <div class="staff-name" style="color:#83ccca; text-shadow:0 0 5px #000000;">Queen Bee</div>
       <div class="staff-description" style="color:#000000; text-shadow:0 0 3px #fabd44;">Stimme von Jamie Fleck und Jill Leif</div>
