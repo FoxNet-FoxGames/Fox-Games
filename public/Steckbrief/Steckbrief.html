@@ -4,102 +4,833 @@
   <meta charset="UTF-8">
   <title>Steckbriefe</title>
   <style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 20px;
+body {
+  background: #000000);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+
+    h1 {
+      text-align: center;
+      color: #ff0000;
+      text-shadow: 0 0 10px #000;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
     }
 
-    h1, h2 {
-      color: #ff0000;
-      text-shadow: 0 0 5px #000;
-      margin-top: 40px;
-    }
+.series {
+  --series-color: #fff;
+  --series-shadow: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+.series span {
+  color: var(--series-color);
+  text-shadow: 0 0 5px var(--series-shadow);
+}
 
     .character-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
       margin-bottom: 40px;
+      justify-content: center;
     }
 
     .name {
-      border-radius: 8px;
-      padding: 10px 14px;
-      min-width: 120px;
+      border-radius: 12px;
+      padding: 15px 25px;
+      min-width: 140px;
       text-align: center;
       font-weight: bold;
-      transition: transform 0.3s, box-shadow 0.3s;
+      font-size: 1.1rem;
+      background: rgba(255,255,255,0.05);
+      border: 2px solid transparent;
+      box-shadow: 0 0 8px rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: box-shadow 0.4s, border-color 0.4s;
+      /* Standardwerte als Fallback */
+      --text-color: #fff;
+      --text-shadow: #000;
     }
 
-    .name:hover {
-      transform: translateY(-5px);
-    }
-
-    .who a {
+    .name a {
       text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 6px;
-      transition: 0.3s;
-      display: inline-block;
+      display: block;
+      font-weight: bold;
+      transition: color 0.4s, text-shadow 0.4s;
+      color: var(--text-color);
+      text-shadow: 0 0 5px var(--text-shadow);
+    }
+
+    /* Hover: Glow + Farb-Switch */
+    .name:hover {
+      box-shadow: 0 0 15px currentColor;
+      border-color: currentColor;
+    }
+
+    .name:hover a {
+      /* Wenn Hover-Farben gesetzt → die nutzen, sonst Switch */
+      color: var(--hover-color, var(--text-shadow));
+      text-shadow: 0 0 8px var(--hover-shadow, var(--text-color));
     }
   </style>
 </head>
 <body>
 
-  <h1>Steckbriefe</h1>
+<body class="all">
+<h1 style="text-align:center; color:#ffffff;
+               text-shadow:0 0 10px #000000; margin-bottom:50px; font-size:2.5rem;"><a href="../FoxGames.html"style="color:inherit; text-decoration:none; transition:color 0.5s, text-shadow 0.5s;"
+     onmouseover="this.style.color='#000000';
+    this.style.textShadow='0 0 10px #ffffff';"
+      onmouseout="this.style.color='#ffffff';
+    this.style.textShadow='0 0 10px #000000';">Alle</a></h1><div id="list-all" class="character-list"></div>
 
-  <!-- Kategorien -->
-  <h2>Alle</h2>
-  <div id="list-all" class="character-list"></div>
+<h1 style="text-align:center; color:#000000;
+               text-shadow:0 0 10px #8b0000; margin-bottom:50px; font-size:2.5rem;"><a href="Dread.html"style="color:inherit; text-decoration:none; transition:color 0.5s, text-shadow 0.5s;"
+     onmouseover="this.style.color='#8b0000';
+    this.style.textShadow='0 0 10px #000000';"
+      onmouseout="this.style.color='#000000';
+    this.style.textShadow='0 0 10px #8b0000';">Administrative</a></h1><div id="list-Administrative" class="character-list"></div>
 
-  <h2>Serie 1</h2>
-  <div id="list-series1" class="character-list"></div>
+<h1 style="text-align:center; color:#000000;
+               text-shadow:0 0 10px #ff0000; margin-bottom:50px; font-size:2.5rem;"><a href="Dread.html"style="color:inherit; text-decoration:none; transition:color 0.5s, text-shadow 0.5s;"
+     onmouseover="this.style.color='#ff0000';
+    this.style.textShadow='0 0 10px #000000';"
+      onmouseout="this.style.color='#000000';
+    this.style.textShadow='0 0 10px #ff0000';">Dread</a></h1><div id="list-Dread" class="character-list"></div>
 
-  <h2>Serie 2</h2>
-  <div id="list-series2" class="character-list"></div>
+<h1 style="text-align:center; color:#665500;
+               text-shadow:0 0 10px #000000; margin-bottom:50px; font-size:2.5rem;"><a href="Catificate.html"style="color:inherit; text-decoration:none; transition:color 0.5s, text-shadow 0.5s;"
+     onmouseover="this.style.color='#000000';
+    this.style.textShadow='0 0 10px #665500';"
+      onmouseout="this.style.color='#665500';
+    this.style.textShadow='0 0 10px #000000';">Catificate</a></h1><div id="list-Catificate" class="character-list"></div>
 
-  <!-- Original-Charaktere -->
+<h1 style="text-align:center; color:#ffff00;
+               text-shadow:0 0 10px #000000; margin-bottom:50px; font-size:2.5rem;"><a href="LiberLuris.html"style="color:inherit; text-decoration:none; transition:color 0.5s, text-shadow 0.5s;"
+     onmouseover="this.style.color='#000000';
+    this.style.textShadow='0 0 10px #ffff00';"
+      onmouseout="this.style.color='#ffff00';
+    this.style.textShadow='0 0 10px #000000';">Liber Luris</a></h1><div id="list-LiberLuris" class="character-list"></div>
+
+<h1 style="text-align:center; color:#ee82ee;
+               text-shadow:0 0 10px #ee82ee; margin-bottom:50px; font-size:2.5rem;"><a href="Starduster.html"style="color:inherit; text-decoration:none; transition:color 0.5s, text-shadow 0.5s;"
+     onmouseover="this.style.color='#000000';
+    this.style.textShadow='0 0 10px #ee82ee';"
+      onmouseout="this.style.color='#ee82ee';
+    this.style.textShadow='0 0 10px #ee82ee';">Starduster</a></h1><div id="list-Starduster" class="character-list"></div>
+
+<h1 style="text-align:center; color:#062c2f;
+               text-shadow:0 0 10px #000000; margin-bottom:50px; font-size:2.5rem;"><a href="Vindex.html"style="color:inherit; text-decoration:none; transition:color 0.5s, text-shadow 0.5s;"
+     onmouseover="this.style.color='#000000';
+    this.style.textShadow='0 0 10px #062c2f';"
+      onmouseout="this.style.color='#062c2f';
+    this.style.textShadow='0 0 10px #000000';">Vindex</a></h1><div id="list-Vindex" class="character-list"></div>
+
+<h1 style="text-align:center; color:#880055;
+               text-shadow:0 0 10px #000000; margin-bottom:50px; font-size:2.5rem;"><a href="Cryptid.html"style="color:inherit; text-decoration:none; transition:color 0.5s, text-shadow 0.5s;"
+     onmouseover="this.style.color='#000000';
+    this.style.textShadow='0 0 10px #880055';"
+      onmouseout="this.style.color='#880055';
+    this.style.textShadow='0 0 10px #000000';">Cryptid</a></h1><div id="list-Cryptid" class="character-list"></div>
+
   <div id="characters" style="display:none;">
 
     <div class="name"
-         data-sort="all series1"
+         data-sort="all Administrative"
+         data-text-color="#000000"
+         data-text-shadow="#800080"
+         data-hover-color="#800080"
+         data-hover-shadow="#000000"
+         data-box-color="#800080">
+      <a href="VECTORYOwner.html">VECTORY Owner</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Administrative Catificate LiberLuris Vindex"
+         data-text-color="#000000"
+         data-text-shadow="#8b0000"
+         data-hover-color="#8b0000"
+         data-hover-shadow="#000000"
+         data-box-color="#8b0000">
+      <a href="ScottOwner.html">Scott Owner</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Administrative Catificate Cryptid"
+         data-text-color="#000000"
+         data-text-shadow="#ee82ee"
+         data-hover-color="#ee82ee"
+         data-hover-shadow="#000000"
+         data-box-color="#ee82ee">
+      <a href="RoxyOwner.html">Roxy Owner</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Administrative Dread Catificate Starduster Cryptid"
          data-text-color="#000000"
          data-text-shadow="#ff0000"
-         data-text-border="#ff0000"
-         data-box-bg="rgba(255,0,0,0.1)"
-         data-box-shadow="#ff0000"
-         data-box-border="#ff0000">
-      <div class="who"><a href="Dread.html">Dread</a></div>
+         data-box-color="#ff0000">
+      <a href="Dread.html">Dread</a>
     </div>
 
     <div class="name"
-         data-sort="all series1"
+         data-sort="all Administrative Cryptid"
+         data-text-color="#000000"
+         data-text-shadow="#000000"
+         data-hover-color="#ffffff"
+         data-hover-shadow="#ffffff"
+         data-box-color="#ffffff">
+      <a href="Anomaly.html">Anomaly</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate Starduster"
+         data-text-color="#000000"
+         data-text-shadow="#ff0000"
+         data-hover-color="#fabd44"
+         data-hover-shadow="#000000"
+         data-box-color="#ff0000">
+      <a href="JamieFleck.html">Jamie Fleck</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Administrative"
+         data-text-color="#800080"
+         data-text-shadow="#8b0000"
+         data-hover-color="#8b0000"
+         data-hover-shadow="#800080"
+         data-box-color="#8b0000">
+      <a href="FoxBotCo-Owner.html">FoxBot Co-Owner</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#221f1f"
+         data-hover-color="#ffffff"
+         data-box-color="#ffffff">
+      <a href="ZeilesMorganaVilgore.html">Zeiles Morgana Vilgore</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ee82ee"
+         data-text-shadow="#ee82ee"
+         data-box-color="#ee82ee">
+      <a href="Viviol.html">Viviol</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Cryptid"
          data-text-color="#ffffff"
-         data-text-shadow="#00ffff"
-         data-text-border="#00ffff"
-         data-box-bg="rgba(0,255,255,0.1)"
-         data-box-shadow="#00ffff"
-         data-box-border="#00ffff">
-      <div class="who"><a href="Shadow.html">Shadow</a></div>
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="NoraRinke.html">Nora Rinke</a>
     </div>
 
     <div class="name"
-         data-sort="all series2"
-         data-text-color="#ffff00"
-         data-text-shadow="#ff00ff"
-         data-text-border="#ff00ff"
-         data-box-bg="rgba(255,255,0,0.1)"
-         data-box-shadow="#ff00ff"
-         data-box-border="#ff00ff">
-      <div class="who"><a href="Luna.html">Luna</a></div>
+         data-sort="all Cryptid"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MaraRinke.html">Mara Rinke</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Cryptid"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="LioRinke.html">Lio Rinke</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Cryptid"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ErenRinke.html">Eren Rinke</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MintRech.html">Mint Rech</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="FoximReich.html">Foxim Reich</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="NilusFenris.html">Nilus Fenris</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MelanieSiegel.html">Melanie Siegel</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="KehlFenris.html">Kehl Fenris</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MilaFenris.html">Mila Fenris</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="TriaFenris.html">Tria Fenris</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="NickoTeros.html">Nicko Teros</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MarkEnrich.html">Mark Enrich</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="ffd700"
+         data-text-shadow="#ffd700"
+         data-hover-color="#000000"
+         data-hover-shadow="#ffd700"
+         data-box-color="#ffd700">
+      <a href="RemedySynclair.html">Remedy Synclair</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="ffff00"
+         data-text-shadow="#ffff00"
+         data-hover-color="#000000"
+         data-hover-shadow="#ffff00"
+         data-box-color="#ffff00">
+      <a href="LilliosHeather.html">Lillios Heather</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Vindex Cryptid"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="VindexHeretic.html">Vindex Heretic</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MonroeValise.html">Monroe Valise</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="RimmLudein.html">Rimm Ludein</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ChrisLee.html">Chris Lee</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="NataliaGonjet.html">Natalia Gonjet</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="WilsonKrocnék.html">Wilson Krocnék</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="KlyoNocturnal.html">Klyo Nocturnal</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="JosyFerrek.html">Josy Ferrek</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ErkanImkal.html">Erkan Imkal</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="NydraForén.html">Nydra Forén</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="Shiro Ante.html">Shiro Ante</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="FinaNocturnal.html">Fina Nocturnal</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="NyoNocturnal.html">Nyo Nocturnal</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="RoverNocturnal.html">Rover Nocturnal</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="UroIna.html">Uro Ina</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="AronImkal.html">Aron Imkal</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="Reikos Forén.html">Reikos Forén</a>
+    </div>
+
+    <div class="name"
+         data-sort="all LiberLuris"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ZeckDann.html">Zeck Dann</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Cryptid"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MineraForger.html">Minera Forger</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Cryptid"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ArcForger.html">Arc Forger</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ChalieHaz.html">Chalie Haz</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="PandaKlan.html">Panda Klan</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="LottiBrand.html">Lotti Brand</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="VincentHanko.html">Vincent Hanko</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="JohnsusMilan.html">Johnsus Milan</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="SantiDenero.html">Santi Denero</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ElizeHanko.html">Elize Hanko</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="TanjaMüller.html">Tanja Müller</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="HarryMarschal.html">Harry Marschal</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="JeffreyHumphry.html">Jeffrey Humphry</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="NilsSambe.html">Nils Sambe</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MarlyHanko.html">Marly Hanko</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="LutzMillen.html">Lutz Millen</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Starduster"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="FinaSchubert.html">Fina Schubert</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="TickPuck.html">Tick Puck</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="AmarNelly.html">Amar Nelly</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="WilsPetz.html">Wils Petz</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="SigelsLaas.html">Sigels Laas</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="FifiToon.html">Fifi Toon</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="SallieToon.html">Sallie Toon</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="HankWespa.html">Hank Wespa</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="NatalieMeer.html">Natalie Meer</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ForgetMeNot.html">Forget Me Not</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="Carolin.html">Carolin Wespa</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="Lars???.html">Lars ???</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="Linus Plaue.html">Linus Plaue</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="AbigaleMadones.html">Abigale Madones</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MilesHeart.html">Miles Heart</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MartinLeynard.html">Martin Leynard</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="FelixMiesel.html">Felix Miesel</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ShilaKeith.html">Shila Keith</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MartaSeigers.html">Marta Seigers</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="ValentinHerrlich.html">Valentin Herrlich</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="Collin.html">Collin</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="Haloo.html">Haloo</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="FriedMeiner.html">Fried Meiner</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Dread"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="VolkerBenrat.html">Volker Benrat</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="Rex.html">Rex</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Administrative Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="MorpheusCo-Owner.html">Morpheus Co-Owner</a>
+    </div>
+
+    <div class="name"
+         data-sort="all Administrative Catificate"
+         data-text-color="#ffffff"
+         data-text-shadow="#000000"
+         data-box-color="#ffffff">
+      <a href="KattigerCo-Owner.html">Kattiger Co-Owner</a>
     </div>
 
   </div>
-
   <script>
-    // Charaktere einfügen & stylen
     const characters = document.querySelectorAll("#characters .name");
 
     characters.forEach(char => {
@@ -108,25 +839,68 @@
         const target = document.querySelector(`#list-${cat}`);
         if (target) {
           const clone = char.cloneNode(true);
-
-          // Farben auslesen
           const textColor = char.dataset.textColor || "#fff";
-          const textShadow = char.dataset.textShadow || "transparent";
-          const textBorder = char.dataset.textBorder || "transparent";
-          const boxBg = char.dataset.boxBg || "transparent";
-          const boxShadow = char.dataset.boxShadow || "transparent";
-          const boxBorder = char.dataset.boxBorder || "transparent";
-
-          // Text-Styles
-          const link = clone.querySelector("a");
-          link.style.color = textColor;
-          link.style.textShadow = `0 0 5px ${textShadow}`;
-          link.style.border = `1px solid ${textBorder}`;
-
+          const textShadow = char.dataset.textShadow || "#000";
+          const boxColor = char.dataset.boxColor || "#fff";
+          const hoverColor = char.dataset.hoverColor;
+          const hoverShadow = char.dataset.hoverShadow;
+          clone.style.color = boxColor;
+          clone.style.setProperty("--text-color", textColor);
+          clone.style.setProperty("--text-shadow", textShadow);
+          if (hoverColor) {clone.style.setProperty("--hover-color", hoverColor);}
+          if (hoverShadow) {clone.style.setProperty("--hover-shadow", hoverShadow);}
           target.appendChild(clone);
-        }
-      });
-    });
+        }});});
+const body = document.body;
+
+const seriesGradients = [
+  'linear-gradient(180deg, #110000, #220000)', // Alle
+  'linear-gradient(180deg, #220000, #800080)', // Administrative
+  'linear-gradient(180deg, #800080, #ff0000)', // Dread
+  'linear-gradient(180deg, #ff0000, #665500)', // Catificate
+  'linear-gradient(180deg, #665500, #ffff00)', // Liber Luris
+  'linear-gradient(180deg, #ffff00, #660055)', // Starduster
+  'linear-gradient(180deg, #660055, #062c2f)', // Vindex
+  'linear-gradient(180deg, #062c2f, #330066)'  // Cryptid
+];
+
+function hexToRgb(hex){
+  hex = hex.replace('#','');
+  return [parseInt(hex.substr(0,2),16), parseInt(hex.substr(2,2),16), parseInt(hex.substr(4,2),16)];
+}
+function rgbToHex(r,g,b){
+  return '#' + [r,g,b].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+function parseGradientEndColor(gradient){
+  const match = gradient.match(/,\s*(#[0-9a-fA-F]{6})\)/);
+  return match ? match[1] : '#000000';
+}
+function mixColors(c1,c2,t){
+  return rgbToHex(
+    Math.round(c1[0]*(1-t)+c2[0]*t),
+    Math.round(c1[1]*(1-t)+c2[1]*t),
+    Math.round(c1[2]*(1-t)+c2[2]*t)
+  );}
+window.addEventListener('scroll', ()=>{
+  const scrollY = window.scrollY;
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const pct = scrollY / maxScroll;
+
+  const n = seriesGradients.length;
+  const index = Math.floor(pct * n);
+  const nextIndex = Math.min(index+1,n-1);
+  const mix = pct*n - index;
+
+  const startGradient = seriesGradients[index].match(/linear-gradient\(180deg, (#[0-9a-fA-F]{6}),/)[1];
+  const endColor1 = parseGradientEndColor(seriesGradients[index]);
+  const endColor2 = parseGradientEndColor(seriesGradients[nextIndex]);
+
+  const mixedEnd = mixColors(hexToRgb(endColor1), hexToRgb(endColor2), mix);
+
+  body.style.background = `linear-gradient(180deg, ${startGradient}, ${mixedEnd})`;
+});
+
+window.dispatchEvent(new Event('scroll'));
   </script>
 
 </body>
