@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Namens-Generator</title>
+  <style>
+    body{font-family:sans-serif;background:#0f1724;color:#e6eef8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+    .card{background:#0b1220;padding:22px;width:500px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    h1{margin:0 0 8px 0;font-size:20px}
+    .controls{display:flex;gap:8px;margin-top:12px}
+    button{background:#38bdf8;color:#002033;border:0;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700}
+    .output{margin-top:16px;padding:14px;border-radius:10px;background:rgba(255,255,255,0.05);font-size:20px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Namens-Generator</h1>
+    <p>Klick auf <strong>Randon</strong> — aus Vor-, Mittel- (10% Chance, sonst weggelassen) und Nachnamen wird zufällig ein Name zusammengesetzt.</p>
+
+    <div class="controls">
+      <button id="btnRandom">Randon</button>
+    </div>
+
+    <div class="output" id="output">— Generierter Name erscheint hier —</div>
+  </div>
+
+  <script>
+  let firstNames = [];
+  let lastNames = [];
+
+  async function loadPools(){
+    const firstRes = await fetch('frontnames.json');
+    firstNames = await firstRes.json();
+
+    const lastRes = await fetch('lastnames.json');
+    lastNames = await lastRes.json();
+  }
+
+  function randInt(max){return Math.floor(Math.random()*max);}
+  function pick(arr){return arr[randInt(arr.length)];}
+  function shouldUseMiddle(){return Math.random() < 0.10;}
+
+  function generateName(){
+    const first = pick(firstNames);
+    const useMiddle = shouldUseMiddle();
+    const middle = useMiddle ? pick(firstNames) : null;
+    const last = pick(lastNames);
+
+    const parts = [first];
+    if(middle) parts.push(middle);
+    parts.push(last);
+
+    return parts.join(' ');
+  }
+
+  document.getElementById('btnRandom').addEventListener('click', ()=>{
+    if(firstNames.length === 0 || lastNames.length === 0){
+      document.getElementById('output').textContent = 'Pools sind nicht geladen.';
+      return;
+    }
+    const name = generateName();
+    document.getElementById('output').textContent = name;
+  });
+
+  loadPools();
+  </script>
+</body>
+</html>
