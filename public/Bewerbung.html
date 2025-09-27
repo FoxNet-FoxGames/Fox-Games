@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Bewerbung als Globaler Moderator</title>
+  <style>
+    body { margin: 0; background-color: #000; color: #fff; font-family: Arial, sans-serif; }
+    header { text-align: center; padding: 2rem 1rem 1rem; }
+    header img.logo { width: 200px; display: block; margin: 0 auto 1rem; }
+    header img.title { max-width: 60%; height: auto; display: block; margin: auto; }
+    .form-container {background: linear-gradient(135deg, #111, #1a1a1a);padding: 2.5rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);text-align: left;}
+    .form-container h2 {font-size: 2.2rem;color: #ff6600;text-shadow: 0 0 10px #000;text-align: center;margin-bottom: 1.5rem;}
+    .form-group {margin-bottom: 1.5rem;}
+    .form-group label {display: block;font-weight: bold;margin-bottom: 0.5rem;color: #ff6600;}
+    .form-group input, 
+    .form-group textarea, 
+    .form-group select {width: 100%;padding: 0.8rem;border: none;border-radius: 8px;background: #222;color: #fff;font-size: 1rem;box-shadow: inset 0 0 10px #8b0000;}
+    .form-group textarea {resize: vertical;min-height: 120px;}
+    .form-submit {text-align: center;margin-top: 2rem;}
+    .form-submit button {background: linear-gradient(135deg, #ff0000, #ff6600);color: #fff;padding: 0.8rem 2rem;border: none;border-radius: 10px;font-size: 1.2rem;font-weight: bold;cursor: pointer;transition: all 0.3s ease;}
+    .form-submit button:hover {box-shadow: 0 0 15px rgba(255, 100, 0, 0.7);transform: scale(1.05);}
+    footer { background: #111; text-align: center; padding: 1rem; font-size: 0.9rem; color: #888; margin-top: 3rem; }
+    hr { border: 1px solid #f00; margin: 2rem 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../assets/Fox Games Logo.png" alt="Logo" class="logo">
+    <img src="../assets/Fox Games Title.png" alt="Titel" class="title">
+  </header>
+
+  <div class="form-container">
+    <h2> Bewerbung als Globaler<a href="steckbrief/moderator.html" span style="color:#000000; text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';"> Moderator </span></a> </h2>
+    <form action="bewerbung_absenden.php" method="post">
+      <div class="form-group">
+        <label for="name">Vollständiger Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="age">Alter</label>
+        <input type="number" id="age" name="age">
+      </div>
+
+      <div class="form-group">
+        <label for="discord">Discord-Tag (z. B. Nutzername#1234)</label>
+        <input type="text" id="discord" name="discord">
+      </div>
+
+      <div class="form-group">
+        <label for="language">Welche sprachen sprichst du fließend?</label>
+        <input type="text" id="language" name="language">
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Hast du bereits Moderationserfahrung? Beschreibe kurz.</label>
+        <textarea id="experience" name="experience"></textarea>
+      </div>
+
+      <div class="form-group">
+                                
+        <label for="motivation">Warum möchtest du Globaler <a href="steckbrief/moderator.html" span style="color:#000000; text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';"> Moderator </span></a> werden?</label>
+        <textarea id="motivation" name="motivation"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="conflict">Wie würdest du mit Konflikten zwischen Spielern umgehen?</label>
+        <textarea id="conflict" name="conflict"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="strengths">Was sind deine Stärken und Schwächen in einem Team? (Bitte sei ehrlich)</label>
+        <textarea id="strengths" name="strengths"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Wie viel Zeit kannst du pro Tag aktiv investieren?</label>
+        <select id="time" name="time">
+          <option value="">Bitte auswählen</option>
+          <option value="1-5">1–5 Stunden</option>
+          <option value="5-10">5–10 Stunden</option>
+          <option value="10-20">10–20 Stunden</option>
+          <option value="20+">Mehr als 20 Stunden (Was machst du mit deinem Leben)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="situation">Beschreibe eine Situation, in der du Verantwortung übernehmen musstest.</label>
+        <textarea id="situation" name="situation"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="future">Wo siehst du dich in der Community in einem Jahr? vllt. als <a href="steckbrief/admin.html" span style="color:#000000; text-shadow:0 0 5px #ff0000;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#ff0000'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #ff0000';"> Admin</span></a>?</label>
+        <textarea id="future" name="future"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="cheat">Wurdest du von einem
+
+
+
+<a href="steckbrief/foxgames.html" 
+   style="
+     display: inline-block;
+     padding: 1px 1px;
+     color: #000000;
+     text-shadow: 0 0 5px #8b0000;
+     background-color: #181818;
+     border: 1px solid #ff0000;
+     box-shadow: inset 0 0 5px #ff0000, 0 0 5px #ff0000;
+     text-decoration: none;
+     transition: all 0.3s ease;"
+   onmouseover="this.style.color='#8b0000'; this.style.textShadow='0 0 5px #000000';"
+   onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #8b0000';">Fox Games</a>
+
+
+
+Mitglied empfohlen? Wenn ja, von wem? (Name des Mitglieds)</label>
+        <input type="text" name="cheat"></textarea>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit">Bewerbung absenden</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 Fox Games</p>
+    </div>
+  </footer>
+</body>
+</html>
