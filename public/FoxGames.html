@@ -6,90 +6,90 @@
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <title>Fox Games</title>
   <style>
-    body { margin: 0; background-color: #000; color: #fff; font-family: Arial, sans-serif;}
-    header { text-align: center; padding: 2rem 1rem 1rem;}
-    header img.logo { width: 200px; display: block; margin: 0 auto 1rem;}
-    header img.title { max-width: 60%; height: auto; display: block; margin: auto;}
+    body { margin: 0;background-color:#000;color:#fff; font-family: Arial, sans-serif;}
+    header { text-align: center;padding: 2rem 1rem 1rem;}
+    header img.logo { width: 200px; display: block;margin: 0 auto 1rem;}
+    header img.title { max-width: 60%; height: auto; display: block;margin: auto;}
 
-    nav { display: flex; justify-content: center; gap: 2rem; background: #111; padding: 1rem 0;}
-    nav a { background: linear-gradient(135deg, #ff0000, #ff6600); -webkit-background-clip: text; -webkit-text-fill-color: transparent;text-decoration: none; font-weight: bold; cursor: pointer;transition: all 0.3s ease; padding: 0.3rem 0.6rem; border-radius: 5px; position: relative;}
-    nav a::after { content: ''; position: absolute; inset: 0; border-radius: 5px; background: linear-gradient(135deg, #ff0000, #ff6600); opacity: 0;transition: opacity 0.3s ease; z-index: -1;}
-    nav a:hover { -webkit-text-fill-color: #fff;}
+    nav { display: flex;justify-content: center; gap: 2rem;background:#111;padding: 1rem 0;}
+    nav a { background: linear-gradient(135deg, #ff0000, #ff6600);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration: none; font-weight: bold;cursor: pointer;transition: all 0.3s ease;padding: 0.3rem 0.6rem;border-radius: 5px;position: relative;}
+    nav a::after { content: '';position: absolute;inset: 0;border-radius: 5px;background: linear-gradient(135deg, #ff0000, #ff6600); opacity: 0;transition: opacity 0.3s ease; z-index: -1;}
+    nav a:hover { -webkit-text-fill-color:#fff;}
     nav a:hover::after { opacity: 1; filter: blur(4px);}
 
-    .welcome-container { background: linear-gradient(145deg, #111, #1a1a1a); border-radius: 15px; padding: 2rem; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);text-align: center; max-width: 800px; margin: auto;}
-    .welcome-container h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #ff6600;text-shadow: 0 0 10px #000;}
-    .welcome-container .highlight { background: linear-gradient(45deg, #ff0000, #ff6600); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-    .welcome-container p { font-size: 1.2rem; color: #ccc; line-height: 1.6; margin: 1rem 0;}
+    .welcome-container { background: linear-gradient(145deg, #111, #1a1a1a);border-radius: 15px;padding: 2rem;box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);text-align: center;max-width: 800px;margin: auto;}
+    .welcome-container h2 { font-size: 2.5rem;margin-bottom: 1rem;color:#ff6600;text-shadow: 0 0 10px #000;}
+    .welcome-container .highlight { background: linear-gradient(45deg, #ff0000, #ff6600);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+    .welcome-container p { font-size: 1.2rem;color:#ccc; line-height: 1.6;margin: 1rem 0;}
 
-    section { display: none; padding: 2rem; max-width: 1000px; margin: auto;}
+    section { display: none;padding: 2rem;max-width: 1000px;margin: auto;}
     section.active { display: block;}
 
     .game { margin-bottom: 2rem;}
-    .game-feature { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; padding: 2rem; border-radius: 20px; margin: auto; max-width: 1000px;}
-    .game-info { flex: 1 1 50%; min-width: 300px;}
-    .game-info h2 { font-size: 2.5rem; margin: 1rem 0;}
+    .game-feature { display: flex; flex-wrap: wrap;justify-content: space-between; gap: 2rem;padding: 2rem;border-radius: 20px;margin: auto;max-width: 1000px;}
+    .game-info { flex: 1 1 50%;min-width: 300px;}
+    .game-info h2 { font-size: 2.5rem;margin: 1rem 0;}
 
     .audio-section {width: 100%;margin-top: 16px;padding: 16px 24px;background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius: 12px;border: 1px solid rgba(255,255,255,0.02);display: flex;flex-direction: column;align-items: center;gap: 12px;}
-    .audio-section h3 {margin: 0 0 8px 0;font-size: 16px;font-weight: 700;color: #e6eef8;}
-    .audio-player::-webkit-media-controls-panel {background-color: #8b0000;}
-    .audio-player::-webkit-media-controls-play-button {background-color: #ff0000;border-radius: 50%;filter: invert(0);}
+    .audio-section h3 {margin: 0 0 8px 0;font-size: 16px;font-weight: 700;color:#e6eef8;}
+    .audio-player::-webkit-media-controls-panel {background-color:#8b0000;}
+    .audio-player::-webkit-media-controls-play-button {background-color:#ff0000;border-radius: 50%;filter: invert(0);}
 
-    .badge { display: inline-block; background: linear-gradient(to right, #9a4dff, #4da6ff); color: white; padding: 0.3rem 1rem; border-radius: 999px; font-size: 0.9rem; font-weight: bold;}
+    .badge { display: inline-block;padding: 0.3rem 1rem;border-radius: 999px; font-size: 0.9rem; font-weight: bold;}
     .badge-icon { margin-right: 0.5rem;}
     .tags { margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem;}
-    .tag { padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 1.1rem; color: #fff;}
-    .description { font-size: 1.1rem; margin-bottom: 1.5rem; color: #ddd;}
-    .features { list-style: none; padding: 0; margin: 0;}
-    .features li { display: flex; align-items: center; margin: 0.5rem 0; font-size: 1rem;}
-    .icon { font-size: 1.2rem; margin-right: 0.6rem;}
-    .game-preview { flex: 1 1 35%; min-width: 250px; position: relative; display: flex; justify-content: center; align-items: center;}
+    .tag { padding: 0.3rem 0.8rem;border-radius: 999px; font-size: 1.1rem;color:#fff;}
+    .description { font-size: 1.1rem;margin-bottom: 1.5rem;}
+    .features { list-style: none;padding: 0;margin: 0;}
+    .features li { display: flex; align-items: center;margin: 0.5rem 0; font-size: 1rem;}
+    .icon { font-size: 1.2rem;margin-right: 0.6rem;}
+    .game-preview { flex: 1 1 35%;min-width: 250px;position: relative; display: flex;justify-content: center; align-items: center;}
     .game-info {position: relative;}
-    .preview-box { background: linear-gradient(135deg, #4f0ac8, #7f4cdb); padding: 2rem; border-radius: 20px;text-align: center; box-shadow: inset 0 0 30px rgba(255,255,255,0.05);}
-    .preview-icon { font-size: 3rem; margin-bottom: 1rem;}
+    .preview-box { padding: 2rem;border-radius: 20px;text-align: center;box-shadow: inset 0 0 30px rgba(255,255,255,0.05);}
+    .preview-icon { font-size: 3rem;margin-bottom: 1rem;}
     .preview-title { font-size: 1.2rem; font-weight: bold;}
-    .preview-sub { font-size: 0.9rem; color: #ccc;}
+    .preview-sub { font-size: 0.9rem;color:#ccc;}
 
     .corner-icon {position: absolute;display: flex;justify-content: center;align-items: center;}
     .bottom-left {bottom: -10px;left: -10px;background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(5px);border-radius: 50%;width: 40px;height: 40px;font-size: 1.5rem;}
-    .top-right {top: -10px;right: -10px;background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(5px);border-radius: 8px;width: 80px;height: 30px;font-size: 0.8rem;white-space: nowrap;border: 1px solid #ff0000;color: #ff0000;}
+    .top-right {top: -10px;right: -10px;background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(5px);border-radius: 8px;width: 80px;height: 30px;font-size: 0.8rem;white-space: nowrap;border: 1px solid #ff0000;color:#ff0000;}
     .game-feature + .game-feature { margin-top: 3rem;}
-    .project-lead {position: absolute;bottom: -20px;left: 0px;color: #666;font-size: 12px;font-weight: normal;}
+    .project-lead {position: absolute;bottom: -20px;left: 0px;color:#666;font-size: 12px;font-weight: normal;}
 
-    .job-listing { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding-top: 2rem;}
-    .job-card { background: #111; padding: 1.5rem; border-radius: 12px; width: 250px;text-align: center; box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);transition: transform 0.3s, box-shadow 0.3s;}
+    .job-listing { display: flex; flex-wrap: wrap;justify-content: center; gap: 2rem;padding-top: 2rem;}
+    .job-card { background:#111;padding: 1.5rem;border-radius: 12px; width: 250px;text-align: center;box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);transition: transform 0.3s, box-shadow 0.3s;}
     .job-card:hover { transform: translateY(-5px);box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);}
     .job-card h3 { margin-bottom: 1rem; font-size: 1.5rem;}
-    .job-card p { color: #ccc; font-size: 1rem; line-height: 1.4;}
-    .job-card.programmer h3 { color: #00ffff;text-shadow: 0 0 5px #00ffff;}
-    .job-card.voiceactor h3 { color: #b84dff;text-shadow: 0 0 5px #b84dff;}
-    .job-card.sounddesigner h3 { color: #ffa500;text-shadow: 0 0 5px #ffa500;}
-    .job-card.composer h3 { color: #ff69b4;text-shadow: 0 0 5px #ff69b4;}
+    .job-card p { color:#ccc; font-size: 1rem; line-height: 1.4;}
+    .job-card.programmer h3 { color:#00ffff;text-shadow: 0 0 5px #00ffff;}
+    .job-card.voiceactor h3 { color:#b84dff;text-shadow: 0 0 5px #b84dff;}
+    .job-card.sounddesigner h3 { color:#ffa500;text-shadow: 0 0 5px #ffa500;}
+    .job-card.composer h3 { color:#ff69b4;text-shadow: 0 0 5px #ff69b4;}
 
     .staff-section { text-align: center;}
-    .staff-entry { display: inline-block; padding: 1rem; margin: 1rem;border-radius: 10px;text-align: center;background-color: #000000;border: 2px solid #000000;box-shadow: 0 0 8px #ffffff;}
-    .staff-entry img { width: 200px; height: 200px; object-fit: cover;border-radius: 10px; display: block; margin: 0 auto 1rem;}
-    .staff-name { font-size: 1.2rem; font-weight: bold; color: #800080;text-shadow: 0 0 5px #000;}
-    .staff-description { color: #bbbbbb;text-shadow: 0 0 3px #000;}
+    .staff-entry { display: inline-block;padding: 1rem;margin: 1rem;border-radius: 10px;text-align: center;background-color:#000000;border: 2px solid #000000;box-shadow: 0 0 8px #ffffff;}
+    .staff-entry img { width: 200px; height: 200px; object-fit: cover;border-radius: 10px; display: block;margin: 0 auto 1rem;}
+    .staff-name { font-size: 1.2rem; font-weight: bold;color:#800080;text-shadow: 0 0 5px #000;}
+    .staff-description { color:#bbbbbb;text-shadow: 0 0 3px #000;}
 
-    .kontakt-container { background: linear-gradient(135deg, #1a001f, #2b003b); padding: 2rem;border-radius: 20px; max-width: 800px; margin: auto;box-shadow: 0 0 20px rgba(255, 0, 128, 0.2);text-align: center; color: #fff;}
-    .kontakt-container h2 { font-size: 2.2rem; color: #ff66cc;text-shadow: 0 0 10px #000; margin-bottom: 1rem;}
-    .kontakt-text { color: #ccc; margin-bottom: 2rem; font-size: 1.1rem;}
-    .kontakt-methoden { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;}
-    .kontakt-item { background: #130017;border: 2px solid #3a003f;border-radius: 15px; padding: 1.5rem; width: 250px;text-align: center;transition: transform 0.3s, box-shadow 0.3s;box-shadow: 0 0 10px rgba(255, 0, 128, 0.1);}
+    .kontakt-container { background: linear-gradient(135deg, #1a001f, #2b003b);padding: 2rem;border-radius: 20px;max-width: 800px;margin: auto;box-shadow: 0 0 20px rgba(255, 0, 128, 0.2);text-align: center;color:#fff;}
+    .kontakt-container h2 { font-size: 2.2rem;color:#ff66cc;text-shadow: 0 0 10px #000;margin-bottom: 1rem;}
+    .kontakt-text { color:#ccc;margin-bottom: 2rem; font-size: 1.1rem;}
+    .kontakt-methoden { display: flex; flex-wrap: wrap;justify-content: center; gap: 2rem;}
+    .kontakt-item { background:#130017;border: 2px solid #3a003f;border-radius: 15px;padding: 1.5rem; width: 250px;text-align: center;transition: transform 0.3s, box-shadow 0.3s;box-shadow: 0 0 10px rgba(255, 0, 128, 0.1);}
     .kontakt-item:hover { transform: translateY(-5px);box-shadow: 0 0 20px rgba(255, 0, 128, 0.3);}
-    .kontakt-item .icon { font-size: 2rem; margin-bottom: 1rem;}
-    .kontakt-item h3 { margin-bottom: 0.5rem; font-size: 1.3rem; color: #ff99cc;}
-    .kontakt-item a { color: #ff66cc; font-weight: bold;text-decoration: none;}
+    .kontakt-item .icon { font-size: 2rem;margin-bottom: 1rem;}
+    .kontakt-item h3 { margin-bottom: 0.5rem; font-size: 1.3rem;color:#ff99cc;}
+    .kontakt-item a { color:#ff66cc; font-weight: bold;text-decoration: none;}
     .kontakt-item a:hover { text-decoration: underline;}
 
-    .report-container {background: linear-gradient(135deg, #1a001f, #2b003b);padding: 2.5rem 3rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 128, 0.4);text-align: center;color: #fff;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.1rem;line-height: 1.5;border: 2px solid #ff0080;transition: box-shadow 0.3s ease;}
+    .report-container {background: linear-gradient(135deg, #1a001f, #2b003b);padding: 2.5rem 3rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 128, 0.4);text-align: center;color:#fff;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.1rem;line-height: 1.5;border: 2px solid #ff0080;transition: box-shadow 0.3s ease;}
     .report-container:hover {box-shadow: 0 0 40px rgba(255, 0, 128, 0.7);}
-    .report-container strong {color: #ff66cc;font-weight: 600;}
-    .report-container a {color: #ff66cc;text-decoration: underline;}
-    .report-container a:hover {color: #ff00aa;text-decoration: none;}
-    footer { background: #111;text-align: center;padding: 1rem;font-size: 0.9rem;color: #888; margin-top: 3rem;}
-    hr { border: 1px solid #f00; margin: 2rem 0;}
+    .report-container strong {color:#ff66cc;font-weight: 600;}
+    .report-container a {color:#ff66cc;text-decoration: underline;}
+    .report-container a:hover {color:#ff00aa;text-decoration: none;}
+    footer { background:#111;text-align: center;padding: 1rem;font-size: 0.9rem;color:#888;margin-top: 3rem;}
+    hr { border: 1px solid #f00;margin: 2rem 0;}
   </style>
   <script>
     function showSection(id) {
@@ -156,174 +156,147 @@
 
   <section id="spiele">
 <div class="game-feature" 
-     style="background:#000; color:#ff0000;border:2px solid #ff0000;box-shadow:0 0 20px #ff0000;">
+     style="background:#000;color:#ff0000;border:2px solid #ff0000;box-shadow:0 0 20px #ff0000;">
   <div class="game-info">
-    <div class="badge" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;"> 
+    <div class="badge" style="background: linear-gradient(90deg, #ff0000, #800080);color:#ff0000;text-shadow: 0 0 5px #800080;">
       <span class="badge-icon">🎮</span> FEATURED GAME
     </div>
-    <h2 style="color: #000000;text-shadow: 0 0 5px #ff0000;">Administrative</h2>
+    <h2 style="color:#000000;text-shadow: 0 0 5px #ff0000;">Administrative</h2>
     <div class="tags">
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">MMORPG</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Gott-Simulator</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Voice Chat</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Achievements</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Online-PvP</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">LAN-PvP</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Online-Koop</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">LAN-Koop</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">MMORPG</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Gott-Simulator</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Voice Chat</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Achievements</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Online-PvP</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">LAN-PvP</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Online-Koop</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">LAN-Koop</div>
     </div>
-    <p class="description" style="color: #ffffff;">Ein MMORPG/Gott-Simulator. Multiplayer mit Voicechat und starkem Community-Fokus. Schwierig am Anfang, aber man wächst mit jeder Erfahrung.</p>
-    <ul class="features" style="color: #ffffff;">
+    <p class="description" style="color:#ffffff;">Ein MMORPG/Gott-Simulator. Multiplayer mit Voicechat und starkem Community-Fokus. Schwierig am Anfang, aber man wächst mit jeder Erfahrung.</p>
+    <ul class="features" style="color:#ffffff;">
       <li><span class="icon">🌍</span> Riesige, persistente Welten</li>
       <li><span class="icon">🧠</span> Integrierter Voice Chat</li>
       <li><span class="icon">🕹️</span> Community-getriebenes Gameplay</li>
       <li><span class="icon">📈</span> Progressives Lernsystem</li>
       <div class="project-lead">Leitung: VECTORY</div>
-    </ul>
-  </div>
+    </ul></div>
   <div class="game-preview" style="margin-top: 15px;">
     <div class="preview-box" 
-         style="border: 2px solid #000000;background-color: #111; padding: 10px;border-radius: 10px;text-align: center;">
+         style="background: linear-gradient(135deg, #ff0000, #800080);border: 2px solid #000000;padding: 10px;border-radius: 10px;text-align: center;">
       <iframe width="300" height="170" src="https://www.youtube.com/embed/nhylYD8xvF4" 
         title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope;picture-in-picture" 
         allowfullscreen></iframe>
-      <div class="preview-text" style="color: #ffffff;">
+      <div class="preview-text" style="color:#ffffff;">
         <div class="preview-title">Coming Soon</div>
         <div class="preview-sub">Screenshots & Gameplay</div>
-        <button onclick="nextScreenshot()" style="background: #000; color: #ff00ff;border: 1px solid #ff0000; padding: 5px 10px;">➡️</button>
-      </div>
-    </div>
+        <button onclick="nextScreenshot()" style="background:#000;color:#ff00ff;border: 1px solid #ff0000;padding: 5px 10px;">➡️</button>
+      </div></div>
       <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="text-decoration:none;">Steckbrief</a>
       <div class="corner-icon bottom-left">
-      <button onclick="showSection('administrativeost')" style="background: #000; color: #ff0000;border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
-    </div>
-  </div>
-</div>
-
-    <div class="game-feature">
-      <div class="game-info">
-        <div class="badge"><span class="badge-icon">🧩</span> Öffentliches Repo</div>
-        <h2>Dreadout</h2>
-        <div class="tags">
-          <div class="tag" style="color: #5b00fb;text-shadow: 0 0 5px #5b00fb;background-color: #000000;border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">Einzelspieler</div>
-          <div class="tag" style="color: #5b00fb;text-shadow: 0 0 5px #5b00fb;background-color: #000000;border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">Online-PvP</div>
-          <div class="tag" style="color: #5b00fb;text-shadow: 0 0 5px #5b00fb;background-color: #000000;border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">LAN-PvP</div>
-          <div class="tag" style="color: #5b00fb;text-shadow: 0 0 5px #5b00fb;background-color: #000000;border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">Online-Koop</div>
-          <div class="tag" style="color: #5b00fb;text-shadow: 0 0 5px #5b00fb;background-color: #000000;border: 1px solid #000000;box-shadow: 0 2px 12px #000000;">LAN-Koop</div>
-        </div>
-        <p class="description">Arkanoid/Breakout Klon, die alte art von spiel, aber mit einem neuen schliff.</p>
-        <ul class="features">
-          <li><span class="icon">🌍</span> 100+ Level</li>
-          <li><span class="icon">🕹️</span> Community-getriebener Workshop</li>
-          <li><span class="icon">📈</span> Dauerhafte Updates</li>
-          <div class="project-lead">Leitung: VECTORY</div>
-        </ul>
-      </div>
-      <div class="game-preview">
-        <div class="preview-box">
-          <div class="preview-icon">🌀</div>
-          <div class="preview-text">
-            <div class="preview-title">In arbeit</div>
-            <div class="preview-sub">Irgendwann</div>
-          </div>
-        </div>
-      <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="text-decoration:none;">Steckbrief</a>
-      <div class="corner-icon bottom-left">
-      <button onclick="showSection('dreadoutost')" style="background: #000; color: #ff0000;border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
-      </div>
-    </div>
+      <button onclick="showSection('administrativeost')" style="background:#000;color:#ff0000;border: 1px solid #ff0000;padding: 5px 10px;">OST</button>
+    </div></div></div>
   </section>
+
+<section id="administrativeost" style="padding:4rem 2rem;max-width:1200px;margin:auto;color:#fff; font-family:Arial, sans-serif;">
+
+  <div class="audio-section" 
+       style="background:linear-gradient(180deg,#8b0000,#ff0000,#ffffff);border:1px solid #ff1a1a;border-radius:12px;padding:16px 24px;">
+    <div class="track-title" style="color:#000000;text-shadow: 0 0 10px #8b0000;font-weight:bold;font-size:18px;white-space: nowrap;">01 Fox Games Intro</div>
+    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
+      <source src="assets/administrativeost/01 Fox Games Intro.mp3" type="audio/mpeg"></audio></div>
+
+  <div class="audio-section" 
+       style="background:linear-gradient(180deg,#ffffff,#ffffff);border:1px solid #ff1a1a;border-radius:12px;padding:16px 24px;">
+    <div class="track-title" style="color:#000000;text-shadow: 0 0 10px #000000;font-weight:bold;font-size:18px;">02 Menu</div>
+    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
+      <source src="assets/administrativeost/02 Menu.mp3" type="audio/mpeg"></audio></div>
+
+</div></div></section>
 
   <section id="animation">
 <div class="game-feature" 
-     style="background:#000; color:#ff0000;border:2px solid #ff0000;box-shadow:0 0 20px #ff0000;">
+     style="background:#000;color:#ff0000;border:2px solid #ff0000;box-shadow:0 0 20px #ff0000;">
   <div class="game-info">
-    <div class="badge" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;"> 
+    <div class="badge" style="background: linear-gradient(90deg, #ff0000, #8b0000);color:#8b0000;text-shadow: 0 0 5px #ff0000;">
       <span class="badge-icon">📺</span> SERIE
     </div>
-    <h2 style="color: #000000;text-shadow: 0 0 5px #ff0000;">Dread</h2>
+    <h2 style="color:#000000;text-shadow: 0 0 5px #ff0000;">Dread</h2>
     <div class="tags">
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Action</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Gore</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Horror</div>
-      <div class="tag" style="color: #ff0000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Phylosophisch</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Action</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Gore</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Horror</div>
+      <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Phylosophisch</div>
     </div>
-    <p class="description" style="color: #ffffff;">Die Serie folgt den anfang von Dread, auf seine interaktion mit Menschen auf er Erde, wie er mit ihnen umgeht und sie behandelt. Seine intentionen sind noch unklar...</p>
-    <ul class="features" style="color: #ffffff;">
+    <p class="description" style="color:#ffffff;">Die Serie folgt den anfang von Dread, auf seine interaktion mit Menschen auf er Erde, wie er mit ihnen umgeht und sie behandelt. Seine intentionen sind noch unklar...</p>
+    <ul class="features" style="color:#ffffff;">
       <li><span class="icon">📺</span> Staffel 1 Folgen: 25</li>
       <li><span class="icon">📺</span> Staffel 2 Folgen: ??</li>
       <li><span class="icon">📺</span> Staffel 3 Folgen: ??</li>
       <div class="project-lead">Leitung: VECTORY</div>
-    </ul>
-  </div>
+    </ul></div>
   <div class="game-preview" style="margin-top: 15px;">
     <div class="preview-box" 
-         style="border: 2px solid #000000;background-color: #111; padding: 10px;border-radius: 10px;text-align: center;">
+         style="background: linear-gradient(135deg, #ff0000, #8b0000);border: 2px solid #000000;padding: 10px;border-radius: 10px;text-align: center;">
       <div style="width: 200px; height: 200px; overflow: hidden;"><img src="assets/dreadost/Cover.png" style="width: 100%; height: 100%; object-fit: cover;"></div>
-      <div class="preview-text" style="color: #ffffff;">
+      <div class="preview-text" style="color:#ffffff;">
         <div class="preview-title">Coming Soon</div>
         <div class="preview-sub">Cover</div>
-        <button onclick="nextScreenshot()" style="background: #000; color: #ff00ff;border: 1px solid #ff0000; padding: 5px 10px;">➡️</button>
-      </div>
-    </div>
-      <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="text-decoration:none;">Steckbrief</a>
+        <button onclick="nextScreenshot()" style="background:#000;color:#ff00ff;border: 1px solid #ff0000;padding: 5px 10px;">➡️</button>
+      </div></div>
+      <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="background: linear-gradient(135deg, #8b0000, #ff0000);border: 2px solid #000000;text-decoration:none;">Steckbrief</a>
       <div class="corner-icon bottom-left">
-      <button onclick="showSection('dreadost')" style="background: #000; color: #ff0000;border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
+      <button onclick="showSection('dreadost')" style="background:#000;color:#ff0000;border: 1px solid #ff0000;padding: 5px 10px;">OST</button>
     </div>
+   </div>
   </div>
-</div>
 
 <div class="game-feature" 
-     style="background:#000; color:#880055;border:2px solid #880055;box-shadow:0 0 20px #880055;">
+     style="background:#000;color:#880055;border:2px solid #880055;box-shadow:0 0 20px #880055;">
   <div class="game-info">
-    <div class="badge" style="color: #880055;text-shadow: 0 0 5px #880055;"> 
+    <div class="badge" style="background: linear-gradient(90deg, #062c2f, #880055);color:#880055;text-shadow: 0 0 5px #062c2f;">
       <span class="badge-icon">📺</span> SERIE
     </div>
-    <h2 style="color: #000000;text-shadow: 0 0 5px #880055;">Cryptid</h2>
+    <h2 style="color:#000000;text-shadow: 0 0 5px #880055;">Cryptid</h2>
     <div class="tags">
-      <div class="tag" style="color: #880055;text-shadow: 0 0 5px #880055;background-color: #000000;border: 1px solid #880055;box-shadow: 0 0 12px #880055;">Horror</div>
-      <div class="tag" style="color: #880055;text-shadow: 0 0 5px #880055;background-color: #000000;border: 1px solid #880055;box-shadow: 0 0 12px #880055;">Thriller</div>
-      <div class="tag" style="color: #880055;text-shadow: 0 0 5px #880055;background-color: #000000;border: 1px solid #880055;box-shadow: 0 0 12px #880055;">Action</div>
-      <div class="tag" style="color: #880055;text-shadow: 0 0 5px #880055;background-color: #000000;border: 1px solid #880055;box-shadow: 0 0 12px #880055;">Drama</div>
+      <div class="tag" style="color:#880055;text-shadow: 0 0 5px #880055;background-color:#000000;border: 1px solid #880055;box-shadow: 0 0 12px #880055;">Horror</div>
+      <div class="tag" style="color:#880055;text-shadow: 0 0 5px #880055;background-color:#000000;border: 1px solid #880055;box-shadow: 0 0 12px #880055;">Thriller</div>
+      <div class="tag" style="color:#880055;text-shadow: 0 0 5px #880055;background-color:#000000;border: 1px solid #880055;box-shadow: 0 0 12px #880055;">Action</div>
+      <div class="tag" style="color:#880055;text-shadow: 0 0 5px #880055;background-color:#000000;border: 1px solid #880055;box-shadow: 0 0 12px #880055;">Drama</div>
     </div>
-    <p class="description" style="color: #ffffff;">In einer Welt voller mysteriöser Kreaturen muss die Familie Rinke ums Überleben kämpfen. Zwischen Albträumen und gefährlichen Entitäten entdecken sie, dass nicht alles ist, wie es scheint. Spannung, Horror und Familiendrama treffen auf Sci-Fi-Action – wer vertraut wem, wenn jede Begegnung tödlich sein kann?</p>
-    <ul class="features" style="color: #ffffff;">
+    <p class="description" style="color:#ffffff;">In einer Welt voller mysteriöser Kreaturen muss die Familie Rinke ums Überleben kämpfen. Zwischen Albträumen und gefährlichen Entitäten entdecken sie, dass nicht alles ist, wie es scheint. Spannung, Horror und Familiendrama treffen auf Sci-Fi-Action – wer vertraut wem, wenn jede Begegnung tödlich sein kann?</p>
+    <ul class="features" style="color:#ffffff;">
       <li><span class="icon">📺</span> Staffel 1 Folgen: 7/?</li>
       <li><span class="icon">📺</span> Staffel 2 Folgen: ?</li>
       <div class="project-lead">Leitung: VECTORY</div>
-    </ul>
-  </div>
+    </ul></div>
   <div class="game-preview" style="margin-top: 15px;">
     <div class="preview-box" 
-         style="border: 2px solid #000000;background-color: #111; padding: 10px;border-radius: 10px;text-align: center;">
+         style="background: linear-gradient(135deg, #062c2f, #880055);border: 2px solid #000000;padding: 10px;border-radius: 10px;text-align: center;">
       <div style="width: 200px; height: 200px; overflow: hidden;"><img src="assets/cryptidost/Cover.png" style="width: 100%; height: 100%; object-fit: cover;"></div>
-      <div class="preview-text" style="color: #ffffff;">
+      <div class="preview-text" style="color:#ffffff;">
         <div class="preview-title">Coming Soon</div>
         <div class="preview-sub">Cover</div>
-        <button onclick="nextScreenshot()" style="background: #000; color: #ff00ff;border: 1px solid #ff0000; padding: 5px 10px;">➡️</button>
-      </div>
-    </div>
+        <button onclick="nextScreenshot()" style="background:#000;color:#ff00ff;border: 1px solid #ff0000;padding: 5px 10px;">➡️</button>
+      </div></div>
       <a href="Steckbrief/Steckbrief.html" class="corner-icon top-right" style="text-decoration:none;">Steckbrief</a>
       <div class="corner-icon bottom-left">
-      <button onclick="showSection('cryptidost')" style="background: #000; color: #ff0000;border: 1px solid #ff0000; padding: 5px 10px;">OST</button>
+      <button onclick="showSection('cryptidost')" style="background:#000;color:#ff0000;border: 1px solid #ff0000;padding: 5px 10px;">OST</button>
     </div>
+   </div>
   </div>
-</div>
-  </section>
+ </section>
 
-<section id="dreadost" style="padding:4rem 2rem; max-width:1200px; margin:auto; color:#fff; font-family:Arial, sans-serif;">
-  <h2 style="border-radius: 40px;display: flex;justify-content: center;text-align:center; font-size:3rem; margin-bottom:3rem;color: #000000;text-shadow: 0 0 5px #ff0000;background-color: #000000;border: 1px solid #000000;box-shadow: 0 2px 12px #ff0000, 0 0 25px #000000 inset;">Dread</h2>
+<section id="dreadost"style="padding:4rem 2rem;max-width:1200px;margin:auto;color:#fff; font-family:Arial, sans-serif;">
 
   <div class="audio-section" 
        style="background:linear-gradient(180deg,#3e0000,#140000);border:1px solid #ff1a1a;border-radius:12px;padding:16px 24px;">
     <div class="track-title" style="color:#000000;text-shadow: 0 0 10px #ff0000;font-weight:bold;font-size:18px;">Dread</div>
     <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
       <source src="assets/dreadost/Dread.mp3" type="audio/mpeg"></audio></div>
-
 </section>
 
-<section id="cryptidost" style="padding:4rem 2rem; max-width:1200px; margin:auto; color:#fff; font-family:Arial, sans-serif;">
+<section id="cryptidost" style="padding:4rem 2rem;max-width:1200px;margin:auto;color:#fff; font-family:Arial, sans-serif;">
 
   <div class="audio-section" 
        style="background:linear-gradient(180deg,#880055,#000000);border:1px solid #880055;border-radius:12px;padding:16px 24px;">
@@ -332,7 +305,7 @@
       <source src="assets/cryptidost/Main Theme.mp3" type="audio/mpeg"></audio></div>
 
   <div class="audio-section" 
-       style="background: radial-gradient(circle, #000000 50%, #880055 100%);border:1px solid #880055;border-radius:12px; padding:16px 24px;">
+       style="background: radial-gradient(circle, #000000 50%, #880055 100%);border:1px solid #880055;border-radius:12px;padding:16px 24px;">
     <div class="track-title" style="color:#000000;text-shadow: 0 0 10px #880055;font-weight:bold;font-size:18px;">Cryptids Finale End Credits</div>
     <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
       <source src="assets/cryptidost/Cryptids Finale End Credits.mp3" type="audio/mpeg"></audio></div>
@@ -342,137 +315,126 @@
   <section id="arbeit">
     <h2 style="text-align:center;">Wir suchen dich!</h2>
     <div class="job-listing">
+
       <div class="job-card programmer">
         <h3>Programmierer</h3>
         <p>Du liebst Code? Entwickle mit uns innovative Spiele – von Gameplay-Mechaniken bis zum Netzwerkcode.</p>
       </div>
+
       <div class="job-card voiceactor">
         <h3>Voice Actor</h3>
         <p>Verleihe unseren Charakteren Leben durch deine Stimme. Wir suchen markante, emotionale Sprecher:innen.</p>
       </div>
+
       <div class="job-card sounddesigner">
         <h3>Sound Designer</h3>
         <p>Erschaffe Klangwelten! Vom UI-Sound bis zu epischen Explosionen – deine Kreativität zählt.</p>
       </div>
+
       <div class="job-card composer">
         <h3>Composer</h3>
         <p>Schreibe atmosphärische Musik, die Emotionen weckt – sei es episch, düster oder verträumt.</p>
       </div>
-    </div>
-  </section>
+
+     </div></section>
 
   <section id="staff" class="staff-section">
     <h2 style="color:#000000;text-shadow:0 0 5px #800080;">CEO</h2>
+
     <div class="staff-entry" style="background-color:#000000;border-color:#800080;box-shadow:0 0 8px #800080;">
       <img src="assets/staff/VECTORY.gif">
       <div class="staff-name" style="color:#000;text-shadow:0 0 5px #800080;">VECTORY</div>
-      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #800080;">CEO und Gründer von Fox Games</div>
-    </div>
+      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #800080;">CEO und Gründer von Fox Games</div></div>
 
-    <hr>
-    <h2 style="color:#000000;text-shadow:0 0 5px #ffffff;">Owner</h2>
+    <hr><h2 style="color:#000000;text-shadow:0 0 5px #ffffff;">Owner</h2>
+
     <div class="staff-entry" style="background-color:#000000;border-color:#800080;box-shadow:0 0 8px #800080;">
       <img src="assets/staff/VECTORY.png">
       <div class="staff-name" style="color:#000;text-shadow:0 0 5px #800080;">VECTORY</div>
-      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #800080;">VECTORY Owner</div>
-    </div>
+      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #800080;">VECTORY Owner</div></div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#8b0000; box-shadow:0 0 8px #8b0000;">
+    <div class="staff-entry" style="background-color:#000000;border-color:#8b0000;box-shadow:0 0 8px #8b0000;">
       <img src="assets/staff/none.png">
       <div class="staff-name" style="color:#000;text-shadow:0 0 5px #8b0000;">???</div>
-      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #8b0000;">Scott Owner</div>
-    </div>
+      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #8b0000;">Scott Owner</div></div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#ee82ee; box-shadow:0 0 8px #ee82ee;">
+    <div class="staff-entry" style="background-color:#000000;border-color:#ee82ee;box-shadow:0 0 8px #ee82ee;">
       <img src="assets/staff/none.png">
       <div class="staff-name" style="color:#000;text-shadow:0 0 5px #ee82ee;">???</div>
-      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #ee82ee;">Roxy Owner</div>
-    </div>
+      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #ee82ee;">Roxy Owner</div></div>
 
-    <hr>
-    <h2 style="color:#000000;text-shadow:0 0 5px #850303;">Creative Director</h2>
-    <div class="staff-entry" style="background-color:#000000; border-color:#850303; box-shadow:0 0 8px #850303;">
+    <hr><h2 style="color:#000000;text-shadow:0 0 5px #850303;">Creative Director</h2>
+
+    <div class="staff-entry" style="background-color:#000000;border-color:#850303;box-shadow:0 0 8px #850303;">
       <img src="assets/staff/Foodhater.gif">
       <div class="staff-name" style="color:#850303;text-shadow:0 0 5px #000000;">Foodhater</div>
-      <div class="staff-description" style="color:#850303;text-shadow:0 0 3px #850303;">Creative Director von Fox Games</div>
-    </div>
+      <div class="staff-description" style="color:#850303;text-shadow:0 0 3px #850303;">Creative Director von Fox Games</div></div>
 
-    <hr>
-    <h2 style="color:#000000;text-shadow:0 0 5px #c0eb34;">Cryptid Co-Director</h2>
-    <div class="staff-entry" style="background-color:#000000; border-color:#c0eb34; box-shadow:0 0 8px #c0eb34;">
+    <hr><h2 style="color:#000000;text-shadow:0 0 5px #c0eb34;">Cryptid Co-Director</h2>
+
+    <div class="staff-entry" style="background-color:#000000;border-color:#c0eb34;box-shadow:0 0 8px #c0eb34;">
       <img src="assets/staff/Earthevocator.png">
       <div class="staff-name" style="color:#c0eb34;text-shadow:0 0 5px #000000;">Earthevocator</div>
-      <div class="staff-description" style="color:#c0eb34;text-shadow:0 0 3px #c0eb34;">Cryptid Co-Director</div>
-    </div>
+      <div class="staff-description" style="color:#c0eb34;text-shadow:0 0 3px #c0eb34;">Cryptid Co-Director</div></div>
 
-    <hr>
-    <h2 style="color:#000000;text-shadow:0 0 5px #9400d3;">Co-Owner</h2>
-    <div class="staff-entry" style="background-color:#000000; border-color:#9400d3; box-shadow:0 0 8px #9400d3;">
+    <hr><h2 style="color:#000000;text-shadow:0 0 5px #9400d3;">Co-Owner</h2>
+
+    <div class="staff-entry" style="background-color:#000000;border-color:#9400d3;box-shadow:0 0 8px #9400d3;">
       <img src="assets/staff/FoxBot.png">
       <div class="staff-name" style="color:#000000;text-shadow:0 0 5px #9400d3;">FoxBot Co-Owner</div>
-      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #9400d3;">Hauseigener Bot</div>
-    </div>
+      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #9400d3;">Hauseigener Bot</div></div>
 
-    <hr>
-    <h2 style="color:#000000;text-shadow:0 0 5px #ffa500;">Teamleitung</h2>
+    <hr><h2 style="color:#000000;text-shadow:0 0 5px #ffa500;">Teamleitung</h2>
 
-    <hr>
-    <h2 style="color:#000000;text-shadow:0 0 5px #ff0000;">Admin</h2>
+    <hr><h2 style="color:#000000;text-shadow:0 0 5px #ff0000;">Admin</h2>
 
-    <hr>
-    <h2 style="color:#000000;text-shadow:0 0 5px #00ffff;">Programmer</h2>
-    <div class="staff-entry" style="background-color:#000000; border-color:#a8160c; box-shadow:0 0 8px #a8160c;">
+    <hr><h2 style="color:#000000;text-shadow:0 0 5px #00ffff;">Programmer</h2>
+
+    <div class="staff-entry" style="background-color:#000000;border-color:#a8160c;box-shadow:0 0 8px #a8160c;">
       <img src="assets/staff/Schwertsascha.png">
       <div class="staff-name" style="color:#000000;text-shadow:0 0 5px #a8160c;">Schwertsascha</div>
       <div class="staff-description" style="color:#a8160c;text-shadow:0 0 3px #a8160c;">Programmierer von Fox Games</div>
     </div>
 
-    <hr>
-    <h2 style="color:#000000;text-shadow:0 0 5px #00dc3c;">Moderator</h2>
+    <hr><h2 style="color:#000000;text-shadow:0 0 5px #00dc3c;">Moderator</h2>
 
-    <hr>
-    <h2 style="color:#ffff00;text-shadow:0 0 5px #000000;">Designer</h2>
-    <div class="staff-entry" style="background-color:#000000; border-color:#260e47; box-shadow:0 0 8px #260e47;">
+    <hr><h2 style="color:#ffff00;text-shadow:0 0 5px #000000;">Designer</h2>
+
+    <div class="staff-entry" style="background-color:#000000;border-color:#260e47;box-shadow:0 0 8px #260e47;">
       <img src="assets/staff/Felix.png">
       <div class="staff-name" style="color:#260e47;text-shadow:0 0 5px #000000;">Felix</div>
       <div class="staff-description" style="color:#260e47;text-shadow:0 0 3px #000000;">Designer von Fox Games</div>
     </div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#a30808; box-shadow:0 0 8px #a30808;">
+    <div class="staff-entry" style="background-color:#000000;border-color:#a30808;box-shadow:0 0 8px #a30808;">
       <img src="assets/staff/Molumbi.png">
       <div class="staff-name" style="color:#a30808;text-shadow:0 0 5px #000000;">Molumbi</div>
       <div class="staff-description" style="color:#a30808;text-shadow:0 0 3px #000000;">Designer von Fox Games</div>
     </div>
 
-    <hr>
-    <h2 style="color:#07940d;text-shadow:0 0 5px #07940d;">Community Manager</h2>
+    <hr><h2 style="color:#07940d;text-shadow:0 0 5px #07940d;">Community Manager</h2>
 
-    <hr>
-    <h2 style="color:#1da1f2;text-shadow:0 0 5px #1da1f2;">Social Media Manager</h2>
+    <hr><h2 style="color:#1da1f2;text-shadow:0 0 5px #1da1f2;">Social Media Manager</h2>
 
-    <hr>
-    <h2 style="color:#ff4fd8;text-shadow:0 0 5px #000000;">Composer</h2>
-    <div class="staff-entry" style="background-color:#000000; border-color:#0029f7; box-shadow:0 0 8px #0029f7;">
+    <hr><h2 style="color:#ff4fd8;text-shadow:0 0 5px #000000;">Composer</h2>
+
+    <div class="staff-entry" style="background-color:#000000;border-color:#0029f7;box-shadow:0 0 8px #0029f7;">
       <img src="assets/staff/Lukas.png">
       <div class="staff-name" style="color:#0029f7;text-shadow:0 0 5px #000000;">Lukas</div>
       <div class="staff-description" style="color:#0029f7;text-shadow:0 0 3px #000000;">Composer von Fox Games</div>
     </div>
 
-    <hr>
-    <h2 style="color:#ff6600;text-shadow:0 0 5px #000000;">Sound Artist</h2>
+    <hr><h2 style="color:#ff6600;text-shadow:0 0 5px #000000;">Sound Artist</h2>
 
-    <hr>
-    <h2 style="color:#8b0000;text-shadow:0 0 5px #000000;">FoxBot Developer</h2>
+    <hr><h2 style="color:#8b0000;text-shadow:0 0 5px #000000;">FoxBot Developer</h2>
 
-    <hr>
-    <h2 style="color:#0022ff;text-shadow:0 0 5px #000000;">Modder</h2>
+    <hr><h2 style="color:#0022ff;text-shadow:0 0 5px #000000;">Modder</h2>
 
-    <hr>
-    <h2 style="color:#4682b4;text-shadow:0 0 5px #000000;">Builder</h2>
+    <hr><h2 style="color:#4682b4;text-shadow:0 0 5px #000000;">Builder</h2>
 
-    <hr>
-    <h2 style="color:#9b30ff;text-shadow:0 0 5px #000000;">Voice Actor</h2>
-    <div class="staff-entry" style="background-color:#000000; border-color:#800080; box-shadow:0 0 8px #800080;">
+    <hr><h2 style="color:#9b30ff;text-shadow:0 0 5px #000000;">Voice Actor</h2>
+
+    <div class="staff-entry" style="background-color:#000000;border-color:#800080;box-shadow:0 0 8px #800080;">
       <img src="assets/staff/VECTORY.png">
       <div class="staff-name" style="color:#000000;text-shadow:0 0 5px #800080;">VECTORY</div>
       <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #800080;">Stimme von VECTORY Owner und Dread</div>
@@ -490,13 +452,13 @@
       <div class="staff-description">Stimme von <a href="steckbrief/RemedySynclair.html" span style="color:#ffd700;text-shadow:0 0 5px #ffd700;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#000000';this.style.textShadow='0 0 5px #ffd700';"onmouseout="this.style.color='#ffd700';this.style.textShadow='0 0 5px #ffd700';"> Remedy Synclair</span></a></div>
     </div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#9b30ff; box-shadow:0 0 8px #9b30ff;">
+    <div class="staff-entry" style="background-color:#000000;border-color:#9b30ff;box-shadow:0 0 8px #9b30ff;">
       <img src="assets/staff/Qualle.png">
       <div class="staff-name" style="color:#9b30ff;text-shadow:0 0 5px #000000;">Qualle</div>
       <div class="staff-description">Stimme von <a href="steckbrief/LilliosHeather.html" span style="color:#ffff00;text-shadow:0 0 5px #ffff00;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#000000';this.style.textShadow='0 0 5px #ffff00';"onmouseout="this.style.color='#ffff00';this.style.textShadow='0 0 5px #ffff00';"> Lillios Heather</span></a></div>
     </div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#260e47; box-shadow:0 0 8px #260e47;">
+    <div class="staff-entry" style="background-color:#000000;border-color:#260e47;box-shadow:0 0 8px #260e47;">
       <img src="assets/staff/Felix.png">
       <div class="staff-name" style="color:#260e47;text-shadow:0 0 5px #000000;">Felix</div>
       <div class="staff-description">Stimme von <a href="steckbrief/ErkanImkal.html" span style="color:#1d1919;text-shadow:0 0 5px none;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#ffffff';this.style.textShadow='0 0 5px #1d1919';"onmouseout="this.style.color='#1d1919';this.style.textShadow='0 0 5px none';"> Erkan Imkal</span></a></div>
@@ -508,7 +470,7 @@
       <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #fabd44;">Stimme von Jamie Fleck und Jill Leif</div>
     </div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#d45c00; box-shadow:0 0 8px #d45c00;">
+    <div class="staff-entry" style="background-color:#000000;border-color:#d45c00;box-shadow:0 0 8px #d45c00;">
       <img src="assets/staff/Rée.jpg">
       <div class="staff-name" style="color:#d45c00;text-shadow:0 0 5px #000000;"><a href="steckbrief/foxgames/Rée.html" span style="color:#000000;text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c';this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000';this.style.textShadow='0 0 5px #00dc3c';">Rée</span></a></div>
       <div class="staff-description">Stimme von<a href="steckbrief/MilaFenris.html" span style="color:#000000;text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c';this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000';this.style.textShadow='0 0 5px #00dc3c';"> Mila Fenris</span></a> und <a href="steckbrief/MonroeValise.html" span style="color:#000000;text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c';this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000';this.style.textShadow='0 0 5px #00dc3c';"> Monroe Valise</span></a></div>
@@ -520,7 +482,7 @@
       <div class="staff-description" >Stimme von <a href="steckbrief/MintRech.html" span style="color:#4b484d;text-shadow:0 0 5px none;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#ffffff';this.style.textShadow='0 0 5px #4b484d';"onmouseout="this.style.color='#4b484d';this.style.textShadow='0 0 5px none';"> Mint Rech</span></a></div>
     </div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#9b30ff; box-shadow:0 0 8px #9b30ff;">
+    <div class="staff-entry" style="background-color:#000000;border-color:#9b30ff;box-shadow:0 0 8px #9b30ff;">
       <img src="assets/staff/Mugen.jpeg">
       <div class="staff-name" style="color:#9b30ff;text-shadow:0 0 5px #000000;">Mugen</div>
       <div class="staff-description" style="color:#9b30ff;text-shadow:0 0 3px #9b30ff;">Stimme von Foxim Reich und Knolli Wile</div>
@@ -538,7 +500,7 @@
       <div class="staff-description" style="color:#c0eb34;text-shadow:0 0 3px #c0eb34;">Stimme von ???</div>
     </div>
 
-    <div class="staff-entry" style="background-color:#000000; border-color:#9b30ff; box-shadow:0 0 8px #9b30ff;">
+    <div class="staff-entry" style="background-color:#000000;border-color:#9b30ff;box-shadow:0 0 8px #9b30ff;">
       <img src="assets/staff/IK.png">
       <div class="staff-name" style="color:#9b30ff;text-shadow:0 0 5px #000000;">IK</div>
       <div class="staff-description" style="color:#9b30ff;text-shadow:0 0 3px #9b30ff;">Stimme von ???</div>
@@ -556,46 +518,41 @@
           <div class="details">
             <h3>Discord</h3>
             <a href="https://discord.gg/hewy2By47T" target="_blank">Beitreten</a>
-          </div>
-        </div>
+          </div></div>
         <div class="kontakt-item email">
           <div class="icon">📧</div>
           <div class="details">
             <h3>E-Mail</h3>
             <a href="mailto:foxgames@web.de">foxgames@web.de</a>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div></div></div></div>
   </section>
 
 <section id="partnerschaft">
-  <div style="background: linear-gradient(135deg, #002f2f, #004d4d); box-shadow: 0 0 20px rgba(0, 255, 200, 0.2); padding: 2rem; border-radius: 20px; max-width: 800px; margin: 2rem auto; color: #ffffff; font-family: Arial, sans-serif;">
-    <h2 style="color: #00ffee;text-shadow: 0 0 10px #000;text-align: center; margin-bottom: 1rem;">Partnerschaftsanfrage</h2>
-    <p style="color: #cccccc; font-size: 1.1rem;text-align: center; margin-bottom: 2rem;">Du möchtest mit uns zusammenarbeiten? Fülle einfach das folgende Formular aus und wir melden uns bei dir!</p>
+  <div style="background: linear-gradient(135deg, #002f2f, #004d4d);box-shadow: 0 0 20px rgba(0, 255, 200, 0.2);padding: 2rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;color:#ffffff; font-family: Arial, sans-serif;">
+    <h2 style="color:#00ffee;text-shadow: 0 0 10px #000;text-align: center;margin-bottom: 1rem;">Partnerschaftsanfrage</h2>
+    <p style="color:#cccccc; font-size: 1.1rem;text-align: center;margin-bottom: 2rem;">Du möchtest mit uns zusammenarbeiten? Fülle einfach das folgende Formular aus und wir melden uns bei dir!</p>
 
-    <form action="/partnership" method="POST" style="max-width: 600px; margin: auto;text-align: left;">
-      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Dein Name:</label>
-      <input type="text" name="name" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+    <form action="/partnership" method="POST" style="max-width: 600px;margin: auto;text-align: left;">
+      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Dein Name:</label>
+      <input type="text" name="name" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
-      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">E-Mail:</label>
-      <input type="email" name="email" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">E-Mail:</label>
+      <input type="email" name="email" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
-      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Discord-Server (Name oder Invite):</label>
-      <input type="text" name="discord" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Discord-Server (Name oder Invite):</label>
+      <input type="text" name="discord" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
-      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Wieviele Abos/Follower?</label>
-      <input type="text" name="abos" placeholder="z. B. YouTube 2.000, Twitch 500, Discord 800" style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Wieviele Abos/Follower?</label>
+      <input type="text" name="abos" placeholder="z. B. YouTube 2.000, Twitch 500, Discord 800" style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
-      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Twitch/YouTube-Link(s):</label>
-      <input type="text" name="links" placeholder="z. B. twitch.tv/deinname, youtube.com/@deinchannel" style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Twitch/YouTube-Link(s):</label>
+      <input type="text" name="links" placeholder="z. B. twitch.tv/deinname, youtube.com/@deinchannel" style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
-      <label style="color:#ffffff; display:block; margin-bottom:0.3rem;">Warum möchtest du Partner werden?</label>
-      <textarea name="message" rows="4" placeholder="Kurze Motivation..." style="width:100%; padding:0.5rem; margin-bottom:1.5rem; border-radius:5px; border:none;"></textarea>
+      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Warum möchtest du Partner werden?</label>
+      <textarea name="message" rows="4" placeholder="Kurze Motivation..." style="width:100%;padding:0.5rem;margin-bottom:1.5rem;border-radius:5px;border:none;"></textarea>
 
-      <button type="submit" style="padding:0.7rem 1.5rem; font-weight:bold; background:#00ffee; color:#000; border:none; border-radius:6px; cursor:pointer; width:100%;">ABSENDEN</button>
-    </form>
-  </div>
+      <button type="submit" style="padding:0.7rem 1.5rem; font-weight:bold;background:#00ffee;color:#000;border:none;border-radius:6px;cursor:pointer; width:100%;">ABSENDEN</button>
+    </form></div>
 </section>
 
 <section id="serverreport">
@@ -603,69 +560,42 @@
     <h2>Server melden</h2>
     <p class="report-text">Hier kannst du Server melden, die gegen unsere Richtlinien verstoßen. Bitte sei ehrlich – Missbrauch kann zu Einschränkungen führen.</p>
 
-<form action="/report" method="POST" onsubmit="return confirmServerReport(event)" style="text-align:left; max-width:600px; margin:auto;">
+<form action="/report" method="POST" onsubmit="return confirmServerReport(event)" style="text-align:left;max-width:600px;margin:auto;">
   <label for="servername">Servername:</label>
-  <input type="text" name="servername" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+  <input type="text" name="servername" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
   <label for="ip">IP-Adresse:</label>
-  <input type="text" name="ip" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+  <input type="text" name="ip" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
   <label for="reason">Grund der Meldung:</label>
-  <input type="text" name="reason" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+  <input type="text" name="reason" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
   <label for="description">Beschreibung (optional):</label>
-  <textarea name="description" rows="4" style="width:100%; padding:0.5rem; border-radius:5px; border:none;"></textarea>
+  <textarea name="description" rows="4" style="width:100%;padding:0.5rem;border-radius:5px;border:none;"></textarea>
 
   <label for="contact">Dein Name: (Discord oder E-Mail)</label>
-  <input type="text" name="contact" required placeholder="z. B. Max / Max#1234 / max@email.de" style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:none;">
+  <input type="text" name="contact" required placeholder="z. B. Max / Max#1234 / max@email.de" style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
 
-  <button type="submit" style="margin-top:1rem; padding:0.7rem 1.5rem; font-weight:bold; background:#e63946; color:#fff; border:none; border-radius:6px; cursor:pointer;">SERVER MELDEN</button>
-</form>
-  </div>
+  <button type="submit" style="margin-top:1rem;padding:0.7rem 1.5rem; font-weight:bold;background:#e63946;color:#fff;border:none;border-radius:6px;cursor:pointer;">SERVER MELDEN</button>
+</form></div>
 </section>
-
-<section id="administrativeost" style="padding:4rem 2rem; max-width:1200px; margin:auto; color:#fff; font-family:Arial, sans-serif;">
-  <h2 style="border-radius: 40px; display: flex; justify-content: center;text-align:center; font-size:3rem; margin-bottom:3rem; color: #000000;text-shadow: 0 0 5px #ff0000; background-color: #000000; border: 1px solid #000000; box-shadow: 0 2px 12px #ff0000, 0 0 25px #000000 inset;">
-    Administrative
-  </h2>
-
-  <div class="audio-section" 
-       style="background:linear-gradient(180deg,#8b0000,#ff0000,#ffffff);border:1px solid #ff1a1a;border-radius:12px;padding:16px 24px;">
-    <div class="track-title" style="color:#000000;text-shadow: 0 0 10px #8b0000;font-weight:bold;font-size:18px;white-space: nowrap;">01 Fox Games Intro</div>
-    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
-      <source src="assets/administrativeost/01 Fox Games Intro.mp3" type="audio/mpeg"></audio></div>
-
-  <div class="audio-section" 
-       style="background:linear-gradient(180deg,#ffffff,#ffffff);border:1px solid #ff1a1a;border-radius:12px;padding:16px 24px;">
-    <div class="track-title" style="color:#000000;text-shadow: 0 0 10px #000000;font-weight:bold;font-size:18px;">02 Menu</div>
-    <audio controls class="audio-player" style="width:100%;max-width:1500px;border-radius:12px;">
-      <source src="assets/administrativeost/02 Menu.mp3" type="audio/mpeg"></audio></div>
-
-</div></div></section>
 
   <section id="impressum">
     <div class="legal-container">
-      <h2>Impressum</h2>
-      <p><strong>Fox Games</strong><br>VECTORY<br>Straße 1<br>30556 Fox<br>Deutschland</p>
-      <p>E-Mail: foxgames@web.de<br>Telefon: ///</p>
-      <p>Verantwortlich gemäß § 5 TMG: VECTORY</p>
-    </div>
-  </section>
+      <p><strong>Fox Games</strong><br>VECTORY<br>Straße 1<br>29391 Fox<br>Deutschland</p>
+      <p>E-Mail: foxgames@web.de<br>Telefon: ///<br>Fax: ///</p>
+    </div></section>
 
   <section id="datenschutz">
     <div class="legal-container">
       <h2>Datenschutzerklärung</h2>
       <p>Wir nehmen den Schutz deiner persönlichen Daten sehr ernst. Personenbezogene Daten werden auf dieser Webseite nur im notwendigen Umfang erhoben. In keinem Fall werden die Daten verkauft oder aus anderen Gründen an Dritte weitergegeben.</p>
       <p>Beim Besuch unserer Website können durch unseren Hostinganbieter automatisch Daten wie IP-Adresse, Browsertyp, Betriebssystem etc. gespeichert werden. Diese Daten dienen ausschließlich der technischen Absicherung und statistischen Auswertung.</p>
-      <p>Du hast jederzeit das Recht auf Auskunft über die von dir gespeicherten Daten sowie das Recht auf Berichtigung oder Löschung dieser Daten.</p>
-    </div>
-  </section>
+    </div></section>
 
-  <footer>
+<footer>
     <div class="footer-container">
       <p>© 2025 Fox Games | <a href="#" onclick="showSection('impressum')">Impressum</a> | <a href="#" onclick="showSection('datenschutz')">Datenschutz</a></p>
-    </div>
-  </footer>
-
+</div></footer>
 </body>
 </html>

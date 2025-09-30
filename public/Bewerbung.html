@@ -8,12 +8,12 @@
     header { text-align: center; padding: 2rem 1rem 1rem; }
     header img.logo { width: 200px; display: block; margin: 0 auto 1rem; }
     header img.title { max-width: 60%; height: auto; display: block; margin: auto; }
-    .form-container {background: linear-gradient(135deg, #111, #1a1a1a);padding: 2.5rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);text-align: left;}
-    .form-container h2 {font-size: 2.2rem;color: #ff6600;text-shadow: 0 0 10px #000;text-align: center;margin-bottom: 1.5rem;}
+    .form-container {background: linear-gradient(180deg, #000000, #1c1c1c, #8b0000);padding: 2.5rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 0, 1);text-align: left;}
+    .form-container h2 {font-size: 2.2rem;text-shadow: 0 0 10px #000000;text-align: center;margin-bottom: 1.5rem;}
     .form-group {margin-bottom: 1.5rem;}
     .form-group label {display: block;font-weight: bold;margin-bottom: 0.5rem;color: #ff6600;}
-    .form-group input, 
-    .form-group textarea, 
+    .form-group input,
+    .form-group textarea,
     .form-group select {width: 100%;padding: 0.8rem;border: none;border-radius: 8px;background: #222;color: #fff;font-size: 1rem;box-shadow: inset 0 0 10px #8b0000;}
     .form-group textarea {resize: vertical;min-height: 120px;}
     .form-submit {text-align: center;margin-top: 2rem;}
@@ -25,105 +25,98 @@
 </head>
 <body>
   <header>
+    <a href="FoxGames.html" style="cursor: pointer;">
     <img src="assets/Fox Games Logo.png" class="logo" style="width: 250px;">
     <img src="assets/Fox Games Title.png" class="title" style="max-width: 20%;">
-  </header>
+  </a></header>
 
   <div class="form-container">
-    <h2> Bewerbung als Globaler<a href="steckbrief/foxgames/moderator.html" span style="color:#000000; text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';"> Moderator</span></a></h2>
+    <h2 style="color: #000000;text-shadow: 0 0 5px #ffffff"> Bewerbung als <a style="color:#000022; text-shadow: 0 0 5px #0000ff"> Globaler<a href="steckbrief/foxgames/moderator.html" span style="color:#000000; text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';"> Moderator</span></a></h2>
     <form action="Bewerbungerfolg.html" method="post">
       <div class="form-group">
-        <label for="name">Vollständiger Name</label>
+        <label for="name" style="color: #00ffff;">01/13: Vollständiger Name</label>
         <input type="text" id="name" name="name">
       </div>
 
       <div class="form-group">
-        <label for="age">Alter</label>
+        <label for="age" style="color: #ffffff;">02/13: Alter</label>
         <input type="number" id="age" name="age">
       </div>
 
       <div class="form-group">
-        <label for="discord">Discord-Tag (z. B. Nutzername#1234)</label>
-        <input type="text" id="discord" name="discord">
+        <label for="dusername" style="color: #0075c4;">03/13: Username/Discord-Tag (z. B. Max/max_123)</label>
+        <input type="text" id="discord" name="username">
       </div>
 
       <div class="form-group">
-        <label for="language">Welche sprachen sprichst du fließend?</label>
+        <label for="language" style="color: #ffff00;">04/13: Welche sprachen sprichst du fließend? (z.b. Deutsch/Englisch/Spanisch)</label>
         <input type="text" id="language" name="language">
       </div>
 
       <div class="form-group">
-        <label for="experience">Hast du bereits Moderationserfahrung? Beschreibe kurz.</label>
+        <label for="experience" style="color: #00ff00;">05/13: Hast du bereits Moderationserfahrung? Beschreibe kurz.</label>
         <textarea id="experience" name="experience"></textarea>
       </div>
 
       <div class="form-group">
-                                
-        <label for="motivation">Warum möchtest du Globaler <a href="steckbrief/foxgames/moderator.html" span style="color:#000000; text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';"> Moderator </span></a> werden?</label>
+        <label for="motivation" style="color: #00dc3c;">06/13: Warum möchtest du Globaler <a href="steckbrief/foxgames/moderator.html" span style="color:#000000; text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';"> Moderator </span></a> werden?</label>
         <textarea id="motivation" name="motivation"></textarea>
       </div>
 
       <div class="form-group">
-        <label for="conflict">Wie würdest du mit Konflikten zwischen Spielern umgehen?</label>
+        <label for="conflict" style="color: #ff1111;">07/13: Wie würdest du mit Konflikten zwischen Spielern umgehen?</label>
         <textarea id="conflict" name="conflict"></textarea>
       </div>
 
       <div class="form-group">
-        <label for="strengths">Was sind deine Stärken und Schwächen in einem Team? (Bitte sei ehrlich)</label>
+        <label for="strengths" style="color: #ff6600;">08/13: Was sind deine Stärken und Schwächen in einem Team? (Bitte sei ehrlich)</label>
         <textarea id="strengths" name="strengths"></textarea>
       </div>
 
       <div class="form-group">
-        <label for="time">Wie viel Zeit kannst du pro Tag aktiv investieren?</label>
+        <label for="time" style="color: #ff00ff;">09/13: Wie viel Zeit kannst du pro Tag aktiv investieren?</label>
         <select id="time" name="time">
           <option value="">Bitte auswählen</option>
           <option value="1-5">1–5 Stunden</option>
           <option value="5-10">5–10 Stunden</option>
           <option value="10-20">10–20 Stunden</option>
           <option value="20+">Mehr als 20 Stunden (Was machst du mit deinem Leben)</option>
-        </select>
-      </div>
+        </select></div>
 
       <div class="form-group">
-        <label for="situation">Beschreibe eine Situation, in der du Verantwortung übernehmen musstest.</label>
+        <label for="situation" style="color: #ffff00;">10/13: Beschreibe eine Situation, in der du Verantwortung übernehmen musstest.</label>
         <textarea id="situation" name="situation"></textarea>
       </div>
 
       <div class="form-group">
-        <label for="future">Wo siehst du dich in der Community in einem Jahr? vllt. als <a href="steckbrief/foxgames/Admin.html" span style="color:#000000; text-shadow:0 0 5px #ff0000;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#ff0000'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #ff0000';"> Admin</span></a>?</label>
+        <label for="future"style="color: #ff0000;">11/13: Wo siehst du dich in der Community in einem Jahr? vllt. als <a href="steckbrief/foxgames/Admin.html" span style="color:#000000; text-shadow:0 0 5px #ff0000;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#ff0000'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #ff0000';"> Admin</span></a>?</label>
         <textarea id="future" name="future"></textarea>
       </div>
 
       <div class="form-group">
-        <label for="cheat">Wurdest du von einem
+        <label for="discord" style="color: #a000a0;">12/13: Bist du im<a href="steckbrief/foxgames/FoxGames.html" style="display: inline-block;padding: 1px 1px;color: #000000;text-shadow: 0 0 5px #8b0000;background-color: #de3500;border: 1px solid #8b0000;box-shadow: inset 0 0 5px #ff0000, 0 0 5px #ff0000;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#8b0000'; this.style.textShadow='0 0 5px #ff0000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #8b0000';">Fox Games</a><a href="https://discord.gg/hewy2By47T" style="display: inline-block;padding: 1px 1px;color: #000000;text-shadow: 0 0 5px #0000ff;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#0000ff'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #0000ff';">Discord</a>?</label>
+        <select id="discord" name="discord">
+          <option value="">Bitte auswählen</option>
+          <option value="ja1">Ja</option>
+          <option value="nein2">Nein</option>
+          <option value="ja2">Ja, aber anderer username als bei 01 angegeben</option>
+          <option value="nein2">Nein, aber werde ich</option>
+          <option value="nein3">Nein, und ich habe auch nicht vor zu joinen. (Kein problem, verstehen wir)</option>
+      </select></div>
 
-
-
-<a href="steckbrief/foxgames/foxgames.html" 
-   style="
-     display: inline-block;
-     padding: 1px 1px;
-     color: #000000;
-     text-shadow: 0 0 5px #8b0000;
-     background-color: #181818;
-     border: 1px solid #ff0000;
-     box-shadow: inset 0 0 5px #ff0000, 0 0 5px #ff0000;
-     text-decoration: none;
-     transition: all 0.3s ease;"
-   onmouseover="this.style.color='#8b0000'; this.style.textShadow='0 0 5px #000000';"
-   onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #8b0000';">Fox Games</a>
-
-
-
-Mitglied empfohlen? Wenn ja, von wem? (Name des Mitglieds)</label>
-        <input type="text" name="cheat"></textarea>
-      </div>
+      <div class="form-group">
+        <label for="cheat" style="color: #000000;">13/13: Wurdest du von einem<a href="steckbrief/foxgames/FoxGames.html" style="display: inline-block;padding: 1px 1px;color: #000000;text-shadow: 0 0 5px #8b0000;background-color: #de1300;border: 1px solid #8b0000;box-shadow: inset 0 0 5px #ff0000, 0 0 5px #ff0000;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#8b0000'; this.style.textShadow='0 0 5px #ff0000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #8b0000';">Fox Games</a>Mitglied empfohlen? Wenn ja, von wem?</label>
+        <select id="cheat" name="cheat">
+          <option value="">Keine Empfehlung</option>
+          <option value="foxgames@vectoryowner">VECTORY Owner</option>
+          <option value="foxgames@lumina">Lumina</option>
+          <option value="foxgames@akuhl">Akuhl</option>
+      </select></div>
 
       <div class="form-submit">
+        <h2>Wir freuen uns auf dich</h2>
         <button type="submit">Bewerbung absenden</button>
-      </div>
-    </form>
-  </div>
+      </div></form></div>
 
   <footer>
     <div class="footer-container">
