@@ -7,7 +7,6 @@ const app = express();
 const PORT = 3000;
 const HOST = '192.168.178.107';
 
-// === Config laden ===
 const configPath = path.join(__dirname, 'config.json');
 let users = [];
 if (fs.existsSync(configPath)) {
@@ -22,7 +21,6 @@ if (fs.existsSync(configPath)) {
   console.warn('[CONFIG] Keine config.json gefunden!');
 }
 
-// === Middleware ===
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -34,17 +32,10 @@ app.use(session({
   cookie: { maxAge: 1000 * 60 * 60 } // 1 Stunde
 }));
 
-// === Login-Seite ===
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'FoxGames.html'));
 });
 
-// Partnership-Seite
-app.get('/partnership', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'partnership.html'));
-});
-
-// === Login prüfen ===
 app.post('/verify-password', (req, res) => {
   const { username, password } = req.body;
 
@@ -61,7 +52,6 @@ app.post('/verify-password', (req, res) => {
   }
 });
 
-// === Reports ===
 app.post('/report', (req, res) => {
   const { servername, ip, reason, description, contact } = req.body;
 
@@ -90,26 +80,23 @@ Kontakt: ${contact}
 app.post('/bewerbung', (req, res) => {
   const data = req.body;
 
-  if(!data.name || !data.job) return res.status(400).send('Name oder Job fehlt');
+  const nameField = Object.keys(data).find(k => k.startsWith("name"));
+  const safeName = nameField ? data[nameField].replace(/[^a-zA-Z0-9-_ ]/g, '') : "Unbekannt";
 
-  const timestamp = new Date().toISOString().replace(/:/g,'-');
-  const safeName = data.name.replace(/[^a-zA-Z0-9-_ ]/g,'');
-  const safeJob = data.job.replace(/[^a-zA-Z0-9-_ ]/g,'');
+  const safeJob = (data.job || "Unbekannter Job").replace(/[^a-zA-Z0-9-_ ]/g, '');
+
+  const timestamp = new Date().toISOString().replace(/:/g, '-');
   const filename = `${timestamp}-${safeName} ${safeJob}.txt`;
   const filepath = path.join(__dirname, 'bewerbungen', filename);
 
-  // Alle Antworten schön formatieren
   let content = `===========================\n`;
   content += `Bewerbung am: ${new Date().toLocaleString()}\n`;
-  content += `Job: ${data.job}\n`;
-  content += `Name: ${data.name}\n\n`;
+  content += `Job: ${safeJob}\n`;
+  if (safeName) content += `Name: ${safeName}\n\n`;
 
-  // Alle anderen Felder
-  for(const key in data){
-    if(key === 'name' || key === 'job') continue;
+  for (const key in data) {
     content += `${key}: ${data[key]}\n`;
   }
-
   content += `===========================\n`;
 
   try {
@@ -117,13 +104,12 @@ app.post('/bewerbung', (req, res) => {
     fs.writeFileSync(filepath, content, 'utf8');
     console.log(`[BEWERBUNG] ${filename} erstellt`);
     res.send({ success: true });
-  } catch(err) {
+  } catch (err) {
     console.error('[BEWERBUNG] Fehler beim Speichern:', err);
     res.status(500).send('Fehler beim Speichern der Bewerbung');
   }
 });
 
-// === Server starten ===
 app.listen(PORT, HOST, () => {
   console.log(`FoxGames Webserver läuft auf http://${HOST}:${PORT}`);
 });
