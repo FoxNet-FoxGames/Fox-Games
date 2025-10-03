@@ -1,0 +1,295 @@
+.staff-entry {padding: 1rem;display: flex;gap: 10px;align-items: center;border-radius: 8px;display: inline-block;margin: 1rem;border-radius: 10px;text-align: center;background-color:#000000;border: 2px solid #000000;box-shadow: 0 0 8px #ffffff}
+.staff-entry img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.rée-entry {background-image: url('assets/staff/Rée.gif');background-size: cover;background-position: center;border: 2px solid #d45c00;box-shadow: 0 0 8px #d45c00;}
+.rée-entry img {content: url('assets/staff/Rée.jpg'); /* ersetzt das img src direkt */}
+.rée {color: #d45c00;text-shadow: 0 0 5px #d45c00;text-decoration: none;transition: all 0.3s ease;}
+.rée:hover {color: #000000;text-shadow: 0 0 5px #d45c00;}
+
+.queenbee-entry {background-image: url('assets/staff/QueenBeeBackground.gif');background-size: cover;background-position: center;border-color: #83ccca;box-shadow: 0 0 8px #83ccca;}
+.queenbee-entry img { content: url('assets/staff/QueenBee.png'); }
+.queenbee {color: #83ccca;text-shadow: 0 0 5px #83ccca;text-decoration: none;transition: all 0.3s ease;}
+.queenbee:hover {color: #000000;text-shadow: 0 0 5px #83ccca;}
+
+
+.vectory-entry {
+    background-color: #000000;
+    border: 2px solid #800080;
+    box-shadow: 0 0 8px #800080;
+    border-radius: 8px;
+}
+
+.vectory-entry img {
+    content: url('assets/staff/VECTORY.png');
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.vectory {
+    color: #000000;
+    text-shadow: 0 0 5px #800080;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.vectory:hover {
+    color: #800080;
+    text-shadow: 0 0 5px #800080;
+}
+
+/* =====================
+   Fuchsie
+===================== */
+.fuchsie-entry {
+    background-image: url('assets/staff/FuchsieBackground.gif');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #9b30ff;
+    box-shadow: 0 0 8px #9b30ff;
+    border-radius: 8px;
+}
+
+.fuchsie-entry img {
+    content: url('assets/staff/Fuchsie.gif');
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.fuchsie {
+    color: #9b30ff;
+    text-shadow: 0 0 5px #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.fuchsie:hover {
+    color: #742B13;
+    text-shadow: 0 0 3px #742B13;
+}
+
+/* =====================
+   Thunder-German
+===================== */
+.thundergerman-entry {
+    background-image: url('assets/staff/ThunderGermanBackground.png');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #9b30ff;
+    box-shadow: 0 0 8px #9b30ff;
+    border-radius: 8px;
+}
+
+.thundergerman-entry img {
+    content: url('assets/staff/ThunderGerman.png');
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.thundergerman {
+    color: #9b30ff;
+    text-shadow: 0 0 5px #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.thundergerman:hover {
+    color: #000000;
+    text-shadow: 0 0 5px #9b30ff;
+}
+
+.qualle-entry {
+    background-color: #000000;
+    border: 2px solid #9b30ff;
+    box-shadow: 0 0 8px #9b30ff;
+    border-radius: 8px;
+}
+
+.qualle-entry img {
+    content: url('assets/staff/Qualle.png');
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.qualle {
+    color: #9b30ff;
+    text-shadow: 0 0 5px #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.qualle:hover {
+    color: #ffff00;
+    text-shadow: 0 0 5px #ffff00;
+}
+
+.felix-entry {
+    background-color: #000000;
+    border: 2px solid #260e47;
+    box-shadow: 0 0 8px #260e47;
+    border-radius: 8px;
+}
+
+.felix-entry img {
+    content: url('assets/staff/Felix.png');
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.felix {
+    color: #260e47;
+    text-shadow: 0 0 5px #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.felix:hover {
+    color: #1d1919;
+    text-shadow: 0 0 5px none;
+}
+
+.dinonudel-entry {
+    background-image: url('assets/staff/DinonudelBackground.gif');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #a327e6;
+    box-shadow: 0 0 8px #a327e6;
+    border-radius: 8px;
+}
+
+.dinonudel-entry img {
+    content: url('assets/staff/Dinonudel.gif');
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.dinonudel {
+    color: #a327e6;
+    text-shadow: 0 0 5px #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dinonudel:hover {
+    color: #4b484d;
+    text-shadow: 0 0 5px #4b484d;
+}
+
+.mugen-entry {
+    background-color: #000000;
+    border: 2px solid #9b30ff;
+    box-shadow: 0 0 8px #9b30ff;
+    border-radius: 8px;
+}
+
+.mugen-entry img {
+    content: url('assets/staff/Mugen.jpeg');
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.mugen {
+    color: #9b30ff;
+    text-shadow: 0 0 5px #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mugen:hover {
+    color: #9b30ff;
+    text-shadow: 0 0 3px #9b30ff;
+}
+
+.margarethe-entry {
+    background-image: url('assets/staff/MargaretheBackground.gif');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #5e0e11;
+    box-shadow: 0 0 8px #5e0e11;
+    border-radius: 8px;
+}
+
+.margarethe-entry img {
+    content: url('assets/staff/Margarethe.jpg');
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.margarethe {
+    color: #5e0e11;
+    text-shadow: 0 0 5px #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.margarethe:hover {
+    color: #5e0e11;
+    text-shadow: 0 0 3px #5e0e11;
+}
+
+.none, .dread, .foximreich, .knolliwile, .mintrech, .lilliosheather, .erkanimkal, .milafenris, .monroevalise {text-decoration: none;transition: all 0.3s ease;}
+
+.none {color: #ffffff;text-shadow: 0 0 3px #ffffff;}
+.none:hover {color: #000000;text-shadow: 0 0 3px #9b30ff;}
+
+.dread { color: #000000; text-shadow: 0 0 3px #ff0000;}
+.dread:hover { color: #ff0000; text-shadow: 0 0 3px #000000;}
+
+.foximreich { color: #9b30ff; text-shadow: 0 0 3px #9b30ff;}
+.foximreich:hover { color: #000000; text-shadow: 0 0 3px #9b30ff;}
+
+.knolliwile { color: #9b30ff; text-shadow: 0 0 3px #9b30ff;}
+.knolliwile:hover { color: #000000; text-shadow: 0 0 3px #9b30ff;}
+
+.mintrech { color: #4b484d; text-shadow: 0 0 3px #4b484d;}
+.mintrech:hover { color: #ffffff; text-shadow: 0 0 3px #4b484d;}
+
+.lilliosheather { color: #ffff00; text-shadow: 0 0 3px #ffff00;}
+.lilliosheather:hover { color: #000000; text-shadow: 0 0 3px #ffff00;}
+
+.erkanimkal { color: #1d1919; text-shadow: 0 0 3px #1d1919; }
+.erkanimkal:hover { color: #ffffff; text-shadow: 0 0 3px #1d1919; }
+
+.milafenris {color: #ff00aa;text-shadow: 0 0 5px #000000;}
+.milafenris:hover {color: #ff55cc;text-shadow: 0 0 5px #000000;}
+
+.monroevalise {color: #00dc3c;text-shadow: 0 0 5px #000000;}
+.monroevalise:hover {color: #00ff66;text-shadow: 0 0 5px #000000;}

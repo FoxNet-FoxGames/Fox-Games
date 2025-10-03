@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <title>Fox Games</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body { margin: 0;background-color:#000;color:#fff; font-family: Arial, sans-serif;}
     header { text-align: center;padding: 2rem 1rem 1rem;}
@@ -89,8 +90,6 @@
     .job-card p {font-size: 1rem;line-height: 1.5;color: #bbb;}
 
     .staff-section { text-align: center;}
-    .staff-entry { display: inline-block;padding: 1rem;margin: 1rem;border-radius: 10px;text-align: center;background-color:#000000;border: 2px solid #000000;box-shadow: 0 0 8px #ffffff;}
-    .staff-entry img { width: 200px; height: 200px; object-fit: cover;border-radius: 10px; display: block;margin: 0 auto 1rem;}
     .staff-name { font-size: 1.2rem; font-weight: bold;color:#800080;text-shadow: 0 0 5px #000;}
     .staff-description { color:#bbbbbb;text-shadow: 0 0 3px #000;}
 
@@ -475,77 +474,133 @@
 
     <hr><h2 style="color:#9b30ff;text-shadow:0 0 5px #000000;">Voice Actor</h2>
 
-    <div class="staff-entry" style="background-color:#000000;border-color:#800080;box-shadow:0 0 8px #800080;">
-      <img src="assets/staff/VECTORY.png">
-      <div class="staff-name" style="color:#000000;text-shadow:0 0 5px #800080;">VECTORY</div>
-      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #800080;">Stimme von VECTORY Owner und Dread</div>
-    </div>
+<div class="staff-entry vectory-entry">
+  <img alt="VECTORY">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/VECTORY.html" class="vectory">VECTORY</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/Dread.html" class="dread">Dread</a> und <span class="vectory">VECTORY Owner</span>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-image: url('assets/staff/FuchsieBackground.gif');background-size: cover;background-position: center;border-color:#9b30ff;box-shadow: 0 0 8px #9b30ff;">
-      <img src="assets/staff/Fuchsie.gif">
-      <div class="staff-name" style="color:#9b30ff;text-shadow:0 0 5px #000000;">Fuchsie</div>
-      <div class="staff-description" style="color:#742B13;text-shadow:0 0 3px #742B13;">Stimme von Zeiles Morgana Vilgore und Frax Reich</div>
-    </div>
+<div class="staff-entry fuchsie-entry">
+  <img alt="Fuchsie">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/Fuchsie.html" class="fuchsie">Fuchsie</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/ZeilesMorganaVilgore.html" class="fuchsie">Zeiles Morgana Vilgore</a> und <a href="steckbrief/FraxReich.html" class="fuchsie">Frax Reich</a>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-image: url('assets/staff/ThunderGermanBackground.png');background-size: cover;background-position: center;border-color:#9b30ff;box-shadow: 0 0 8px #9b30ff;">
-      <img src="assets/staff/ThunderGerman.png">
-      <div class="staff-name" style="color:#9b30ff;text-shadow:0 0 5px #000000;">Thunder-German</div>
-      <div class="staff-description">Stimme von <a href="steckbrief/RemedySynclair.html" span style="color:#ffd700;text-shadow:0 0 5px #ffd700;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#000000';this.style.textShadow='0 0 5px #ffd700';"onmouseout="this.style.color='#ffd700';this.style.textShadow='0 0 5px #ffd700';"> Remedy Synclair</span></a></div>
-    </div>
+<div class="staff-entry thundergerman-entry">
+  <img alt="Thunder-German">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/ThunderGerman.html" class="thundergerman">Thunder-German</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/RemedySynclair.html" class="thundergerman">Remedy Synclair</a>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-color:#000000;border-color:#9b30ff;box-shadow:0 0 8px #9b30ff;">
-      <img src="assets/staff/Qualle.png">
-      <div class="staff-name" style="color:#9b30ff;text-shadow:0 0 5px #000000;">Qualle</div>
-      <div class="staff-description">Stimme von <a href="steckbrief/LilliosHeather.html" span style="color:#ffff00;text-shadow:0 0 5px #ffff00;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#000000';this.style.textShadow='0 0 5px #ffff00';"onmouseout="this.style.color='#ffff00';this.style.textShadow='0 0 5px #ffff00';"> Lillios Heather</span></a></div>
-    </div>
+<div class="staff-entry qualle-entry">
+  <img alt="Qualle">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/Qualle.html" class="qualle">Qualle</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/LilliosHeather.html" class="lilliosheather">Lillios Heather</a>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-color:#000000;border-color:#260e47;box-shadow:0 0 8px #260e47;">
-      <img src="assets/staff/Felix.png">
-      <div class="staff-name" style="color:#260e47;text-shadow:0 0 5px #000000;">Felix</div>
-      <div class="staff-description">Stimme von <a href="steckbrief/ErkanImkal.html" span style="color:#1d1919;text-shadow:0 0 5px none;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#ffffff';this.style.textShadow='0 0 5px #1d1919';"onmouseout="this.style.color='#1d1919';this.style.textShadow='0 0 5px none';"> Erkan Imkal</span></a></div>
-    </div>
+<div class="staff-entry felix-entry">
+  <img alt="Felix">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/Felix.html" class="felix">Felix</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/ErkanImkal.html" class="erkanimkal">Erkan Imkal</a>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-image: url('assets/staff/QueenBeeBackground.gif');background-size: cover;background-position: center;border-color:#83ccca;box-shadow: 0 0 8px #83ccca;">
-      <img src="assets/staff/QueenBee.png">
-      <div class="staff-name" style="color:#83ccca;text-shadow:0 0 5px #83ccca;"><a href="steckbrief/foxgames/QueenBee.html" span style="color:#83ccca;text-shadow:0 0 5px #83ccca;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#000000';this.style.textShadow='0 0 5px #83ccca';"onmouseout="this.style.color='#83ccca';this.style.textShadow='0 0 5px #83ccca';">Queen Bee</span></a></div>
-      <div class="staff-description" style="color:#000000;text-shadow:0 0 3px #fabd44;">Stimme von Jamie Fleck und Jill Leif</div>
+<div class="staff-entry queenbee-entry">
+  <img alt="Queen Bee">
+  <div>
+    <div class="staff-name">
+      <a href="steckbrief/foxgames/QueenBee.html" class="queenbee">Queen Bee</a>
     </div>
+    <div class="staff-description">
+      Stimme von 
+      <a href="steckbrief/foxgames/JamieFleck.html" class="jamie">Jamie Fleck</a> und 
+      <a href="steckbrief/foxgames/JillLeif.html" class="jill">Jill Leif</a>
+    </div>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-color:#000000;border-color:#d45c00;box-shadow:0 0 8px #d45c00;">
-      <img src="assets/staff/Rée.jpg">
-      <div class="staff-name" style="color:#d45c00;text-shadow:0 0 5px #000000;"><a href="steckbrief/foxgames/Rée.html" span style="color:#000000;text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c';this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000';this.style.textShadow='0 0 5px #00dc3c';">Rée</span></a></div>
-      <div class="staff-description">Stimme von<a href="steckbrief/MilaFenris.html" span style="color:#000000;text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c';this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000';this.style.textShadow='0 0 5px #00dc3c';"> Mila Fenris</span></a> und <a href="steckbrief/MonroeValise.html" span style="color:#000000;text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c';this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000';this.style.textShadow='0 0 5px #00dc3c';"> Monroe Valise</span></a></div>
+<div class="staff-entry rée-entry">
+  <img>
+  <div>
+    <div class="staff-name">
+      <a href="steckbrief/foxgames/Rée.html" class="rée">Rée</a>
     </div>
+    <div class="staff-description">
+      Stimme von 
+      <a href="steckbrief/MilaFenris.html" class="milafenris">Mila Fenris</a> und 
+      <a href="steckbrief/MonroeValise.html" class="monroevalise">Monroe Valise</a>
+    </div>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-image: url('assets/staff/DinonudelBackground.gif');background-size: cover;background-position: center;border-color:#9b30ff;box-shadow: 0 0 8px #a327e6;">
-      <img src="assets/staff/Dinonudel.gif">
-      <div class="staff-name" style="color:#a327e6;text-shadow:0 0 5px #000000;">Dinonudel</div>
-      <div class="staff-description" >Stimme von <a href="steckbrief/MintRech.html" span style="color:#4b484d;text-shadow:0 0 5px none;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#ffffff';this.style.textShadow='0 0 5px #4b484d';"onmouseout="this.style.color='#4b484d';this.style.textShadow='0 0 5px none';"> Mint Rech</span></a></div>
-    </div>
+<div class="staff-entry dinonudel-entry">
+  <img alt="Dinonudel">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/Dinonudel.html" class="dinonudel">Dinonudel</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/MintRech.html" class="mintrech">Mint Rech</a>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-color:#000000;border-color:#9b30ff;box-shadow:0 0 8px #9b30ff;">
-      <img src="assets/staff/Mugen.jpeg">
-      <div class="staff-name" style="color:#9b30ff;text-shadow:0 0 5px #000000;">Mugen</div>
-      <div class="staff-description" style="color:#9b30ff;text-shadow:0 0 3px #9b30ff;">Stimme von Foxim Reich und Knolli Wile</div>
-    </div>
+<div class="staff-entry mugen-entry">
+  <img alt="Mugen">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/Mugen.html" class="mugen">Mugen</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/FoximReich.html" class="foximreich">Foxim Reich</a> und <a href="steckbrief/KnolliWile.html" class="knolliwile">Knolli Wile</a>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-image: url('assets/staff/MargaretheBackground.gif');background-size: cover;background-position: center;border-color:#5e0e11;box-shadow: 0 0 8px #5e0e11;">
-      <img src="assets/staff/Margarethe.jpg">
-      <div class="staff-name" style="color:#5e0e11;text-shadow:0 0 5px #000000;">Margarethe</div>
-      <div class="staff-description" style="color:#5e0e11;text-shadow:0 0 3px #5e0e11;">Stimme von Elize Hanko</div>
-    </div>
+<div class="staff-entry margarethe-entry">
+  <img alt="Margarethe">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/Margarethe.html" class="margarethe">Margarethe</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/ElizeHanko.html" class="margarethe">Elize Hanko</a>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-image: url('assets/staff/EarthevocatorBackground.gif');background-size: cover;background-position: center;border-color:#c0eb34;box-shadow: 0 0 8px #c0eb34;">
-      <img src="assets/staff/Earthevocator.png">
-      <div class="staff-name" style="color:#c0eb34;text-shadow:0 0 5px #000000;">Eathevocator</div>
-      <div class="staff-description" style="color:#c0eb34;text-shadow:0 0 3px #c0eb34;">Stimme von ???</div>
-    </div>
+<div class="staff-entry earthevocator-entry">
+  <img alt="Earthevocator">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/Earthevocator.html" class="earthevocator">Earthevocator</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <a href="steckbrief/Unbekannt.html" class="none">???</a>
+  </div>
+</div>
 
-    <div class="staff-entry" style="background-color:#000000;border-color:#9b30ff;box-shadow:0 0 8px #9b30ff;">
-      <img src="assets/staff/IK.png">
-      <div class="staff-name" style="color:#9b30ff;text-shadow:0 0 5px #000000;">IK</div>
-      <div class="staff-description" style="color:#9b30ff;text-shadow:0 0 3px #9b30ff;">Stimme von ???</div>
-    </div>
+<div class="staff-entry ik-entry">
+  <img alt="IK">
+  <div class="staff-name">
+    <a href="steckbrief/foxgames/IK.html" class="IK">IK</a>
+  </div>
+  <div class="staff-description">
+    Stimme von <span class="none">???</span>
+  </div>
+</div>
 
   </section>
 
