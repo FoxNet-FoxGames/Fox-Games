@@ -56,15 +56,37 @@
     .game-feature + .game-feature { margin-top: 3rem;}
     .project-lead {position: absolute;bottom: -20px;left: 0px;color:#666;font-size: 12px;font-weight: normal;}
 
-    .job-listing { display: flex; flex-wrap: wrap;justify-content: center; gap: 2rem;padding-top: 2rem;}
-    .job-card { background:#111;padding: 1.5rem;border-radius: 12px; width: 250px;text-align: center;box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);transition: transform 0.3s, box-shadow 0.3s;}
-    .job-card:hover { transform: translateY(-5px);box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);}
-    .job-card h3 { margin-bottom: 1rem; font-size: 1.5rem;}
-    .job-card p { color:#ccc; font-size: 1rem; line-height: 1.4;}
-    .job-card.programmer h3 { color:#00ffff;text-shadow: 0 0 5px #00ffff;}
-    .job-card.voiceactor h3 { color:#b84dff;text-shadow: 0 0 5px #b84dff;}
-    .job-card.sounddesigner h3 { color:#ffa500;text-shadow: 0 0 5px #ffa500;}
-    .job-card.composer h3 { color:#ff69b4;text-shadow: 0 0 5px #ff69b4;}
+    #arbeit {background: linear-gradient(135deg, rgba(255,0,0,0.05), rgba(255,102,0,0.05));border-radius: 20px;padding: 3rem 2rem;box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);margin: 3rem auto;max-width: 1100px;text-align: center;}
+    #arbeit h2 {font-size: 2.5rem;margin-bottom: 2rem;background: linear-gradient(90deg, #ff0000, #ff6600);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-shadow: 0 0 15px rgba(255, 0, 0, 0.4);}
+    .job-listing {display: flex;flex-wrap: wrap;justify-content: center;gap: 2rem;max-width: 1200px;margin: auto;}
+    .job-listing:has(.job-card:only-child) {justify-content: center;}
+    .job-listing:has(.job-card:nth-child(2):last-child) {justify-content: space-evenly;}
+    .job-listing:has(.job-card:nth-child(3):last-child),
+    .job-listing:has(.job-card:nth-child(4):last-child) {grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* 3/4 flexibel */}
+    .job-card {background: rgba(20, 20, 20, 0.9);border: 1px solid rgba(255,255,255,0.1);border-radius: 16px;padding: 2rem 1.5rem;text-align: center;box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);transition: transform 0.35s ease, box-shadow 0.35s ease;flex: 1 1 250px;max-width: 280px;}
+    .job-card:hover {transform: translateY(-8px) scale(1.02);}
+    .job-card.programmer:hover { box-shadow: 0 0 25px #00ffff;}
+    .job-card.voiceactor:hover { box-shadow: 0 0 25px #b84fd8;}
+    .job-card.sounddesigner:hover { box-shadow: 0 0 25px #ff6600;}
+    .job-card.composer:hover { box-shadow: 0 0 25px #ff4fd8;}
+    .job-card h3 {margin-bottom: 1rem;font-size: 1.6rem;letter-spacing: 1px;}
+    .job-card h3 a {color: inherit;text-decoration: none;transition: all 0.3s ease;}
+    .job-card.programmer h3 a { color:#000000; text-shadow: 0 0 5px #00ffff;}
+    .job-card.voiceactor h3 a { color:#b84dff;}
+    .job-card.sounddesigner h3 a { color:#ff6600;}
+    .job-card.composer h3 a { color:#ff4fd8;}
+    .job-card.moderator h3 a { color:#000000; text-shadow: 0 0 5px #00dc3c;}
+    .job-card.designer h3 a  { color:#ffcc00;}
+    .job-card.soundartist h3 a { color:#ff6600;}
+    .job-card.builder h3 a { color:#4682b4;}
+    .job-card.partner h3 a { color:#ff00ff;}
+    .job-card.moderator:hover { box-shadow: 0 0 25px #00dc3c;}
+    .job-card.designer:hover { box-shadow: 0 0 25px #ffcc00;}
+    .job-card.soundartist:hover { box-shadow: 0 0 25px #ff6600;}
+    .job-card.builder:hover { box-shadow: 0 0 25px #4682b4;}
+    .job-card.partner:hover { box-shadow: 0 0 25px #ff00ff;}
+    .job-card h3 a:hover {color: #000;background: currentColor;-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-shadow: 0 0 10px currentColor;}
+    .job-card p {font-size: 1rem;line-height: 1.5;color: #bbb;}
 
     .staff-section { text-align: center;}
     .staff-entry { display: inline-block;padding: 1rem;margin: 1rem;border-radius: 10px;text-align: center;background-color:#000000;border: 2px solid #000000;box-shadow: 0 0 8px #ffffff;}
@@ -137,10 +159,9 @@
     <a onclick="showSection('willkommen')">Willkommen</a>
     <a onclick="showSection('spiele')">Spiele</a>
     <a onclick="showSection('animation')">Animation</a>
-    <a onclick="showSection('arbeit')">Arbeit</a>
     <a onclick="showSection('staff')">Staff</a>
     <a onclick="showSection('kontakt')">Kontakt</a>
-    <a onclick="showSection('partnerschaft')">Partnerschaft</a>
+    <a onclick="showSection('arbeit')">Arbeit</a>
     <a href="Bewerbung.html">Bewerbung</a>
     <a onclick="showSection('serverreport')">Server melden</a>
     <a href="pass.html">FoxNet Login</a>
@@ -312,31 +333,52 @@
 
 </section>
 
-  <section id="arbeit">
-    <h2 style="text-align:center;">Wir suchen dich!</h2>
-    <div class="job-listing">
+<section id="arbeit">
+  <h2>Wir suchen dich!</h2>
+  <div class="job-listing">
 
-      <div class="job-card programmer">
-        <h3>Programmierer</h3>
-        <p>Du liebst Code? Entwickle mit uns innovative Spiele – von Gameplay-Mechaniken bis zum Netzwerkcode.</p>
-      </div>
+    <div class="job-card programmer">
+      <h3><a href="Steckbrief/foxgames/Programmer.html">Programmer</a></h3>
+      <p>Du liebst Code? Entwickle mit uns innovative Spiele – von Gameplay-Mechaniken bis zum Netzwerkcode.</p>
+    </div>
 
-      <div class="job-card voiceactor">
-        <h3>Voice Actor</h3>
-        <p>Verleihe unseren Charakteren Leben durch deine Stimme. Wir suchen markante, emotionale Sprecher:innen.</p>
-      </div>
+    <div class="job-card moderator">
+      <h3><a href="Steckbrief/foxgames/Moderator.html">Moderator</a></h3>
+      <p>Sorge für Fairness und Ordnung in unserer Community. Sei die Brücke zwischen Spielern und Team.</p>
+    </div>
 
-      <div class="job-card sounddesigner">
-        <h3>Sound Designer</h3>
-        <p>Erschaffe Klangwelten! Vom UI-Sound bis zu epischen Explosionen – deine Kreativität zählt.</p>
-      </div>
+    <div class="job-card designer">
+      <h3><a href="Steckbrief/foxgames/Designer.html">Designer</a></h3>
+      <p>Gestalte UI, Charaktere und Welten, die Spieler visuell fesseln und Wiedererkennungswert schaffen.</p>
+    </div>
 
-      <div class="job-card composer">
-        <h3>Composer</h3>
-        <p>Schreibe atmosphärische Musik, die Emotionen weckt – sei es episch, düster oder verträumt.</p>
-      </div>
+    <div class="job-card composer">
+      <h3><a href="Steckbrief/foxgames/Composer.html">Composer</a></h3>
+      <p>Schreibe atmosphärische Musik, die Emotionen weckt – sei es episch, düster oder verträumt.</p>
+    </div>
 
-     </div></section>
+    <div class="job-card soundartist">
+      <h3><a href="Steckbrief/foxgames/SoundArtist.html">Sound Artist</a></h3>
+      <p>Erschaffe Klangwelten! Vom UI-Sound bis zu epischen Explosionen – deine Kreativität zählt.</p>
+    </div>
+
+    <div class="job-card builder">
+      <h3><a href="Steckbrief/foxgames/Builder.html">Builder</a></h3>
+      <p>Kreiere Maps, Levels und detailreiche Umgebungen, die Spieler in eine neue Welt ziehen.</p>
+    </div>
+
+    <div class="job-card voiceactor">
+      <h3><a href="Steckbrief/foxgames/VoiceActor.html">Voice Actor</a></h3>
+      <p>Verleihe unseren Charakteren Leben durch deine Stimme. Wir suchen markante, emotionale Sprecher:innen.</p>
+    </div>
+
+    <div class="job-card partner">
+      <h3><a href="Steckbrief/foxgames/Partner.html">Partner</a></h3>
+      <p>Werde Teil unseres Netzwerks und wachse mit uns gemeinsam. Wir suchen starke Partnerschaften.</p>
+    </div>
+
+  </div>
+</section>
 
   <section id="staff" class="staff-section">
     <h2 style="color:#000000;text-shadow:0 0 5px #800080;">CEO</h2>
@@ -527,34 +569,6 @@
           </div></div></div></div>
   </section>
 
-<section id="partnerschaft">
-  <div style="background: linear-gradient(135deg, #002f2f, #004d4d);box-shadow: 0 0 20px rgba(0, 255, 200, 0.2);padding: 2rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;color:#ffffff; font-family: Arial, sans-serif;">
-    <h2 style="color:#00ffee;text-shadow: 0 0 10px #000;text-align: center;margin-bottom: 1rem;">Partnerschaftsanfrage</h2>
-    <p style="color:#cccccc; font-size: 1.1rem;text-align: center;margin-bottom: 2rem;">Du möchtest mit uns zusammenarbeiten? Fülle einfach das folgende Formular aus und wir melden uns bei dir!</p>
-
-    <form action="/partnership" method="POST" style="max-width: 600px;margin: auto;text-align: left;">
-      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Dein Name:</label>
-      <input type="text" name="name" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">E-Mail:</label>
-      <input type="email" name="email" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Discord-Server (Name oder Invite):</label>
-      <input type="text" name="discord" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Wieviele Abos/Follower?</label>
-      <input type="text" name="abos" placeholder="z. B. YouTube 2.000, Twitch 500, Discord 800" style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Twitch/YouTube-Link(s):</label>
-      <input type="text" name="links" placeholder="z. B. twitch.tv/deinname, youtube.com/@deinchannel" style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-      <label style="color:#ffffff; display:block;margin-bottom:0.3rem;">Warum möchtest du Partner werden?</label>
-      <textarea name="message" rows="4" placeholder="Kurze Motivation..." style="width:100%;padding:0.5rem;margin-bottom:1.5rem;border-radius:5px;border:none;"></textarea>
-
-      <button type="submit" style="padding:0.7rem 1.5rem; font-weight:bold;background:#00ffee;color:#000;border:none;border-radius:6px;cursor:pointer; width:100%;">ABSENDEN</button>
-    </form></div>
-</section>
-
 <section id="serverreport">
   <div class="report-container">
     <h2>Server melden</h2>
@@ -582,15 +596,15 @@
 
   <section id="impressum">
     <div class="legal-container">
-      <p><strong>Fox Games</strong><br>VECTORY<br>Straße 1<br>29391 Fox<br>Deutschland</p>
+      <p><strong>Fox Games</strong><br>VECTORY<br>Adresse: ///<br>30451 Hannover<br>Deutschland</p>
       <p>E-Mail: foxgames@web.de<br>Telefon: ///<br>Fax: ///</p>
     </div></section>
 
   <section id="datenschutz">
     <div class="legal-container">
       <h2>Datenschutzerklärung</h2>
-      <p>Wir nehmen den Schutz deiner persönlichen Daten sehr ernst. Personenbezogene Daten werden auf dieser Webseite nur im notwendigen Umfang erhoben. In keinem Fall werden die Daten verkauft oder aus anderen Gründen an Dritte weitergegeben.</p>
-      <p>Beim Besuch unserer Website können durch unseren Hostinganbieter automatisch Daten wie IP-Adresse, Browsertyp, Betriebssystem etc. gespeichert werden. Diese Daten dienen ausschließlich der technischen Absicherung und statistischen Auswertung.</p>
+      <p>Diese Website wird Lokal gehostet.</p>
+      <p>Beim Besuch unserer Website wird laut meines wissens keinerlei Daten gespeichert, außer du nutzt das Reportsystem oder das Bewerbungsformular, aber da werden nur daten gesendet die du hineingeschrieben hast.</p>
     </div></section>
 
 <footer>

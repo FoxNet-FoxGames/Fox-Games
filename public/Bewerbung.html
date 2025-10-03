@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Bewerbung als Globaler Moderator</title>
+  <title>Bewerbungsformular</title>
   <style>
     body { margin: 0; background-color: #000; color: #fff; font-family: Arial, sans-serif; }
     header { text-align: center; padding: 2rem 1rem 1rem; }
@@ -31,8 +31,31 @@
   </a></header>
 
   <div class="form-container">
-    <h2 style="color: #000000;text-shadow: 0 0 5px #ffffff"> Bewerbung als <a style="color:#000022; text-shadow: 0 0 5px #0000ff"> Globaler<a href="steckbrief/foxgames/moderator.html" span style="color:#000000; text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';"> Moderator</span></a></h2>
+<div id="job-title" class="job-title-container">
+<h2>Bewerbung als 
+  <span id="job-text" style="color:#000000; text-shadow:0 0 5px #0000ff;">Globaler</span>
+  <a id="job-link" href="steckbrief/foxgames/moderator.html" 
+     style="color:#000000; text-shadow:0 0 5px #00dc3c; text-decoration:none; transition: all 0.3s ease;"
+     onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"
+     onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';">
+    Moderator
+  </a>
+</h2>
     <form action="Bewerbungerfolg.html" method="post">
+
+<div class="form-group">
+  <label for="jobselect" style="color:#ff6600;">Wähle deine Position:</label>
+  <select id="jobselect" name="job">
+    <option value="moderator" selected>Globaler Moderator</option>
+    <option value="sounddesigner">Sound Designer</option>
+    <option value="builder">Builder</option>
+    <option value="partner">Partner</option>
+    <option value="composer">Composer</option>
+    <option value="voiceactor">Voice Actor</option>
+  </select>
+</div>
+
+<div id="job-moderator" class="job-questions">
       <div class="form-group">
         <label for="name" style="color: #00ffff;">01/13: Vollständiger Name</label>
         <input type="text" id="name" name="name">
@@ -111,17 +134,478 @@
           <option value="foxgames@vectoryowner">VECTORY Owner</option>
           <option value="foxgames@lumina">Lumina</option>
           <option value="foxgames@akuhl">Akuhl</option>
-      </select></div>
+      </select></div></div>
 
-      <div class="form-submit">
-        <h2>Wir freuen uns auf dich</h2>
-        <button type="submit">Bewerbung absenden</button>
-      </div></form></div>
+<div id="job-sounddesigner" class="job-questions" style="display:none;">
+  <div class="form-group">
+    <label for="name-sd" style="color: #ffa500;">01/10: Vollständiger Name</label>
+    <input type="text" id="name-sd" name="name">
+  </div>
 
-  <footer>
-    <div class="footer-container">
-      <p>© 2025 Fox Games</p>
+  <div class="form-group">
+    <label for="age-sd" style="color: #ffffff;">02/10: Alter</label>
+    <input type="number" id="age-sd" name="age">
+  </div>
+
+  <div class="form-group">
+    <label for="experience-sd" style="color: #00ff00;">03/10: Hast du Erfahrung mit Sounddesign? (Programme, Projekte, Plugins)</label>
+    <textarea id="experience-sd" name="experience"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="motivation-sd" style="color: #ffa500;">04/10: Warum möchtest du Sound Designer werden?</label>
+    <textarea id="motivation-sd" name="motivation"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="portfolio" style="color: #00ffff;">05/10: Hast du ein Portfolio oder Beispiele deiner Arbeit?</label>
+    <input type="text" id="portfolio" name="portfolio" placeholder="Link zu Portfolio oder Soundcloud etc.">
+  </div>
+
+  <div class="form-group">
+    <label for="time-sd" style="color: #ff00ff;">06/10: Wie viel Zeit kannst du pro Tag investieren?</label>
+    <select id="time-sd" name="time">
+      <option value="">Bitte auswählen</option>
+      <option value="1-5">1–5 Stunden</option>
+      <option value="5-10">5–10 Stunden</option>
+      <option value="10-20">10–20 Stunden</option>
+      <option value="20+">Mehr als 20 Stunden</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="strengths-sd" style="color: #ff6600;">07/10: Was sind deine Stärken und Schwächen als Sound Designer?</label>
+    <textarea id="strengths-sd" name="strengths"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="software" style="color: #ffff00;">08/10: Welche Software/DAWs benutzt du?</label>
+    <input type="text" id="software" name="software">
+  </div>
+
+  <div class="form-group">
+    <label for="future-sd" style="color: #ff0000;">09/10: Wo siehst du dich in der Community in einem Jahr?</label>
+    <textarea id="future-sd" name="future"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="discord-sd" style="color: #a000a0;">10/10: Bist du im Discord?</label>
+    <select id="discord-sd" name="discord">
+      <option value="">Bitte auswählen</option>
+      <option value="ja1">Ja</option>
+      <option value="nein2">Nein</option>
+    </select>
+  </div>
+</div>
+
+<div id="job-builder" class="job-questions" style="display:none;">
+  <div class="form-group">
+    <label for="name-b" style="color: #00ffff;">01/10: Vollständiger Name</label>
+    <input type="text" id="name-b" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="experience-b" style="color: #00ff00;">02/10: Hast du Erfahrung als Builder? Beschreibe kurz.</label>
+    <textarea id="experience-b" name="experience"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="motivation-b" style="color: #00dc3c;">03/10: Warum möchtest du Builder werden?</label>
+    <textarea id="motivation-b" name="motivation"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="projects" style="color: #ffff00;">04/10: Hast du Beispiele/Projekte die du gebaut hast? (Screenshots oder Links)</label>
+    <input type="text" id="projects" name="projects">
+  </div>
+
+  <div class="form-group">
+    <label for="time-b" style="color: #ff00ff;">05/10: Wie viel Zeit kannst du pro Tag investieren?</label>
+    <select id="time-b" name="time">
+      <option value="">Bitte auswählen</option>
+      <option value="1-5">1–5 Stunden</option>
+      <option value="5-10">5–10 Stunden</option>
+      <option value="10-20">10–20 Stunden</option>
+      <option value="20+">Mehr als 20 Stunden</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="style-b" style="color: #ff6600;">06/10: Was ist dein bevorzugter Baustil oder Spezialgebiet?</label>
+    <textarea id="style-b" name="style"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="team-b" style="color: #ff1111;">07/10: Wie gut arbeitest du in einem Team?</label>
+    <textarea id="team-b" name="team"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="future-b" style="color: #ff0000;">08/10: Wo siehst du dich in der Community in einem Jahr?</label>
+    <textarea id="future-b" name="future"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="discord-b" style="color: #a000a0;">09/10: Bist du im Discord?</label>
+    <select id="discord-b" name="discord">
+      <option value="">Bitte auswählen</option>
+      <option value="ja1">Ja</option>
+      <option value="nein2">Nein</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="cheat-b" style="color: #000000;">10/10: Wurdest du empfohlen? Wenn ja, von wem?</label>
+    <input type="text" id="cheat-b" name="cheat">
+  </div>
+</div>
+
+<div id="job-partner" class="job-questions" style="display:none;">
+  <div class="form-group">
+    <label for="name-p" style="color: #ff69b4;">01/10: Vollständiger Name</label>
+    <input type="text" id="name-p" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="experience-p" style="color: #00ff00;">02/10: Hast du Erfahrung mit Partnerschaften? (z.B. Kooperationen, Sponsoring)</label>
+    <textarea id="experience-p" name="experience"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="motivation-p" style="color: #ff69b4;">03/10: Warum möchtest du Partner werden?</label>
+    <textarea id="motivation-p" name="motivation"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="projects-p" style="color: #ffff00;">04/10: Hast du bisherige Projekte oder Partner, die du vorweisen kannst?</label>
+    <input type="text" id="projects-p" name="projects">
+  </div>
+
+  <div class="form-group">
+    <label for="time-p" style="color: #ff00ff;">05/10: Wie viel Zeit kannst du pro Tag investieren?</label>
+    <select id="time-p" name="time">
+      <option value="">Bitte auswählen</option>
+      <option value="1-5">1–5 Stunden</option>
+      <option value="5-10">5–10 Stunden</option>
+      <option value="10-20">10–20 Stunden</option>
+      <option value="20+">Mehr als 20 Stunden</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="strengths-p" style="color: #ff6600;">06/10: Was sind deine Stärken in der Zusammenarbeit mit anderen Partnern?</label>
+    <textarea id="strengths-p" name="strengths"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="conflict-p" style="color: #ff1111;">07/10: Wie würdest du Konflikte zwischen Partnern lösen?</label>
+    <textarea id="conflict-p" name="conflict"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="future-p" style="color: #ff0000;">08/10: Wo siehst du dich in der Community in einem Jahr?</label>
+    <textarea id="future-p" name="future"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="discord-p" style="color: #a000a0;">09/10: Bist du im Discord?</label>
+    <select id="discord-p" name="discord">
+      <option value="">Bitte auswählen</option>
+      <option value="ja1">Ja</option>
+      <option value="nein2">Nein</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="cheat-p" style="color: #000000;">10/10: Wurdest du empfohlen? Wenn ja, von wem?</label>
+    <input type="text" id="cheat-p" name="cheat">
+  </div>
+</div>
+
+<div id="job-composer" class="job-questions" style="display:none;">
+  <div class="form-group">
+    <label for="name-c" style="color: #ff00ff;">01/10: Vollständiger Name</label>
+    <input type="text" id="name-c" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="experience-c" style="color: #00ff00;">02/10: Hast du Erfahrung mit Komposition? (z.B. Musik, Jingles, Projekte)</label>
+    <textarea id="experience-c" name="experience"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="motivation-c" style="color: #ff00ff;">03/10: Warum möchtest du Composer werden?</label>
+    <textarea id="motivation-c" name="motivation"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="portfolio-c" style="color: #ffff00;">04/10: Hast du ein Portfolio oder Beispiele deiner Kompositionen?</label>
+    <input type="text" id="portfolio-c" name="portfolio">
+  </div>
+
+  <div class="form-group">
+    <label for="software-c" style="color: #00ffff;">05/10: Welche Software oder Instrumente benutzt du?</label>
+    <input type="text" id="software-c" name="software">
+  </div>
+
+  <div class="form-group">
+    <label for="time-c" style="color: #ff00ff;">06/10: Wie viel Zeit kannst du pro Tag investieren?</label>
+    <select id="time-c" name="time">
+      <option value="">Bitte auswählen</option>
+      <option value="1-5">1–5 Stunden</option>
+      <option value="5-10">5–10 Stunden</option>
+      <option value="10-20">10–20 Stunden</option>
+      <option value="20+">Mehr als 20 Stunden</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="strengths-c" style="color: #ff6600;">07/10: Was sind deine Stärken als Composer?</label>
+    <textarea id="strengths-c" name="strengths"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="future-c" style="color: #ff0000;">08/10: Wo siehst du dich in der Community in einem Jahr?</label>
+    <textarea id="future-c" name="future"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="discord-c" style="color: #a000a0;">09/10: Bist du im Discord?</label>
+    <select id="discord-c" name="discord">
+      <option value="">Bitte auswählen</option>
+      <option value="ja1">Ja</option>
+      <option value="nein2">Nein</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="cheat-c" style="color: #000000;">10/10: Wurdest du empfohlen? Wenn ja, von wem?</label>
+    <input type="text" id="cheat-c" name="cheat">
+  </div>
+</div>
+
+<div id="job-voiceactor" class="job-questions" style="display:none;">
+  <div class="form-group">
+    <label for="name-va" style="color: #b84dff;">01/10: Vollständiger Name</label>
+    <input type="text" id="name-va" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="experience-va" style="color: #00ff00;">02/10: Hast du Erfahrung als Voice Actor? (Projekte, Rollen, Sprachstil)</label>
+    <textarea id="experience-va" name="experience"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="motivation-va" style="color: #b84dff;">03/10: Warum möchtest du Voice Actor werden?</label>
+    <textarea id="motivation-va" name="motivation"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="samples-va" style="color: #ffff00;">04/10: Hast du Sprachbeispiele oder ein Portfolio?</label>
+    <input type="text" id="samples-va" name="samples">
+  </div>
+
+  <div class="form-group">
+    <label for="time-va" style="color: #ff00ff;">05/10: Wie viel Zeit kannst du pro Tag investieren?</label>
+    <select id="time-va" name="time">
+      <option value="">Bitte auswählen</option>
+      <option value="1-5">1–5 Stunden</option>
+      <option value="5-10">5–10 Stunden</option>
+      <option value="10-20">10–20 Stunden</option>
+      <option value="20+">Mehr als 20 Stunden</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="strengths-va" style="color: #ff6600;">06/10: Was sind deine Stärken als Voice Actor?</label>
+    <textarea id="strengths-va" name="strengths"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="future-va" style="color: #ff0000;">07/10: Wo siehst du dich in der Community in einem Jahr?</label>
+    <textarea id="future-va" name="future"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="discord-va" style="color: #a000a0;">08/10: Bist du im Discord?</label>
+    <select id="discord-va" name="discord">
+      <option value="">Bitte auswählen</option>
+      <option value="ja1">Ja</option>
+      <option value="nein2">Nein</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="cheat-va" style="color: #000000;">09/10: Wurdest du empfohlen? Wenn ja, von wem?</label>
+    <input type="text" id="cheat-va" name="cheat">
+  </div>
+</div>
+
+<div class="form-submit">
+  <h2>Wir freuen uns auf dich</h2>
+  <button type="submit">Bewerbung absenden</button>
+</div>
+</form>
+</div>
+
+<audio id="checkup-sound" src="assets/checkup.mp3"></audio>
+<audio id="submit-sound" src="assets/absenden.mp3"></audio>
+
+<div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; pointer-events:none;">
+  <div id="circle-effect"></div>
+  <div id="last-warning-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1c0000; color:#ff00ff; padding:2rem; border-radius:15px; text-align:center; z-index:10000; font-family:'Impact', sans-serif; font-size:1.3rem;">
+    <p>
+      ⚠ LETZTE WARNUNG ⚠<br>
+      Du bist kurz davor, deine Bewerbung abzusenden!<br>
+      Ein Admin wird sie prüfen. Vergewissere dich, dass du alles korrekt ausgefüllt hast.<br>
+      Fehler können nicht rückgängig gemacht werden.
+    </p>
+    <div style="margin-top:1.5rem; display:flex; justify-content:center; gap:1rem;">
+      <button id="confirm-submit" style="padding:1rem 2rem; background:#ff0000; color:#fff; border:none; border-radius:8px; font-size:1rem; cursor:pointer;">Bewerbung absenden</button>
+      <button id="cancel-submit" style="padding:1rem 2rem; background:#555; color:#fff; border:none; border-radius:8px; font-size:1rem; cursor:pointer;">Nochmal zurück und checken</button>
     </div>
-  </footer>
-</body>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <p>© 2025 Fox Games</p>
+  </div>
+</footer>
+
+<style>
+#circle-effect {
+  position: fixed;
+  top: var(--click-y);
+  left: var(--click-x);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,0,255,0.3) 0%, rgba(200,0,0,0) 80%);
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1), width 1s ease-out, height 1s ease-out;
+  backdrop-filter: blur(0px) brightness(1);
+}
+#circle-effect.active {
+  width: 200vw;
+  height: 200vh;
+  transform: translate(-50%, -50%) scale(1);
+  backdrop-filter: blur(12px) brightness(1.4) contrast(1.2) hue-rotate(200deg);
+}
+</style>
+
+<script>
+const form = document.querySelector('form');
+const overlay = document.getElementById('overlay');
+const ripple = document.getElementById('circle-effect');
+const popup = document.getElementById('last-warning-popup');
+const checkupSound = document.getElementById('checkup-sound');
+const submitSound = document.getElementById('submit-sound');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('button[type="submit"]');
+  const rect = btn.getBoundingClientRect();
+  const clickX = rect.left + rect.width / 2;
+  const clickY = rect.top + rect.height / 2;
+
+  overlay.style.display = 'block';
+  overlay.style.pointerEvents = 'auto';
+
+  ripple.style.setProperty('--click-x', clickX + 'px');
+  ripple.style.setProperty('--click-y', clickY + 'px');
+  ripple.classList.remove('active');
+
+  requestAnimationFrame(() => {
+    ripple.classList.add('active');
+  });
+
+  setTimeout(() => {
+    popup.style.display = 'block';
+    popup.style.opacity = '0';
+    requestAnimationFrame(() => popup.style.opacity = '1');
+    checkupSound.play();
+  }, 600);
+
+  document.getElementById('cancel-submit').onclick = () => {
+    overlay.style.display = 'none';
+    popup.style.display = 'none';
+    ripple.classList.remove('active');
+    checkupSound.pause();
+    checkupSound.currentTime = 0;
+  };
+
+document.getElementById('confirm-submit').onclick = async () => {
+  checkupSound.pause();
+  checkupSound.currentTime = 0;
+  submitSound.play();
+
+  // Alle Inputs/Textareas/Selects aus dem aktiven Formular sammeln
+  const formData = {};
+  const activeJobSection = document.querySelector('.job-questions:not([style*="display: none"])');
+  const inputs = activeJobSection.querySelectorAll('input, textarea, select');
+  inputs.forEach(input => {
+    formData[input.name] = input.value || '';
+  });
+
+  // Name und Job extra setzen
+  const nameField = activeJobSection.querySelector('input[name="name"]');
+  const jobSelect = document.querySelector('select[name="job"]');
+  formData.name = nameField ? nameField.value : '';
+  formData.job = jobSelect ? jobSelect.options[jobSelect.selectedIndex].text : '';
+
+  try {
+    const response = await fetch('/bewerbung', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+    if(!response.ok) throw new Error('Server antwortet nicht mit 200');
+  } catch(e) {
+    console.error('Fehler beim Bewerben', e);
+  }
+
+  // Fade to black nach Sound
+  const blackOverlay = document.createElement('div');
+  blackOverlay.style.position='fixed';
+  blackOverlay.style.top='0';
+  blackOverlay.style.left='0';
+  blackOverlay.style.width='100vw';
+  blackOverlay.style.height='100vh';
+  blackOverlay.style.backgroundColor='rgba(0,0,0,0)';
+  blackOverlay.style.transition='background-color 1s ease-in';
+  blackOverlay.style.zIndex='10001';
+  document.body.appendChild(blackOverlay);
+  requestAnimationFrame(()=> blackOverlay.style.backgroundColor='#000');
+
+  submitSound.onended = ()=> window.location.href='Bewerbungerfolg.html';
+};
+});
+</script>
+
+<script>
+const jobSelect = document.getElementById('jobselect');
+const jobSections = document.querySelectorAll('.job-questions');
+const jobLink = document.getElementById('job-link');
+const jobText = document.getElementById('job-text');
+
+const jobTitles = { moderator: { textBefore: 'Globaler', colorBefore: '#000000', shadowBefore: '0 0 5px #0000ff', textLink: 'Moderator', colorLink: '#000000', shadowLink: '0 0 5px #00dc3c', hoverColor: '#00dc3c', hoverShadow: '0 0 5px #00dc3c', href: 'steckbrief/foxgames/moderator.html' }, sounddesigner: { textLink: 'Sound Designer', colorLink: '#ff6600', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #ff6600', href: 'steckbrief/foxgames/sounddesigner.html' }, builder: { textLink: 'Builder', colorLink: '#00ffff', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #00ffff', href: 'steckbrief/foxgames/builder.html' }, partner: { textLink: 'Partner', colorLink: '#ff69b4', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #ff69b4', href: 'steckbrief/foxgames/partner.html' }, composer: { textLink: 'Composer', colorLink: '#ff00ff', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #ff00ff', href: 'steckbrief/foxgames/composer.html' }, voiceactor: { textLink: 'Voice Actor', colorLink: '#b84dff', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #b84dff', href: 'steckbrief/foxgames/voiceactor.html' } };
+
+jobSelect.addEventListener('change', () => {
+  const selected = jobSelect.value;
+  const job = jobTitles[selected];
+  if(job.textBefore){
+    jobText.style.display='inline'; jobText.textContent=job.textBefore; jobText.style.color=job.colorBefore; jobText.style.textShadow=job.shadowBefore;
+  } else jobText.style.display='none';
+  jobLink.textContent=job.textLink; jobLink.href=job.href; jobLink.style.color=job.colorLink; jobLink.style.textShadow=job.shadowLink;
+  jobLink.onmouseover = ()=>{ jobLink.style.color=job.hoverColor; jobLink.style.textShadow=job.hoverShadow; };
+  jobLink.onmouseout = ()=>{ jobLink.style.color=job.colorLink; jobLink.style.textShadow=job.shadowLink; };
+  jobSections.forEach(sec=>sec.style.display='none');
+  const selectedSection=document.getElementById('job-'+selected);
+  if(selectedSection) selectedSection.style.display='block';
+});
+</script>
 </html>

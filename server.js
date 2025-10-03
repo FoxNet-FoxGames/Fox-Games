@@ -87,6 +87,42 @@ Kontakt: ${contact}
   res.sendFile(path.join(__dirname, 'public', 'confirmation.html'));
 });
 
+app.post('/bewerbung', (req, res) => {
+  const data = req.body;
+
+  if(!data.name || !data.job) return res.status(400).send('Name oder Job fehlt');
+
+  const timestamp = new Date().toISOString().replace(/:/g,'-');
+  const safeName = data.name.replace(/[^a-zA-Z0-9-_ ]/g,'');
+  const safeJob = data.job.replace(/[^a-zA-Z0-9-_ ]/g,'');
+  const filename = `${timestamp}-${safeName} ${safeJob}.txt`;
+  const filepath = path.join(__dirname, 'bewerbungen', filename);
+
+  // Alle Antworten schön formatieren
+  let content = `===========================\n`;
+  content += `Bewerbung am: ${new Date().toLocaleString()}\n`;
+  content += `Job: ${data.job}\n`;
+  content += `Name: ${data.name}\n\n`;
+
+  // Alle anderen Felder
+  for(const key in data){
+    if(key === 'name' || key === 'job') continue;
+    content += `${key}: ${data[key]}\n`;
+  }
+
+  content += `===========================\n`;
+
+  try {
+    fs.mkdirSync(path.dirname(filepath), { recursive: true });
+    fs.writeFileSync(filepath, content, 'utf8');
+    console.log(`[BEWERBUNG] ${filename} erstellt`);
+    res.send({ success: true });
+  } catch(err) {
+    console.error('[BEWERBUNG] Fehler beim Speichern:', err);
+    res.status(500).send('Fehler beim Speichern der Bewerbung');
+  }
+});
+
 // === Server starten ===
 app.listen(PORT, HOST, () => {
   console.log(`FoxGames Webserver läuft auf http://${HOST}:${PORT}`);
