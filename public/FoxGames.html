@@ -6,112 +6,19 @@
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <title>Fox Games</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body { margin: 0;background-color:#000;color:#fff; font-family: Arial, sans-serif;}
-    header { text-align: center;padding: 2rem 1rem 1rem;}
-    header img.logo { width: 200px; display: block;margin: 0 auto 1rem;}
-    header img.title { max-width: 60%; height: auto; display: block;margin: auto;}
-
-    nav { display: flex;justify-content: center; gap: 2rem;background:#111;padding: 1rem 0;}
-    nav a { background: linear-gradient(135deg, #ff0000, #ff6600);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration: none; font-weight: bold;cursor: pointer;transition: all 0.3s ease;padding: 0.3rem 0.6rem;border-radius: 5px;position: relative;}
-    nav a::after { content: '';position: absolute;inset: 0;border-radius: 5px;background: linear-gradient(135deg, #ff0000, #ff6600); opacity: 0;transition: opacity 0.3s ease; z-index: -1;}
-    nav a:hover { -webkit-text-fill-color:#fff;}
-    nav a:hover::after { opacity: 1; filter: blur(4px);}
-
-    .welcome-container { background: linear-gradient(145deg, #111, #1a1a1a);border-radius: 15px;padding: 2rem;box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);text-align: center;max-width: 800px;margin: auto;}
-    .welcome-container h2 { font-size: 2.5rem;margin-bottom: 1rem;color:#ff6600;text-shadow: 0 0 10px #000;}
-    .welcome-container .highlight { background: linear-gradient(45deg, #ff0000, #ff6600);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
-    .welcome-container p { font-size: 1.2rem;color:#ccc; line-height: 1.6;margin: 1rem 0;}
-
-    section { display: none;padding: 2rem;max-width: 1000px;margin: auto;}
-    section.active { display: block;}
-
-    .game { margin-bottom: 2rem;}
-    .game-feature { display: flex; flex-wrap: wrap;justify-content: space-between; gap: 2rem;padding: 2rem;border-radius: 20px;margin: auto;max-width: 1000px;}
-    .game-info { flex: 1 1 50%;min-width: 300px;}
-    .game-info h2 { font-size: 2.5rem;margin: 1rem 0;}
-
-    .audio-section {width: 100%;margin-top: 16px;padding: 16px 24px;background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius: 12px;border: 1px solid rgba(255,255,255,0.02);display: flex;flex-direction: column;align-items: center;gap: 12px;}
-    .audio-section h3 {margin: 0 0 8px 0;font-size: 16px;font-weight: 700;color:#e6eef8;}
-    .audio-player::-webkit-media-controls-panel {background-color:#8b0000;}
-    .audio-player::-webkit-media-controls-play-button {background-color:#ff0000;border-radius: 50%;filter: invert(0);}
-
-    .badge { display: inline-block;padding: 0.3rem 1rem;border-radius: 999px; font-size: 0.9rem; font-weight: bold;}
-    .badge-icon { margin-right: 0.5rem;}
-    .tags { margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem;}
-    .tag { padding: 0.3rem 0.8rem;border-radius: 999px; font-size: 1.1rem;color:#fff;}
-    .description { font-size: 1.1rem;margin-bottom: 1.5rem;}
-    .features { list-style: none;padding: 0;margin: 0;}
-    .features li { display: flex; align-items: center;margin: 0.5rem 0; font-size: 1rem;}
-    .icon { font-size: 1.2rem;margin-right: 0.6rem;}
-    .game-preview { flex: 1 1 35%;min-width: 250px;position: relative; display: flex;justify-content: center; align-items: center;}
-    .game-info {position: relative;}
-    .preview-box { padding: 2rem;border-radius: 20px;text-align: center;box-shadow: inset 0 0 30px rgba(255,255,255,0.05);}
-    .preview-icon { font-size: 3rem;margin-bottom: 1rem;}
-    .preview-title { font-size: 1.2rem; font-weight: bold;}
-    .preview-sub { font-size: 0.9rem;color:#ccc;}
-
-    .corner-icon {position: absolute;display: flex;justify-content: center;align-items: center;}
-    .bottom-left {bottom: -10px;left: -10px;background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(5px);border-radius: 50%;width: 40px;height: 40px;font-size: 1.5rem;}
-    .top-right {top: -10px;right: -10px;background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(5px);border-radius: 8px;width: 80px;height: 30px;font-size: 0.8rem;white-space: nowrap;border: 1px solid #ff0000;color:#ff0000;}
-    .game-feature + .game-feature { margin-top: 3rem;}
-    .project-lead {position: absolute;bottom: -20px;left: 0px;color:#666;font-size: 12px;font-weight: normal;}
-
-    #arbeit {background: linear-gradient(135deg, rgba(255,0,0,0.05), rgba(255,102,0,0.05));border-radius: 20px;padding: 3rem 2rem;box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);margin: 3rem auto;max-width: 1100px;text-align: center;}
-    #arbeit h2 {font-size: 2.5rem;margin-bottom: 2rem;background: linear-gradient(90deg, #ff0000, #ff6600);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-shadow: 0 0 15px rgba(255, 0, 0, 0.4);}
-    .job-listing {display: flex;flex-wrap: wrap;justify-content: center;gap: 2rem;max-width: 1200px;margin: auto;}
-    .job-listing:has(.job-card:only-child) {justify-content: center;}
-    .job-listing:has(.job-card:nth-child(2):last-child) {justify-content: space-evenly;}
-    .job-listing:has(.job-card:nth-child(3):last-child),
-    .job-listing:has(.job-card:nth-child(4):last-child) {grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* 3/4 flexibel */}
-    .job-card {background: rgba(20, 20, 20, 0.9);border: 1px solid rgba(255,255,255,0.1);border-radius: 16px;padding: 2rem 1.5rem;text-align: center;box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);transition: transform 0.35s ease, box-shadow 0.35s ease;flex: 1 1 250px;max-width: 280px;}
-    .job-card:hover {transform: translateY(-8px) scale(1.02);}
-    .job-card.programmer:hover { box-shadow: 0 0 25px #00ffff;}
-    .job-card.voiceactor:hover { box-shadow: 0 0 25px #b84fd8;}
-    .job-card.sounddesigner:hover { box-shadow: 0 0 25px #ff6600;}
-    .job-card.composer:hover { box-shadow: 0 0 25px #ff4fd8;}
-    .job-card h3 {margin-bottom: 1rem;font-size: 1.6rem;letter-spacing: 1px;}
-    .job-card h3 a {color: inherit;text-decoration: none;transition: all 0.3s ease;}
-    .job-card.programmer h3 a { color:#000000; text-shadow: 0 0 5px #00ffff;}
-    .job-card.voiceactor h3 a { color:#b84dff;}
-    .job-card.sounddesigner h3 a { color:#ff6600;}
-    .job-card.composer h3 a { color:#ff4fd8;}
-    .job-card.moderator h3 a { color:#000000; text-shadow: 0 0 5px #00dc3c;}
-    .job-card.designer h3 a  { color:#ffcc00;}
-    .job-card.soundartist h3 a { color:#ff6600;}
-    .job-card.builder h3 a { color:#4682b4;}
-    .job-card.partner h3 a { color:#ff00ff;}
-    .job-card.moderator:hover { box-shadow: 0 0 25px #00dc3c;}
-    .job-card.designer:hover { box-shadow: 0 0 25px #ffcc00;}
-    .job-card.soundartist:hover { box-shadow: 0 0 25px #ff6600;}
-    .job-card.builder:hover { box-shadow: 0 0 25px #4682b4;}
-    .job-card.partner:hover { box-shadow: 0 0 25px #ff00ff;}
-    .job-card h3 a:hover {color: #000;background: currentColor;-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-shadow: 0 0 10px currentColor;}
-    .job-card p {font-size: 1rem;line-height: 1.5;color: #bbb;}
-
-    .staff-section { text-align: center;}
-    .staff-name { font-size: 1.2rem; font-weight: bold;color:#800080;text-shadow: 0 0 5px #000;}
-    .staff-description { color:#bbbbbb;text-shadow: 0 0 3px #000;}
-
-    .kontakt-container { background: linear-gradient(135deg, #1a001f, #2b003b);padding: 2rem;border-radius: 20px;max-width: 800px;margin: auto;box-shadow: 0 0 20px rgba(255, 0, 128, 0.2);text-align: center;color:#fff;}
-    .kontakt-container h2 { font-size: 2.2rem;color:#ff66cc;text-shadow: 0 0 10px #000;margin-bottom: 1rem;}
-    .kontakt-text { color:#ccc;margin-bottom: 2rem; font-size: 1.1rem;}
-    .kontakt-methoden { display: flex; flex-wrap: wrap;justify-content: center; gap: 2rem;}
-    .kontakt-item { background:#130017;border: 2px solid #3a003f;border-radius: 15px;padding: 1.5rem; width: 250px;text-align: center;transition: transform 0.3s, box-shadow 0.3s;box-shadow: 0 0 10px rgba(255, 0, 128, 0.1);}
-    .kontakt-item:hover { transform: translateY(-5px);box-shadow: 0 0 20px rgba(255, 0, 128, 0.3);}
-    .kontakt-item .icon { font-size: 2rem;margin-bottom: 1rem;}
-    .kontakt-item h3 { margin-bottom: 0.5rem; font-size: 1.3rem;color:#ff99cc;}
-    .kontakt-item a { color:#ff66cc; font-weight: bold;text-decoration: none;}
-    .kontakt-item a:hover { text-decoration: underline;}
-
-    .report-container {background: linear-gradient(135deg, #1a001f, #2b003b);padding: 2.5rem 3rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 128, 0.4);text-align: center;color:#fff;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.1rem;line-height: 1.5;border: 2px solid #ff0080;transition: box-shadow 0.3s ease;}
-    .report-container:hover {box-shadow: 0 0 40px rgba(255, 0, 128, 0.7);}
-    .report-container strong {color:#ff66cc;font-weight: 600;}
-    .report-container a {color:#ff66cc;text-decoration: underline;}
-    .report-container a:hover {color:#ff00aa;text-decoration: none;}
-    footer { background:#111;text-align: center;padding: 1rem;font-size: 0.9rem;color:#888;margin-top: 3rem;}
-    hr { border: 1px solid #f00;margin: 2rem 0;}
-  </style>
+<style>
+  body {
+    all: unset;
+    display: block;
+    margin: 0 !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    font-family: Arial, sans-serif !important;
+  }
+  header { text-align: center; padding: 2rem 1rem 1rem; }
+  header img.logo { width: 200px; display: block; margin: 0 auto 1rem; }
+  header img.title { max-width: 60%; height: auto; display: block; margin: auto; }
+</style>
   <script>
     function showSection(id) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
@@ -159,8 +66,8 @@
     <a onclick="showSection('spiele')">Spiele</a>
     <a onclick="showSection('animation')">Animation</a>
     <a onclick="showSection('staff')">Staff</a>
-    <a onclick="showSection('kontakt')">Kontakt</a>
     <a onclick="showSection('arbeit')">Arbeit</a>
+    <a onclick="showSection('kontakt')">Kontakt</a>
     <a href="Bewerbung.html">Bewerbung</a>
     <a onclick="showSection('serverreport')">Server melden</a>
     <a href="pass.html">FoxNet Login</a>
@@ -374,7 +281,19 @@
       <h3><a href="Steckbrief/foxgames/Partner.html">Partner</a></h3>
       <p>Werde Teil unseres Netzwerks und wachse mit uns gemeinsam. Wir suchen starke Partnerschaften.</p>
     </div>
+  </div>
 
+  <div class="bewerbung-info">
+    <h3>Worauf wir achten, was wir wollen – und worauf du dich freuen kannst</h3>
+    <p> <strong style="background: linear-gradient(45deg, #ff0000, #ff6600);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Fox Games</strong> achtet auf individuelle Gleichberechtigung – egal welcher Rang, Geschlecht oder Herkunft.  
+    Wir geben jedem das, was er oder sie braucht, um sich bei uns wohlzufühlen.</p>
+
+    <ul>
+      </li>
+      <li>❤️ Wir achten aufeinander. Wenn es dir nicht gut geht, verstehen wir das – nimm dir Zeit und komm zurück, wenn du bereit bist.</li>
+    </ul>
+
+    <p>Bei uns zählt Menschlichkeit vor Hierarchie. Sei du selbst – der Rest ergibt sich.</p>
   </div>
 </section>
 
@@ -649,7 +568,7 @@
 
   <section id="impressum">
     <div class="legal-container">
-      <p><strong>Fox Games</strong><br>VECTORY<br>Adresse: ///<br>30451 Hannover<br>Deutschland</p>
+      <p><strong>Fox Games</strong><br>VECTORY<br>Adresse: ///<br>Deutschland</p>
       <p>E-Mail: foxgames@web.de<br>Telefon: ///<br>Fax: ///</p>
     </div></section>
 
