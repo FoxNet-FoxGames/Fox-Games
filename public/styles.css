@@ -1,4 +1,4 @@
-.staff-entry {padding: 1rem;display: flex;gap: 10px;align-items: center;background-size: cover;background-position: center;border-radius: 8px;display: inline-block;margin: 1rem;border-radius: 10px;text-align: center;background-color:#000000;border: 2px solid #000000;box-shadow: 0 0 8px #ffffff;}
+.staff-entry {padding: 1rem;display: flex;gap: 10px;align-items: center;background-size: cover;background-position: center;border-radius: 8px;margin: 1rem;border-radius: 10px;text-align: center;background-color:#000000;border: 2px solid #000000;box-shadow: 0 0 8px #ffffff;}
 .staff-entry img {width: 200px;height: 200px;object-fit: cover;border-radius: 10px;display: block;margin: 0 auto 1rem;}
 
 .none-entry {border: 2px solid #555555;box-shadow: 0 0 8px #555555;background-color: #000000;}
@@ -65,7 +65,7 @@
 .ik {color: #9b30ff;text-shadow: 0 0 5px #9b30ff;text-decoration: none;transition: all 0.3s ease;}
 .ik:hover {color: #000000;text-shadow: 0 0 3px #9b30ff;}
 
-.none, .foxgames, .vectoryowner, .scottowner, .roxyowner, .dread, .foximreich, .knolliwile, .mintrech, .remedysynclair, .lilliosheather, .erkanimkal, .milafenris, .monroevalise {text-decoration: none;transition: all 0.3s ease;}
+.none, .foxgames, .vectoryowner, .scottowner, .roxyowner, .dread, .jamiefleck, .foximreich, .knolliwile, .mintrech, .remedysynclair, .lilliosheather, .erkanimkal, .milafenris, .monroevalise {text-decoration: none;transition: all 0.3s ease;}
 
 .none {color: #ffffff;text-shadow: 0 0 3px #ffffff;}
 .none:hover {color: #000000;text-shadow: 0 0 3px #ffffff;}
@@ -82,8 +82,14 @@
 .roxyowner { color: #000000; text-shadow: 0 0 3px #ee82ee;}
 .roxyowner:hover { color: #ee82ee; text-shadow: 0 0 3px #000000;}
 
+.coowner { color: #000000; text-shadow: 0 0 5px #9400d3; text-decoration: none; transition: color 0.5s, text-shadow 0.5s; }
+.coowner:hover { color: #9400d3; text-shadow: 0 0 5px #000000; }
+
 .dread { color: #000000; text-shadow: 0 0 3px #ff0000;}
 .dread:hover { color: #ff0000; text-shadow: 0 0 3px #000000;}
+
+.jamiefleck { color: #000000; text-shadow: 0 0 3px #ff0000;}
+.jamiefleck:hover { color: #fabd44; text-shadow: none;}
 
 .foximreich { color: #9b30ff; text-shadow: 0 0 3px #9b30ff;}
 .foximreich:hover { color: #000000; text-shadow: 0 0 3px #9b30ff;}
@@ -108,6 +114,12 @@
 
 .monroevalise {color: #00dc3c;text-shadow: 0 0 5px #000000;}
 .monroevalise:hover {color: #00ff66;text-shadow: 0 0 5px #000000;}
+
+.ownerdomain { color: #000000; text-shadow: 0 0 5px #ffffff; text-decoration: none; transition: color 0.5s, text-shadow 0.5s; }
+.ownerdomain:hover { color: #ffffff; text-shadow: 0 0 5px #ffffff; }
+
+.erde { color: #00ff00; text-shadow: 0 0 5px #000000; text-decoration: none; transition: color 0.5s, text-shadow 0.5s; }
+.erde:hover { color: #00ff00; text-shadow: 0 0 5px #00ff00; }
 
     nav { display: flex;justify-content: center; gap: 2rem;background:#111;padding: 1rem 0;}
     nav a { background: linear-gradient(135deg, #ff0000, #ff6600);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration: none; font-weight: bold;cursor: pointer;transition: all 0.3s ease;padding: 0.3rem 0.6rem;border-radius: 5px;position: relative;}
@@ -181,28 +193,10 @@
     .job-card h3 a:hover {color: #000;background: currentColor;-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-shadow: 0 0 10px currentColor;}
     .job-card p {font-size: 1rem;line-height: 1.5;color: #bbb;}
 
-.bewerbung-info {
-  background: #1a1a1a;
-  color: #f5f5f5;
-  padding: 2rem;
-  border-radius: 1rem;
-  margin-top: 2rem;
-  box-shadow: 0 0 20px rgba(255, 100, 50, 0.2);
-}
-
-.bewerbung-info h3 {
-  color: #ff7849;
-  margin-bottom: 1rem;
-}
-
-.bewerbung-info ul {
-  list-style: none;
-  padding: 0;
-}
-
-.bewerbung-info li {
-  margin-bottom: 0.5rem;
-}
+    .bewerbung-info {background: #1a1a1a;color: #f5f5f5;padding: 2rem;border-radius: 1rem;margin-top: 2rem;box-shadow: 0 0 20px rgba(255, 100, 50, 0.2);}
+    .bewerbung-info h3 {color: #ff7849;margin-bottom: 1rem;}
+    .bewerbung-info ul {list-style: none;padding: 0;}
+    .bewerbung-info li {margin-bottom: 0.5rem;}
 
     .staff-section { text-align: center;}
     .staff-name { font-size: 1.2rem; font-weight: bold;color:#800080;text-shadow: 0 0 5px #000;}
