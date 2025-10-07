@@ -543,18 +543,22 @@ document.getElementById('confirm-submit').onclick = async () => {
   checkupSound.currentTime = 0;
   submitSound.play();
 
-  // Alle Inputs/Textareas/Selects aus dem aktiven Formular sammeln
+  // Alle Inputs/Textareas/Selects im Formular sammeln
   const formData = {};
-  const activeJobSection = document.querySelector('.job-questions:not([style*="display: none"])');
-  const inputs = activeJobSection.querySelectorAll('input, textarea, select');
-  inputs.forEach(input => {
-    formData[input.name] = input.value || '';
+  const allInputs = form.querySelectorAll('input, textarea, select');
+  allInputs.forEach(input => {
+    if(input.name) formData[input.name] = input.value || '';
   });
 
-  // Name und Job extra setzen
-  const nameField = activeJobSection.querySelector('input[name="name"]');
+  // Name aus der sichtbaren Job-Sektion überschreiben
+  const activeJobSection = document.querySelector('.job-questions:not([style*="display: none"])');
+  if(activeJobSection) {
+    const nameField = activeJobSection.querySelector('input[name="name"]');
+    if(nameField) formData.name = nameField.value || '';
+  }
+
+  // Job extra setzen
   const jobSelect = document.querySelector('select[name="job"]');
-  formData.name = nameField ? nameField.value : '';
   formData.job = jobSelect ? jobSelect.options[jobSelect.selectedIndex].text : '';
 
   try {

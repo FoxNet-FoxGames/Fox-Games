@@ -80,20 +80,23 @@ Kontakt: ${contact}
 app.post('/bewerbung', (req, res) => {
   const data = req.body;
 
-  const nameField = Object.keys(data).find(k => k.startsWith("name"));
-  const safeName = nameField ? data[nameField].replace(/[^a-zA-Z0-9-_ ]/g, '') : "Unbekannt";
+  // Originalname übernehmen, keine Filterung
+  const nameField = Object.keys(data).find(k => k.toLowerCase().includes("name"));
+  const safeName = nameField ? data[nameField] : "Unbekannt";
 
-  const safeJob = (data.job || "Unbekannter Job").replace(/[^a-zA-Z0-9-_ ]/g, '');
+  // Job für Dateiname nur minimal filtern, Inhalt aber unverändert speichern
+  const safeJobForFile = (data.job || "Unbekannter Job").replace(/[^a-zA-Z0-9-_ ]/g, '');
 
   const timestamp = new Date().toISOString().replace(/:/g, '-');
-  const filename = `${timestamp}-${safeName} ${safeJob}.txt`;
+  const filename = `${timestamp}-${safeName} ${safeJobForFile}.txt`;
   const filepath = path.join(__dirname, 'bewerbungen', filename);
 
   let content = `===========================\n`;
   content += `Bewerbung am: ${new Date().toLocaleString()}\n`;
-  content += `Job: ${safeJob}\n`;
-  if (safeName) content += `Name: ${safeName}\n\n`;
+  content += `Job: ${data.job || 'Unbekannter Job'}\n`;
+  content += `Name: ${safeName}\n\n`;
 
+  // Alle Felder direkt schreiben
   for (const key in data) {
     content += `${key}: ${data[key]}\n`;
   }
