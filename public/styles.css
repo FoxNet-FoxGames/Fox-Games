@@ -71,7 +71,7 @@
 .ik:hover {color: #000000;text-shadow: 0 0 3px #9b30ff;}
 
 .none, .ceo, .foxgames, .owner, .creativedirector, .cryptidcoowner, .teamleitung, .admin, .programmer, .designer, .communitymanager, .socialmediamanager, .composer, .soundartist, .foxbotdeveloper, .modder, .builder, .voiceactor, .moderator,
-.vectoryowner, .scottowner, .roxyowner, .dread, .jamiefleck, .foximreich, .knolliwile, .mintrech, .remedysynclair, .lilliosheather, .erkanimkal, .milafenris, .monroevalise, .viviol, .norarinke, .mararinke, .liorinke, .erenrinke, .nilusfenris, .kehlfenris, .milafernis, .triafenris, .nickoteros, .markenrich, .remedysynclair, .vindexheretic, .rimmludein, .chrislee, .nataliagonjet, .wilsonkrocnek, .klyonocturnal, .josyferrek, .nydraforen, .shiroante, .finanocturnal, .nyonocturnal, .rovernocturnal, .uroina, .aronimkal, .reikosforen, .zeckdann, .mineralissyforger, .wendelarcfoger, .vinthanforger, .chaliehaz, .pandaklan, .lottibrand, .vincenthanko, .johnsusmilan, .santidenero, .elizehanko, .tanjamueller, .harrymarschal, .jeffreyhumphry, .nilssambe, .marlyhanko, .lutzmillen, .finaschubert, .tickpuck, .amarnelly, .wilspetz, .sigelslaas, .fifitoon, .sallietoon, .hankwespa, .nataliemeer, .forgetmenot, .carolinwespa, .larslaison, .linusplaue, .abigalemadones, .milesheart, .martinleynard, .felixmiesel, .shilakeith, .martaseigers, .valentinherrlich, .sheilakeith, .collin, .haloo, .friedmeiner, .volkerbenrat, .rex, .morpheuscoowner, .kattigercoowner, .atsuko, .neilko, .ezycoran, .mauricebahl, .lyleekriskan, .mitsitekka, .sallymaroon, .felixmaroon, .rufuslocko, .triskservekan, .jasperruscho { text-decoration: none;transition: all 0.3s ease;}
+.vectoryowner, .scottowner, .roxyowner, .dread, .jamiefleck, .foximreich, .knolliwile, .mintrech, .remedysynclair, .lilliosheather, .erkanimkal, .milafenris, .monroevalise, .viviol, .norarinke, .mararinke, .liorinke, .erenrinke, .nilusfenris, .kehlfenris, .milafernis, .triafenris, .nickoteros, .markenrich, .remedysynclair, .vindexheretic, .rimmludein, .chrislee, .nataliagonjet, .wilsonkrocnek, .klyonocturnal, .josyferrek, .nydraforen, .shiroante, .finanocturnal, .nyonocturnal, .rovernocturnal, .uroina, .aronimkal, .reikosforen, .zeckdann, .mineralissyforger, .wendelarcfoger, .vinthanforger, .chaliehaz, .pandaklan, .lottibrand, .vincenthanko, .johnsusmilan, .santidenero, .elizehanko, .tanjamueller, .harrymarschal, .jeffreyhumphry, .nilssambe, .marlyhanko, .lutzmillen, .finaschubert, .tickpuck, .amarnelly, .wilspetz, .sigelslaas, .fifitoon, .sallietoon, .hankwespa, .nataliemeer, .forgetmenot, .carolinwespa, .larslaison, .linusplaue, .abigalemadones, .milesheart, .martinleynard, .felixmiesel, .shilakeith, .martaseigers, .valentinherrlich, .sheilakeith, .collin, .haloo, .friedmeiner, .forgetmenot .volkerbenrat, .rex, .morpheuscoowner, .kattigercoowner, .atsuko, .neilko, .ezycoran, .mauricebahl, .lyleekriskan, .mitsitekka, .sallymaroon, .felixmaroon, .rufuslocko, .triskservekan, .jasperruscho, .restleinen { text-decoration: none;transition: all 0.3s ease;}
 
 .none {color: #ffffff;text-shadow: 0 0 3px #ffffff;}
 .none:hover {color: #000000;text-shadow: 0 0 3px #ffffff;}
@@ -106,11 +106,17 @@
 .dread {color: #000000;text-shadow: 0 0 3px #ff0000;}
 .dread:hover {color: #ff0000;text-shadow: 0 0 3px #000000;}
 
+.forgetmenot {color: #ffffff;text-shadow: 0 0 3px #aaaaaa;}
+.forgetmenot:hover {color: #1c1c1c;text-shadow: 0 0 3px #ffffff;}
+
 .jamiefleck {color: #000000;text-shadow: 0 0 3px #ff0000;}
 .jamiefleck:hover {color: #fabd44;text-shadow: none;}
 
 .sheilakeith {color: #a5f8fc;text-shadow: none;}
 .sheilakeith:hover {color: #000000;text-shadow: 0 0 3px #a5f8fc;}
+
+.collin {color: #ffff00;text-shadow: 0 0 5px #ffff00;}
+.collin:hover {color: #000000;text-shadow: 0 0 3px #ffff00;}
 
 .foximreich {color: #9b30ff;text-shadow: 0 0 3px #9b30ff;}
 .foximreich:hover {color: #000000;text-shadow: 0 0 3px #9b30ff;}
@@ -211,28 +217,14 @@
 .ownerdomain {color: #000000;text-shadow: 0 0 5px #ffffff;text-decoration: none;transition: color 0.5s, text-shadow 0.5s;}
 .ownerdomain:hover {color: #ffffff;text-shadow: 0 0 5px #ffffff;}
 
+.restleinen {color: #000000;text-shadow: 0 0 5px #ffffff;text-decoration: none;transition: color 0.5s, text-shadow 0.5s;}
+.restleinen:hover {color: #ffffff;text-shadow: 0 0 5px #ffffff;}
+
 .erde {color: #00ff00;text-shadow: 0 0 5px #000000;text-decoration: none;transition: color 0.5s, text-shadow 0.5s;}
 .erde:hover {color: #00ff00;text-shadow: 0 0 5px #00ff00;}
 
-nav {
-    display: flex;
-    position: sticky;
-    top: 0;
-    justify-content: center;
-    gap: 2rem;
-    background: #111;
-    padding: 1rem 0;
-    z-index: 9999;
-}
-
-nav a {
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    padding: 0.3rem 0.6rem;
-    position: relative;
-}
+nav {display: flex;position: sticky;top: 0;justify-content: center;gap: 2rem;background: #111;padding: 1rem 0;z-index: 9999;}
+nav a {text-decoration: none;font-weight: bold;cursor: pointer;transition: color 0.3s ease, text-shadow 0.3s ease;padding: 0.3rem 0.6rem;position: relative;}
 
 nav a.fgred { color: #000000; text-shadow: 0 0 3px #8b0000; }
 nav a.fgred:hover { color: #8b0000; text-shadow: none; }
@@ -261,20 +253,8 @@ nav a.pink:hover { color: #ff33aa; text-shadow: none; }
 nav a.cyan { color: #000000; text-shadow: 0 0 3px #006666; }
 nav a.cyan:hover { color: #00ffff; text-shadow: none; }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 5px;
-    background: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-nav a:hover::after {
-    opacity: 0;
-}
+nav a::after {content: '';position: absolute;inset: 0;border-radius: 5px;background: none;opacity: 0;transition: opacity 0.3s ease;z-index: -1;}
+nav a:hover::after {opacity: 0;}
 
     .welcome-container {background: linear-gradient(145deg, #111, #1a1a1a);border-radius: 15px;padding: 2rem;box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);text-align: center;max-width: 800px;margin: auto;}
     .welcome-container h2 {font-size: 2.5rem;margin-bottom: 1rem;color:#ff6600;text-shadow: 0 0 10px #000;}
@@ -390,9 +370,11 @@ nav a:hover::after {
     .favColor{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:12px;background:var(--glass-2);width:100%;justify-content:center}
     .swatch{width:36px;height:36px;border-radius:8px;border:1px solid rgba(0,0,0,0.25)}
     .meta-list{width:100%;display:flex;flex-direction:column;gap:10px}
-    .meta{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);}
-    .meta .k{color:var(--muted);font-size:13px}
     .meta .v{font-weight:600}
+    .meta {display: flex;justify-content: space-between;align-items: flex-start;padding: 10px 12px;border-radius: 10px;background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);}
+    .meta .k {color: var(--muted);font-size: 13px;font-weight: 500;letter-spacing: 0.5px;min-width: 80px;}
+    .aliases {display: flex;flex-direction: column;gap: 4px;text-align: left;}
+    .alias {line-height: 1.3em;text-overflow: ellipsis;white-space: nowrap;}
     .right{padding:28px 32px;display:flex;flex-direction:column;gap:18px}
     .section{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
     .section h3{margin:0;font-size:16px;font-weight:700}
