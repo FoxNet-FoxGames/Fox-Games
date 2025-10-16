@@ -398,7 +398,7 @@ nav a:hover::after {opacity: 0;}
     .charisma {background-color: black; box-shadow: 0 0 8px hotpink;text-shadow: 0 0 4px hotpink;}
 
     .quotes-box {background: var(--glass-2);padding: 24px;border-radius: 12px;display: flex;flex-direction: column;gap: 12px;}
-    .quote-box {background: rgba(0,0,0,0.4);border-left: 4px solid #ff0000;padding: 12px;border-radius: 8px;}
+    .quote-box {background: rgba(0,0,0,0.4);padding: 12px;border-radius: 8px;}
     .quote-author {font-size: 0.9rem;color: #ccc;margin-top: 4px;}
     @media (max-width: 900px) {.stats-zitate {grid-template-columns: 1fr;}}
     .family-section {background: var(--glass-2);border-radius: 12px;padding: 24px;text-align: center;}
