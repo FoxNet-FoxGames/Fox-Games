@@ -64,7 +64,7 @@
 <nav>
   <a class="fgred" onclick="showSection('willkommen')">Willkommen</a>
   <a class="blue" onclick="showSection('spiele')">Spiele</a>
-  <a class="purple" onclick="showSection('animation')">Animation</a>
+  <a class="purple" onclick="showSection('animation')">Animationen</a>
   <a class="orange" onclick="showSection('staff')">Staff</a>
   <a class="red" onclick="showSection('arbeit')">Arbeit</a>
   <a class="teal" onclick="showSection('kontakt')">Kontakt</a>
@@ -140,45 +140,86 @@
 
 </div></div></section>
 
-  <section id="animation">
+<section id="animation">
 <div class="game-feature" 
      style="background:#000;color:#ff0000;border:2px solid #ff0000;box-shadow:0 0 20px #ff0000;">
   <div class="game-info">
     <div class="badge" style="background: linear-gradient(90deg, #ff0000, #8b0000);color:#8b0000;text-shadow: 0 0 5px #ff0000;">
       <span class="badge-icon">📺</span> SERIE
     </div>
-    <h2 style="color:#000000;text-shadow: 0 0 5px #ff0000;">Dread</h2>
+
+    <h2 style="color:#000000;text-shadow: 0 0 5px #ff0000; text-align: left; margin-top:5px; margin-bottom:5px;user-select: none;"
+        onclick="toggleDropdown('dread-versions')">
+      Dread
+    </h2>
+
+    <div id="dread-versions" style="position: absolute;background-color: #000000;border: 1px solid #ff0000; box-shadow: 0 0 10px #ff0000; width: 0px; right:0;">
+      <div class="version-item" style="padding: 8px; color:#ff0000; cursor:pointer;" onclick="showVersion('normal')">Normal</div>
+      <div class="version-item" style="padding: 8px; color:#ff0000; cursor:pointer;" onclick="showVersion('remaster')">Remaster</div>
+      <div class="version-item" style="padding: 8px; color:#ff0000; cursor:pointer;" onclick="showVersion('rework')">Rework</div>
+      <div class="version-item" style="padding: 8px; color:#ff0000; cursor:pointer;" onclick="showVersion('4k')">4K</div>
+      <div class="version-item" style="padding: 8px; color:#ff0000; cursor:pointer;" onclick="showVersion('alternate')">Alternate</div>
+    </div>
+
     <div class="tags">
       <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Action</div>
       <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Gore</div>
       <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Horror</div>
       <div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 0 12px #ff0000;">Phylosophisch</div>
     </div>
-    <p class="description" style="color:#ffffff;">Die Serie folgt den anfang von Dread, auf seine interaktion mit Menschen auf der Erde, wie er mit ihnen umgeht und sie behandelt. Seine intentionen sind noch unklar...</p>
+
+    <p id="desc-normal" class="description" style="color:#ffffff;">Die Serie folgt den Anfang von Dread, auf seine Interaktion mit Menschen auf der Erde, wie er mit ihnen umgeht und sie behandelt. Seine Intentionen sind noch unklar...</p>
+    <p id="desc-remaster" class="description" style="color:#ffffff; display:none;">Bessere Qualität, Story und Ereignisse bleiben gleich.</p>
+    <p id="desc-rework" class="description" style="color:#ffffff; display:none;">Script wurde angepasst, oder es wurde hinzugefügt/geändert, eventuell auch bessere Grafik.</p>
+    <p id="desc-4k" class="description" style="color:#ffffff; display:none;">Nur in 4K gerendert, ansonsten gleiche Auflösung/Story wie Original.</p>
+    <p id="desc-alternate" class="description" style="color:#ffffff; display:none;">Alternative Version, andere Storyverläufe, non-canon.</p>
+
     <ul class="features" style="color:#ffffff;">
       <li><span class="icon">📺</span> Staffel 1 Folgen: 25</li>
       <li><span class="icon">📺</span> Staffel 2 Folgen: ??</li>
       <li><span class="icon">📺</span> Staffel 3 Folgen: ??</li>
       <div class="project-lead">Leitung: VECTORY</div>
-    </ul></div>
+    </ul>
+  </div>
+
   <div class="game-preview" style="margin-top: 15px;">
-    <div class="preview-box" 
-         style="background: linear-gradient(135deg, #ff0000, #8b0000);border: 2px solid #000000;padding: 10px;border-radius: 10px;text-align: center;">
+    <div class="preview-box" style="background: linear-gradient(135deg, #ff0000, #8b0000);border: 2px solid #000000;padding: 10px;border-radius: 10px;text-align: center;">
       <div style="width: 200px; height: 200px; overflow: hidden;"><img src="assets/dreadost/Cover.png" style="width: 100%; height: 100%; object-fit: cover;"></div>
       <div class="preview-text" style="color:#ffffff;">
         <div class="preview-title">Coming Soon</div>
         <div class="preview-sub">Cover</div>
         <button onclick="nextScreenshot()" style="background:#000;color:#ff00ff;border: 1px solid #ff0000;padding: 5px 10px;">➡️</button>
-      </div></div>
+</div></div>
       <a href="Steckbrief/foxgames/Dread.html" class="corner-icon top-right" style="background: linear-gradient(180deg, #ff0000, #8b0000);border: 2px solid #000000;text-decoration:none;">Steckbrief</a>
       <div class="corner-icon bottom-left">
       <button onclick="showSection('dreadost')" style="background:#000;color:#ff0000;border: 1px solid #ff0000;padding: 5px 10px;">OST</button>
     </div>
-   </div>
   </div>
+</div>
 
 <script>
   function nextScreenshot() {alert("Screenshot-Funktion kommt noch...");}
+  function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    const rect = document.querySelector('h2').getBoundingClientRect();
+    dropdown.style.top = (window.scrollY + rect.bottom) + 'px';
+    dropdown.style.left = (rect.left + (rect.width/2) - 100) + 'px'; // zentriert 200px Breite
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function showVersion(version) {
+    const versions = ['normal','remaster','rework','4k','alternate'];
+    versions.forEach(v => {
+      document.getElementById('desc-' + v).style.display = v === version ? 'block' : 'none';
+    });
+    document.getElementById('dread-versions').style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('h2')) {
+      document.getElementById('dread-versions').style.display = 'none';
+    }
+  }
 </script>
 
 <div class="game-feature" 
