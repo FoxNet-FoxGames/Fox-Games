@@ -237,6 +237,9 @@ nav a {text-decoration: none;font-weight: bold;cursor: pointer;transition: color
 nav a.fgred { color: #000000; text-shadow: 0 0 3px #8b0000; }
 nav a.fgred:hover { color: #8b0000; text-shadow: none; }
 
+nav a.fnred { color: #000000; text-shadow: 0 0 3px #500000; }
+nav a.fnred:hover { color: #500000; text-shadow: none; }
+
 nav a.blue { color: #000000; text-shadow: 0 0 3px #0066cc; }
 nav a.blue:hover { color: #00cfff; text-shadow: none; }
 

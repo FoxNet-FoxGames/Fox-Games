@@ -68,9 +68,8 @@
   <a class="orange" onclick="showSection('staff')">Staff</a>
   <a class="red" onclick="showSection('arbeit')">Arbeit</a>
   <a class="teal" onclick="showSection('kontakt')">Kontakt</a>
-  <a class="yellow" href="Bewerbung.html">Bewerbung</a>
-  <a class="pink" onclick="showSection('serverreport')">Server melden</a>
-  <a class="cyan" href="pass.html">FoxNet Login</a>
+  <a class="yellow" href="Formulare.html">Formulare</a>
+  <a class="fnred" href="pass.html">FoxNet Login</a>
 </nav>
 
   <section id="willkommen">
@@ -175,7 +174,7 @@
     <p id="desc-alternate" class="description" style="color:#ffffff; display:none;">Alternative Version, andere Storyverläufe, non-canon.</p>
 
     <ul class="features" style="color:#ffffff;">
-      <li><span class="icon">📺</span> Staffel 1 Folgen: 25</li>
+      <li><span class="icon">📺</span> Staffel 1 Folgen: 26/??</li>
       <li><span class="icon">📺</span> Staffel 2 Folgen: ??</li>
       <li><span class="icon">📺</span> Staffel 3 Folgen: ??</li>
       <div class="project-lead">Leitung: VECTORY</div>
@@ -221,6 +220,8 @@
     }
   }
 </script>
+
+    <hr></h2>
 
 <div class="game-feature" 
      style="background:#000;color:#880055;border:2px solid #880055;box-shadow:0 0 20px #880055;">
@@ -603,31 +604,6 @@
           <a href="mailto:foxgames@web.de">
             <button type="button">E-Mail</button>
           </a></div></div></div></div></section>
-
-<section id="serverreport">
-  <div class="report-container">
-    <h2>Server melden</h2>
-    <p class="report-text">Hier kannst du Server melden, die gegen unsere Richtlinien verstoßen. Bitte sei ehrlich – Missbrauch kann zu Einschränkungen führen.</p>
-
-<form action="/report" method="POST" onsubmit="return confirmServerReport(event)" style="text-align:left;max-width:600px;margin:auto;">
-  <label for="servername">Servername:</label>
-  <input type="text" name="servername" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-  <label for="ip">IP-Adresse:</label>
-  <input type="text" name="ip" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-  <label for="reason">Grund der Meldung:</label>
-  <input type="text" name="reason" required style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-  <label for="description">Beschreibung (optional):</label>
-  <textarea name="description" rows="4" style="width:100%;padding:0.5rem;border-radius:5px;border:none;"></textarea>
-
-  <label for="contact">Dein Name: (Discord oder E-Mail)</label>
-  <input type="text" name="contact" required placeholder="z. B. Max / Max#1234 / max@email.de" style="width:100%;padding:0.5rem;margin-bottom:1rem;border-radius:5px;border:none;">
-
-  <button type="submit" style="margin-top:1rem;padding:0.7rem 1.5rem; font-weight:bold;background:#e63946;color:#fff;border:none;border-radius:6px;cursor:pointer;">SERVER MELDEN</button>
-</form></div>
-</section>
 
   <section id="impressum">
     <div class="legal-container">

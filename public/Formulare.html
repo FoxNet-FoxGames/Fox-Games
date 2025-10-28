@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Bewerbungsformular</title>
+  <title>Formulare</title>
   <style>
     body { margin: 0; background-color: #000; color: #fff; font-family: Arial, sans-serif; }
     header { text-align: center; padding: 2rem 1rem 1rem; }
@@ -458,7 +458,7 @@
       ⚠ LETZTE WARNUNG ⚠<br>
       Du bist kurz davor, deine Bewerbung abzusenden!<br>
       Ein Admin wird sie prüfen. Vergewissere dich, dass du alles korrekt ausgefüllt hast.<br>
-      Fehler können nicht rückgängig gemacht werden.
+      Das absenden kann nicht rückgängig gemacht werden.
     </p>
     <div style="margin-top:1.5rem; display:flex; justify-content:center; gap:1rem;">
       <button id="confirm-submit" style="padding:1rem 2rem; background:#ff0000; color:#fff; border:none; border-radius:8px; font-size:1rem; cursor:pointer;">Bewerbung absenden</button>
@@ -486,7 +486,7 @@
   transform: translate(-50%, -50%) scale(0);
   pointer-events: none;
   z-index: 9998;
-  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1), width 1s ease-out, height 1s ease-out;
+  transition: transform 3s cubic-bezier(0.25, 0.1, 0.25, 1), width 1s ease-out, height 1s ease-out;
   backdrop-filter: blur(0px) brightness(1);
 }
 #circle-effect.active {
@@ -528,7 +528,7 @@ form.addEventListener('submit', (e) => {
     popup.style.opacity = '0';
     requestAnimationFrame(() => popup.style.opacity = '1');
     checkupSound.play();
-  }, 600);
+  }, 1800);
 
   document.getElementById('cancel-submit').onclick = () => {
     overlay.style.display = 'none';
@@ -543,21 +543,18 @@ document.getElementById('confirm-submit').onclick = async () => {
   checkupSound.currentTime = 0;
   submitSound.play();
 
-  // Alle Inputs/Textareas/Selects im Formular sammeln
   const formData = {};
   const allInputs = form.querySelectorAll('input, textarea, select');
   allInputs.forEach(input => {
     if(input.name) formData[input.name] = input.value || '';
   });
 
-  // Name aus der sichtbaren Job-Sektion überschreiben
   const activeJobSection = document.querySelector('.job-questions:not([style*="display: none"])');
   if(activeJobSection) {
     const nameField = activeJobSection.querySelector('input[name="name"]');
     if(nameField) formData.name = nameField.value || '';
   }
 
-  // Job extra setzen
   const jobSelect = document.querySelector('select[name="job"]');
   formData.job = jobSelect ? jobSelect.options[jobSelect.selectedIndex].text : '';
 
@@ -572,7 +569,6 @@ document.getElementById('confirm-submit').onclick = async () => {
     console.error('Fehler beim Bewerben', e);
   }
 
-  // Fade to black nach Sound
   const blackOverlay = document.createElement('div');
   blackOverlay.style.position='fixed';
   blackOverlay.style.top='0';
