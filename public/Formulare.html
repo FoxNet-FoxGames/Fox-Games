@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Formulare</title>
-  <style>
-    body { margin: 0; background-color: #000; color: #fff; font-family: Arial, sans-serif; }
-    header { text-align: center; padding: 2rem 1rem 1rem; }
-    header img.logo { width: 200px; display: block; margin: 0 auto 1rem; }
-    header img.title { max-width: 60%; height: auto; display: block; margin: auto; }
-    .form-container {background: linear-gradient(180deg, #000000, #1c1c1c, #8b0000);padding: 2.5rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 0, 1);text-align: left;}
-    .form-container h2 {font-size: 2.2rem;text-shadow: 0 0 10px #000000;text-align: center;margin-bottom: 1.5rem;}
-    .form-group {margin-bottom: 1.5rem;}
-    .form-group label {display: block;font-weight: bold;margin-bottom: 0.5rem;color: #ff6600;}
-    .form-group input,
-    .form-group textarea,
-    .form-group select {width: 100%;padding: 0.8rem;border: none;border-radius: 8px;background: #222;color: #fff;font-size: 1rem;box-shadow: inset 0 0 10px #8b0000;}
-    .form-group textarea {resize: vertical;min-height: 120px;}
-    .form-submit {text-align: center;margin-top: 2rem;}
-    .form-submit button {background: linear-gradient(135deg, #ff0000, #ff6600);color: #fff;padding: 0.8rem 2rem;border: none;border-radius: 10px;font-size: 1.2rem;font-weight: bold;cursor: pointer;transition: all 0.3s ease;}
-    .form-submit button:hover {box-shadow: 0 0 15px rgba(255, 100, 0, 0.7);transform: scale(1.05);}
-    footer { background: #111; text-align: center; padding: 1rem; font-size: 0.9rem; color: #888; margin-top: 3rem; }
-    hr { border: 1px solid #f00; margin: 2rem 0; }
-  </style>
+<meta charset="UTF-8">
+<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+<title>Formulare</title>
+<style>
+body { margin: 0; background-color: #000; color: #fff; font-family: Arial, sans-serif; }
+header { text-align: center; padding: 2rem 1rem 1rem; }
+header img.logo { width: 200px; display: block; margin: 0 auto 1rem; }
+header img.title { max-width: 60%; height: auto; display: block; margin: auto; }
+.form-container {padding: 2.5rem;border-radius: 20px;max-width: 800px;margin: 2rem auto;box-shadow: 0 0 25px rgba(255, 0, 0, 1);text-align: left;}
+.form-container h2 {font-size: 2.2rem;text-shadow: 0 0 10px #000000;text-align: center;margin-bottom: 1.5rem;}
+.form-group {margin-bottom: 1.5rem;}
+.form-group label {display: block;font-weight: bold;margin-bottom: 0.5rem;color: #ff6600;}
+.form-group input,
+.form-group textarea,
+.form-group select {width: 100%;padding: 0.8rem;border: none;border-radius: 8px;font-size: 1rem;background: #222;color: #fff;box-shadow: inset 0 0 10px #8b0000;}
+.form-group textarea {resize: vertical;min-height: 120px;}
+.form-submit {text-align: center;margin-top: 2rem;}
+.form-submit button {background: linear-gradient(135deg, #ff0000, #ff6600);color: #fff;padding: 0.8rem 2rem;border: none;border-radius: 10px;font-size: 1.2rem;font-weight: bold;cursor: pointer;transition: all 0.3s ease;}
+.form-submit button:hover {box-shadow: 0 0 15px rgba(255, 100, 0, 0.7);transform: scale(1.05);}
+footer { background: #111; text-align: center; padding: 1rem; font-size: 0.9rem; color: #888; margin-top: 3rem; }
+hr { border: 1px solid #f00; margin: 2rem 0; }
+#circle-effect {position: fixed;top: var(--click-y);left: var(--click-x);width: 0;height: 0;border-radius: 50%;background: radial-gradient(circle, rgba(200,0,255,0.3) 0%, rgba(200,0,0,0) 80%);transform: translate(-50%, -50%) scale(0);pointer-events: none;z-index: 9998;transition: transform 3s cubic-bezier(0.25, 0.1, 0.25, 1), width 1s ease-out, height 1s ease-out;backdrop-filter: blur(0px) brightness(1);}
+#circle-effect.active {width: 200vw;height: 200vh;transform: translate(-50%, -50%) scale(1);backdrop-filter: blur(12px) brightness(1.4) contrast(1.2) hue-rotate(200deg);}
+</style>
 </head>
 <body>
   <header>
@@ -32,7 +35,7 @@
 
   <div class="form-container">
 <div id="job-title" class="job-title-container">
-<h2>Bewerbung als 
+<h2> 
   <span id="job-text" style="color:#000000; text-shadow:0 0 5px #0000ff;">Globaler</span>
   <a id="job-link" href="steckbrief/foxgames/moderator.html" 
      style="color:#000000; text-shadow:0 0 5px #00dc3c; text-decoration:none; transition: all 0.3s ease;"
@@ -52,6 +55,7 @@
     <option value="partner">Partner</option>
     <option value="composer">Composer</option>
     <option value="voiceactor">Voice Actor</option>
+    <option value="report">Server Report</option>
   </select>
 </div>
 
@@ -441,6 +445,28 @@
   </div>
 </div>
 
+<div id="job-report" class="job-questions" style="display:none;">
+  <div class="form-group">
+    <label for="reporter-name" style="color: #ff6600;">Dein Name:</label>
+    <input type="text" id="reporter-name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="reported-player" style="color: #ff1111;">Wen möchtest du melden? (Username)</label>
+    <input type="text" id="reported-player" name="reported_player">
+  </div>
+
+  <div class="form-group">
+    <label for="reason" style="color: #ffff00;">Grund der Meldung / Beschreibung</label>
+    <textarea id="reason" name="reason"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="evidence" style="color: #00ff00;">Beweise (Links/Screenshots/Onedrive)</label>
+    <input type="text" id="evidence" name="evidence" placeholder="z.B. Imgur/YouTube Link">
+  </div>
+</div>
+
 <div class="form-submit">
   <h2>Wir freuen uns auf dich</h2>
   <button type="submit">Bewerbung absenden</button>
@@ -473,29 +499,6 @@
     <p>© 2025 Fox Games</p>
   </div>
 </footer>
-
-<style>
-#circle-effect {
-  position: fixed;
-  top: var(--click-y);
-  left: var(--click-x);
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(200,0,255,0.3) 0%, rgba(200,0,0,0) 80%);
-  transform: translate(-50%, -50%) scale(0);
-  pointer-events: none;
-  z-index: 9998;
-  transition: transform 3s cubic-bezier(0.25, 0.1, 0.25, 1), width 1s ease-out, height 1s ease-out;
-  backdrop-filter: blur(0px) brightness(1);
-}
-#circle-effect.active {
-  width: 200vw;
-  height: 200vh;
-  transform: translate(-50%, -50%) scale(1);
-  backdrop-filter: blur(12px) brightness(1.4) contrast(1.2) hue-rotate(200deg);
-}
-</style>
 
 <script>
 const form = document.querySelector('form');
@@ -538,74 +541,208 @@ form.addEventListener('submit', (e) => {
     checkupSound.currentTime = 0;
   };
 
-document.getElementById('confirm-submit').onclick = async () => {
-  checkupSound.pause();
-  checkupSound.currentTime = 0;
-  submitSound.play();
+  document.getElementById('confirm-submit').onclick = async () => {
+    checkupSound.pause();
+    checkupSound.currentTime = 0;
+    submitSound.play();
 
-  const formData = {};
-  const allInputs = form.querySelectorAll('input, textarea, select');
-  allInputs.forEach(input => {
-    if(input.name) formData[input.name] = input.value || '';
-  });
-
-  const activeJobSection = document.querySelector('.job-questions:not([style*="display: none"])');
-  if(activeJobSection) {
-    const nameField = activeJobSection.querySelector('input[name="name"]');
-    if(nameField) formData.name = nameField.value || '';
-  }
-
-  const jobSelect = document.querySelector('select[name="job"]');
-  formData.job = jobSelect ? jobSelect.options[jobSelect.selectedIndex].text : '';
-
-  try {
-    const response = await fetch('/bewerbung', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
+    const formData = {};
+    const allInputs = form.querySelectorAll('input, textarea, select');
+    allInputs.forEach(input => {
+      if(input.name) formData[input.name] = input.value || '';
     });
-    if(!response.ok) throw new Error('Server antwortet nicht mit 200');
-  } catch(e) {
-    console.error('Fehler beim Bewerben', e);
-  }
 
-  const blackOverlay = document.createElement('div');
-  blackOverlay.style.position='fixed';
-  blackOverlay.style.top='0';
-  blackOverlay.style.left='0';
-  blackOverlay.style.width='100vw';
-  blackOverlay.style.height='100vh';
-  blackOverlay.style.backgroundColor='rgba(0,0,0,0)';
-  blackOverlay.style.transition='background-color 1s ease-in';
-  blackOverlay.style.zIndex='10001';
-  document.body.appendChild(blackOverlay);
-  requestAnimationFrame(()=> blackOverlay.style.backgroundColor='#000');
+    const activeJobSection = document.querySelector('.job-questions:not([style*="display: none"])');
+    if(activeJobSection) {
+      const nameField = activeJobSection.querySelector('input[name="name"]');
+      if(nameField) formData.name = nameField.value || '';
+    }
 
-  submitSound.onended = ()=> window.location.href='Bewerbungerfolg.html';
-};
+    const jobSelectEl = document.querySelector('select[name="job"]');
+    formData.job = jobSelectEl ? jobSelectEl.options[jobSelectEl.selectedIndex].text : '';
+
+    try {
+      const response = await fetch('/bewerbung', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if(!response.ok) throw new Error('Server antwortet nicht mit 200');
+    } catch(e) {
+      console.error('Fehler beim Bewerben', e);
+    }
+
+    const blackOverlay = document.createElement('div');
+    blackOverlay.style.position='fixed';
+    blackOverlay.style.top='0';
+    blackOverlay.style.left='0';
+    blackOverlay.style.width='100vw';
+    blackOverlay.style.height='100vh';
+    blackOverlay.style.backgroundColor='rgba(0,0,0,0)';
+    blackOverlay.style.transition='background-color 1s ease-in';
+    blackOverlay.style.zIndex='10001';
+    document.body.appendChild(blackOverlay);
+    requestAnimationFrame(()=> blackOverlay.style.backgroundColor='#000');
+
+    submitSound.onended = ()=> window.location.href='Bewerbungerfolg.html';
+  };
 });
 </script>
 
 <script>
 const jobSelect = document.getElementById('jobselect');
 const jobSections = document.querySelectorAll('.job-questions');
-const jobLink = document.getElementById('job-link');
-const jobText = document.getElementById('job-text');
 
-const jobTitles = { moderator: { textBefore: 'Globaler', colorBefore: '#000000', shadowBefore: '0 0 5px #0000ff', textLink: 'Moderator', colorLink: '#000000', shadowLink: '0 0 5px #00dc3c', hoverColor: '#00dc3c', hoverShadow: '0 0 5px #00dc3c', href: 'steckbrief/foxgames/moderator.html' }, sounddesigner: { textLink: 'Sound Designer', colorLink: '#ff6600', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #ff6600', href: 'steckbrief/foxgames/sounddesigner.html' }, builder: { textLink: 'Builder', colorLink: '#00ffff', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #00ffff', href: 'steckbrief/foxgames/builder.html' }, partner: { textLink: 'Partner', colorLink: '#ff69b4', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #ff69b4', href: 'steckbrief/foxgames/partner.html' }, composer: { textLink: 'Composer', colorLink: '#ff00ff', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #ff00ff', href: 'steckbrief/foxgames/composer.html' }, voiceactor: { textLink: 'Voice Actor', colorLink: '#b84dff', shadowLink: 'none', hoverColor: '#000000', hoverShadow: '0 0 5px #b84dff', href: 'steckbrief/foxgames/voiceactor.html' } };
+const jobTitles = {
+  moderator: {
+    textBefore: 'Globaler',
+    colorBefore: '#000000',
+    shadowBefore: '0 0 5px #0000ff',
+    textLink: 'Moderator',
+    colorLink: '#000000',
+    shadowLink: '0 0 5px #00dc3c',
+    hoverColor: '#00dc3c',
+    hoverShadow: '0 0 5px #00dc3c',
+    href: 'steckbrief/foxgames/moderator.html',
+    mainTitle: "Bewerbung als Moderator",
+    boxGradient: "linear-gradient(180deg, #000000, #8b0000, #00dc3c)"
+  },
+  sounddesigner: {
+    textLink: 'Sound Designer',
+    colorLink: '#ff6600',
+    shadowLink: 'none',
+    hoverColor: '#000000',
+    hoverShadow: '0 0 5px #ff6600',
+    href: 'steckbrief/foxgames/sounddesigner.html',
+    mainTitle: "Bewerbung als Sound Designer",
+    boxGradient: "linear-gradient(180deg, #000000, #1c1c1c, #ff0000)"
+  },
+  builder: {
+    textLink: 'Builder',
+    colorLink: '#00ffff',
+    shadowLink: 'none',
+    hoverColor: '#000000',
+    hoverShadow: '0 0 5px #00ffff',
+    href: 'steckbrief/foxgames/builder.html',
+    mainTitle: "Bewerbung als Builder",
+    boxGradient: "linear-gradient(180deg, #000000, #1c1c1c, #ff0000)"
+  },
+  partner: {
+    textLink: 'Partner',
+    colorLink: '#ff69b4',
+    shadowLink: 'none',
+    hoverColor: '#000000',
+    hoverShadow: '0 0 5px #ff69b4',
+    href: 'steckbrief/foxgames/partner.html',
+    mainTitle: "Bewerbung als Partner",
+    boxGradient: "linear-gradient(180deg, #000000, #444444, #ff0000)"
+  },
+  composer: {
+    textLink: 'Composer',
+    colorLink: '#ff00ff',
+    shadowLink: 'none',
+    hoverColor: '#000000',
+    hoverShadow: '0 0 5px #ff00ff',
+    href: 'steckbrief/foxgames/composer.html',
+    mainTitle: "Bewerbung als Composer",
+    boxGradient: "linear-gradient(180deg, #000000, #444444, #ff0000)"
+  },
+  voiceactor: {
+    textLink: 'Voice Actor',
+    colorLink: '#b84dff',
+    shadowLink: 'none',
+    hoverColor: '#000000',
+    hoverShadow: '0 0 5px #b84dff',
+    href: 'steckbrief/foxgames/voiceactor.html',
+    mainTitle: "Bewerbung als Voice Actor",
+    boxGradient: "linear-gradient(180deg, #000000, #444444, #ff0000)"
+  },
+  report: {
+    textLink: "Server Report",
+    colorLink: "#ff6600",
+    shadowLink: "none",
+    hoverColor: "#000000",
+    hoverShadow: "0 0 5px #ff6600",
+    href: "steckbrief/foxgames/report.html",
+    mainTitle: "Server Reporten",
+    boxGradient: "linear-gradient(180deg, #500000, #800080, #500000)"
+  }
+};
 
 jobSelect.addEventListener('change', () => {
   const selected = jobSelect.value;
   const job = jobTitles[selected];
-  if(job.textBefore){
-    jobText.style.display='inline'; jobText.textContent=job.textBefore; jobText.style.color=job.colorBefore; jobText.style.textShadow=job.shadowBefore;
-  } else jobText.style.display='none';
-  jobLink.textContent=job.textLink; jobLink.href=job.href; jobLink.style.color=job.colorLink; jobLink.style.textShadow=job.shadowLink;
-  jobLink.onmouseover = ()=>{ jobLink.style.color=job.hoverColor; jobLink.style.textShadow=job.hoverShadow; };
-  jobLink.onmouseout = ()=>{ jobLink.style.color=job.colorLink; jobLink.style.textShadow=job.shadowLink; };
+  const formContainer = document.querySelector('.form-container');
+  
+  // Gradient anpassen
+  if(job.boxGradient){
+    formContainer.style.background = job.boxGradient;
+  }
+
+  // Main Title ersetzen + anklickbar
+  if(job.mainTitle){
+    const mainTitleH2 = document.querySelector('.form-container h2');
+    mainTitleH2.innerHTML = job.textBefore 
+      ? `<span id="job-text" style="color:${job.colorBefore}; text-shadow:${job.shadowBefore};">${job.textBefore}</span> <a id="job-link" href="${job.href}" style="color:${job.colorLink}; text-shadow:${job.shadowLink}; text-decoration:none;">${job.textLink}</a>`
+      : `<a id="job-link" href="${job.href}" style="color:${job.colorLink}; text-shadow:${job.shadowLink}; text-decoration:none;">${job.textLink}</a>`;
+    
+    const jobLinkEl = document.getElementById('job-link');
+    jobLinkEl.onmouseover = ()=>{ jobLinkEl.style.color=job.hoverColor; jobLinkEl.style.textShadow=job.hoverShadow; };
+    jobLinkEl.onmouseout = ()=>{ jobLinkEl.style.color=job.colorLink; jobLinkEl.style.textShadow=job.shadowLink; };
+  }
+
+  // Job-Sektionen umschalten
   jobSections.forEach(sec=>sec.style.display='none');
   const selectedSection=document.getElementById('job-'+selected);
   if(selectedSection) selectedSection.style.display='block';
+
+  // Footer-Text (Submit-H2) anpassen
+  const submitTitle = document.querySelector('.form-submit h2');
+  submitTitle.textContent = "Danke für deine Hilfe.";
+});
+
+function updateJobUI(selected) {
+  const job = jobTitles[selected];
+  if (!job) return;
+
+  // Text before
+  if(job.textBefore){
+    jobText.style.display='inline';
+    jobText.textContent=job.textBefore;
+    jobText.style.color=job.colorBefore;
+    jobText.style.textShadow=job.shadowBefore;
+  } else jobText.style.display='none';
+
+  // Link
+  jobLink.textContent=job.textLink;
+  jobLink.href=job.href;
+  jobLink.style.color=job.colorLink;
+  jobLink.style.textShadow=job.shadowLink;
+  jobLink.onmouseover = () => { jobLink.style.color=job.hoverColor; jobLink.style.textShadow=job.hoverShadow; };
+  jobLink.onmouseout = () => { jobLink.style.color=job.colorLink; jobLink.style.textShadow=job.shadowLink; };
+
+  // Form container gradient
+  const formContainer = document.querySelector('.form-container');
+  if(job.boxGradient) formContainer.style.background = job.boxGradient;
+
+  // Main title
+  if(job.mainTitle){
+    const mainTitleH2 = document.querySelector('.form-container h2');
+    mainTitleH2.textContent = job.mainTitle;
+  }
+
+  // Show job section
+  jobSections.forEach(sec => sec.style.display='none');
+  const selectedSection=document.getElementById('job-'+selected);
+  if(selectedSection) selectedSection.style.display='block';
+}
+
+// Event listener
+jobSelect.addEventListener('change', () => updateJobUI(jobSelect.value));
+
+// Initial load
+document.addEventListener('DOMContentLoaded', () => {
+  updateJobUI(jobSelect.value); // lädt die initiale Auswahl
 });
 </script>
 </html>
