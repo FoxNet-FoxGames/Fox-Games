@@ -27,68 +27,52 @@ hr { border: 1px solid #f00; margin: 2rem 0; }
 </style>
 </head>
 <body>
-  <header>
-    <a href="FoxGames.html" style="cursor: pointer;">
-    <img src="assets/Fox Games Logo.png" class="logo" style="width: 250px;">
-    <img src="assets/Fox Games Title.png" class="title" style="max-width: 20%;">
-  </a></header>
+<header>
+<a href="FoxGames.html" style="cursor: pointer;">
+<img src="assets/Fox Games Logo.png" class="logo" style="width: 250px;">
+<img src="assets/Fox Games Title.png" class="title" style="max-width: 20%;">
+</a></header>
 
-  <div class="form-container">
-<div id="job-title" class="job-title-container">
-<h2> 
-  <span id="job-text" style="color:#000000; text-shadow:0 0 5px #0000ff;">Globaler</span>
-  <a id="job-link" href="steckbrief/foxgames/moderator.html" 
-     style="color:#000000; text-shadow:0 0 5px #00dc3c; text-decoration:none; transition: all 0.3s ease;"
-     onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"
-     onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';">
-    Moderator
-  </a>
-</h2>
-    <form action="Bewerbungerfolg.html" method="post">
+<div class="form-container"><div id="job-title" class="job-title-container"><h2><span id="job-text" style="color:#000000; text-shadow:0 0 5px #0000ff;">Globaler</span>
+<a id="job-link" href="steckbrief/foxgames/moderator.html" 
+style="color:#000000; text-shadow:0 0 5px #00dc3c; text-decoration:none; transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';">Moderator</a>
+</h2><form action="Bewerbungerfolg.html" method="post">
 
-<div class="form-group">
-  <label for="jobselect" style="color:#ff6600;">Wähle deine Position:</label>
-  <select id="jobselect" name="job">
-    <option value="moderator" selected>Globaler Moderator</option>
-    <option value="sounddesigner">Sound Designer</option>
-    <option value="builder">Builder</option>
-    <option value="partner">Partner</option>
-    <option value="composer">Composer</option>
-    <option value="voiceactor">Voice Actor</option>
-    <option value="report">Server Report</option>
-  </select>
-</div>
+<div class="form-group"><label for="jobselect" style="color:#ff6600;">Wähle deine Position:</label>
+<select id="jobselect" name="job">
+<option value="moderator" selected>Globaler Moderator</option>
+<option value="sounddesigner">Sound Designer</option>
+<option value="builder">Builder</option>
+<option value="partner">Partner</option>
+<option value="composer">Composer</option>
+<option value="voiceactor">Voice Actor</option>
+<option value="report">Server Report</option>
+</select></div>
 
 <div id="job-moderator" class="job-questions">
-      <div class="form-group">
-        <label for="name" style="color: #00ffff;">01/13: Vollständiger Name</label>
-        <input type="text" id="name" name="name">
-      </div>
+<div class="form-group"><label for="name" style="color: #00ffff;">01/13: Vollständiger Name [Musst nicht sagen, is ok.]</label>
+<input type="text" id="name" name="name" placeholder="Max Mustermann (Maxi)">
+</div>
 
-      <div class="form-group">
-        <label for="age" style="color: #ffffff;">02/13: Alter</label>
-        <input type="number" id="age" name="age">
-      </div>
+<div class="form-group"><label for="age" style="color: #ffffff;">02/13: Alter</label>
+<input type="number" id="age" name="age" placeholder="15">
+</div>
 
-      <div class="form-group">
-        <label for="dusername" style="color: #0075c4;">03/13: Username/Discord-Tag (z. B. Max/max_123)</label>
-        <input type="text" id="discord" name="username">
-      </div>
+<div class="form-group"><label for="dusername" style="color: #0075c4;">03/13: Username/Discord-Tag/id</label>
+<input type="text" id="discord" name="username" placeholder="Max | max_123 | 93218471712">
+</div>
 
-      <div class="form-group">
-        <label for="language" style="color: #ffff00;">04/13: Welche sprachen sprichst du fließend? (z.b. Deutsch/Englisch/Spanisch)</label>
-        <input type="text" id="language" name="language">
-      </div>
+<div class="form-group"><label for="language" style="color: #ffff00;">04/13: Welche sprachen sprichst du fließend?</label>
+<input type="text" id="language" name="language" placeholder="Deutsch | Englisch | Spanisch">
+</div>
 
-      <div class="form-group">
-        <label for="experience" style="color: #00ff00;">05/13: Hast du bereits Moderationserfahrung? Beschreibe kurz.</label>
-        <textarea id="experience" name="experience"></textarea>
-      </div>
+<div class="form-group"><label for="experience" style="color: #00ff00;">05/13: Hast du bereits Moderationserfahrung? Beschreibe kurz.</label>
+<textarea id="experience" name="experience"></textarea>
+</div>
 
-      <div class="form-group">
-        <label for="motivation" style="color: #00dc3c;">06/13: Warum möchtest du Globaler <a href="steckbrief/foxgames/moderator.html" span style="color:#000000; text-shadow:0 0 5px #00dc3c;text-decoration: none;transition: all 0.3s ease;"onmouseover="this.style.color='#00dc3c'; this.style.textShadow='0 0 5px #000000';"onmouseout="this.style.color='#000000'; this.style.textShadow='0 0 5px #00dc3c';"> Moderator </span></a> werden?</label>
-        <textarea id="motivation" name="motivation"></textarea>
-      </div>
+<div class="form-group"><label for="motivation" style="color: #00dc3c;">06/13: Warum möchtest du Globaler <a href="steckbrief/foxgames/Moderator.html" class="moderator">Moderator</a> werden?</label>
+<textarea id="motivation" name="motivation"></textarea>
+</div>
 
       <div class="form-group">
         <label for="conflict" style="color: #ff1111;">07/13: Wie würdest du mit Konflikten zwischen Spielern umgehen?</label>
@@ -96,7 +80,7 @@ hr { border: 1px solid #f00; margin: 2rem 0; }
       </div>
 
       <div class="form-group">
-        <label for="strengths" style="color: #ff6600;">08/13: Was sind deine Stärken und Schwächen in einem Team? (Bitte sei ehrlich)</label>
+        <label for="strengths" style="color: #ff6600;">08/13: Was sind deine Stärken und Schwächen in einem Team? [Bitte sei ehrlich]</label>
         <textarea id="strengths" name="strengths"></textarea>
       </div>
 
@@ -126,7 +110,7 @@ hr { border: 1px solid #f00; margin: 2rem 0; }
           <option value="">Bitte auswählen</option>
           <option value="ja1">Ja</option>
           <option value="nein2">Nein</option>
-          <option value="ja2">Ja, aber anderer username als bei 01 angegeben</option>
+          <option value="ja2">Ja, aber anderer username als bei 03 angegeben</option>
           <option value="nein2">Nein, aber werde ich</option>
           <option value="nein3">Nein, und ich habe auch nicht vor zu joinen. (Kein problem, verstehen wir)</option>
       </select></div>
@@ -447,13 +431,18 @@ hr { border: 1px solid #f00; margin: 2rem 0; }
 
 <div id="job-report" class="job-questions" style="display:none;">
   <div class="form-group">
-    <label for="reporter-name" style="color: #ff6600;">Dein Name:</label>
-    <input type="text" id="reporter-name" name="name">
+    <label for="reporter" style="color: #ff6600;">Dein Name:</label>
+    <input type="text" id="reporter" name="reporter">
   </div>
 
   <div class="form-group">
-    <label for="reported-player" style="color: #ff1111;">Wen möchtest du melden? (Username)</label>
-    <input type="text" id="reported-player" name="reported_player">
+    <label for="reporter-name" style="color: #ff6600;">Deine E-mail:</label>
+    <input type="text" id="email" name="email">
+  </div>
+
+  <div class="form-group">
+    <label for="reported" style="color: #ff1111;">IP des Servers der gemeldet werden möchte</label>
+    <input type="text" id="reported" name="reported">
   </div>
 
   <div class="form-group">
@@ -462,8 +451,8 @@ hr { border: 1px solid #f00; margin: 2rem 0; }
   </div>
 
   <div class="form-group">
-    <label for="evidence" style="color: #00ff00;">Beweise (Links/Screenshots/Onedrive)</label>
-    <input type="text" id="evidence" name="evidence" placeholder="z.B. Imgur/YouTube Link">
+    <label for="evidence" style="color: #00ff00;">Beweise (Screenshots/Online file sharing links)</label>
+    <input type="text" id="evidence" name="evidence">
   </div>
 </div>
 
@@ -482,7 +471,7 @@ hr { border: 1px solid #f00; margin: 2rem 0; }
   <div id="last-warning-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1c0000; color:#ff00ff; padding:2rem; border-radius:15px; text-align:center; z-index:10000; font-family:'Impact', sans-serif; font-size:1.3rem;">
     <p>
       ⚠ LETZTE WARNUNG ⚠<br>
-      Du bist kurz davor, deine Bewerbung abzusenden!<br>
+      Du bist kurz davor, dein Formular abzusenden!<br>
       Ein Admin wird sie prüfen. Vergewissere dich, dass du alles korrekt ausgefüllt hast.<br>
       Das absenden kann nicht rückgängig gemacht werden.
     </p>
@@ -584,7 +573,7 @@ form.addEventListener('submit', (e) => {
     document.body.appendChild(blackOverlay);
     requestAnimationFrame(()=> blackOverlay.style.backgroundColor='#000');
 
-    submitSound.onended = ()=> window.location.href='Bewerbungerfolg.html';
+    submitSound.onended = ()=> window.location.href='Formularerfolg.html';
   };
 });
 </script>

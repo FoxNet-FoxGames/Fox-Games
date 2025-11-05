@@ -1,54 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FoxNet – Innovation & Entertainment</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoxNet</title>
 <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
 <style>
-/* Grundlegende Reset & Styles */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; background-color:#0a0a0a; color:#fff; line-height:1.6; }
-a { color:inherit; text-decoration:none; }
-img { max-width:100%; display:block; }
-
-/* Header & Navigation */
-header { text-align:center; padding:2rem 1rem; background:linear-gradient(90deg,#ff0000,#800080); }
-header img { width:200px; margin-bottom:1rem; }
-nav { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; background-color:#111; padding:0.5rem; }
-nav a { padding:0.5rem 1rem; border-radius:5px; transition:0.3s; }
-nav a:hover { background-color:#222; }
-
-/* Sektionen */
-section { display:none; padding:4rem 2rem; max-width:1200px; margin:auto; }
-section.active { display:block; }
-h2 { color:#ffcc00; margin-bottom:1rem; }
-.highlight { color:#ff0000; font-weight:bold; }
-
-/* Unternehmensübersicht */
-.company-overview { background:#111; padding:2rem; border-radius:12px; margin-bottom:2rem; }
-.company-overview p { margin-top:1rem; }
-
-/* Tochterunternehmen */
-.subsidiary { border:2px solid #ff0000; border-radius:12px; padding:1rem; margin-bottom:2rem; background:#000; }
-.subsidiary h3 { color:#ff0000; }
-.subsidiary p { margin-top:0.5rem; }
-
-/* Team */
-.team-entry { border-left:4px solid #ff0000; padding:1rem; margin-bottom:1rem; background:#111; border-radius:8px; }
-.team-entry h4 { color:#ff0000; margin-bottom:0.5rem; }
-
-/* Jobs */
-.job-card { background:#111; border:2px solid #800080; border-radius:8px; padding:1rem; margin-bottom:1rem; }
-.job-card h4 { color:#ff00ff; margin-bottom:0.5rem; }
-
-/* Kontaktformular */
-form input, form textarea, form button { display:block; width:100%; margin-bottom:1rem; padding:0.5rem; border-radius:5px; border:none; }
-form button { background:#ff0000; color:#fff; font-weight:bold; cursor:pointer; }
-
-/* Footer */
-footer { text-align:center; padding:2rem 1rem; background-color:#111; font-size:0.9rem; color:#888; margin-top:2rem; }
+* {margin:0; padding:0; box-sizing:border-box}
+body {font-family: Arial, sans-serif; background-color:#0a0a0a; color:#fff; line-height:1.6}
+a {color:inherit; text-decoration:none}
+img {max-width:100%; display:block}
+header {text-align:center; padding:2rem 1rem; background:linear-gradient(90deg,#ff0000,#800080)}
+header img {width:200px; margin-bottom:1rem}
+nav {display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; background-color:#111; padding:0.5rem}
+nav a {padding:0.5rem 1rem; border-radius:5px; transition:0.3s}
+nav a:hover {background-color:#222}
+section {display:none; padding:4rem 2rem; max-width:1200px; margin:auto}
+section.active {display:block}
+h2 {color:#ffcc00; margin-bottom:1rem}
+.highlight {color:#500000; font-weight:bold}
+.company-overview {background:#111; padding:2rem; border-radius:12px; margin-bottom:2rem}
+.company-overview p {margin-top:1rem}
+.subsidiary {border:2px solid #ff0000; border-radius:12px; padding:1rem; margin-bottom:2rem; background:#000}
+.subsidiary h3 {color:#ff0000}
+.subsidiary p {margin-top:0.5rem}
+.team-entry {border-left:4px solid #ff0000; padding:1rem; margin-bottom:1rem; background:#111; border-radius:8px}
+.team-entry h4 {color:#ff0000; margin-bottom:0.5rem}
+.job-card {background:#111; border:2px solid #800080; border-radius:8px; padding:1rem; margin-bottom:1rem}
+.job-card h4 {color:#ff00ff; margin-bottom:0.5rem}
+form input, form textarea, form button {display:block; width:100%; margin-bottom:1rem; padding:0.5rem; border-radius:5px; border:none}
+form button {background:#ff0000; color:#fff; font-weight:bold; cursor:pointer}
+footer {text-align:center; padding:2rem 1rem; background-color:#111; font-size:0.9rem; color:#888; margin-top:2rem}
 </style>
+
 <script>
 function showSection(id){
   document.querySelectorAll('section').forEach(sec=>sec.classList.remove('active'));
@@ -64,12 +48,13 @@ function confirmJobApplication(event){
   return false;
 }
 </script>
+
 </head>
 <body>
 
 <header>
 <img src="assets/FoxNet_Logo.png" alt="FoxNet Logo">
-<h1>FoxNet – Innovation & Entertainment</h1>
+<h1 class=highlight>FoxNet</h1>
 </header>
 
 <nav>
@@ -83,13 +68,11 @@ function confirmJobApplication(event){
 <a onclick="showSection('rechtliches')">Rechtliches</a>
 </nav>
 
-<!-- Willkommen -->
 <section id="willkommen" class="active">
 <h2>Willkommen bei <span class="highlight">FoxNet</span></h2>
 <p>FoxNet ist ein führendes Unternehmen für digitale Unterhaltung und Innovation. Wir entwickeln und fördern Marken, die die Zukunft der Gaming- und Medienbranche gestalten.</p>
 </section>
 
-<!-- Unternehmensübersicht -->
 <section id="unternehmen">
 <h2>Über FoxNet</h2>
 <div class="company-overview">
@@ -100,76 +83,45 @@ function confirmJobApplication(event){
 <li>🎬 Film & Animation</li>
 <li>🤝 Kooperationen & Partnerschaften</li>
 </ul>
-</div>
-</section>
+</div></section>
 
-<!-- Tochterfirmen -->
-<section id="tochterfirmen">
-<h2>Unsere Tochterfirmen</h2>
-<div class="subsidiary">
-<h3>Fox Games</h3>
-<p>Innovative Spieleentwicklung mit Community-Fokus. Multiplayer, MMORPGs und Simulationen.</p>
-</div>
-<div class="subsidiary">
-<h3>Fox Media</h3>
-<p>Produktion von Serien, Animationen und Streaming-Inhalten für ein globales Publikum.</p>
-</div>
-<div class="subsidiary">
-<h3>Fox Studios</h3>
+<section id="tochterfirmen"><h2>Unsere Tochterfirmen</h2>
+<div class="subsidiary"><h3>Fox Games</h3>
+<p>Innovative Spieleentwicklung mit Community-Fokus. Multiplayer, MMORPGs und Simulationen.</p></div>
+<div class="subsidiary"><h3>Fox Media</h3>
+<p>Produktion von Serien, Animationen und Streaming-Inhalten für ein globales Publikum.</p></div>
+<div class="subsidiary"><h3>Fox Studios</h3>
 <p>Filmproduktion, visuelle Effekte und digitale Welten – von Konzept bis Kino.</p>
-</div>
-</section>
+</div></section>
 
-<!-- Team -->
-<section id="team">
-<h2>Unser Team</h2>
-<div class="team-entry">
-<h4>VECTORY – CEO & Gründer</h4>
-<p>Leitet das Unternehmen und verantwortet die strategische Ausrichtung aller Tochterfirmen.</p>
-</div>
-<div class="team-entry">
-<h4>Foodhater – Creative Director</h4>
-<p>Verantwortlich für die kreative Vision aller Projekte.</p>
-</div>
-<div class="team-entry">
-<h4>Lukas – Composer</h4>
+<section id="team"><h2>Unser Team</h2>
+<div class="team-entry"><h4>VECTORY – CEO & Gründer</h4>
+<p>Leitet das Unternehmen und verantwortet die strategische Ausrichtung aller Tochterfirmen.</p></div>
+<div class="team-entry"><h4>Foodhater – Creative Director</h4>
+<p>Verantwortlich für die kreative Vision aller Projekte.</p></div>
+<div class="team-entry"><h4>Lukas – Composer</h4>
 <p>Musikalische Leitung für alle Projekte und Produktionen.</p>
-</div>
-</section>
+</div></section>
 
-<!-- Jobs -->
-<section id="jobs">
-<h2>Karriere bei FoxNet</h2>
-<div class="job-card">
-<h4>Programmierer</h4>
-<p>Entwicklung innovativer Softwarelösungen und Spiele.</p>
-</div>
-<div class="job-card">
-<h4>Designer</h4>
-<p>UI/UX, Charakterdesign, Animationen – deine Kreativität zählt.</p>
-</div>
-<div class="job-card">
-<h4>Composer & Sound Designer</h4>
+<section id="jobs"><h2>Karriere bei FoxNet</h2>
+<div class="job-card"><h4>Programmierer</h4>
+<p>Entwicklung innovativer Softwarelösungen und Spiele.</p></div>
+<div class="job-card"><h4>Designer</h4>
+<p>UI/UX, Charakterdesign, Animationen – deine Kreativität zählt.</p></div>
+<div class="job-card"><h4>Composer & Sound Designer</h4>
 <p>Erstelle epische Musik und Soundeffekte für Games & Media.</p>
 </div>
 
 <h3>Bewerbung</h3>
 <form onsubmit="return confirmJobApplication(event)">
-<label>Name:</label>
-<input type="text" name="name" required>
-<label>Email:</label>
-<input type="email" name="email" required>
-<label>Position:</label>
-<input type="text" name="position" required>
-<label>Motivation:</label>
-<textarea name="motivation" rows="4"></textarea>
+<label>Name:</label><input type="text" name="name" required>
+<label>Email:</label><input type="email" name="email" required>
+<label>Position:</label><input type="text" name="position" required>
+<label>Motivation:</label><textarea name="motivation" rows="4"></textarea>
 <button type="submit">Bewerben</button>
-</form>
-</section>
+</form></section>
 
-<!-- Kontakt -->
-<section id="kontakt">
-<h2>Kontakt</h2>
+<section id="kontakt"><h2>Kontakt</h2>
 <p>Hast du Fragen oder Interesse an Kooperationen? Wir freuen uns über deine Nachricht!</p>
 <ul>
 <li>📧 E-Mail: <a href="mailto:contact@foxnet.com">contact@foxnet.com</a></li>
@@ -178,17 +130,15 @@ function confirmJobApplication(event){
 </ul>
 </section>
 
-<!-- News -->
 <section id="news">
 <h2>News & Updates</h2>
 <p>Hier erscheinen regelmäßig Neuigkeiten zu Projekten, Releases und Events von FoxNet und seinen Tochterfirmen.</p>
 </section>
 
-<!-- Rechtliches -->
 <section id="rechtliches">
 <h2>Impressum & Datenschutz</h2>
-<p><strong>FoxNet GmbH</strong><br>CEO: VECTORY<br>Adresse: Musterstraße 1, 12345 Musterstadt, Deutschland</p>
-<p>Email: contact@foxnet.com<br>Telefon: +49 123 456789</p>
+<p><strong>FoxNet GmbH</strong><br>CEO: VECTORY<br>Adresse: Restleinen, Restleiner weg 29, Deutschland</p>
+<p>Email: foxgames@web.de<br>Telefon:</p>
 <p>Datenschutzerklärung: Diese Website speichert keine personenbezogenen Daten, außer bei Formularnutzung.</p>
 </section>
 
@@ -196,5 +146,4 @@ function confirmJobApplication(event){
 <p>© 2025 FoxNet | <a onclick="showSection('rechtliches')">Rechtliches</a></p>
 </footer>
 
-</body>
-</html>
+</body></html>
