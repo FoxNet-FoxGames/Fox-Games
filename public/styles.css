@@ -236,33 +236,26 @@ nav a {text-decoration: none;font-weight: bold;cursor: pointer;transition: color
 
 nav a.fgred { color: #000000; text-shadow: 0 0 3px #8b0000; }
 nav a.fgred:hover { color: #8b0000; text-shadow: none; }
-
 nav a.fnred { color: #000000; text-shadow: 0 0 3px #500000; }
 nav a.fnred:hover { color: #500000; text-shadow: none; }
-
+nav a.red { color: #000000; text-shadow: 0 0 3px #ff0000; }
+nav a.red:hover { color: #ff0000; text-shadow: none; }
 nav a.blue { color: #000000; text-shadow: 0 0 3px #0066cc; }
 nav a.blue:hover { color: #00cfff; text-shadow: none; }
-
-nav a.purple { color: #000000; text-shadow: 0 0 3px #6600cc; }
-nav a.purple:hover { color: #a200ff; text-shadow: none; }
-
-nav a.orange { color: #000000; text-shadow: 0 0 3px #cc6600; }
-nav a.orange:hover { color: #ff9900; text-shadow: none; }
-
-nav a.red { color: #000000; text-shadow: 0 0 3px #aa2a2a; }
-nav a.red:hover { color: #ff5555; text-shadow: none; }
-
-nav a.teal { color: #000000; text-shadow: 0 0 3px #008080; }
-nav a.teal:hover { color: #00ffff; text-shadow: none; }
-
-nav a.yellow { color: #000000; text-shadow: 0 0 3px #cccc00; }
+nav a.purple { color: #000000; text-shadow: 0 0 3px #cc00ff; }
+nav a.purple:hover { color: #cc00ff; text-shadow: none; }
+nav a.lime { color: #000000; text-shadow: 0 0 3px #ccff00; }
+nav a.lime:hover { color: #ccff00; text-shadow: none; }
+nav a.yellow { color: #000000; text-shadow: 0 0 3px #ffff00; }
 nav a.yellow:hover { color: #ffff00; text-shadow: none; }
-
-nav a.pink { color: #000000; text-shadow: 0 0 3px #cc0066; }
-nav a.pink:hover { color: #ff33aa; text-shadow: none; }
-
-nav a.cyan { color: #000000; text-shadow: 0 0 3px #006666; }
+nav a.pink { color: #000000; text-shadow: 0 0 3px #ff00ff; }
+nav a.pink:hover { color: #ff00ff; text-shadow: none; }
+nav a.cyan { color: #000000; text-shadow: 0 0 3px #00ffff; }
 nav a.cyan:hover { color: #00ffff; text-shadow: none; }
+nav a.green { color: #000000; text-shadow: 0 0 3px #00ff00; }
+nav a.green:hover { color: #00ff00; text-shadow: none; }
+nav a.grey { color: #000000; text-shadow: 0 0 3px #1c1c1c; }
+nav a.grey:hover { color: #1c1c1c; text-shadow: none; }
 
 nav a::after {content: '';position: absolute;inset: 0;border-radius: 5px;background: none;opacity: 0;transition: opacity 0.3s ease;z-index: -1}
 nav a:hover::after {opacity: 0}
