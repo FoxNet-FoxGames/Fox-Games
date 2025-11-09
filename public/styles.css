@@ -35,6 +35,11 @@
 .thundergerman {color: #9b30ff;text-shadow: 0 0 5px #000000;text-decoration: none;transition: all 0.3s ease}
 .thundergerman:hover {color: #000000;text-shadow: 0 0 5px #9b30ff}
 
+.louemi-entry {background-image: url('assets/staff/louemiBackground.png');border: 2px solid #ffff00;box-shadow: 0 0 8px #ffff00}
+.louemi-entry img {content: url('assets/staff/louemi.png')}
+.louemi {color: #ffff00;text-shadow: 0 0 5px #000000;text-decoration: none;transition: all 0.3s ease}
+.louemi:hover {color: #000000;text-shadow: 0 0 5px #ffff00}
+
 .qualle-entry {background-image: url('assets/staff/QualleBackground.gif');border: 2px solid #9b30ff;box-shadow: 0 0 8px #9b30ff}
 .qualle-entry img {content: url('assets/staff/Qualle.png')}
 .qualle {color: #9b30ff;text-shadow: 0 0 5px #000000;text-decoration: none;transition: all 0.3s ease}
