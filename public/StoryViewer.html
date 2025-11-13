@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Story Viewer — autom. Parser</title>
+<style>
+/* ------------ Basis-CSS ------------ */
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body{height:100%; font-family:Georgia,serif; background:#000; color:#fff; font-size:18px;}
+header{padding:1rem; text-align:center; border-bottom:1px solid #333}
+nav{display:flex; gap:1rem; justify-content:center; flex-wrap:wrap}
+nav a{cursor:pointer; text-decoration:none; color:#fff; font-weight:700; text-transform:uppercase}
+main{padding:2rem; max-width:1200px; margin:0 auto}
+.section{display:none}
+.section.active{display:block; animation:fadeIn .45s ease}
+h1{text-align:center; margin-bottom:1rem; font-size:1.8rem}
+.character-line{margin:1rem 0; display:block;}
+.character-line .name{font-weight:normal; cursor:pointer; display:inline-flex; align-items:center; gap:.4rem; text-decoration:none}
+.character-line .name img{width:1.2em; height:1.2em; border-radius:50%; object-fit:cover}
+.character-line .speech{margin-left:.6rem;}
+.note.editor { color: #ffffff; text-shadow: 0 0 8px #fff; margin: .8rem 0; font-style: italic; }
+
+/* Beispiel-Charakterklassen */
+.zeilesmorganavilgore {color: #221f1f; text-shadow:0 0 3px #221f1f}
+.zeilesmorganavilgore:hover {color:#000}
+.dread {color:#000; text-shadow:0 0 3px #ff0000}
+.dread:hover {color:#ff0000}
+
+/* Utility */
+#meta { margin-top:1.5rem; font-size:.9rem; color:#ddd; background: rgba(255,255,255,0.02); padding: .75rem; border-radius:8px; }
+@keyframes fadeIn { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)} }
+</style>
+</head>
+<body>
+<header>
+  <nav id="menu"></nav>
+</header>
+
+<main id="app">
+  <section id="hub" class="section active">
+    <h1>Willkommen im Geschichten-Hub</h1>
+    <p>Klicke oben auf eine Story. Die Seite liest automatisch die .txt-Dateien, erzeugt die Dialoge und sammelt Metadaten (Farben, Bilder).</p>
+    <div id="meta"><strong>Debug / Metadaten erscheinen hier.</strong></div>
+  </section>
+</main>
+
+<footer style="text-align:center;padding:1rem;color:#888">&copy; 2025 FoxNet</footer>
+
+<script>
+/* ----------------- Hilfsfunktionen ----------------- */
+function nameToKey(fullName){
+  return fullName.normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
+                 .toLowerCase().replace(/[^a-z0-9]+/g,'');
+}
+
+function readCssColorsForClass(className){
+  const result = { color: null, hoverColor: null, textShadow: null, hoverTextShadow: null };
+  const sel = '.' + className;
+  const selHover = sel + ':hover';
+  for(const ss of document.styleSheets){
+    try{
+      const rules = ss.cssRules || ss.rules;
+      for(const r of rules){
+        if(!r.selectorText) continue;
+        const s = r.selectorText.split(',').map(x=>x.trim());
+        if(s.includes(sel)){ if(r.style.color) result.color = r.style.color; if(r.style.textShadow) result.textShadow = r.style.textShadow; }
+        if(s.includes(selHover)){ if(r.style.color) result.hoverColor = r.style.color; if(r.style.textShadow) result.hoverTextShadow = r.style.textShadow; }
+      }
+    }catch(e){}
+  }
+  return result;
+}
+
+function probeImageSrc(baseKey){
+  return new Promise(resolve=>{
+    const src = 'Steckbrief/' + baseKey + '.png';
+    const img = new Image();
+    img.onload = ()=>resolve(src);
+    img.onerror = ()=>resolve('Steckbrief/default-avatar.png');
+    img.src = src;
+  });
+}
+
+/* ----------------- Parser ----------------- */
+function parseStoryText(text){
+  const lines = text.split(/\r?\n/);
+  const domNodes = [];
+  const nameMap = {};
+  const charactersSeen = {};
+  const fullNameRegex = /^\s*([A-Za-zÄÖÜäöüß'` \-]+?)\s*\(([^)]+)\)\s*:\s*(.*)$/;
+  const shortNameRegex = /^\s*([A-Za-zÄÖÜäöüß'`\-]+)\s*:\s*(.*)$/;
+  for(const raw of lines){
+    const line = raw.trim();
+    if(!line) continue;
+    let m = fullNameRegex.exec(line);
+    if(m){
+      const fullName=m[1].trim(), role=m[2].trim(), speech=m[3].trim();
+      const key=nameToKey(fullName), firstName=fullName.split(/\s+/)[0];
+      nameMap[firstName]=fullName; charactersSeen[key]=fullName;
+      domNodes.push({ type:'dialog', fullName, firstName, role, key, speech, firstOccurrence:true });
+      continue;
+    }
+    m = shortNameRegex.exec(line);
+    if(m){
+      const firstName=m[1].trim(), speech=m[2].trim();
+      const fullName=nameMap[firstName] || firstName;
+      const key=nameToKey(fullName);
+      charactersSeen[key]=fullName;
+      domNodes.push({ type:'dialog', fullName, firstName, role:null, key, speech, firstOccurrence:false });
+      continue;
+    }
+    domNodes.push({ type:'note', text: line });
+  }
+  return { domNodes, characters: charactersSeen };
+}
+
+/* ----------------- DOM Renderer ----------------- */
+async function renderStoryToSection(story){
+  const secId = story.id;
+  let section=document.getElementById(secId);
+  if(!section){
+    section=document.createElement('section');
+    section.id=secId; section.className='section';
+    document.getElementById('app').appendChild(section);
+  }
+  section.innerHTML=`<h1>${story.title}</h1><div class="content"></div>`;
+  try{
+    const res=await fetch(story.file);
+    if(!res.ok) throw new Error('Nicht gefunden: '+story.file);
+    const text=await res.text();
+    const parsed=parseStoryText(text);
+    const container=section.querySelector('.content');
+
+    for(const n of parsed.domNodes){
+      if(n.type==='note'){
+        const el=document.createElement('div');
+        el.className='note editor';
+        el.textContent=n.text;
+        container.appendChild(el);
+      }else if(n.type==='dialog'){
+        const wrapper=document.createElement('div');
+        wrapper.className='character-line';
+        const a=document.createElement('a');
+        a.href='steckbrief/'+encodeURIComponent(n.key)+'.html';
+        a.className='name '+n.key;
+        const img=document.createElement('img');
+        probeImageSrc(n.key).then(src=>{img.src=src || 'default-avatar.png';});
+        a.appendChild(img);
+        let nameLabel=n.fullName;
+        if(n.firstOccurrence && n.role) nameLabel+=' ('+n.role+')';
+        a.appendChild(document.createTextNode(nameLabel));
+        const speech=document.createElement('span');
+        speech.className='speech '+n.key;
+        speech.textContent=n.speech;
+        wrapper.appendChild(a);
+        wrapper.appendChild(document.createTextNode(': '));
+        wrapper.appendChild(speech);
+        container.appendChild(wrapper);
+      }
+    }
+
+    const metadata={story:story.title, characters:[]};
+    for(const k of Object.keys(parsed.characters)){
+      const full=parsed.characters[k];
+      const css=readCssColorsForClass(k);
+      const img=await probeImageSrc(k);
+      metadata.characters.push({key:k, fullName:full, cssColor:css.color, cssHoverColor:css.hoverColor, cssTextShadow:css.textShadow, cssHoverTextShadow:css.hoverTextShadow, image:img});
+    }
+
+    const metaDiv=document.createElement('pre');
+    metaDiv.style.marginTop='1rem';
+    metaDiv.style.background='rgba(255,255,255,0.03)';
+    metaDiv.style.padding='.6rem';
+    metaDiv.style.color='#ddd';
+    metaDiv.textContent=JSON.stringify(metadata,null,2);
+    section.appendChild(metaDiv);
+
+    return metadata;
+  }catch(err){
+    section.querySelector('.content').innerHTML=`<div class="note">Fehler beim Laden der Story "${story.title}": ${err.message}</div>`;
+    return null;
+  }
+}
+
+/* ----------------- Menü & Initialisierung ----------------- */
+function showSection(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  const sec=document.getElementById(id);
+  if(sec) sec.classList.add('active');
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+function addStoryToMenu(id,title,file){
+  const menu=document.getElementById('menu');
+  const a=document.createElement('a');
+  a.textContent=title;
+  a.onclick=()=>renderStoryToSection({id,title,file}).then(()=>showSection(id));
+  menu.appendChild(a);
+}
+
+async function init(){
+  const res=await fetch('/api/stories');
+  const files=await res.json();
+  for(const f of files){
+    const id=f.replace(/\.txt$/i,'').toLowerCase();
+    const title=f.replace(/\.txt$/i,'');
+    const file=`assets/txt/${f}`;
+    addStoryToMenu(id,title,file);
+  }
+  document.getElementById('meta').textContent='Stories werden geladen... (siehe Sektionen)';
+}
+
+init();
+</script>
+</body>
+</html>

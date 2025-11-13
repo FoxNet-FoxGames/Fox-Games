@@ -113,6 +113,74 @@ app.post('/bewerbung', (req, res) => {
   }
 });
 
+app.get('/api/stories', (req, res) => {
+  const storyFolder = path.join(__dirname, 'public', 'assets', 'txt');
+  fs.readdir(storyFolder, (err, files) => {
+    if (err) {
+      console.error('Fehler beim Lesen des Story-Ordners:', err);
+      return res.status(500).json({ error: 'Ordner konnte nicht gelesen werden' });
+    }
+    // Nur .txt-Dateien
+    const txtFiles = files.filter(f => f.toLowerCase().endsWith('.txt'));
+    res.json(txtFiles); // Array von Dateinamen, z.B. ["Catificate.txt", "Dread.txt"]
+  });
+});
+
+function parseStory(text) {
+  const lines = text.split(/\r?\n/);
+  const container = document.createElement('div');
+
+  let currentCharacter = null;
+
+  lines.forEach(line => {
+    line = line.trim();
+    if (!line) return;
+
+    // Editor Notes: immer weiß
+    if (!line.includes(':')) {
+      const note = document.createElement('p');
+      note.textContent = line;
+      note.classList.add('note'); // CSS für weiß leuchtend
+      container.appendChild(note);
+      return;
+    }
+
+    // Zeilen mit "Name: Text"
+    const [namePart, speech] = line.split(/:(.+)/); // erstes ":" trennt
+    let characterName = namePart.trim();
+    let displaySpeech = speech.trim();
+
+    // Voller Name vs nur Vorname
+    if (characterName.includes(' ')) {
+      // voller Name → Klasse und Bild ableiten
+      currentCharacter = characterName.replace(/[^a-z0-9]/gi,'').toLowerCase();
+    } else {
+      // nur Vorname → nutze aktuellen Character
+      displaySpeech = speech.trim();
+    }
+
+    // Charakterzeile erstellen
+    const div = document.createElement('div');
+    div.classList.add('character-line');
+
+    const a = document.createElement('a');
+    a.className = `name ${currentCharacter}`;
+    a.href = `Steckbrief/${currentCharacter}.png`; // Bildlink
+    a.textContent = characterName;
+
+    const span = document.createElement('span');
+    span.className = `speech ${currentCharacter}`;
+    span.textContent = displaySpeech;
+
+    div.appendChild(a);
+    div.appendChild(document.createTextNode(': '));
+    div.appendChild(span);
+    container.appendChild(div);
+  });
+
+  return container;
+}
+
 app.listen(PORT, HOST, () => {
   console.log(`FoxGames Webserver läuft auf http://${HOST}:${PORT}`);
 });
