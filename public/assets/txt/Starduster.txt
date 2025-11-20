@@ -2939,26 +2939,46 @@ Mark: Setz dich neben mich.
 Die beiden gehen durch, viele Menschen schauen Viviol unbeeindruckt und misstrauisch entgegen.
 einige von ihnen zeichnen ein Jesus-kreuz auf ihre Brust.
 
+*Anfang Rückblende*
 
+Viviol schwebt auserhalb vom Galaxy kreuzer.
 
+Mark: Was ist das, was da draußen schwebt?
 
+Alle stehen auf und gehen zum Glas.
 
+Leovald Smith (Mensch, President von den USA): Alien?
 
+Mark: Kann sein.
 
+Leovald: Was machen wir jetzt?
 
-441: Ricky rückblende wie mark die ansprache gehalten hat.
+Mark schaut sich um, jeder tuschelt unter sich, aber niemand scheint ein Plan zu haben.
 
+Mark: Ehhmmm...
 
+Ricky Voltär: Ein Alien sagt ihr?
 
+Alle drehen sich zu Ricky um.
 
+Ricky: Ich sehe da nur ein Wesen was Hilfe braucht, kein Alien.
 
+Mark: Ricky hat recht, wenn es hilfe braucht, dann reten wir es.
 
+Der rest der gruppe sagt nichts, sie schauen sich nur um.
 
+Mark: Dann rette ich es halt allein.
 
+Leovald: Warte, Aliens sind unsere Spezialität, ihr rettet es und wir bekommen es dann, richtig?
+
+Mark: Nein? Hast du zu viel Leim geschnüffelt Leovald? Ihr wollt es nur sezieren.
+Ich rette es, und dabei bleibts.
+
+*Ende Rückblende*
 
 Mark und Viviol haben sich gesetzt.
 
-Leovald Smith (Mensch, President von den USA): Good, now that jeder hier is. Can we anfangen uns auf die wichtigen dinge zu konzentrieren.
+Leovald: Good, now that jeder hier is. Can we anfangen uns auf die wichtigen dinge zu konzentrieren.
 
 Am Anfang hat Viviol ihn angeschaut, hat ihn beobachtet, wie er redet, was er redet, am ende lächelt sie und hört zu.
 
@@ -2985,7 +3005,7 @@ Leovald: -netzwerk, Autos und Transportmitt-
 
 Mark schlägt mit seinen beiden Händen auf den Tisch und steht auf.
 
-Mark: Das ist doch nicht ihr ernst! Wir haben doch erst vor 6 Monaten unseren Planeten verloren, habt ihr den nichts hinzu gelernt!?
+Mark: Das ist doch nicht ihr ernst! Wir haben doch erst vor 6 Monaten unseren Planeten verloren, habt ihr den nichts dazu gelernt!?
 Der Planet ist wie gesagt sehr viel kleiner, also auch sehr viel verwundbarer zu Abgasen. Ihr seit, solche... Menschen!
 
 Leovald: Müssen wir sie wieder aus dem Saal entfernen Herr Enrich?
@@ -3031,10 +3051,10 @@ Viviol: Ich brauche hilfe.
 
 Jamie: Mit was?
 
-Viviol: Sie wollen mit Autos auf den Planeten rumfahren, Mark sagt das würde ihn zerstören.
+Viviol: Sie wollen den Planet Industrialisieren, Mark sagt das würde ihn zerstören.
 
 Jamie: Ich kann es nicht glauben, wisst ihr, ich habe mich über diese Dimension informiert.
-Die Menschheit ausgelöscht weil sie vor Gier nicht aufhören wollte ihren Planeten auszunutzen.
+Die Menschheit wurde ausgelöscht weil sie vor Gier nicht aufhören wollte ihren Planeten auszunutzen.
 Es ist erbärmlich das sogar jetzt, wo ihr gesehen habt was passieren kann, immernoch Menschen seit.
 Ignorant, Egoistisch, Narzistisch. Ich, Ich, Ich. Was ist mit euch nur geschehen.
 Wann in der Menschheitsgeschichte habt ihr gedacht, anstatt zusammenzuleben,
@@ -3099,7 +3119,7 @@ Viviol: Ja, glaube schon.
 
 Viviol geht in ihr Zimmer, etwas später schläft sie bereits. Vincent steht vor ihr und rüttelt sie wach.
 
-Vincent: Viviol?
+Vincent: Vivi?
 
 Viviol ist wach.
 
@@ -3136,9 +3156,15 @@ Vincent: Imense kälte.
 
 Viviol: Mir macht kälte nichts aus.
 
-Vincent: Viviol, Ich hab dich lieb.
+Vincent: Viviol, Ich mag dich sehr... Ich, ich liebe dich.
 
-Viviol: Ich dich auch Vincent.
+Viviol liegt nur da.
+
+Viviol: Du weißt ich kann es nicht erwiedern, ich brauch noch zeit.
+
+Vincent lächelt.
+
+Vincent: Es ist schön es endlich gesagt zu haben.
 
 Vincent ist eingeschlafen ohne Viviols schweif gestreichelt zu haben.
 
@@ -3937,8 +3963,7 @@ Mark: Ist jeder hier einverstanden wenn Vincent mitmacht?
 Es wird viel geredet, doch am ende scheinen die meisten dafür zu sein.
 
 Mark: Gut. Wir spielen Wahrheit oder Pflicht, keine grenzen, natürlich kann man immernoch ablehnen.
-Alles was hier passiert oder gesagt wird bleibt hier.
-Wer nicht mitspielen will kann jetzt gehen.
+Alles was hier passiert oder gesagt wird bleibt hier. Wer nicht mitspielen will kann jetzt gehen.
 Bitte legt alle eure Handys ausgeschaltet in die Truhe da hinten.
 
 Mark zeigt auf die truhe, einige gehen hin und schmeißen ihre handys rein,
@@ -5761,7 +5786,7 @@ Nicko: Ganz gut. hier.
 
 Nicko gibt Mark das Holzstück.
 
-Mark: Ja, also... sieht schön aus.
+Mark: Ja, also... sieht schön aus?
 
 Mark gibt es wieder. Er schaut ihn dabei unwissend an.
 
@@ -5775,8 +5800,8 @@ Nicko: Naja, sie macht das ja irgendwie mit mir.
 
 Mark: Was hat sie dir geschenkt?
 
-Nicko: Ihre liebe, das macht sie dauerhaft, gestern abend auch wieder, wir zwei waren die letzten die eingeschlafen sind.
-Sie wollte sich auf mein schoß setzen.
+Nicko: Ihre liebe, das macht sie dauerhaft, gestern abend auch wieder,
+wir zwei waren die letzten die eingeschlafen sind. Sie wollte sich auf mein schoß setzen.
 
 Mark: Und? Hast du sie gelassen?
 
@@ -5851,7 +5876,7 @@ Mark: Tschau.
 Nicko: Tschau.
 
 Jamie geht hindurch. Die beiden schauen sich an. Nicko zuckt mit seinen augenbrauen, Mark lacht wieder.
-Währenddessen bei Viviol. Si sitzt an einer Bar und trinkt Bananensaft.
+Währenddessen bei Viviol. Sie sitzt an einer Bar und trinkt Bananensaft.
 Jamie geht in die bar, setzt sich neben Viviol.
 
 Jamie: Na meine Pummelfee?
@@ -5862,7 +5887,7 @@ Viviol: Hallo.
 
 Jamie macht ein erstaunten gesichtsausdruck.
 
-Jamie: Du hast dein gedächtnis verloren?
+Jamie: Du hast dein gedächtnis nochnicht wieder?
 
 Viviol: Ich weiß was ich bin, nicht warum ich bin.
 
@@ -5879,7 +5904,7 @@ Bitte lass mich dir deine erinnerungen wiedergeben.
 
 Viviol: ok...
 
-Jamie fässt Viviol an.
+Jamie fässt Viviol an. Es blitzen momente von Viviols Kindheit, man sieht ihre Eltern.
 
 Jamie: Vivi?
 
@@ -5968,7 +5993,7 @@ Jamie: Warte, wenn du mir zeigst wo er ist, kann ich ihn auch einfach holen.
 
 Viviol: Nein, das wäre zu unspektakulär, ich möchte ein kleines abenteuer.
 
-Viviol geht in richtung schiff. Läft ru, sie scheint zu wissen wo sie lang muss, hält vor einer nur für Personal tür an, klopft an.
+Viviol geht in richtung schiff. Läft rum, sie scheint zu wissen wo sie lang muss, hält vor einer nur für Personal tür an, klopft an.
 
 Viviol: Hallo?
 
@@ -5990,11 +6015,11 @@ Lylee: Ich dich nicht, tschüss.
 
 Lylee versucht die tür zu zu machen, aber Viviol hält sie mit ihren kräften auf.
 
-Viviol: Ich  möchte wissen wer du bist.
+Viviol: Ich möchte wissen wer du bist.
 
 Lylee: Warte, wie hast du mich überhaupt gefunden?
 
-Viviol: Deine Energie signatur sticht sehr heraus.
+Viviol: Deine Energiesignatur sticht sehr heraus.
 
 Lylee: Wehe du sagst das irgendjemanden, jetzt hau ab. Lass mich in ruhe.
 
@@ -6029,36 +6054,319 @@ Ich... hab auch viel zurückbekommen, geschenke, geld, zuneigung und gute freund
 irgendwann... Wurde ich nur ausgenutzt, jeder wollte das ich seine freunde, familie und unbekannte wiederbelebe, den ein haus baue, oder ihnen 500 Gold schenke.
 Ich mag das du so bist Vivi, aber bitte mach es nicht so wie ich.
 
+Viviol: So bin ich nunmal.
+
+Jamie: Und das mag ich an dir.
+
+Jamie schaut Viviol an.
+
+Viviol: Was ist dieser blick?
+
+Jamie: Wirst du gleich rausfinden.
+
+Jamie öffnet ein Portal und zerrt Viviol mit sich. Nicko schaut bedrückt in die richtung.
+
+Nicko: Arme Viviol.
+
+Mark: Warum denn?
+
+Nicko: So hat mich jamie auch angeschaut als sie mich entführt hat.
+
+Mark schaut Nicko an, lacht.
+
+Mark: Die beiden passen auch irgendwie zusammen.
+
+Nicko: Und Jamie hat dann wenigstens jemand um... ihren dampf abzulassen.
+
+Mark: Meinst wohl eher Dämpfe?
+
+Nicko schaut Mark an, lacht.
+
+Nicko: Halt die fresse.
+
+Mark lacht mit.
+
+Mark: Und wann machen wir beide Freundschafftssex?
+
+Mark schaut Nicko an, verkneift sich das lachen, aber Nicko lacht los.
+
+Nicko: Scheiße, wann war das letzte mal das du überhaupt ne beziehung hattest?
+
+Mark: Oh, das weiß ich garnicht... lange her, und bei dir?
+
+Nicko: Ich hatte einige, aber wie du siehst ist nichts drauß geworden.
+
+Mark: Wie ich sehe, seh ich nichts.
+
+Nicko schaut Mark an, beide lachen. Die kamera geht zur seite, Lillios saß die ganze zeit daneben. Er sieht verstört aus.
+Lillios steht auf, öffnet ein portal und geht.
+
+Mark: Ich glaub wir haben gerade den Löwen verstört.
+
+Nicko setzt sich Feminin hin und zwinkert mit den augen.
+
+Nicko: Das schaffst auch nur du.
+
+Mark lacht, aber hört schnell wieder auf. Nicko merkt das, setzt sich wieder normal hin.
+
+Mark: Erde... haben wir zerstört, dann haben wir einfach ein Raumschiff gebaut. Mit dem sind wir in den Weltraum geflogen, haben...
+einfach mal ein Alien gefunden was nun ein fester bestandteil des Schiffes ist und sogar, würde ich sagen, eine gute Freundin.
+Jamie genauso, ein Alien, einfach so... Aliens haben die ganze zeit existiert, so viele Theorien, filme und geschichten.
+Das sie uns alle vernichten werden, schlauer sind als wir oder uns unterjochen, versklaven.
+und dann sind sie einfach die nettesten wesen die wir kennen.
+Da fang ich an zu überlegen, ist hass und diese komptetitivität nur bei uns menschen so?
+Sind nur wir menschen so das wir, immer besser sein wollen als der andere, weil bei Viviol und Jamie habe ich das nicht gesehen.
+Remedy seine gründe waren ja... gründe? er wollte aus dem buch, viviol bezahlen, sie hat ihn aber dann angegriffen, er war also eigentlich im recht.
+
+Mark schaut auf den Galaxy Kreuzer, seine blicke scheinen leer.
+
+Mark: Wir kennen das Universum kein stück, oder eher, andere Dimensionen sogar... wir sind so klein.
+
+Nicko schaut ihn an, nickt. Währenddessen bei Jamie & Viviol. Die beiden liegen im bett.
+
+Viviol: Wie lang wirst du mich eigentlich brauchen?
+
+Jamie: Was meinst du damit?
+
+Viviol: Wann wirst du mal Nicko... ordentlich, fragen was du für ihn empfindest?
+Und sag mir nicht das ich dir reiche, richtiger Sex ist immernoch sehr viel schöner.
+
+Jamie: Ich weiß nicht. Irgendwann, denke ich.
+
+Viviol steht auf, hat nichts an.
+
+Jamie: Vivi, warte.
+
+Viviol schaut jamie an.
+
+Jamie: Würdest du mit mir Duschen wollen?
+
+Viviol schaut jamie nur verwirrt an.
+
+Jamie: Ist... so ein Kindheitsding von mir, 2 meiner freunde haben das mit mir gemacht und...
+es hat mir sehr gefallen, es würde mich freuen wenn du mit Duschen würdest.
+
+Viviol: ok?
+
+Die zwei gehen in die Dusche, Viviol ist immernoch sehr verwirrt, schaut Jamie komisch an wenn sie das wasser anstellt.
+Doch jamie lächelt sie nur an, sie freut sich, also lächelt Viviol mit. Jamie gibt Viviol noch ein Kuss auf die schnauze.
+Jamie fängt an sich einzuseifen, schaut Viviol an, diese nimmt die seife, Jamie zeigt ihr das sie es an sich reiben soll.
+Viviol reibt auch jamie ein, sie fängt an zu schnurren. Nachdem die beiden fertig sind gehen sie raus,
+Viviol scheint nicht nass zu sein, Jamie tropft aber. Ihr fell ist klitschnass, doch sie lässt sich von ihren kräften durchbürsten und ist trocken.
+Viviol zieht sich an, Jamie auch, Jamie öffnet ein portal, beide gehen durch.
+
+Nicko: Oh wow.
+
+Jamie: Ja, seh ich nicht süß aus?
+
+Nicko: Naja, eigentlich so wie immer.
+
+Jamie sieht traurig aus. nicko merkt es.
+
+Nicko: ich mein damit das du immer süß aussiehst.
+
+Jamie lacht ihn an.
+
+Nicko: Aber eigentlich wollte ich mit dem Oh wow nur ausdrücken das du, Jamie, so lachst,
+das du sogar ein Honigkuchenpferd in den schatten stellen würdest.
+
+Jamie: Ja, Vivi und ich hatten eine schöne zeit.
+
+Mark: Gut, ich schreib mal in den Gruppenchat das wir, ein kleines spiel spielen. Es ist schon dunkel genug dafür.
+
+Alle sind am lagerfeuer angekommen, es ist schon sehr dunkel, Lillios ist auch dabei.
+
+Mark: Gut. Wir spielen Wahrheit oder Pflicht, keine grenzen, natürlich kann man immernoch ablehnen.
+Alles was hier passiert oder gesagt wird bleibt hier. Wer nicht mitspielen will kann jetzt gehen.
+Bitte legt alle eure Handys ausgeschaltet in die Truhe da hinten.
+
+Alle gehen zur truhe und legen ihre handys rein, ein paar gehen auch.
+
+Mark: Gut, wir haben ein neuankömmling hier im spiel, lillios.
+
+Lillios schaut sich um, alle schauen ihn an.
+
+Lillios: Hi.
+
+Mark: Willst du nicht noch mas über dich erzählen? Viele kennen dich hier nicht.
+
+Lillios schaut sich um, Viviol und Jamie lächeln ihn an, der rest sitzt nur gespannt da.
+
+Lillios: Ich muss kurz wohin.
+
+Lillios teleportiert sich weg. Viele setzen sich normal hin, jamie und Viviol schauen sich gegenseitig an.
+Lillios kommt wieder, er hat Remedy dabei, beide setzen sich hin.
+
+Mark: Wir haben zwei neuankömmlinge.
+
+Lillios: Ich bin lillios Heather, ich bin der sohn von dem der neben mir sitzt, mein Skelett besteht aus DMM, aber alles andere ist aus Terriblium.
+
+Viele schauen ihn nur verwirrt an, weil sie nichts verstanden haben.
+
+Remedy: ich bin Remedy Synclair, Schwarzmarkthändler, meistens kommt man zu mir wenn man waffen haben will, diese stell ich dann her.
+Ich habe die erlaubnis und das recht mit der FoxBot API zu programmieren... Für die, die das nicht wissen.
+Es ist der Code mit der eure Physik geschrieben wurde.
+
+Remedy lässt ein erschaffenen Apfel fallen.
+
+Remedy: ich kann also Physik umschreiben wenn ich möchte, weswegen meine waffen hohen wert haben... und ja, der ist mein Sohn, ich hab ihn erschaffen.
+
+Lillios lächelt während Remedy das sagt.
+
+Mark: Schön... das war einiges, ehm, dann fängt doch mal Remedy an. Wahrheit oder Pflicht, glaub das kennst du?
+
+Remedy. Ja, gut.
+
+Remedy schaut sich um, Jamie sieht ihn wütend zurück an, alle anderen sind nur gespannt.
+
+Remedy: Jamie... Leg deine Dread kräfte ab.
+
+Jamie sieht ihn wütend entgegen. Nimmt ihre pfote an die brust und zieht sich die Dread kräfte raus, gibt sie Viviol.
+Remedy lächelt, die Dread kräfte teleportieren sich weg, sind in Remedys Krallen. Er absorbiert sie.
+Jeder wartet was jetzt passiert, er teleportiert sich weg.
+
+Mark: Jamie, du hättest auch passen können...
+
+Jamie: Irgendwie wollte ich wissen was er macht, ich hab ein plan. Papa!
+
+Schwarze soße bildet sich am bode, sie manifestiert sich, dread.
+
+Dread: Was ist?
+
+Jamie: Remedy hat meine kräfte geklaut.
+
+Mark: Du hast sie ihm mehr oder weniger selbst gegeben.
+
+Dread schaute zu Mark, dann zu Jamie. sie schaut ihn liebevoll an. Er lässt nur ein Knurren raus,
+dreht sich um und setzt sich auf den freien platz von Remedy.
+
+Dread: Ich geb sie dir gleich wieder. Was macht ihr hier?
+
+Mark: Wahrheit oder Pflicht.
+
+Dread: Ich mach mit.
+
+Mark: ok, dann sind sie dran.
+
+Dread: Nennt mich Dread, aber nein, alles gut, sie können ruhig.
+
+Mark: Nenn mich Mark, ok... Dread.
+
+Dread schaut ihn erwartungsvoll an.
+
+Mark: Was sind deine Liebeserfahrungen?
+
+Dread: Meine? ich... hatte nie liebeserfahrungen in dem sinne.
+
+Nicko: Das heißt du bist Jungfrau?
+
+Dread: Nein nein, das nicht.
+
+Nicko: Wer war die gute?
+
+Dread: Shila Keith, war aber ein one-off... ich weiß nichtmal wie es überhaupt dazu gekommen ist.
+
+Mark: Ah, ok... Jetzt sind, bist du dran Dread.
+
+Dread schaut ihn genervt an.
+
+Dread: Nagut.
+
+Die runde ging wieder ein wenig, aber eigentlich war es nicht so spannend wie letzte runde.
+Die runde löst sich auf, einige gehen wieder nachhause.
+
+Mark: Schön! Ich würde jetzt auch gehen. Gute nacht euch.
+
+Mark geht zum Galaxy Kreuzer, Dread steht auf und geht zu Jamie.
+
+Dread: Wir gehen jetzt auch, außer du willst hier übernachten.
+
+Jamie: und meine kräfte?
+
+Dread: Ich muss erstmal darüber nachdenken warum du deine kräfte Remedy gegeben hast.
+Ich hab mit FoxBot geredet während hier alle gespielt haben. Ich weiß genau was passiert ist.
+
+Jamie: Können wir Nicko mitnehmen? Wenn er das möchte...
+
+Nicko schaut verwundert Jamie an.
+
+Nicko: Ja, wieso nicht.
+
+Die drei teleportieren sich weg. Viviol ist die einzige die noch da ist.
+
+Viviol: (ich geh ein ordentlichen vorrat Stardust holen, wer weiß was Remedy vorhat.)
+
+Währenddessen bei Jamie zuhause.
+
+Dread: Du bekommst deine Rechte morgen früh wieder, ich muss das erstmal verkraften... wieso Jamie?
+
+Jamie: Wahrheit oder Pflicht... Ich wollte irgendwie wissen was passiert.
+
+Dread Knurrt nur wieder, er zerfällt ihn soße.
+
+Jamie: Sooo, Nicko?
+
+Nicko: Ja?
+
+Jamie: Wir kennen uns jetzt schon etwas besser...
+
+Nicko: (Eher nicht)
+
+Jamie: Und ich hab gedacht, jetzt bestimmt...
+
+Nicko: (Ich weiß was kommt.)
+
+Jamie: ob es so weit wäre das du heute mit mir schläfst... also, nur das schlafen, kein sex.
+
+Nicko schaut ein wenig überrascht.
+
+Nicko: Nagut... Roxy scheint nicht da zu sein. Ich schlafe mit dir. nicht mehr.
+
+Jamie: Nicht mehr.
+
+Die beiden gehen in ihr zimmer, Jamie zieht sich aus.
+
+Nicko: Ich... dachte...
+
+Jamie: Ich schlaf nackt, ist so ein Kindhetsding bei mir. Da... fühl ich mich frei und herr über mein körper, wenn das ok ist.
+
+Nicko: Ja, mach.
+
+Jamie let sich hin, Nicko zieht sich außer der Unterhose auch alles aus. Die beiden liegen nun nebeneinander, Jamie hat bereits die augen zu.
+
+Nicko: Das ist... hart unangenehm.
+
+Jamie: Wird besser mit der Zeit, ich bin sehr warm. Irgendwann kannst du nicht mehr ohne mich schlafen.
+
+Nicko: Weiß nicht.
+
+Jamie kuschelt sich an Nicko.
+
+Nicko: Jamie, nein, nur schlafen, nichts anderes.
+
+Jamie geht rutscht wieder auf ihre seite.
+
+Jamie: ok... Du bist schwer zu kriegen.
+
+Nicko: Nein? Das ist normal?
+
+Jamie: Achso, naja, so weit bin ich noch nie gekommen, ich hab hoffnung.
+
+Nicko starrt nur an die decke.
+
+Nicko: Gute Nacht
+
+Jamie: Gute nacht... FoxBot, licht aus.
+
+Das Licht geht aus.
+
+Nicko: Alter ist das dunkel.
+
+Jamie lacht.
 
 
 
-
-
-
-
-Nicko: Ich habe ein Chipsgeschmack im mund.
-
-Jamie: Darf ich probieren?
-
-Nicko schaut Jamie verwirrt an.
-
-Nicko: Nein?
-
-
-
-
-
-
-
-Folge 2 ???:
-
-
-
-
-
-
-
-
+Folge 2 Zwei schiffe sind besser als keins:
 
 
 
@@ -6214,7 +6522,33 @@ später ein betrunkener, Nicko de-eskaliert die situation und bringt ihn nach ha
 
 
 
+Suchen sie ein Babysitter? 5 zufriedene kunden... den anderen 100 hats nicht gefallen.
 
+
+
+Eine katze miaut am lagerfeuer, jamie sagt, ich miau gleich mit.
+
+
+
+
+
+
+
+
+vivi muss ausweis beantragen, macht passfotos mit nicko, romantische scene.
+
+
+
+
+
+
+Nicko: Ich habe ein Chipsgeschmack im mund.
+
+Jamie: Darf ich probieren?
+
+Nicko schaut Jamie verwirrt an.
+
+Nicko: Nein?
 
 
 
@@ -6298,7 +6632,6 @@ vivi im call mit randoms. realtalk mit chef, aka eric brehm.
 
 
 
-vivi muss ausweis beantragen, macht passfotos mit nicko, romantische scene.
 
 
 
@@ -6317,25 +6650,13 @@ vivi muss ausweis beantragen, macht passfotos mit nicko, romantische scene.
 
 
 
-Lylee: Wo warst du grade? ... ok, kannst du wieder dahin gehen?
 
+Lylee: Wo warst du grade?... ok, kannst du wieder dahin gehen?
 Lylee: Mach dich nicht Plusterig.
-
 Lylee: Dein Hosenstall ist auf, aber lass so... passt zu dir, du hure.
 
 
 
-Mark: Und Dread? Was sind deine Liebeserfahrungen?
-
-Dread: Meine? ich... hatte nie liebeserfahrungen in dem sinne.
-
-Nicko: Das heißt du bist Jungfrau?
-
-Dread: Nein nein, das nicht.
-
-Nicko: Wer war die gute?
-
-Dread: Shila Keith, war aber ein one-off, weiß nichtmal wie es überhaupt dazu gekommen ist.
 
 
 
@@ -6349,7 +6670,8 @@ Dread: Shila Keith, war aber ein one-off, weiß nichtmal wie es überhaupt dazu 
 
 
 
-Jamie: Erst wenn leute aufhören dir dinge zu verbieten, wirst du anfangen kreativ sein.
+
+Jamie: Erst wenn leute aufhören dir dinge zu verbieten, wirst du anfangen kreativ zu sein.
 
 
 
@@ -6420,11 +6742,17 @@ Dreh die mal um
 
 steck ein stock rein.
 
-fina unterbricht das, belert viviol. dabei schneidet niklas grimassen, viviol lacht.
+fina unterbricht das, belert viviol. dabei schneidet niklas grimassen, viviol muss lachen.
 
 Niklas: Du hast wegen mir ärger bekommen.
 
 Viviol: Ach, dafür bin ich doch da.
+
+
+
+
+Niklas malt ein Bild von einem Elefant der eine plastikflasche hält.
+Fina fragt was das ist. er sagt es ist ein Elepfand.
 
 
 
