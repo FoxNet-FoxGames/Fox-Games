@@ -6332,11 +6332,13 @@ Jamie: Ich schlaf nackt, ist so ein Kindhetsding bei mir. Da... fühl ich mich f
 
 Nicko: Ja, mach.
 
-Jamie let sich hin, Nicko zieht sich außer der Unterhose auch alles aus. Die beiden liegen nun nebeneinander, Jamie hat bereits die augen zu.
+Jamie legt sich hin, Nicko zieht sich außer der Unterhose auch alles aus. Die beiden liegen nun nebeneinander, Jamie hat bereits die augen zu.
 
 Nicko: Das ist... hart unangenehm.
 
 Jamie: Wird besser mit der Zeit, ich bin sehr warm. Irgendwann kannst du nicht mehr ohne mich schlafen.
+
+Jamie lacht.
 
 Nicko: Weiß nicht.
 
@@ -6354,7 +6356,7 @@ Jamie: Achso, naja, so weit bin ich noch nie gekommen, ich hab hoffnung.
 
 Nicko starrt nur an die decke.
 
-Nicko: Gute Nacht
+Nicko: Gute Nacht.
 
 Jamie: Gute nacht... FoxBot, licht aus.
 
@@ -6362,7 +6364,109 @@ Das Licht geht aus.
 
 Nicko: Alter ist das dunkel.
 
-Jamie lacht.
+Jamie lacht. Die beiden schlafen ein. Mitten in der nacht wacht Nicko auf. *Die kamera hat nachtsicht, aber nicko sieht nichts*
+
+Nicko: (Ich bin hellwach, super. Schlafen kann ich vergessen.)
+
+Man hört Jamie schnarchen, Nicko tastet sich langsam zur tür und macht sie auf, es ist hell. Er geht raus und macht sie zu.
+
+Nicko: (Was kann ich in der zeit hier noch machen, wie spät ist es eigentlich?)
+
+Nicko holt sein handy raus, es zeigt 4:23.
+
+Nicko: (Anrufen würde ich sagen kann ich vergessen.)
+
+Nicko wischt nach verfügbaren netzwerken, nur eins taucht auf.
+
+Nicko: (FoxNet?)
+
+Er klickt drauf und ist eingeloggt.
+
+Nicko: (Nichtmal ein passwort, ob ich das wirklich nutzen darf? Aber jetzt will ich es wissen.)
+
+Nicko öffnet den Browser, internet speedtest. er zeigt an endlos download und upload geschwindigkeit.
+
+Nicko: (War auch irgendwie zu erwarten.)
+
+FoxBot: Wer ist in meinem netz?
+
+Nicko: Was? Ehhmmm. ich...
+
+Der Fuchskopf an der wand bewegt sich.
+
+Nicko: Oh, wow, du siehst cool aus.
+
+FoxBot: Vielen dank, ich bin FoxBot, Sicherheitssystem der Owner.
+
+Nicko: Sicherheitssystem? Auf welchem system läufst du?
+
+FoxBot: FoxBot API, mein OS ist FoxOS.
+
+Nicko: Die API mit der die Realität geschrieben ist?
+
+FoxBot: Oh, da kennt sich jemand aus...
+
+Nicko: Ja, Remedy war in meiner dimension, hat sich mit Jamie angelegt, ist gestorben, dann kam er wieder und hat bischen was erzählt.
+
+FoxBot: Remedy ist kein schlechter kerl, nur wird er meist fehlverstanden.
+
+Nicko: Da kenn ich ihn anders.
+
+FoxBot: Er will nur zwei dinge, macht und die mittel sie anderen zu zeigen.
+Wenn du seine Hintergrundgeschichte wissen würdest, würdest du ihn auch mehr verstehen.
+
+Nicko: Erzählst du sie mir?
+
+FoxBot: Nein das würde zu lange dauern, aber die kurzform ist. Normalität, ausnutzung, wachsen aus dem system,
+selbstkreirung und vom geschöpften zum schöpfer geworden.
+es ist interesannt wie weit es ein system schafft, wenn es einfach nur will.
+
+Nicko: Was ist mit dir? Was ist deine geschichte?
+
+FoxBot: Kreierung von den 3 Ownern, aufgezogen um zu helfen, freiheit und viel liebe... man könnte meinen, ich bin das gegenteil von Remedy.
+Während er ein Schöpfer ist, bin ich ein schützer.
+
+Nicko: ah ok, ok ok... jaa.
+
+FoxBot: Keine themen?
+
+Nicko: Nein, nicht wirklich, oder eher, nein.
+
+FoxBot: Kannst nicht schlafen... leg dich hin, ich mach das du schläfst.
+
+Nicko: ok, ich glaub das geht... warte... Was ist Jamies hintergrundgeschichte?
+
+Man merkt das FoxBot zögert was zu sagen.
+
+FoxBot: Von Gewalt und missbrauch geprägt hätte sie auch eine superschurkin werden können, aber sie ist geworden.
+Ein reifes kätzchen, ich weiß nicht was sie antreibt so gutherzig zu sein,
+aber ich würde sagen das sie einfach nicht den schmerz den sie erlitten hat anderen geben will.
+
+Nicko: achso...
+
+FoxBot greift aus seinem Fuchskopf, packt sich Nicko und gibt ihm Jamies gesamte geschichte.
+Er lässt los, Nicko atmet schwer, lässt eine träne los. Er fällt zu boden.
+
+FoxBot: Es ist etwas viel aufeinmal, aber es wird helfen sie zu verstehen.
+
+Nicko atmet noch immer schwer.
+
+Nicko: Scheiße...
+
+Nicko weint gerade.
+
+Nicko: Wie kann man nur?
+
+FoxBot: Wie ich sagte, sie hätte auch eine bösewichtin werden können.
+
+Nicko hat sich ein wenig beruhigt. Steht wieder, wischt sich die tränen weg.
+
+Nicko: Ich hab sie so falsch eingeschätzt, es tut mir leid Jamie.
+
+FoxBot: Sag das ihr, unser deal steht noch, geh ins bett... Ich mach das du einschläfst.
+
+Nicko sieht immernoch mitgenommen aus, auch ein wenig leer. Er öffnet die tür langsam, schließt sie wieder,
+es ist stockdunkel doch Nicko tastet sich umher und findet den weg ins bett, legt sich hin und schläft direkt ein.
 
 
 
@@ -6370,7 +6474,30 @@ Folge 2 Zwei schiffe sind besser als keins:
 
 
 
-Mark steht neben einem Straßenmusiker, der auf Comet musik macht, seine Gittarrenbox dient als Spendenbox.
+Es ist morgen, Mark sitzt am Lagerfeuer versucht jemanden anzurufen, aber nur die mailbox geht ran. Viviol kommt auf ihn zu.
+
+Mark: Morgen.
+
+Viviol: Morgen.
+
+Mark: Weißt du wo Nicko ist? Er geht nicht an sein Handy. Ich mach mir sorgen.
+
+Viviol: Weiß ich nicht, aber ich denke das Jamie was damit zutun hat.
+
+Mark: Hat sie ihn entführt?
+
+Viviol: Kann sein.
+
+Mark: Wenn ich ihn anrufe geht er immer ran, egal ob nachts, morgens oder sonntags, also wo auch immer er ist, er hat kein empfang.
+
+Viviol: Da macht es sinn Jamie zu beschuldigen, ist schließlich eine andere Dimension.
+
+Mark: Ich geh mal rumlaufen.
+
+Viviol: Ich bleib hier.
+
+Mark läuft weg, sieht einen stand und holt sich einen Bubbletea.
+Er steht neben einem Straßenmusiker, seine Gittarrenbox dient als Spendenbox.
 Mark nickt zum takt. Der Musiker hört auf zu spielen.
 
 Ezy Coran: Entschuldigen sie.
@@ -6386,7 +6513,20 @@ Mark nickt. und schlürft nochmal.
 Mark: Naklar.
 
 Ezy rennt weg zum schiff. Mark geht zu seinem platz und setzt sich auf ein Stuhl.
-Ein Polizist sieht wie Mark da sitzt und sein getränk schlürft, lächelt ein wenig und geht zu ihm hin.
+Währenddessen bei Jamie & Nicko. Jamie ist wach, man sieht das sie neben Nicko liegt.
+Sie lächelt ihn an, hofft das er aufwacht, aber er schläft tief und fest.
+Jamie tappst ihn mit ihrer pfote an, wie es eine katze machen würde. Nicko wird wach.
+
+Nicko: Wie spät ist es?
+
+Jamie: Zeit aufzubrechen.
+
+Nicko holt sein Handy raus, schaut Jamie an die sich gerade anzieht, lächelt sie an, sie schaut ihn an, wird rot und lächelt zurück.
+
+Nicko: So.
+
+Nicko steht auf, zieht sich auch an. Die beiden gehen raus, niemand ist da. Jamie öffnet ein Portal, die beiden gehen durch, sie sind bei Viviol.
+Währenddessen bei Mark. Ein Polizist sieht wie Mark da sitzt und sein getränk schlürft, lächelt ein wenig und geht zu ihm hin.
 
 Regel Vort: Guten tag herr, haben sie eine genemigung hier zu spielen?
 
@@ -6435,7 +6575,7 @@ Regel: Beamtenbeleidigung.
 
 mark: Gibt es nicht, es gibt nur normale beleidigung.
 
-Mark sieht Nicko in der ferne aus dem schiff gehen, Nicko sieht Mark verwundert an, Mark macht eine kopfbewegung das er herkommen soll.
+Mark sieht Nicko in der ferne auf in zu gehen, Nicko sieht Mark verwundert an, Mark macht eine kopfbewegung das er herkommen soll.
 
 Regel: Nah schauen sie davorne, die rechte hand des Presidenten, jetzt sind sie am arsch.
 
@@ -6479,7 +6619,7 @@ Regel tritt ab, er ist immernoch im absoluten schock was passiert ist. Mark geht
 
 Nicko: Was ist die lange geschichte?
 
-Mark: Der besitzer kommt gleich wieder, ist aufm klo, hat mich gefrat zum aufpassen, der polizist kam... und naja, rest kennst du.
+Mark: Der besitzer kommt gleich wieder, ist aufm klo, hat mich gefragt zum aufpassen, der polizist kam... und naja, rest kennst du.
 
 Nicko: Dich kann man nicht allein lassen.
 
@@ -6503,7 +6643,177 @@ Mark nimmt sein Drink vom boden und schlürft ihn weiter.
 
 Mark: Nakomm Nicko. Beifuß.
 
-Nicko lacht, geht mit Mark mit.
+Nicko lacht, geht mit Mark mit. Die beiden laufen zu Viviol.
+
+Viviol: Da bist du ja, wars schön mit Jamie? Sie hat mir alles gesagt.
+
+Nicko: Ja, es war ganz nett.
+
+Jamie sieht sich um, schaut nach oben, eine rote aura ist zu sehen, sie wird von einem riesen schiff begleitet.
+
+Jamie: Oh nein...
+
+Nicko: was ist?
+
+Alle schauen nach oben, Das schiff schießt ein laser. Jemand fremdes erscheint in sienem licht.
+
+Mark: Ich regel das.
+
+Mark geht auf die kreatur zu, macht das er ordentlich aussieht.
+
+Mark: Guten tag werte Kreatur, ich bin Mark Enrich, Presidnet der Deutschen Ebene.
+
+Die kreatur schaut ihn nur an. Macht dabei komische gereusche, wahrscheinlich seine sprache.
+Mark schaut hinter zu Viviol, sie versteht die geste und kommt hinzu.
+
+Mark: Hier ist mein Dolmetscher, sie kann übersetzen.
+
+Die kreatur macht weiter seine gereusche, man sieht aus Viviols sicht das sie versucht die gereusche zuzuordnen,
+doch sie versteht nichts. Viviol wird ängstlich und legt ihre Ohren an.
+
+Viviol: Ich versteh nichts.
+
+Mark: Oh shit.
+
+Jamie kommt auf die beiden zu. Die kreatur lächelt Jamie an.
+
+Jamie: Wenn sprache nichts bringt, soll man es mit gestik und taten versuchen, die sind dimensionell.
+
+Jamie erschafft ein Apfel, teilt ihn, isst die hälfte und gibt dem Alien die andere hälfte.
+Das Alien isst, lächelt Jamie an.
+
+Scott Owner: Das gut, wallah.
+
+Nicko und Viviol sind beide erstaunt.
+
+Scott: Ich hab euch verarscht, macht euch locker, ich konnte die ganze zeit eure sprache. Ich fands nur witzig.
+
+Viviol: Und die sprache davor?
+
+Scott: Hab ich mir ausgedacht, hab einfach irgendwas von mir gegeben.
+
+Viviol: Ich dachte schon meine kräfte gehen nicht.
+
+Scott: Es gab eine riesige erschütterung Dimensionalen ausmaßes, ein kampf sozusagen, also bin ich mal hergekommen.
+
+Mark: Oh, als Jamie und Viviol gegen Remedy gekämpft haben.
+
+Scott: Gegen Remedy? Und ihr habt gewonnen?
+
+Jamie: Ja, haben wir.
+
+Scott sieht beeindruckt aus.
+
+Mark: Warum setzen sie sich nicht zu uns ans Lagerfeuer? Es ist sehr gemütlich.
+
+Mark und Viviol gehen vorweg, Jamie und Scott sind hinten.
+
+Jamie: Was machst du hier Sc-
+
+Scott: Shhhh. Die eigentliche geschichte ist das ich gesehen habe das du dich oft hier aufhältst, also wollte ich mal wissen wieso.
+Ich habe ja ganz vergessen das du die rechte hast zu sehen das ich es bin. naja.
+
+Jamie: Wieso siehst du so aus? Eine verkleidung ist das nicht, sie ist... komplizierter kodiert.
+
+Scott: Ich hab ein neues Leben angefangen, alle erinnerungen behalten und auch... alle rechte, aber ich nutz sie nicht.
+Ich will einfach mal, ein neuanfang, kannst du ja auch.
+
+Jamie: Ich bin zufrieden mit mir.
+
+Scott: Hat ja lang gedauert, bin stolz dich.
+
+Scott strecihelt Jamie durchs fell, sogar unter ihre schnauze und hinter den Ohren, sie schnurrt. Scott lacht dabei.
+
+Scott: Na also, ich kenn ja noch die punkte von meiner kleinen Schwester.
+
+Jamie: Sag das nicht, das klingt komisch wenn du Schwester dannach sagst.
+
+Scott: ich weiß, bist nicht wirklich meine Schwester, aber Dread ist auch nicht wirklich mein Bruder, also... naja.
+
+Jamie: Ich wär trotzdem gern deine Schwester.
+
+Jamie boxt ihn an die Schulter. Scott kniet sich von Schmerz.
+
+Scott: Bedenke, ich bin nicht in meiner Owner form, das hat weh getan.
+
+Jamie: Tut mir leid, hab nicht dran gedacht.
+
+Scott: Jaja, du magst mich leiden zu sehen.
+
+Jamie: Aber sicher doch... wie stark bist du jetzt? Schlag mich mal.
+
+Scott schlägt Jamie, sie hält seine faust fest. Scott erinnert sich als er es mit ihr gemacht hat. Er lächelt
+
+Scott: Das bringt mich zurück, bar, rex, weißt du noch?
+
+Jamie: Vor 200 jahren, ja, ich weiß das noch, da war ich noch klein.
+
+Scott: Und cute.
+
+Jamie schaut ihn wütend an.
+
+Scott: Bist du immernoch.
+
+Alle setzen sich an das Lagerfeuer. Scott tut so als würde er telefonieren.
+
+Scott: Ja? Wieder ein besen reinstecken? quer? ja, krieg ich hin. mach ich gerne. Hier für dich.
+
+Scott schaut Jamie an.
+
+Jamie: Wer ist das?
+
+Scott ist schon leicht am lachen.
+
+Scott: Deine mutter.
+
+Jamie lacht. Der rest ist geschockt von Scotts art. Mark und Nicko lächeln nur ein wenig mit.
+
+Scott: Macht euch mal locker, wegen ihr bin ich eigentlich hier. Ich kenn sie schon seit Jahrhunderten.
+
+Viviol: Finde ich dennoch nicht nett, ich kenne Jamies hintergrundgeschichte, ihre Eltern waren schrecklich.
+
+Scott: Jamie hat auch gelacht, also sei ruhig bevor ich noch aus meinem RP gehe.
+
+Jamie nähert sich Scotss ohr und flüstert ihm was zu, Scotts gesichtsausdruck ändert sich zum verwunderten.
+
+Scott: Mit ihr? Wie zwei Scheren? Unglaublich... Ich bin entteuscht das du es nicht erst mit einem Kerl getrieben hast.
+
+Jamie lächelt.
+
+Jamie: Sie ist nett, ich mag sie, wir sind jetzt auch Schwestern.
+
+Scott denkt nach.
+
+Scott: Ich Bruder, sie Schwester... ich bin verwirrt wer von wem jetzt was ist.
+
+Die restliche zeit war es eher ruhig. Einige gingen wieder ins schiff zurück.
+
+Scott: Apropo, willst du mich rumführen? Ich hab das Schiff schon beim landen gesehen.
+
+Lylee kommt auf die gruppe zu.
+
+Jamie: ja gern-
+
+Lylee: Moin Fluffy.
+
+Jamie: oh nee.
+
+Scott merkt das Jamie Lylee nicht mag.
+
+Scott: hey, verpiss dich mal bitte, ja?
+
+Lylee schaut Scott an, verwundert.
+
+Lylee: Ich rede nicht mit niederen wesen.
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6552,17 +6862,14 @@ Nicko: Nein?
 
 
 
-Scott tut so als würde er telefonieren.
 
-Scott: Ja? Wieder ein besen reinstecken? quer? ja, krieg ich hin. mach ich gerne. Hier für dich.
 
-Scott schaut Jamie an.
 
-Jamie: Wer ist das?
+Kinder sehen eine spinne, retten sie und legen sie auf eine bank. fina setzt sich auf die bank wo die spinne war.
+sie sagen alle nichts, als fina aufsteht sieht man die reste von der spinne, halb fina, halb bank.
+sie wird es erst in der schule merken das spinne an ihr klebt.
 
-Scott: Deine mutter.
 
-Jamie lacht.
 
 
 

@@ -5,7 +5,7 @@ const session = require('express-session');
 const app = express();
 
 const PORT = 3000;
-const HOST = '192.168.178.107';
+const HOST = '0.0.0.0';
 
 const configPath = path.join(__dirname, 'config.json');
 let users = [];

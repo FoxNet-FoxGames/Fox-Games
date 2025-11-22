@@ -1,2 +1,2 @@
-start http://192.168.178.107:3000
+start http://localhost:3000
 npm start
