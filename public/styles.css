@@ -15,10 +15,20 @@
 .queenbee {color: #83ccca;text-shadow: 0 0 5px #83ccca;text-decoration: none;transition: all 0.3s ease}
 .queenbee:hover {color: #000000;text-shadow: 0 0 5px #83ccca}
 
-.vectory-entry {background-image: url('assets/staff/VECTORYBackground.gif');border: 2px solid #800080;box-shadow: 0 0 8px #800080}
+.vectory-entry {background-image: url('');border: 2px solid #800080;box-shadow: 0 0 8px #800080}
 .vectory-entry img {content: url('assets/staff/VECTORY.png')}
 .vectory {color: #000000;text-shadow: 0 0 5px #800080;text-decoration: none;transition: all 0.3s ease}
 .vectory:hover {color: #800080;text-shadow: 0 0 5px #000000}
+
+.len-entry {background-image: url('');border: 2px solid #ff0000;box-shadow: 0 0 8px #ff0000}
+.len-entry img {content: url('assets/staff/len.jpg')}
+.len {color: #000000;text-shadow: 0 0 5px #ff0000;text-decoration: none;transition: all 0.3s ease}
+.len:hover {color: #ff0000;text-shadow: 0 0 5px #ff0000}
+
+.riba-entry {background-image: url('');border: 2px solid #ee82ee;box-shadow: 0 0 8px #ee82ee}
+.riba-entry img {content: url('assets/staff/riba.jpg')}
+.riba {color: #000000;text-shadow: 0 0 5px #ee82ee;text-decoration: none;transition: all 0.3s ease}
+.riba:hover {color: #ee82ee;text-shadow: 0 0 5px #ee82ee}
 
 .nori-entry {background-image: url('assets/staff/Nori.gif');border: 2px solid 8b0000;box-shadow: 0 0 8px #8b0000}
 .nori-entry img {content: url('assets/staff/Nori.png')}
@@ -80,7 +90,7 @@
 .ik {color: #9b30ff;text-shadow: 0 0 5px #9b30ff;text-decoration: none;transition: all 0.3s ease}
 .ik:hover {color: #000000;text-shadow: 0 0 3px #9b30ff}
 
-.none, .ceo, .foxgames, .owner, .creativedirector, .cryptidcoowner, .teamleitung, .admin, .programmer, .designer, .communitymanager, .socialmediamanager, .composer, .soundartist, .foxbotdeveloper, .modder, .builder, .voiceactor, .moderator,
+.none, .ceo, .foxnet, .foxgames, .owner, .creativedirector, .cryptidcoowner, .teamleitung, .admin, .programmer, .designer, .communitymanager, .socialmediamanager, .composer, .soundartist, .foxbotdeveloper, .modder, .builder, .voiceactor, .moderator,
 .vectoryowner, .scottowner, .roxyowner, .dread, .jamiefleck, .foximreich, .knolliwile, .mintrech, .remedysynclair, .lilliosheather, .erkanimkal, .milafenris, .monroevalise, .viviol, .norarinke, .mararinke, .liorinke, .erenrinke, .nilusfenris, .kehlfenris, .milafernis, .triafenris, .nickoteros, .markenrich, .remedysynclair, .vindexheretic, .rimmludein, .chrislee, .nataliagonjet, .wilsonkrocnek, .klyonocturnal, .josyferrek, .nydraforen, .shiroante, .finanocturnal, .nyonocturnal, .rovernocturnal, .uroina, .aronimkal, .reikosforen, .zeckdann, .mineralissyforger, .wendelarcfoger, .vinthanforger, .chaliehaz, .pandaklan, .lottibrand, .vincenthanko, .johnsusmilan, .santidenero, .elizehanko, .tanjamueller, .harrymarschal, .jeffreyhumphry, .nilssambe, .marlyhanko, .lutzmillen, .finaschubert, .tickpuck, .amarnelly, .wilspetz, .sigelslaas, .fifitoon, .sallietoon, .hankwespa, .nataliemeer, .forgetmenot, .carolinwespa, .larslaison, .linusplaue, .abigalemadones, .milesheart, .martinleynard, .felixmiesel, .shilakeith, .martaseigers, .valentinherrlich, .sheilakeith, .collin, .haloo, .friedmeiner, .forgetmenot, .starduster .volkerbenrat, .rex, .morpheuscoowner, .kattigercoowner, .atsuko, .neilko, .ezycoran, .mauricebahl, .lyleekriskan, .mitsitekka, .sallymaroon, .felixmaroon, .rufuslocko, .triskservekan, .jasperruscho, .restleinen { text-decoration: none;transition: all 0.3s ease}
 
 .none {color: #ffffff;text-shadow: 0 0 3px #ffffff}
@@ -88,6 +98,9 @@
 
 .ceo {color: #000000;text-shadow: 0 0 5px #800080}
 .ceo:hover {color: #800080;text-shadow: 0 0 5px #800080}
+
+.foxnet {color: #000000;text-shadow: 0 0 3px #500000}
+.foxnet:hover {color: #500000;text-shadow: 0 0 3px #000000}
 
 .foxgames {color: #000000;text-shadow: 0 0 3px #8b0000}
 .foxgames:hover {color: #8b0000;text-shadow: 0 0 3px #000000}
