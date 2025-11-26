@@ -21,12 +21,12 @@
 .vectory:hover {color: #800080;text-shadow: 0 0 5px #000000}
 
 .len-entry {background-image: url('');border: 2px solid #ff0000;box-shadow: 0 0 8px #ff0000}
-.len-entry img {content: url('assets/staff/len.jpg')}
+.len-entry img {content: url('assets/staff/Len.png')}
 .len {color: #000000;text-shadow: 0 0 5px #ff0000;text-decoration: none;transition: all 0.3s ease}
 .len:hover {color: #ff0000;text-shadow: 0 0 5px #ff0000}
 
 .riba-entry {background-image: url('');border: 2px solid #ee82ee;box-shadow: 0 0 8px #ee82ee}
-.riba-entry img {content: url('assets/staff/riba.jpg')}
+.riba-entry img {content: url('assets/staff/Riba.png')}
 .riba {color: #000000;text-shadow: 0 0 5px #ee82ee;text-decoration: none;transition: all 0.3s ease}
 .riba:hover {color: #ee82ee;text-shadow: 0 0 5px #ee82ee}
 
