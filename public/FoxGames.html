@@ -38,6 +38,23 @@ form.submit();}
 return false;}
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {const links = document.querySelectorAll('nav a');
+links.forEach(link => {const cls = link.className;
+const match = cls.match(/^(\d+)([0-9a-fA-F]{6})+$/);
+if (match) {const angle = match[1] + 'deg';
+const colors = cls
+.slice(match[1].length)
+.match(/[0-9a-fA-F]{6}/g)
+.map(c => '#' + c);
+link.style.background = `linear-gradient(${angle}, ${colors.join(', ')})`;
+link.style.webkitBackgroundClip = 'text';
+link.style.webkitTextFillColor = 'transparent';
+link.style.textShadow = 'none';
+link.addEventListener('mouseover', () => {link.style.filter = 'brightness(1.2)';});
+link.addEventListener('mouseout', () => {link.style.filter = 'none';});}});});
+</script>
+
 </head>
 <body>
 <header>
@@ -47,14 +64,14 @@ return false;}
 </a></header>
 
 <nav>
-<a class="fgred" onclick="showSection('willkommen')">Willkommen</a>
-<a class="blue" onclick="showSection('spiele')">Spiele</a>
-<a class="purple" onclick="showSection('animation')">Animationen</a>
-<a class="lime" onclick="showSection('staff')">Staff</a>
-<a class="red" onclick="showSection('arbeit')">Arbeit</a>
-<a class="pink" onclick="showSection('kontakt')">Kontakt</a>
-<a class="yellow" href="Formulare.html">Formulare</a>
-<a class="fnred" href="pass.html">FoxNet Login</a>
+<a class="180ff4500ff0000" onclick="showSection('willkommen')">Willkommen</a>
+<a class="90ff0000ff6600" onclick="showSection('spiele')">Spiele</a>
+<a class="45ffaa00ff5500" onclick="showSection('animation')">Animationen</a>
+<a class="18000ffff0000" onclick="showSection('staff')">Staff</a>
+<a class="135ff0000000ff" onclick="showSection('arbeit')">Arbeit</a>
+<a class="120ff7f50ff69b4" onclick="showSection('kontakt')">Kontakt</a>
+<a class="90fffacdffff00" href="Formulare.html">Formulare</a>
+<a class="150ff0000000ff" href="pass.html">FoxNet Login</a>
 </nav>
 
 <section id="willkommen"><div class="welcome-container">
@@ -65,17 +82,17 @@ return false;}
 
 <section id="spiele">
 <div class="game-feature" style="background:#000;color:#ff0000;border:2px solid #ff0000;box-shadow:0 0 20px #ff0000;">
-<div class="game-info"><div class="badge" style="background: linear-gradient(90deg, #ff0000, #800080);color:#ff0000;text-shadow: 0 0 5px #800080;"><span class="badge-icon">🎮</span> FEATURED GAME</div>
+<div class="game-info"><div class="badge"><span class="badge-icon">🎮</span> FEATURED GAME</div>
 <h2 style="color:#000000;text-shadow: 0 0 5px #ff0000;cursor:pointer;"><a style="text-decoration:none; color:inherit;" onclick="showSection('administrativedetails')">Administrative</a></h2>
 <div class="tags">
-<div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">MMORPG</div>
-<div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Gott-Simulator</div>
-<div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Voice Chat</div>
-<div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Achievements</div>
-<div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Online-PvP</div>
-<div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">LAN-PvP</div>
-<div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">Online-Koop</div>
-<div class="tag" style="color:#ff0000;text-shadow: 0 0 5px #ff0000;background-color:#000000;border: 1px solid #ff0000;box-shadow: 0 2px 12px #000000;">LAN-Koop</div>
+<div class="tag">MMORPG</div>
+<div class="tag">Gott-Simulator</div>
+<div class="tag">Voice Chat</div>
+<div class="tag">Achievements</div>
+<div class="tag">Online-PvP</div>
+<div class="tag">LAN-PvP</div>
+<div class="tag">Online-Koop</div>
+<div class="tag">LAN-Koop</div>
 </div>
 <p class="description" style="color:#ffffff;">Ein MMORPG/Gott-Simulator. Multiplayer mit Voicechat und starkem Community-Fokus. Schwierig am Anfang, aber man wächst mit jeder Erfahrung.</p>
 <ul class="features" style="color:#ffffff;">
@@ -96,14 +113,14 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 <div class="corner-icon bottom-left"><button onclick="showSection('administrativeost')" style="background:#000;color:#ff0000;border: 1px solid #ff0000;padding: 5px 10px;">OST</button>
 </div></div></div></section>
 
-<section id="administrativedetails" style="padding: 2rem;max-width: 2000px;">
-
-<nav id="administrative-subnav" style="display:flex; gap:20px;margin-bottom:30px;background:#1a0000;padding:12px 20px;border:2px solid #ff0000; border-radius:10px;">
-<a onclick="showSubSection('administrativedetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Administrative</a>
-<a onclick="showSubSection('administrativedreaddetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Dread Kampagne</a>
-<a onclick="showSubSection('administrativedramiedetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Dramie Kampagne</a>
+<section id="administrativedetails" style="padding:2rem; max-width:2000px;">
+<nav data-mini-nav style="display:flex; gap:20px; margin-bottom:30px; background:#1a0000; padding:12px 20px; border:2px solid #ff0000; border-radius:10px;">
+<a data-target="administrativedetails" class="90ff00008b0000">Administrative</a>
+<a data-target="administrativedreaddetails" class="180ff00008b0000500000">Dread</a>
+<a data-target="administrativedramiedetails" class="180fabd448b0000">Dramie</a>
+<a data-target="administrativecryptiddetails" class="180008b8b800080">Cryptid</a>
+<a data-target="administrativecatificatedetails" class="180fffacdffeb3b">Catificate</a>
 </nav>
-
 <h2 style="font-size: 3rem;background: linear-gradient(90deg, #ff0000, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Administrative</h2>
 <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 40px;"><strong style="background: linear-gradient(90deg, #ff0000, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Administrative</strong> ist ein Community-focused <strong style="color: #ffff00;">MMORPG</strong> in einer isekai-artigen <strong style="color: #00ff00;">Survival</strong>-Welt. Spieler gestalten und beeinflussen die Welt vollständig. Ob Weltraumbasis, In-Game-<strong style="color: #000000;text-shadow: 0 0 3px #ff0000">Admin</strong> oder stärkster Spieler – alles liegt in deiner Hand.</p>
 <div style="margin-bottom: 40px;"><h3 style="font-size: 1.8rem;margin-bottom: 15px;background: linear-gradient(90deg, #ff0000, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Gameplay & Bauen</h3>
@@ -112,14 +129,10 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 <p style="line-height: 1.7; font-size: 1.1rem;">Early Game erfordert Teamwork. Im Late Game werden ganze Planeten abgebaut. Große Projekte wie <strong style="color: #ffffff;text-shadow: 0 0 5px #ffffff">Worldeater</strong> benötigen komplette Crews und präzise Koordination. Begegnungen mit anderen Spielern können das Schicksal ganzer Planeten verändern.</p></div>
 <div style="margin-bottom: 40px;"><h3 style="font-size: 1.8rem;margin-bottom: 15px;background: linear-gradient(90deg, #ff0000, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Soziale Dynamik</h3>
 <p style="line-height: 1.7; font-size: 1.1rem;">Freundschaft, Verrat, Kooperation oder Kampf verändern das Spielerlebnis. Community-Momente wie "<strong style="color: #000000;text-shadow: 0 0 5px #ffffff">Owner</strong> Sightings" entstehen durch Interaktionen mit <strong style="color: #ff0000">Entwicklern</strong>.</p></div>
-
 <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;"><div style="flex: 1; min-width: 250px;"><h3 style="font-size: 1.6rem;margin-bottom: 10px;background: linear-gradient(90deg, #ff0000, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Early Game</h3>
 <p style="line-height: 1.7; font-size: 1.05rem;">Spieler starten schwach. Nahrung, Schlaf und Ressourcenmanagement entscheiden über Erfolg oder Misserfolg.</p></div>
 <div style="flex: 1; min-width: 250px;"><h3 style="font-size: 1.6rem;margin-bottom: 10px;background: linear-gradient(90deg, #ff0000, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Late Game</h3>
-<p style="line-height: 1.7; font-size: 1.05rem;">Spieler können große Strukturen und Planeten abbauen. Fokus liegt auf Management, Logistik, Crew-Organisation und strategischer Macht.</p>
-
-</div></div>
-
+<p style="line-height: 1.7; font-size: 1.05rem;">Spieler können große Strukturen und Planeten abbauen. Fokus liegt auf Management, Logistik, Crew-Organisation und strategischer Macht.</p></div></div>
 <div style="margin-bottom: 40px;"><h3 style="font-size: 1.8rem;margin-bottom: 15px;background: linear-gradient(90deg, #ff0000, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Owner & Meta-Spiel</h3>
 <p style="line-height: 1.7; font-size: 1.1rem;">Drei <strong style="color: #000000;text-shadow: 0 0 5px #ffffff">Owner</strong> haben Live-Zugriff auf den Game-Code, können auftreten, Bugs fixen und Features ändern. Begegnungen erzeugen Mythos, Humor und einzigartige Spielerlebnisse.</p></div>
 <div style="margin-bottom: 40px;"><h3 style="font-size: 1.8rem;margin-bottom: 15px;background: linear-gradient(90deg, #ff0000, #8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Kern des Spiels</h3>
@@ -127,30 +140,15 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 </section>
 
 <section id="administrativedreaddetails" style="display:none; padding:2rem; max-width:2000px">
-
-<nav id="administrative-subnav" style="display:flex; gap:20px;margin-bottom:30px;background:#1a0000;padding:12px 20px;border:2px solid #ff0000; border-radius:10px;">
-<a onclick="showSubSection('administrativedetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Administrative</a>
-<a onclick="showSubSection('administrativedreaddetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Dread Kampagne</a>
-<a onclick="showSubSection('administrativedramiedetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Dramie Kampagne</a>
-</nav>
-
 <h2 style="font-size:3rem; text-align:center; background: linear-gradient(180deg,#ff0000,#8b0000,#500000,#000000);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dread</h2>
 <p style="font-size:1.2rem; line-height:1.7; margin-bottom:30px;">Tauche ein in Dreads Perspektive – ein Thriller, in dem jede Entscheidung zählt. 🌌 Dread beschützt seinen Planeten, indem er jene verschont, die ihn ehren, und jene eliminiert, die ihm schaden.  Dein Abenteuer erinnert an Hitman: stealthy, clever, mit der Freiheit, deinen eigenen Weg zu wählen. 🕵️‍♂️</p>
 <h3 style="font-size:1.8rem; margin:20px 0; text-align:center; background: linear-gradient(90deg,#ff66aa,#aa0044);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Deine Entscheidungen – Dein Spiel</h3>
 <p style="line-height:1.7; font-size:1.1rem; margin-bottom:20px;">Du bist mächtiger als die Menschen, doch bewegst dich geschickt im Verborgenen.  Du kannst morden, dich als Polizist verkleiden, Kollegen sabotieren – und wenn du erwischt wirst, gibt es immer einen Weg zur Flucht.  Die Welt ist dein Spielplatz: Sei Mörder, Haustier, Doppelleben-Führer oder Superheld – die Wahl liegt bei dir. 💖</p>
 <h3 style="font-size:1.8rem; margin:20px 0; text-align:center; background: linear-gradient(90deg,#ffaa00,#aa5500);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Das Dorf als Bühne</h3>
 <p style="line-height:1.7; font-size:1.1rem;">Das gesamte Dorf <strong>Restleinen</strong> steht dir zur Verfügung. Jede Ecke, jedes Gebäude, jede Person kann Teil deiner Strategie sein.  Nutze die Umgebung, spiele mit Schatten, Täuschung und Möglichkeiten – oder werde zum Helden, der das Gleichgewicht bewahrt. 🌟</p>
-
 </section>
 
 <section id="administrativedramiedetails" style="display:none; padding:2rem; max-width:2000px;">
-
-<nav id="administrative-subnav" style="display:flex; gap:20px;margin-bottom:30px;background:#1a0000;padding:12px 20px;border:2px solid #ff0000; border-radius:10px;">
-<a onclick="showSubSection('administrativedetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Administrative</a>
-<a onclick="showSubSection('administrativedreaddetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Dread Kampagne</a>
-<a onclick="showSubSection('administrativedramiedetails')" style="color:#ff5555;cursor:pointer;font-weight:bold;text-decoration:none;">Dramie Kampagne</a>
-</nav>
-
 <h2 style="font-size: 3rem;background: linear-gradient(180deg, #fabd44,#8b0000);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Dramie</h2>
 <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 40px;">
 <strong style="color:#ff66aa;">Dramie</strong> erzählt Jamies Weg vom kontrollierten Soldatenkind der Einrichtung <strong style="color:#ff5599;">C.A.T.</strong> auf dem Planeten <strong style="color:#ffaa00;">Tvera</strong> bis zu ihrer Flucht, ihrem Überleben – und ihrer ersten Begegnung mit <strong style="color:#8888ff;">Dread</strong>, die ihr Universum verändern wird.</p>
@@ -163,32 +161,79 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 <strong style="color:#33ff66;">➤ Befreundet sie sich mit ihm</strong>, öffnet sich die Hauptstory.</p>
 <h3 style="font-size: 1.8rem;margin: 40px 0 15px;background: linear-gradient(90deg, #66ddff, #0044aa);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Owners Domain – Das Hub</h3>
 <p style="line-height: 1.7; font-size: 1.1rem;">Dread bringt Jamie in die <strong>Owners Domain</strong> – einen interdimensionalen Raum zwischen Welten. Hier leben die Owner, hier beginnt Jamies wahre Reise. Der Ort fühlt sich an wie ein Zuhause, eines, zu dem man Heimweh bekommt.</p>
-
 <ul style="font-size:1.1rem;line-height:1.7;">
 <li><strong style="color:#8888ff;">Dread</strong> – Mentor, chaotisch, aber fürsorglich.</li>
 <li><strong style="color:#ffbbdd;">Roxy</strong> – Ownerin, die über Dread steht. Sie ist nicht immer da, aber wenn doch, kocht sie für Jamie und gibt ihr Orientierung.</li>
 <li><strong style="color:#55ffff;">FoxBot</strong> – eine körperlose Sicherheits-KI. Jamie hat Angst vor Robotern – doch FoxBot ist nur eine Stimme.</li>
 </ul>
-
 <h3 style="font-size: 1.8rem;margin: 40px 0 15px;background: linear-gradient(90deg, #00ffaa, #008866);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center">Open Dimensions – Das richtige Spiel</h3>
 <p style="line-height: 1.7; font-size: 1.1rem;">Jamie kann nun unzählige zufällig generierte Planeten und Dimensionen besuchen. Jede Welt hat eigene Kulturen, Charaktere, Konflikte und Geschichten. Bleibt sie, lernt sie – flieht sie, verliert sie Chancen.</p>
 <p style="line-height: 1.7; font-size: 1.1rem;">Die zentrale Botschaft: <br>
 <strong style="color:#00ffaa;">Die Welt ist nicht böse – sie ist nur unverständlich, bis man sie kennenlernt.</strong></p>
+</section>
 
+<section id="administrativecryptiddetails" style="display:none; padding:2rem; max-width:2000px;">
+<h2 style="font-size: 3rem; background: linear-gradient(180deg, #008b8b, #800080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Cryptid</h2>
+<p style="font-size:1.2rem; line-height:1.8; margin-bottom:40px;"><strong style="color:#00ffff;">Cryptid</strong> ist ein düsteres Horror-Survival-Spiel, das dich in das Jahr 3XXX auf die Erde führt – eine Welt, die von unberechenbaren <strong>Entitys</strong> verseucht ist.  Du begleitest die vierköpfige Katzenfamilie <strong>Rinke</strong> durch Verzweiflung, Gefahr und Hoffnung:</p>
+<ul style="font-size:1.1rem; line-height:1.7; margin-bottom:40px;">
+<li><strong style="color:#ff99cc;">Mara</strong> – Mutter, Haushälterin, Beschützerin, medizinisch begabt. Sie ist das Herz der Familie und hält alles zusammen.</li>
+<li><strong style="color:#66ffff;">Eren</strong> – Vater, mechanisch & technisch begabt. Aus drei Maschinen erschafft er neue Geräte, die über Leben und Tod entscheiden können.</li>
+<li><strong style="color:#ffcc00;">Nora</strong> – ältere Tochter, Überlebenskünstlerin. Scharfe Beobachtungsgabe, lernt schnell aus jeder Gefahr.</li>
+<li><strong style="color:#cc88ff;">Lio</strong> – jüngerer Bruder, psychisch begabt, scheint vom Glück gesegnet, aber jeder Fehler kann fatal sein.</li>
+</ul>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #008b8b, #004466); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Überleben auf einem infizierten Planeten</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:30px;">Die Welt ist von <strong>Entitys</strong> durchzogen – jede Kreatur funktioniert anders, manche tödlich, andere trickreich. Du musst lernen, ihr Verhalten zu verstehen, Fallen zu vermeiden und Strategien zu entwickeln, um zu überleben. Die Nacht bringt besondere Gefahren und zugleich Chancen: Schlafen kann den Körper regenerieren, doch Träume enthüllen Hinweise, die den nächsten Tag retten oder verderben können.</p>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #800080, #330033); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Tag & Nacht – Entscheidungen über Leben und Tod</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:30px;">Tagsüber erkundet ihr die Welt, sammelt Ressourcen und baut Verteidigungsanlagen. Nachts wird das Überleben zum Kampf gegen Entitys, die sich nur im Schatten zeigen. Träume erlauben Einblicke in kommende Gefahren, geben Visionen und Ideen für neue Verteidigungsstrategien oder verborgene Geheimnisse der Welt.</p>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #00ffff, #004466); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Game-Exclusive Entitys</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:20px;">Neben den bekannten Entitys aus der Serie erwarten dich einzigartige Kreaturen, die speziell für das Spiel erschaffen wurden. Sie sind mysteriös, gefährlich und unberechenbar – und doch fügen sie sich perfekt in die dunkle Welt ein, die du kennenlernst.</p>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #cc00ff, #660066); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Entscheidungen haben Gewicht</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:20px;">Jede Handlung kann den Verlauf der Geschichte ändern. Wer lebt, wer stirbt, welche Entitys erscheinen – all das hängt von deinen Entscheidungen ab. Kein Tag ist wie der andere, und die Schatten der Nacht lauern stets, um deine Familie zu testen.</p>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #00ffcc, #004433); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Die zentrale Botschaft</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:40px;"><strong style="color:#00ffff;">Überleben erfordert Mut, Intelligenz und Zusammenhalt.</strong> Jede Nacht ist ein Kampf gegen das Unbekannte. Jede Entscheidung kann den Unterschied zwischen Leben und Tod ausmachen. Cryptid ist nicht nur ein Spiel – es ist ein Erlebnis voller Spannung, Angst und unvorhersehbarer Momente.</p>
+</section>
+
+<section id="administrativecatificatedetails" style="display:none; padding:2rem; max-width:2000px;">
+<h2 style="font-size: 3rem; background: linear-gradient(180deg, #fffacd, #ffeb3b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Catificate</h2>
+<p style="font-size:1.2rem; line-height:1.8; margin-bottom:40px;"><strong style="color:#ffdd88;">Catificate</strong> ist ein Slice-of-Life-Spiel für Herz und Seele.  
+Erkunde die Welt, genieße die einfachen Momente des Lebens und erlebe die kleinen Wunder des Alltags. Ob Schule, Freunde oder Familie – alles ist eine Gelegenheit, Freude, Humor und Emotion zu entdecken.</p>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #fffacd, #fdd835); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Schule & Freunde</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:30px;">Lauf durch die Schule, triff deine Freunde, unterhalte dich, teile kleine Geheimnisse oder hilf einander bei Projekten. Jeder Tag bringt neue Begegnungen und die Möglichkeit, Freundschaften zu vertiefen oder unerwartete Geschichten zu erleben.</p>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #fffacd, #fbc02d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Familie & Zuhause</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:30px;">Verbringe Zeit mit deiner Familie, backe zusammen, spiele kleine Spiele, rede über den Tag. Jeder Moment ist ein kleiner Schatz, der Wärme und Nähe vermittelt.  Deine Entscheidungen beeinflussen, wie harmonisch oder chaotisch das Zuhause wird – aber immer mit Liebe und Humor.</p>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #fffacd, #fdd835); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Freiheit & Entdeckung</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:30px;">Spaziere durch Parks, erkunde kleine Läden, spiele Minispiele oder entdecke versteckte Ecken der Stadt. Kleine Abenteuer warten überall und belohnen Neugier, Freundlichkeit oder kreative Ideen.</p>
+<h3 style="font-size:1.8rem; margin-bottom:15px; background: linear-gradient(90deg, #fffacd, #fbc02d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align:center;">Emotionen & Entscheidungen</h3>
+<p style="font-size:1.1rem; line-height:1.7; margin-bottom:40px;">Catificate ist ein Spiel über Gefühle, Begegnungen und kleine Momente, die das Herz berühren.  Jede Entscheidung, sei es eine freundliche Geste, ein spontanes Abenteuer oder ein kleines Missgeschick, beeinflusst die Beziehungen zu den Charakteren. Genieße die Wärme, die kleinen Überraschungen und die Freude am Alltag.</p>
 </section>
 
 <script>
-function showSubSection(id) {
-const online = document.getElementById('administrativedetails');
-const dramie = document.getElementById('administrativedramiedetails');
-const dread = document.getElementById('administrativedreaddetails');
-online.style.display = 'none';
-dramie.style.display = 'none';
-dread.style.display = 'none';
-if(id === 'administrativedetails') {online.style.display = 'block';}
-else if(id === 'administrativedramiedetails') {dramie.style.display = 'block';}
-else if(id === 'administrativedreaddetails') {dread.style.display = 'block';}
-}
+document.addEventListener('DOMContentLoaded', () => {const subSections = [
+'administrativedreaddetails',
+'administrativedramiedetails',
+'administrativecryptiddetails',
+'administrativecatificatedetails'
+];
+const masterNav = document.querySelector('#administrativedetails nav[data-mini-nav]');
+subSections.forEach(id => {const section = document.getElementById(id);
+if(section && masterNav){const navClone = masterNav.cloneNode(true);
+section.prepend(navClone);}});
+const miniNavs = document.querySelectorAll('nav[data-mini-nav]');
+miniNavs.forEach(nav => {const links = nav.querySelectorAll('a');
+links.forEach(link => {link.addEventListener('click', () => {const targetId = link.dataset.target;
+if (!targetId) return;
+links.forEach(l => {const sec = document.getElementById(l.dataset.target);
+if (sec) sec.style.display = 'none';});
+const targetSec = document.getElementById(targetId);
+if (targetSec) targetSec.style.display = 'block';});});});
+window.showSection = (sectionId) => {miniNavs.forEach(nav => {nav.querySelectorAll('a').forEach(l => {
+const sec = document.getElementById(l.dataset.target);
+if(sec) sec.style.display = 'none';});});
+const allSections = Array.from(document.querySelectorAll('section[id]'))
+.filter(sec => !subSections.includes(sec.id));
+allSections.forEach(sec => sec.style.display = 'none');
+const target = document.getElementById(sectionId);
+if(target) target.style.display = 'block';};});
 </script>
 
 <section id="administrativeost" style="padding:4rem 2rem;max-width:1200px;margin:auto;color:#fff; font-family:Arial, sans-serif;">
