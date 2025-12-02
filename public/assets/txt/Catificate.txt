@@ -8791,11 +8791,11 @@ Rex: Zeig mal her, hol sie raus und geb sie mir, dann kann ich es sehen.
 Jamie nimmt ihre Dread fähigkeit raus und gibt sie Rex.
 Rex hält sie auf seine Hand und überlegt, scheint irgendwie darin was zu lesen.
 
-Rex: Es ist Mythisch.
+Rex: Es ist Einzigartig.
 
 Rex gibt Jamie die Fähigkeit wieder.
 
-Jamie: Du hast es gelsen das es Mythisch ist, und mir dennoch einfach wiedergegeben?
+Jamie: Du hast es gelsen das es Einzigartig ist, und mir dennoch einfach wiedergegeben?
 
 Rex: Ja, ich habe die Scanner Fähigkeit, und, je mächtiger man ist, desto weniger Spaß macht es hier.
 Wenn man die ganze zeit auf eine Waffe hinarbeitet macht das Spaß,
@@ -9671,10 +9671,7 @@ Jamie legt ihre Dread Fähigkeit auf den Tresen.
 
 Jamie: Schau dir das mal an.
 
-Francais Schaut sich Die Fähigkeit an.
-Dread
-Mythisch
-Francais schaut sich alles an.
+Francais Schaut sich Die Fähigkeit an. Dread, Einzigartig, Francais schaut sich alles an.
 
 Jamie: Gefällt dir was du siehst?
 
@@ -13769,7 +13766,7 @@ Makety: Abend.
 
 Jamie: Was machst du da?
 
-Makety: Hacking.
+Makety: Hacking?
 
 Jamie: Welche Sprache?
 
@@ -13921,7 +13918,7 @@ Monroe: Jetzt weißt du warum ich so bin... sagt man dir dein ganzes leben lang 
 wird es dir irgendwann egal was andere über dich denken, du machst dein eigenes ding und jeder der was gegen dich sagt
 wird ausgelöscht. Danke das du mich aufgehalten hast. Ich brauch ein wenig zeit für mich.
 
-Monroe geht in ihr Raum, Jamie steht nur da.
+Monroe geht in ihren Raum, Jamie steht nur da.
 
 Makety: Alles in ordnung?
 
@@ -14262,9 +14259,10 @@ Jamie: Ich hab eine bessere idee, wie wärs wenn wir kämpfen?
 
 Mehero: Ich weiß nicht, ich bin nicht so stark.
 
+Jamie fässt beide hände von Mehero an, ihre hände leuchten, er wird rot, Jamie lächelt ihn an.
+
 Jamie: Alles gut, ich brings dir bei.
 
-Jamie fässt beide hände von Mehero an, ihre hände leuchten, er wird rot, Jamie lächelt ihn an.
 Währenddessen bei Jasper. Er ist in der Dusche, sein Telefon klingelt, er streift sich zum trocknen durch das haar.
 Schnappt sich ein Handtuch und geht aus der dusche. jasper geht an das Telefon.
 
@@ -14295,7 +14293,7 @@ Mehero: ok, ich bin bereit.
 Jamie hat ein wenig Dread flüssigkeit in der Pfote, lässt es auf den boden fallen, der Boden ist schwarz.
 Sie stürmt auf Mehero der ausweicht.
 
-Dread: Cool! Dread kräfte sind so... Cool! Du bist eine super Spielkameradin jamie.
+Mehero: Cool! Dread kräfte sind so... Cool! Du bist eine super Spielkameradin jamie.
 
 Jamie: Ich spiel grad nicht.
 
@@ -14348,7 +14346,7 @@ FoxBot: (Die Beeren wurden manipuliert, um nicht aufzufallen würde ich dir empf
 
 Jamie legt sich ebenfalls hin und schließt die augen. Einige Soldaten mit einem W auf der Uniform kommen auf sie zu.
 Jamie sieht alles mit Freecam, als wäre sie von ihrem körper getrennt sieht sie alles was um ihr rum passiert.
-Die Soldaten nehmen beide mit. An der Grenze wird das roße auto angehalten.
+Die Soldaten nehmen beide mit. An der Grenze wird das große auto angehalten.
 Ein soldat klopft an, die tür öffnet sich, er hat den schlafenden Mehero in der hand, zielt seine Pistole auf ihm.
 Dabei lächelt er ihn an. Der soldat winkt sie durch. Sie fahren weiter.
 Mehero öffnet seine augen, er ist in einer zelle, schaut nach links, dort sitzt Jamie.
@@ -14375,7 +14373,7 @@ Jamie: Nalos, komm mit.
 
 Mehero strahlt vor freude und kommt mit. Sie laufen zusammen durch die gänge. Sie gehen um eine ecke, ein Soldat steht vor ihnen.
 Beide partien schauen sich an. Der soldat schubst Jamie weg und hält Mehero fest, zielt seine Pistole auf ihm.
-Jamie denkt nach und macht eine schnelle bewegung. Der soldat schießt, sein Kopf sieht aus wie Physic, niht biologie.
+Jamie denkt nach und macht eine schnelle bewegung. Der soldat schießt, sein Kopf sieht aus wie Physic, nicht biologie.
 Jamie schaut Mehero an, er wurde von dem Pistolenschuss getroffen, mitten am kopf.
 Jamie geht nah an mehero und heilt ihn, behält die leere Patrone. Mehero atmet ein.
 
@@ -14623,7 +14621,7 @@ Webi steht immernoch verwirrt da, aber er scheint mehr nachzudenken.
 
 Webi: Wo hast du das gelesen?
 
-Jamie: Abenteuer vom kleinen Kater, Mister und miss Miau, Ich und meine gefühle.
+Jamie: Abenteuer vom kleinen Kater, Mister und Miss Miau, Ich und meine gefühle.
 
 Webi: Wie sahen die aus?
 
@@ -14649,7 +14647,7 @@ Jamie: Und wenn ich dich wiederbelebe? Liebst du mich dann?
 
 Webi: Nein, warum bist du so fixiert geliebt zu werden?
 
-Jamie trifft die frage, sie erinnert sich wie si von ihren eltern abgewiesen wurde und sie es nicht gemerkt hat.
+Jamie trifft die frage, sie erinnert sich wie sie von ihren eltern abgewiesen wurde und sie es nicht gemerkt hat.
 
 Jamie: Weil... ich nie, geliebt wurde.
 
@@ -14784,7 +14782,7 @@ Tick: Naja, ich bin Tick Vild, Schwertkämpfer und anführer der gruppe, Level 2
 
 Mitsu Sherl: Ich bin Mitsu Sherl, Magierin, Level 1.
 
-Karl Ingar: Und ich bin karl Ingar, Der draufhauer, Level 2
+Karl Ingar: Und ich bin karl Ingar, Der draufhauer, Level 2.
 
 Jamie: Ich bin... weiß ich nicht, aber ich bin Level 1.
 
@@ -14807,7 +14805,7 @@ Tick sagt der gruppe mit zeichen das sie aufpassen sollen, alle sind kampfbereit
 Die ganze gruppe kämpft, aber sie sind viel zu schwach. Jamie selbst macht auch was, aber ohne Dread kräfte hat sie keine chance.
 Sie wird vom Wolf geschnappt und ist unter seiner pfote, seine klaue ist genau auf jamies rücken.
 Die gruppe sieht das Jamie gefangen wurde, sie kämpfen besser, aber sind ebenfalls vom Wolf overpowered worden.
-Sie liegen alle am boden, Trisk steht auf, mit Schwert in der hand, schwerverletzt.
+Sie liegen alle am boden, Tick steht auf, mit Schwert in der hand, schwerverletzt.
 
 Tick: Es ist mir egal ob ich draufgeh, ich muss Jamie retten.
 
@@ -14840,7 +14838,7 @@ Jamie fällt nach hinten, der arzt schaut zu ihr, merkt das was nicht stimmt. ja
 
 Sarko: Und jetzt bitte nicht aufspringen. Es ist ein Wunder das du noch lebst, wir haben kein Beast Blut hier.
 Und Menschenblut ist nicht kompatibel, also konnten wir nur die blutungen stoppen, ich empfehl dir was zu essen.
-Dein Blutgehalt ist um 26% gesunken, ich frag mich was du bist.
+Dein Blutgehalt ist um 48% gesunken, ich frag mich was du bist.
 
 Jamie: Ich bin nicht von hier, wo sind meine Freunde?
 
@@ -14895,7 +14893,7 @@ Tick: Nein nein nein, ist ok, behalt es, du brauchst es mehr.
 
 Jamie: Wir sehen uns.
 
-Jamie geht aus dem Zimmer,
+Jamie geht aus dem Zimmer. Wird vom Arzt abgefangen.
 
 Sarko: Ah, kleiner, geh mal zum König dieses Landes, der wollte dir was geben als dank das du sein Sohn gerettet hast.
 
@@ -14903,7 +14901,7 @@ Jamie nickt ihm zu, sieht überrascht aus das Tick der sohn vom König dieses La
 Ihr gehts noch immer nicht gut. Sie läuft am markt vorbei, sieht ein Apfelstand.
 Die besitzerin schaut sie lächelnd an, Jamie schaut traurig zurück. Die Besitzerin gibt Jamie ein Apfel.
 Jamie lächelt ein wenig und geht. Die besitzerin schaut ihr lächelnd hinterher.
-Sie gehtweiter zum Königshaus zwei wachen stehen am Haupteingang.
+Sie geht weiter zum Königshaus zwei wachen stehen am Haupteingang.
 
 Hamsiel Heiser: Du darfst hier nicht durch.
 
@@ -14932,7 +14930,7 @@ Jamie: ich dachte mit 18 bei euch Menschen.
 
 Corsia: Nein, es war schon immer 16.
 
-FoxBot: (Bei ihnen, bei vielen anderen variiert es, die meisten haben 17-19)
+FoxBot: (Bei vielen anderen variiert es, die meisten haben 17-19)
 
 Jamie: (Achso)
 
@@ -15072,7 +15070,7 @@ Wenn du dich selbst für zu wenig anbietest, nehmen dich Menschen nicht ernst, k
 
 Jamie: kenne dein Wert... Ich weiß nicht wiviel ich wert bin. Für wiviel würdest du mich kaufen?
 
-Vel: Ein leben ist unbezahlbar, auch deins. Du bist mehr wert als alle meine Gemälde.
+Vel: Ein leben ist unbezahlbar, auch deins. Du bist mehr wert als alle meine Gemälde zusammen.
 
 Jamie: Hast du eine geliebte?
 
@@ -15133,13 +15131,13 @@ hätte er es dir auch gegeben, also war mich anzuheuern dich zu malen für in g�
 
 Jamie: Achso...
 
-Die Bedienstete schaut beide an, da sie vorn am Tresen sind. Vel hlt zwei finger hoch, die bedienstete nickt, führt die beiden zu ihrem Platz.
+Die Bedienstete schaut beide an, da sie vorn am Tresen sind. Vel hält zwei finger hoch, die bedienstete nickt, führt die beiden zu ihrem Platz.
 
 Jamie: Wow, hier sieht es absolut schön aus.
 
-Die bedientete gibt den beiden ihre Speisekarte. Jamie ist sichtlich geschockt.
+Die bedienstete gibt den beiden ihre Speisekarte. Jamie ist sichtlich geschockt.
 
-Jamie: Das günstigste ist 38 GOld, das teuerste ist 118. Und das für uns beide.
+Jamie: Das günstigste ist 38 Gold, das teuerste ist 118. Und das für uns beide.
 
 Jamie schaut langsam nach oben, Vel lächelt sie nur an.
 
@@ -15149,7 +15147,7 @@ Jamie: Nudelauflauf, dann habe ich ein vergleich ob der hier besser schmeckt, od
 
 Die bedienstete kommt wieder.
 
-Vel: Ein Nudelauflauf, und ein Vegetarisches Stake bitte.
+Vel: Ein Nudelauflauf, und ein Vegetarisches Steake bitte.
 
 Die bedienstete lächelt, nickt und geht.
 
@@ -15171,7 +15169,7 @@ Vel: Ich geh gern wetten ein, wetten das die Kellnerin hinfallen wird?
 
 Jamie: Ok, ich wette dagegen.
 
-Die beiden beobachten die Kellnerin. Sie knickt mit ihrem schuh um die erhöhung im schuh kaputt ist.
+Die beiden beobachten die Kellnerin. Sie knickt mit ihrem schuh um.
 Sie droht umzufallen, aber Vel hat sie aufgefangen.
 
 Vel: Alles inordnung?
@@ -15231,7 +15229,7 @@ Jamie: Hast du die befugnis dafür?
 Vel: Aber sicher doch.
 
 Vel bezahlt und die beiden gehen raus. Sie gehen zurück richtung schloss.
-Jamie schaut Vel an, er lächelt in die ferne. Sie nähert sich seine Hand und hält sie, Vel sieht Überrasch Jamie an.
+Jamie schaut Vel an, er lächelt in die ferne. Sie nähert sich seine Hand und hält sie, Vel sieht Überrascht Jamie an.
 
 Vel: Was ist das? Hast du angst im dunkeln?
 
