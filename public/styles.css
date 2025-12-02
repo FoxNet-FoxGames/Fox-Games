@@ -45,6 +45,11 @@
 .thundergerman {color: #9b30ff;text-shadow: 0 0 5px #000000;text-decoration: none;transition: all 0.3s ease}
 .thundergerman:hover {color: #000000;text-shadow: 0 0 5px #9b30ff}
 
+.kiira-entry {background-image: url('assets/staff/kiiraBackground.png');border: 2px solid #701eb3;box-shadow: 0 0 8px #701eb3}
+.kiira-entry img {content: url('assets/staff/kiira.png')}
+.kiira {color: #701eb3;text-shadow: 0 0 5px #000000;text-decoration: none;transition: all 0.3s ease}
+.kiira:hover {color: #000000;text-shadow: 0 0 5px #701eb3}
+
 .louemi-entry {background-image: url('assets/staff/louemiBackground.png');border: 2px solid #ffff00;box-shadow: 0 0 8px #ffff00}
 .louemi-entry img {content: url('assets/staff/louemi.png')}
 .louemi {color: #ffff00;text-shadow: 0 0 5px #000000;text-decoration: none;transition: all 0.3s ease}
